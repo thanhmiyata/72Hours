@@ -1,0 +1,549 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap');
+  
+  .custom_influencer-section {
+    position: relative;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    overflow: hidden;
+    border: 0px solid #4CAF50;
+    border-radius: 20px;
+    margin: 40px 0;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  
+  .custom_influencer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .custom_influencer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .custom_influencer-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .title-highlight {
+    display: block;
+    color: rgb(255, 0, 0);
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 3px;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #dc3545;
+  }
+
+  .rating-number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+  }
+
+  .rating-text {
+    color: #666;
+    font-size: 0.9rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  .custom_influencer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .custom_influencer-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .custom_influencer-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom_influencer-image-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 177.778%; /* Match video aspect ratio for consistency */
+    overflow: hidden;
+  }
+
+  .custom_influencer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .custom_influencer-item:hover .custom_influencer-image {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 3;
+  }
+
+  .custom_influencer-video-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 177.778%;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f0f0f0;
+    border-radius: 15px;
+  }
+  
+  .custom_influencer-video-container .video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .custom_influencer-video-container.auto-play {
+    cursor: default;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .placeholder-thumbnail {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .play-button {
+    transition: transform 0.3s ease;
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+  }
+
+  .custom_influencer-item:hover .video-thumbnail {
+    transform: scale(1.05);
+  }
+
+  .video-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .video-iframe.active {
+    display: block;
+  }
+
+  .video-thumbnail.hidden {
+    display: none;
+  }
+
+  .video-iframe {
+    pointer-events: none;
+  }
+
+  .video-iframe.active {
+    pointer-events: auto;
+  }
+  
+  .custom_influencer-content {
+    padding: 20px;
+  }
+  
+  .customer-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 1200px) {
+    .custom_influencer-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .custom_influencer-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .custom_influencer-section {
+      padding: 40px 15px;
+      margin: 20px 0;
+    }
+    
+    .custom_influencer-title {
+      font-size: 1.8rem;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    
+    .custom_influencer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+
+    .custom_influencer-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+
+    .custom_influencer-title {
+      flex: none;
+    }
+
+    .rating-container {
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .decorative-elements > * {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .custom_influencer-title {
+      font-size: 1.5rem;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    
+    .custom_influencer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+  }
+</style>
+
+<div class="custom_influencer-section">
+  <div class="custom_influencer-container">
+    
+    <div class="custom_influencer-header">
+      <h2 class="custom_influencer-title">
+        {{ section.settings.title | default: "LOVED BY FAMILIES" }}
+        <span class="title-highlight">
+          {{ section.settings.subtitle | default: "ACROSS CANADA & USA" }}
+        </span>
+      </h2>
+      
+      <div class="rating-container">
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+        <span class="rating-number">4.8</span>
+        <span class="rating-text">Based on 976 reviews</span>
+      </div>
+    </div>
+
+    <div class="custom_influencer-grid">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'custom_influencer_image' %}
+            <div class="custom_influencer-item" {{ block.shopify_attributes }}>
+              <div class="custom_influencer-image-container">
+                {% if block.settings.image %}
+                  <img 
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    alt="{{ block.settings.customer_name | default: 'Customer custom_influencer' }}"
+                    class="custom_influencer-image"
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  >
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'custom_influencer-image' }}
+                {% endif %}
+                
+                {% if block.settings.overlay_text %}
+                  <div class="image-overlay">
+                    {{ block.settings.overlay_text }}
+                  </div>
+                {% endif %}
+              </div>
+              
+              {% if block.settings.customer_name %}
+                <div class="custom_influencer-content">
+                  <h4 class="customer-name">{{ block.settings.customer_name }}</h4>
+                </div>
+              {% endif %}
+            </div>
+
+          {% when 'custom_influencer_video' %}
+            <div class="custom_influencer-item" {{ block.shopify_attributes }}>
+              {% if block.settings.video_thumbnail %}
+                <div class="custom_influencer-video-container" onclick="playInlineVideo(this, '{{ block.settings.video_url | escape }}')">
+                  <img 
+                    src="{{ block.settings.video_thumbnail | image_url: width: 400 }}"
+                    alt="Video custom_influencer"
+                    class="video-thumbnail"
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  >
+                  <iframe class="video-iframe" frameborder="0" allowfullscreen allow="fullscreen; autoplay"></iframe>
+                </div>
+              {% else %}
+                {% assign video_id = '' %}
+                {% if block.settings.video_url contains '/e/' %}
+                  {% assign video_id = block.settings.video_url | split: '/e/' | last | split: '?' | first %}
+                {% elsif block.settings.video_url contains 'streamable.com/' %}
+                  {% assign video_id = block.settings.video_url | split: 'streamable.com/' | last | split: '?' | first %}
+                {% endif %}
+                
+                <div class="custom_influencer-video-container" onclick="playInlineVideo(this, '{{ block.settings.video_url | escape }}')">
+                  {% if video_id != '' %}
+                    <div class="video-thumbnail placeholder-thumbnail">
+                      <div class="play-button">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                          <circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.9)"/>
+                          <polygon points="25,20 25,40 40,30" fill="#333"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <iframe 
+                      class="video-iframe" 
+                      frameborder="0" 
+                      allowfullscreen 
+                      allow="fullscreen; autoplay">
+                    </iframe>
+                  {% else %}
+                    <div class="video-thumbnail placeholder-thumbnail">
+                      <span>Invalid Video URL</span>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<script>
+function pauseAllVideos(exceptContainer = null) {
+  const allContainers = document.querySelectorAll('.custom_influencer-video-container');
+  allContainers.forEach(container => {
+    if (container !== exceptContainer) {
+      const iframe = container.querySelector('.video-iframe');
+      const thumbnail = container.querySelector('.video-thumbnail');
+      
+      if (iframe) {
+        if (container.classList.contains('auto-play')) {
+          iframe.src = '';
+        } else if (iframe.classList.contains('active')) {
+          iframe.src = '';
+          iframe.classList.remove('active');
+          if (thumbnail) {
+            thumbnail.classList.remove('hidden');
+          }
+        }
+      }
+    }
+  });
+}
+
+function playInlineVideo(container, videoUrl) {
+  pauseAllVideos(container);
+  
+  const iframe = container.querySelector('.video-iframe');
+  const thumbnail = container.querySelector('.video-thumbnail');
+  
+  let embedUrl = '';
+  
+  if (videoUrl.includes('streamable.com')) {
+    let videoId = '';
+    if (videoUrl.includes('/e/')) {
+      videoId = videoUrl.split('/e/')[1].split('?')[0];
+    } else if (videoUrl.includes('streamable.com/')) {
+      videoId = videoUrl.split('streamable.com/')[1].split('?')[0];
+    }
+    embedUrl = `https://streamable.com/e/${videoId}?loop=0&nocontrols=1`;
+  } else {
+    console.warn('Only Streamable URLs are supported');
+    return;
+  }
+  
+  if (iframe) {
+    iframe.src = embedUrl;
+    iframe.classList.add('active');
+  }
+  if (thumbnail) {
+    thumbnail.classList.add('hidden');
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Custom Influencer Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Title",
+      "default": "LOVED BY FAMILIES"
+    },
+    {
+      "type": "text",
+      "id": "subtitle", 
+      "label": "Subtitle",
+      "default": "ACROSS CANADA & USA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_influencer_image",
+      "name": "custom_influencer Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Customer Image"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text",
+          "label": "Overlay Text",
+          "info": "Text hiển thị trên hình ảnh"
+        }
+      ]
+    },
+    {
+      "type": "custom_influencer_video",
+      "name": "custom_influencer Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Streamable Video URL",
+          "info": "Paste Streamable link (e.g., https://streamable.com/VIDEO_ID). Video format: 720x1280 vertical"
+        },
+        {
+          "type": "image_picker",
+          "id": "video_thumbnail",
+          "label": "Video Thumbnail",
+          "info": "Thumbnail image to show before playing video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Influencer Video",
+      "blocks": [
+        {
+          "type": "custom_influencer_video",
+          "settings": {
+            "video_url": "https://streamable.com/14q6dm",
+          }
+        },
+        {
+          "type": "custom_influencer_video",
+          "settings": {
+            "video_url": "https://streamable.com/evu1f8",
+          }
+        },
+        {
+          "type": "custom_influencer_video",
+          "settings": {
+            "video_url": "https://streamable.com/rdv28t",
+          }
+        },
+        {
+          "type": "custom_influencer_video",
+          "settings": {
+            "video_url": "https://streamable.com/1r1ko1",
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
