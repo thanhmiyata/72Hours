@@ -1,5 +1,23 @@
-<html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>72 Hours Emergency Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #0A0702;
+      overflow-x: hidden;
+    }
+    
     .image-gallery-hover:hover .left-img {
       transform: rotate(-8deg);
     }
@@ -12,101 +30,241 @@
       transform: rotate(8deg);
     }
     
-    /* Wave Divider Styles */
     .wave-divider {
       position: relative;
-      width: 1440px;
+      width: 120%; /* Increased by 20% from 100% */
       height: 141px;
       overflow: hidden;
-      margin-top: -1px; /* Prevent potential white line */
+      line-height: 0;
+    }
+
+    .wave-divider svg {
+      position: relative;
+      display: block;
+      width: 100vw;
+      height: 141px;
+      left: 0;
     }
     
-    .wave-divider svg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    /* Add shadow effect to wave divider */
+    .wave-divider svg path {
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    }
+    
+    /* Improve button styles */
+    .btn-primary {
+      background: #D1232A;
+      color: white;
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: #B01E1F;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(209, 35, 42, 0.3);
+    }
+    
+    .btn-secondary {
+      background: rgba(10, 7, 2, 0.05);
+      color: #0A0702;
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(10, 7, 2, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* Improve section spacing */
+    section {
+      padding: 80px 0;
+    }
+    
+    /* Add container class for consistent width */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Improve heading styles */
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    
+    /* Improve card styles */
+    .card {
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Days Timeline Slider */
+    .days-timeline-slider {
+      position: relative;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    .slider-wrapper {
+      overflow: hidden;
+    }
+    
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      gap: 20px;
+    }
+    
+    .slide {
+      flex: 0 0 976px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      width: 976px;
+      height: 352px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
+
   </style>
-</head><body><div style="width: 1440px; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-    <div style="align-self: stretch; background: var(--Color-Scheme-4-Background, white); overflow: hidden; border-bottom: 1px var(--Color-Scheme-4-Border, rgba(10, 7, 2, 0.15)) solid; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-      <div style="align-self: stretch; height: 72px; padding-left: 64px; padding-right: 64px; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+</head>
+<body>
+  <div style="width: 100%; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+    <!-- Header -->
+    <header style="align-self: stretch; background: white; overflow: hidden; border-bottom: 1px rgba(10, 7, 2, 0.15) solid; flex-direction: column; justify-content: flex-start; align-items: center; display: flex; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+      <div class="container" style="align-self: stretch; height: 72px; padding-left: 20px; padding-right: 20px; overflow: hidden; justify-content: space-between; align-items: center; display: flex">
         <div style="flex: 1 1 0; justify-content: space-between; align-items: center; display: flex">
           <div style="justify-content: flex-start; align-items: center; gap: 24px; display: flex">
+            <!-- Logo -->
             <div data-alternate="False" style="width: 84px; height: 36px; position: relative; overflow: hidden">
               <div style="width: 70px; height: 36px; left: 6.67px; top: 0px; position: absolute; overflow: hidden">
-                <img style="width: 150px; height: 113px; left: -40.17px; top: -38.50px; position: absolute" src="https://placehold.co/150x113">
+                <img style="width: 150px; height: 113px; left: -40.17px; top: -38.50px; position: absolute" src="https://placehold.co/150x113" alt="72 Hours Logo">
               </div>
             </div>
-            <div style="overflow: hidden; justify-content: flex-start; align-items: center; gap: 32px; display: flex">
-              <div style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Home Page</div>
-              <div style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">About Us</div>
-              <div style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Services</div>
-              <div style="justify-content: center; align-items: center; gap: 4px; display: flex">
-                <div style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Resources</div>
+            <!-- Navigation -->
+            <nav style="overflow: hidden; justify-content: flex-start; align-items: center; gap: 32px; display: flex">
+              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Home Page</a>
+              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">About Us</a>
+              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Services</a>
+              <div style="justify-content: center; align-items: center; gap: 4px; display: flex; cursor: pointer;">
+                <div style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px;">Resources</div>
                 <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                  <div style="width: 12.59px; height: 7.13px; left: 5.70px; top: 8.70px; position: absolute; background: var(--Color-Scheme-4-Text, #0A0702)"></div>
+                  <div style="width: 12.59px; height: 7.13px; left: 5.70px; top: 8.70px; position: absolute; background: #0A0702"></div>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
+          <!-- Buttons -->
           <div style="justify-content: center; align-items: center; gap: 16px; display: flex">
-            <div data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Secondary" style="padding-left: 20px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px; background: var(--Opacity-Neutral-Darkest-5, rgba(10, 7, 2, 0.05)); border-radius: 100px; outline: 1px var(--Opacity-Transparent, rgba(255, 255, 255, 0)) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-              <div style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">Join</div>
-            </div>
-            <div data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Primary" style="padding-left: 20px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px; background: var(--Color-Cardinal, #D1232A); border-radius: 100px; outline: 1px var(--Color-Cardinal, #D1232A) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-              <div style="color: var(--Color-White, white); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">Learn</div>
-            </div>
+            <a href="#" class="btn-secondary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+              Join
+            </a>
+            <a href="#" class="btn-primary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+              Learn
+            </a>
           </div>
         </div>
       </div>
-    </div>
-    <div id="urgency-banner" style="align-self: stretch; padding-left: 64px; padding-right: 64px; background: #DC2627; overflow: hidden; border-bottom: 1px var(--Color-Scheme-1-Border, rgba(255, 255, 255, 0.20)) solid; flex-direction: column; justify-content: flex-start; align-items: center; display: flex; height: 75px;">
-      <div style="width: 100%; max-width: 1280px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; justify-content: space-between; align-items: center; gap: 16px; display: inline-flex; height: 100%;">
-        <div style="flex: 1 1 0; padding-left: 48px; justify-content: center; align-items: center; gap: 24px; display: flex">
-          <div style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-            <div style="width: 32px; height: 32px; position: relative">
-              <div style="width: 27.07px; height: 25.92px; left: 2.47px; top: 2.28px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 27px; word-wrap: break-word">Limited Time Offer: Save 20% Today!</div>
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Plus, receive a free fire blanket with purchase.</div>
-            </div>
+    </header>
+    <!-- Urgency Banner -->
+    <div id="urgency-banner" style="align-self: stretch; padding: 15px 0; background: linear-gradient(90deg, #DC2627 0%, #B01E1F 100%); overflow: hidden; border-bottom: 1px rgba(255, 255, 255, 0.20) solid; display: flex; justify-content: center; align-items: center;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 20px; flex: 1; min-width: 300px;">
+          <div style="width: 40px; height: 40px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg style="width: 24px; height: 24px;" fill="#DC2627" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
           </div>
-          <div data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Primary" style="padding-left: 20px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px; background: #B01E1F; border-radius: 100px; outline: 1px var(--Color-Cardinal, #D1232A) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-            <div style="color: var(--Color-White, white); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">24:59:59:59</div>
+          <div>
+            <h3 style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 1.3; margin-bottom: 5px;">Limited Time Offer: Save 20% Today!</h3>
+            <p style="color: white; font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.4; margin: 0;">Plus, receive a free fire blanket with purchase.</p>
           </div>
         </div>
-        <!-- Close Button -->
-        <button onclick="closeBanner()" style="padding: 8px; background: transparent; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center;" aria-label="Close banner">
-          <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div style="align-self: stretch; height: 935px; position: relative; background: var(--Grays-Black, black); overflow: hidden">
-      <div style="width: 1280px; height: 823px; left: 80px; top: 112px; position: absolute">
-        <div style="width: 1280px; height: 759px; left: 0px; top: 0px; position: absolute">
-          <div class="image-gallery-hover" style="width: 765px; height: 758px; left: 604px; top: 25px; position: absolute">
-            <img class="center-img" style="width: 640px; height: 640px; left: 48.14px; top: -1.13px; position: absolute; border-radius: 40px; transition: transform 0.3s ease;" src="assess/1.jpg">
-            <img class="left-img" style="width: 211px; height: 211px; left: 15.81px; top: 517px; position: absolute; border-radius: 40px; transition: transform 0.3s ease;" src="assess/2.jpg">
-            <img class="right-img" style="width: 155px; height: 155px; left: 550.26px; top: 557.74px; position: absolute; border-radius: 40px; transition: transform 0.3s ease;" src="assess/3.jpg">
+        
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Primary" style="padding: 10px 25px; background: white; color: #DC2627; border-radius: 100px; font-family: Montserrat; font-weight: 600; font-size: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+            <span style="margin-right: 10px;">Offer ends in:</span>
+            <span>24:59:59:59</span>
           </div>
-          <div style="width: 502px; height: 823px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 32px; display: inline-flex">
-            <div style="align-self: stretch; height: 857px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-              <div style="width: 580px; height: 306px"><span style="color: var(--Colors-Red, #FF3B30); font-family: Poppins; font-size: 60px; font-style: normal; font-weight: 700; line-height: 120%; letter-spacing: -0.6px; text-transform: uppercase; word-wrap: break-word">The Wake-Up Call</span><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Poppins; font-size: 60px; font-style: normal; font-weight: 700; line-height: 120%; letter-spacing: -0.6px; text-transform: uppercase; word-wrap: break-word"> West Coast Families Are Finally Hearing</span></div>
-              <div style="width: 481px"><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Montserrat; font-size: 22px; font-style: normal; font-weight: 400; line-height: 150%; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">Living on the West Coast means living with earthquakes. In Japan, disaster kits are common household items. Here, many moms quietly plan </span><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Montserrat; font-size: 22px; font-style: italic; font-weight: 400; line-height: 150%; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">"figure it out later".<br></span><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Montserrat; font-size: 22px; font-style: normal; font-weight: 400; line-height: 150%; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">But experts like the Red Cross and FEMA warn that every household needs its own </span><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Montserrat; font-size: 22px; font-style: normal; font-weight: 700; line-height: 150%; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">72hours emergency kit</span><span style="color: var(--Color-Scheme-8-Text, #FFF); font-family: Montserrat; font-size: 22px; font-style: normal; font-weight: 400; line-height: 150%; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">. When the ground shakes, you won't have time to run to the store. You'll need safe water, ready-to-eat food, reliable light, warmth, and first aid already at the door. Keeping those critical supplies on hand gives you peace of mind that your family can manage on its own for at least the first three days after a disaster.</span></div>
-            </div>
-          </div>
+          
+          <!-- Close Button -->
+          <button onclick="closeBanner()" style="padding: 8px; background: transparent; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center;" aria-label="Close banner">
+            <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-    <div style="width: 1440px; height: 141px; position: relative; background: white; overflow: hidden">
-      <div style="width: 1630.50px; height: 104.01px; left: -134px; top: 0px; position: absolute; background: black; outline: 1px black solid; outline-offset: -0.50px"></div>
-    </div>
-    <div style="align-self: stretch; height: 951px; position: relative; overflow: hidden; "src="assess/background_risk.png">
+    <!-- Hero Section -->
+    <section style="align-self: stretch; height: 900px; position: relative; background: #000000; overflow: hidden; display: flex; align-items: center;">
+      <div class="container" style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; height: 100%;">
+        <!-- Text Content -->
+        <div style="width: 50%; padding-right: 40px;">
+          <h1 style="color: #FF3B30; font-family: 'Poppins', sans-serif; font-size: 54px; font-weight: 700; line-height: 1.2; text-transform: uppercase; margin-bottom: 24px;">
+            The Wake-Up Call
+            <span style="color: white; display: block;">West Coast Families Are Finally Hearing</span>
+          </h1>
+          <p style="color: white; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.6; margin-bottom: 32px;">
+            Living on the West Coast means living with earthquakes. In Japan, disaster kits are common household items. Here, many moms quietly plan <em style="font-style: italic;">"figure it out later"</em>.
+          </p>
+          <p style="color: white; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.6; margin-bottom: 32px;">
+            But experts like the Red Cross and FEMA warn that every household needs its own <strong style="font-weight: 700;">72hours emergency kit</strong>. When the ground shakes, you won't have time to run to the store. You'll need safe water, ready-to-eat food, reliable light, warmth, and first aid already at the door. Keeping those critical supplies on hand gives you peace of mind that your family can manage on its own for at least the first three days after a disaster.
+          </p>
+        </div>
+        <!-- Image Gallery -->
+        <div class="image-gallery-hover" style="width: 50%; position: relative;">
+          <div style="position: relative; height: 700px;">
+            <img class="center-img" style="width: 640px; height: 640px; position: absolute; top: 0; right: 0; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);" src="assess/1.jpg" alt="Emergency Kit">
+            <img class="left-img" style="width: 211px; height: 211px; position: absolute; bottom: 0; left: 0; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" src="assess/2.jpg" alt="Emergency Supplies">
+            <img class="right-img" style="width: 155px; height: 155px; position: absolute; bottom: 50px; right: 50px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" src="assess/3.jpg" alt="Emergency Water">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Wave Divider -->
+    <!-- <div class="wave-divider" style="margin: 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 141" preserveAspectRatio="none">
+        <path fill="#000000" d="M0,96L48,80C96,64,192,32,288,37.3C384,43,480,85,576,101.3C672,117,768,107,864,96C960,85,1056,75,1152,85.3C1248,96,1344,128,1392,144L1440,160L1440,0L0,0Z"></path>
+      </svg>
+    </div> -->
+    <!-- Know The Risk Section -->
+    <section style="align-self: stretch; padding: 80px 0 0 0; position: relative; overflow: hidden; background: #f8f9fa;">
+      <div style="align-self: stretch; height: 951px; position: relative; overflow: hidden; background-image: url(assess/background_risk.png); background-size: cover; background-position: center;">
       <div style="width: 1280px; max-width: 1280px; left: 80px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
         <div style="width: 1280px; height: 169px; position: relative; overflow: hidden">
           <div style="height: 105px; left: 13px; top: 32px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 151px; display: inline-flex">
@@ -115,152 +273,213 @@
           </div>
         </div>
         <div style="align-self: stretch; height: 782px; overflow: hidden; border-radius: 30px; flex-direction: column; justify-content: center; align-items: center; gap: 64px; display: flex">
-          <img style="width: 1280px; height: 784px" src="assess/hazard map_.jpg">
+          <img style="width: 100%; height: auto;" src="assess/hazard map_.jpg" alt="Hazard Map">
         </div>
       </div>
     </div>
-    <div style="align-self: stretch; padding-left: 64px; padding-right: 64px; padding-top: 112px; padding-bottom: 112px; background: var(--Color-Scheme-8-Background, #0A0702); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 80px; display: flex">
-      <div style="width: 100%; max-width: 1280px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 80px; display: flex">
-        <div style="width: 965px; height: 134px; max-width: 965px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: flex">
-          <div style="width: 956px; text-align: center"><span style="color: var(--Colors-Red, #FF3B30); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word">The 10‑Minute</span><span style="color: var(--Color-Scheme-8-Text, white); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word"> Reality Check</span></div>
-          <div style="text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 25px; font-family: Montserrat; font-weight: 400; line-height: 37.50px; word-wrap: break-word">Having these items ready can make all the difference in the first critical minutes after a quake</div>
+    </section>
+    <!-- The 10-Minute Reality Check Section -->
+    <section style="align-self: stretch; padding: 112px 0; background: #0A0702; overflow: hidden;">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div style="margin-bottom: 80px; max-width: 965px;">
+          <h2 class="section-title" style="color: #FF3B30; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 24px;">
+            The 10‑Minute <span style="color: white;">Reality Check</span>
+          </h2>
+          <p style="color: white; font-size: 25px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">
+            Having these items ready can make all the difference in the first critical minutes after a quake
+          </p>
+        </div>
+        
+        <!-- Essentials Grid -->
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 23px; width: 100%; max-width: 1280px;">
+          <!-- Water -->
+          <div class="card" style="background: #0A0702; border: 1px solid #333; padding: 20px; text-align: center;">
+            <div style="width: 200px; height: 200px; background: white; border-radius: 25px; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-1.jpg" alt="Water">
+            </div>
+            <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Water</h3>
+            <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Taps break fast <br> 1 gallon per person per day is essential.</p>
+          </div>
+          
+          <!-- Power & Light -->
+          <div class="card" style="background: #0A0702; border: 1px solid #333; padding: 20px; text-align: center;">
+            <div style="width: 200px; height: 200px; background: white; border-radius: 25px; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-2.png" alt="Power & Light">
+            </div>
+            <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Power & Light</h3>
+            <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Outages happen instantly. Hands-free light keeps you safe.</p>
+          </div>
+          
+          <!-- Communication -->
+          <div class="card" style="background: #0A0702; border: 1px solid #333; padding: 20px; text-align: center;">
+            <div style="width: 200px; height: 200px; background: white; border-radius: 25px; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-3.jpg" alt="Communication">
+            </div>
+            <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Communication</h3>
+            <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Phones jam. A crank radio delivers lifesaving updates.</p>
+          </div>
+          
+          <!-- Food & Energy -->
+          <div class="card" style="background: #0A0702; border: 1px solid #333; padding: 20px; text-align: center;">
+            <div style="width: 200px; height: 200px; background: white; border-radius: 25px; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-4.png" alt="Food & Energy">
+            </div>
+            <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Food & Energy</h3>
+            <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Stress burns calories. Ready-to-eat meals keep you moving.</p>
+          </div>
+          
+          <!-- Cold & Warmth -->
+          <div class="card" style="background: #0A0702; border: 1px solid #333; padding: 20px; text-align: center;">
+            <div style="width: 200px; height: 200px; background: white; border-radius: 25px; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-5.jpg" alt="Cold & Warmth">
+            </div>
+            <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Cold & Warmth</h3>
+            <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Nights get cold. One blanket or bag per person is critical.</p>
+          </div>
         </div>
       </div>
-      <div data-property-1="Default" style="width: 1280px; height: 351px; padding-left: 10px; padding-right: 10px; overflow: hidden; justify-content: center; align-items: center; gap: 23px; display: inline-flex">
-        <div style="flex: 1 1 0; height: 351px; position: relative">
-          <div data-property-1="Default" style="width: 200px; height: 200px; left: 8.80px; top: 0px; position: absolute; background: white; overflow: hidden; border-radius: 25px">
-            <img style="width: 343px; height: 229px; left: -19px; top: -23px; position: absolute" src="https://placehold.co/343x229">
-          </div>
-          <div style="width: 217.60px; height: 127px; left: 0px; top: 224px; position: absolute">
-            <div style="left: 76px; top: 0px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 30px; word-wrap: break-word">Water</div>
-            <div style="width: 217.60px; left: 0px; top: 46px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Taps break fast <br> 1 gallon per person per day is essential.</div>
-          </div>
-        </div>
-        <div style="flex: 1 1 0; height: 351px; position: relative">
-          <div data-property-1="Variant2" style="width: 200px; height: 200px; left: 8.80px; top: 0px; position: absolute; background: white; overflow: hidden; border-radius: 25px">
-            <img style="width: 343px; height: 210px; left: -114px; top: 0px; position: absolute" src="https://placehold.co/343x210">
-          </div>
-          <div style="width: 217.60px; height: 127px; left: 0px; top: 224px; position: absolute">
-            <div style="left: 34px; top: 0px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 30px; word-wrap: break-word">Power &amp; Light</div>
-            <div style="width: 217.60px; left: 0px; top: 46px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Outages happen instantly. Hands-free light keeps you safe.</div>
-          </div>
-        </div>
-        <div style="flex: 1 1 0; height: 351px; position: relative">
-          <div data-property-1="Variant3" style="width: 200px; height: 200px; left: 8.80px; top: 0px; position: absolute; background: white; overflow: hidden; border-radius: 25px">
-            <img style="width: 343px; height: 229px; left: -107px; top: -8px; position: absolute" src="https://placehold.co/343x229">
-          </div>
-          <div style="width: 217.60px; height: 127px; left: 0px; top: 224px; position: absolute">
-            <div style="left: 24px; top: 0px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 30px; word-wrap: break-word">Communication</div>
-            <div style="width: 217.60px; left: 0px; top: 46px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Phones jam. A crank radio delivers lifesaving updates.</div>
-          </div>
-        </div>
-        <div style="flex: 1 1 0; height: 351px; position: relative">
-          <div data-property-1="Variant4" style="width: 200px; height: 200px; left: 8.80px; top: 0px; position: absolute; background: white; overflow: hidden; border-radius: 25px">
-            <img style="width: 306px; height: 200px; left: -83px; top: 0px; position: absolute" src="https://placehold.co/306x200">
-          </div>
-          <div style="width: 217.60px; height: 127px; left: 0px; top: 224px; position: absolute">
-            <div style="left: 32px; top: 0px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 30px; word-wrap: break-word">Food &amp; Energy</div>
-            <div style="width: 217.60px; left: 0px; top: 46px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Stress burns calories. Ready-to-eat meals keep you moving.</div>
-          </div>
-        </div>
-        <div style="flex: 1 1 0; height: 351px; position: relative">
-          <div data-property-1="Variant5" style="width: 200px; height: 200px; left: 8.80px; top: 0px; position: absolute; background: white; overflow: hidden; border-radius: 25px">
-            <img style="width: 238px; height: 200px; left: -19px; top: 0px; position: absolute" src="https://placehold.co/238x200">
-          </div>
-          <div style="width: 217.60px; height: 127px; left: 0px; top: 224px; position: absolute">
-            <div style="left: 28px; top: 0px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 30px; word-wrap: break-word">Cold &amp; Warmth</div>
-            <div style="width: 217.60px; left: 0px; top: 46px; position: absolute; text-align: center; color: var(--Color-Scheme-8-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Nights get cold. One blanket or bag per person is critical.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="align-self: stretch; height: 793px; position: relative; background: var(--Backgrounds-Secondary, #F2F2F7); overflow: hidden">
-      <div style="width: 1449px; height: 718px; left: -26px; top: 24px; position: absolute">
-        <div style="width: 1119px; left: 192px; top: 86px; position: absolute; text-align: center"><span style="color: var(--Grays-Black, black); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word">Why </span><span style="color: var(--Colors-Red, #FF3B30); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word">72 Hours</span><span style="color: var(--Grays-Black, black); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word"> Is the Magic Number</span></div>
-        <img style="width: 346px; height: 154px; left: 578px; top: -91px; position: absolute" src="https://placehold.co/346x154">
-        <img style="width: 584px; height: 259px; left: 1043px; top: 867px; position: absolute; transform: rotate(-180deg); transform-origin: top left; opacity: 0.20" src="https://placehold.co/584x259">
-        <div data-property-1="Default" style="width: 4144px; height: 481px; left: -795px; top: 225px; position: absolute">
-          <div style="width: 976px; height: 352px; left: 2112px; top: 0px; position: absolute; background: var(--Backgrounds-Primary, white); border-radius: 40px">
-            <div style="left: 20px; top: 33px; position: absolute; justify-content: flex-start; align-items: center; gap: 36px; display: inline-flex">
-              <div style="width: 268.15px; height: 246.80px; transform: rotate(-5deg); transform-origin: top left; background: linear-gradient(180deg, #D73630 28%, #E64F20 100%); border-radius: 32px"></div>
-              <div style="width: 283.89px; height: 261.28px; transform: rotate(1deg); transform-origin: top left; border-radius: 32px; border: 8px black solid"></div>
-              <div style="width: 181px; height: 202px; text-align: center"><span style="color: white; font-size: 64px; font-family: Inter; font-weight: 700; line-height: 64px; word-wrap: break-word">Day <br></span><span style="color: white; font-size: 128px; font-family: Jolly Lodger; font-weight: 400; line-height: 128px; word-wrap: break-word">2</span></div>
-              <div style="width: 566px"><span style="color: #D1232A; font-size: 34px; font-family: SF Pro; font-weight: 400; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">48 Hours<br></span><span style="color: black; font-size: 34px; font-family: SF Pro; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">Emergency services will be overwhelmed. Families need to rely on their own resources.</span></div>
-            </div>
-          </div>
-          <div style="width: 976px; height: 352px; left: 1056px; top: 0px; position: absolute; background: var(--Backgrounds-Primary, white); border-radius: 40px">
-            <div style="left: 20px; top: 33px; position: absolute; justify-content: flex-start; align-items: center; gap: 36px; display: inline-flex">
-              <div style="width: 268.15px; height: 246.80px; transform: rotate(-5deg); transform-origin: top left; background: linear-gradient(180deg, #D73630 28%, #E64F20 100%); border-radius: 32px"></div>
-              <div style="width: 283.89px; height: 261.28px; transform: rotate(1deg); transform-origin: top left; border-radius: 32px; border: 8px black solid"></div>
-              <div style="width: 181px; height: 202px; text-align: center"><span style="color: white; font-size: 64px; font-family: Inter; font-weight: 700; line-height: 64px; word-wrap: break-word">Day <br></span><span style="color: white; font-size: 128px; font-family: Jolly Lodger; font-weight: 400; line-height: 128px; word-wrap: break-word">1</span></div>
-              <div style="width: 566px"><span style="color: #D1232A; font-size: 37px; font-family: Montserrat; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">First 24 Hours<br></span><span style="color: #D1232A; font-size: 34px; font-family: Montserrat; font-weight: 400; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word"><br></span><span style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">Shops may close, power could fail, and roads might be blocked. Prepare for the unexpected.</span></div>
-            </div>
-          </div>
-          <div style="width: 976px; height: 352px; left: 0px; top: 0px; position: absolute; background: var(--Backgrounds-Primary, white); border-radius: 40px">
-            <div style="left: 20px; top: 33px; position: absolute; justify-content: flex-start; align-items: center; gap: 36px; display: inline-flex">
-              <div style="width: 268.15px; height: 246.80px; transform: rotate(-5deg); transform-origin: top left; background: linear-gradient(180deg, #D73630 28%, #E64F20 100%); border-radius: 32px"></div>
-              <div style="width: 283.89px; height: 261.28px; transform: rotate(1deg); transform-origin: top left; border-radius: 32px; border: 8px black solid"></div>
-              <div style="width: 181px; height: 110px; text-align: center"><span style="color: white; font-size: 64px; font-family: Inter; font-weight: 700; line-height: 64px; word-wrap: break-word">Be </span><span style="color: white; font-size: 40px; font-family: Inter; font-weight: 700; line-height: 40px; word-wrap: break-word">Prepared</span></div>
-              <div style="width: 566px"><span style="color: #D1232A; font-size: 34px; font-family: SF Pro; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">Be Prepared<br></span><span style="color: black; font-size: 34px; font-family: SF Pro; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">Understanding these critical days can save lives. Don't wait—get ready now.</span></div>
-            </div>
-          </div>
-          <div style="width: 976px; height: 352px; left: 3168px; top: 0px; position: absolute; background: var(--Backgrounds-Primary, white); border-radius: 40px">
-            <div style="left: 20px; top: 33px; position: absolute; justify-content: flex-start; align-items: center; gap: 36px; display: inline-flex">
-              <div style="width: 268.15px; height: 246.80px; transform: rotate(-5deg); transform-origin: top left; background: linear-gradient(180deg, #D73630 28%, #E64F20 100%); border-radius: 32px"></div>
-              <div style="width: 283.89px; height: 261.28px; transform: rotate(1deg); transform-origin: top left; border-radius: 32px; border: 8px black solid"></div>
-              <div style="width: 181px; height: 202px; text-align: center"><span style="color: white; font-size: 64px; font-family: Inter; font-weight: 700; line-height: 64px; word-wrap: break-word">Day <br></span><span style="color: white; font-size: 128px; font-family: Jolly Lodger; font-weight: 400; line-height: 128px; word-wrap: break-word">3</span></div>
-              <div style="width: 566px"><span style="color: #D1232A; font-size: 34px; font-family: SF Pro; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">72 Hours<br></span><span style="color: black; font-size: 34px; font-family: SF Pro; font-weight: 700; line-height: 41px; letter-spacing: 0.40px; word-wrap: break-word">Shops may close, power could fail, and roads might be blocked. Prepare for the unexpected.</span></div>
-            </div>
-          </div>
-          <div style="width: 54px; height: 54px; left: 1477px; top: 427px; position: absolute; background: #D3232A; border-radius: 9999px"></div>
-          <div style="width: 54px; height: 54px; left: 1558px; top: 427px; position: absolute; background: #D3232A; border-radius: 9999px"></div>
-        </div>
-      </div>
-    </div>
-    <div style="align-self: stretch; height: 576px; position: relative; background: var(--Color-Scheme-5-Background, #D1232A); overflow: hidden">
-      <img style="width: 138px; height: 649px; left: -6px; top: -57px; position: absolute; opacity: 0.25" src="https://placehold.co/138x649">
-      <img style="width: 176.68px; height: 832px; left: 1445.68px; top: 713px; position: absolute; transform: rotate(180deg); transform-origin: top left; opacity: 0.25" src="https://placehold.co/177x832">
-      <div style="width: 1449px; height: 411px; left: 28px; top: 47px; position: absolute">
-        <div style="width: 1280px; height: 421px; padding: 64px; left: 66px; top: 0px; position: absolute; background: var(--Color-Scheme-5-Foreground, rgba(167, 28, 33, 0.20)); border-radius: 40px; outline: 1px var(--Color-Scheme-5-Border, rgba(255, 255, 255, 0.20)) solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-          <div style="width: 100%; max-width: 768px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 32px; display: flex">
-            <div style="width: 1106px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: flex">
-              <div style="align-self: stretch; text-align: center; justify-content: center; display: flex; flex-direction: column; color: var(--Color-Scheme-5-Text, white); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word">"Every household should be prepared to be self-sufficient for at least 72 hours."</div>
-              <div style="width: 894px; text-align: center; color: var(--Color-Scheme-5-Text, white); font-size: 22px; font-family: Montserrat; font-weight: 400; line-height: 33px; word-wrap: break-word">— Red Cross &amp; FEMA Emergency Guidelines<br>That's why experts call 72 hours the magic number. Your survival window depends on what you have ready before help arrives.</div>
-            </div>
-            <div style="justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-              <div data-alternate="True" data-icon-position="No icon" data-small="False" data-style="Primary" style="padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; background: var(--Color-White, white); border-radius: 100px; outline: 1px var(--Color-White, white) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">Learn More</div>
+    </section>
+    <!-- Why 72 Hours Section -->
+    <section style="align-self: stretch; padding: 100px 0; position: relative; background: #F2F2F7; overflow: hidden;">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title" style="color: black; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 80px;">
+          Why <span style="color: #FF3B30;">72 Hours</span> Is the Magic Number
+        </h2>
+        
+        <!-- Days Timeline -->
+        <div style="margin-bottom: 50px;">
+        
+        <!-- Slider Container -->
+        <div class="days-timeline-slider">
+          
+          <!-- Slider Wrapper -->
+          <div class="slider-wrapper">
+            <div class="slider-track">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="card">
+                  <img src="assess/Card0.png" alt="Day 1">
+                </div>
               </div>
-              <div data-alternate="True" data-icon-position="No icon" data-small="False" data-style="Secondary" style="padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; background: var(--Opacity-White-10, rgba(255, 255, 255, 0.10)); border-radius: 100px; outline: 1px var(--Opacity-Transparent, rgba(255, 255, 255, 0)) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Color-White, white); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">Sign Up</div>
+              
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="card">
+                  <img src="assess/Card1.png" alt="Day 2">
+                </div>
+              </div>
+              
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="card">
+                  <img src="assess/Card2.png" alt="Day 3">
+                </div>
+              </div>
+              
+              <!-- Slide 4 -->
+              <div class="slide">
+                <div class="card">
+                  <img src="assess/Card3.png" alt="Day 4">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div data-property-1="Default" style="width: 1280px; height: 420px; left: 84px; top: 18px; position: absolute">
-          <div style="width: 1280px; height: 420px; left: 0px; top: 0px; position: absolute; border-radius: 40px; outline: 1px black solid"></div>
-          <div style="width: 1721px; height: 1867.75px; left: 1501px; top: 1066.82px; position: absolute; transform: rotate(180deg); transform-origin: top left; background: conic-gradient(from 180deg at 50.00% 50.00%, white 0deg, #F4767B 267deg, white 353deg); border-radius: 9999px"></div>
-        </div>
-      </div>
-    </div>
-    <div style="align-self: stretch; padding-top: 32px; padding-bottom: 50px; padding-left: 64px; padding-right: 64px; background: var(--Color-Scheme-4-Background, white); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 26px; display: flex">
-      <div style="width: 1203px; height: 120px; position: relative">
-        <img style="width: 214px; height: 62px; left: -0.50px; top: 33px; position: absolute" src="https://placehold.co/214x62">
-        <img style="width: 146px; height: 25px; left: 999.50px; top: 100px; position: absolute" src="https://placehold.co/146x25">
-        <img style="width: 146px; height: 29px; left: 601.50px; top: 38px; position: absolute" src="https://placehold.co/146x29">
-      </div>
-      <div style="width: 100%; max-width: 1280px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 80px; display: flex">
-        <div style="width: 100%; max-width: 768px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-          <div style="justify-content: flex-start; align-items: center; display: inline-flex">
-            <div style="text-align: center; color: var(--Color-Scheme-4-Text, #0A0702); font-size: 30px; font-family: Poppins; font-weight: 600; line-height: 45px; word-wrap: break-word">What Works Best For You?</div>
-          </div>
-          <div style="width: 966px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: flex">
-            <div style="align-self: stretch; text-align: center"><span style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word"> </span><span style="color: var(--Colors-Red, #FF3B30); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word">72hours earthquake Kit </span><span style="color: var(--Color-Scheme-4-Text, #0A0702); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 78px; word-wrap: break-word">vs. Pre-made Emergency Kits </span></div>
-            <div style="align-self: stretch; text-align: center; color: var(--Color-Scheme-4-Text, #0A0702); font-size: 25px; font-family: Montserrat; font-weight: 400; line-height: 37.50px; word-wrap: break-word">Does Your Emergency Kit Have All The Essentials FEMA Recommends?</div>
+          
+          <!-- Navigation Buttons -->
+          <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+            <button class="slider-nav prev-btn" style="background: #D1232A; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">&#8249;</button>
+            <button class="slider-nav next-btn" style="background: #D1232A; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">&#8250;</button>
           </div>
         </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const sliderTrack = document.querySelector('.slider-track');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+            
+            // Update slider position to show partial views
+            function updateSlider() {
+              const slideWidth = 976;
+              const gap = 20;
+              // Position the slider to show current slide centered with partial views of adjacent slides
+              const containerWidth = document.querySelector('.days-timeline-slider').offsetWidth;
+              const offset = (containerWidth - slideWidth) / 2;
+              sliderTrack.style.transform = `translateX(${-currentIndex * (slideWidth + gap) + offset}px)`;
+            }
+            
+            function nextSlide() {
+              currentIndex = (currentIndex + 1) % slides.length;
+              updateSlider();
+            }
+            
+            function prevSlide() {
+              currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+              updateSlider();
+            }
+            
+            // Event listeners for navigation buttons
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+            
+            // Initialize slider
+            updateSlider();
+            
+            // Handle window resize
+            window.addEventListener('resize', updateSlider);
+          });
+        </script>
+       
       </div>
-    </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section style="align-self: stretch; padding: 100px 0; position: relative; background: #D1232A; overflow: hidden;">
+      <div class="container" style="position: relative; z-index: 2; text-align: center;">
+        <div class="card" style="background: rgba(167, 28, 33, 0.20); border: 1px solid rgba(255, 255, 255, 0.20); border-radius: 40px; padding: 60px 40px; max-width: 1000px; margin: 0 auto;">
+          <blockquote style="margin-bottom: 30px;">
+            <p style="color: white; font-size: 40px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 30px;">
+              "Every household should be prepared to be self-sufficient for at least 72 hours."
+            </p>
+            <cite style="color: white; font-size: 22px; font-family: Montserrat; font-weight: 400; line-height: 1.5; display: block;">
+              — Red Cross & FEMA Emergency Guidelines<br>
+              That's why experts call 72 hours the magic number. Your survival window depends on what you have ready before help arrives.
+            </cite>
+          </blockquote>
+          
+          <div style="display: flex; justify-content: center; gap: 16px; margin-top: 30px;">
+            <a href="#" class="btn-primary" style="text-decoration: none;">
+              Learn More
+            </a>
+            <a href="#" class="btn-secondary" style="background: rgba(255, 255, 255, 0.10); color: white; border: 1px solid transparent; text-decoration: none;">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Decorative Elements -->
+      <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);"></div>
+      <div style="position: absolute; bottom: -50px; right: -50px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);"></div>
+    </section>
+    <!-- What Works Best For You Section -->
+    <section style="align-self: stretch; padding: 80px 0 50px; background: white; overflow: hidden;">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div style="margin-bottom: 60px; max-width: 966px;">
+          <h2 class="section-title" style="color: #0A0702; font-size: 30px; font-family: Poppins; font-weight: 600; line-height: 1.5; margin-bottom: 20px;">What Works Best For You?</h2>
+          <h1 style="color: #0A0702; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 24px;">
+            <span style="color: #FF3B30;">72hours earthquake Kit</span> vs. Pre-made Emergency Kits
+          </h1>
+          <p style="color: #0A0702; font-size: 25px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">
+            Does Your Emergency Kit Have All The Essentials FEMA Recommends?
+          </p>
+        </div>
+      </div>
+    </section>
     <div data-property-1="Default" style="width: 1409px; height: 990px; position: relative; background: white">
       <img style="width: 679px; height: 990px; left: 0px; top: 0px; position: absolute" src="https://placehold.co/679x990">
       <div style="width: 581px; height: 901px; left: 754px; top: 35px; position: absolute; background: white; box-shadow: 0px 0px 36.900001525878906px 10px rgba(255, 0, 0, 0.25)"></div>
@@ -324,122 +543,91 @@
         </div>
       </div>
     </div>
-    <div style="align-self: stretch; padding-left: 64px; padding-right: 64px; padding-top: 80px; padding-bottom: 80px; background: var(--Color-Scheme-1-Background, #221F1B); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 80px; display: flex">
-      <div style="width: 100%; max-width: 1280px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 80px; display: flex">
-        <div style="align-self: stretch; height: 248px; justify-content: flex-start; align-items: flex-start; gap: 128px; display: inline-flex">
-          <div style="flex: 1 1 0; justify-content: flex-start; align-items: flex-start; gap: 40px; display: flex">
-            <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-              <img data-alternate="True" style="width: 84px; height: 44px; position: relative" src="https://placehold.co/84x44">
+    <!-- Footer -->
+    <footer style="align-self: stretch; padding: 80px 0 40px; background: #221F1B; overflow: hidden;">
+      <div class="container">
+        <!-- Footer Content -->
+        <div style="margin-bottom: 60px;">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 60px;">
+            <!-- Logo and Description -->
+            <div style="grid-column: span 1;">
+              <img data-alternate="True" style="width: 84px; height: 44px; margin-bottom: 20px;" src="https://placehold.co/84x44" alt="72 Hours Logo">
+              <p style="color: white; font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.6;">
+                Preparing families for emergencies with comprehensive 72-hour emergency kits.
+              </p>
             </div>
-            <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 27px; word-wrap: break-word">Quick Links</div>
-              <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">About Us</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Contact Us</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Support</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Blog</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Careers</div>
-                </div>
-              </div>
+            
+            <!-- Quick Links -->
+            <div>
+              <h3 style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 1.5; margin-bottom: 20px;">Quick Links</h3>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Contact Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Support</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Blog</a></li>
+                <li><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Careers</a></li>
+              </ul>
             </div>
-            <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 27px; word-wrap: break-word">Resources</div>
-              <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">FAQs</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Guides</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Webinars</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Case Studies</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Events</div>
-                </div>
-              </div>
+            
+            <!-- Resources -->
+            <div>
+              <h3 style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 1.5; margin-bottom: 20px;">Resources</h3>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">FAQs</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Guides</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Webinars</a></li>
+                <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Case Studies</a></li>
+                <li><a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: none; transition: color 0.3s ease;">Events</a></li>
+              </ul>
             </div>
-            <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 27px; word-wrap: break-word">Stay Connected</div>
-              <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Link Eleven</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Link Twelve</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Link Thirteen</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Link Fourteen</div>
-                </div>
-                <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="flex: 1 1 0; color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">Link Fifteen</div>
-                </div>
+            
+            <!-- Newsletter -->
+            <div>
+              <h3 style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 1.5; margin-bottom: 20px;">Join</h3>
+              <p style="color: white; font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.6; margin-bottom: 20px;">
+                Subscribe to our newsletter for the latest updates on features and releases.
+              </p>
+              <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="email" placeholder="Your email here" style="flex: 1; padding: 12px; background: rgba(255, 255, 255, 0.10); border-radius: 12px; border: 1px solid transparent; color: rgba(255, 255, 255, 0.60); font-family: Montserrat; font-size: 16px;">
+                <button style="padding: 12px 24px; background: rgba(255, 255, 255, 0.10); border-radius: 100px; border: 1px solid transparent; color: white; font-family: Montserrat; font-weight: 500; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">Subscribe</button>
               </div>
+              <p style="color: rgba(255, 255, 255, 0.7); font-size: 12px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">
+                By subscribing, you consent to our Privacy Policy and receiving updates.
+              </p>
             </div>
           </div>
-          <div style="width: 400px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 600; line-height: 27px; word-wrap: break-word">Join</div>
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Subscribe to our newsletter for the latest updates on features and releases.</div>
+          
+          <!-- Divider -->
+          <div style="height: 1px; background: rgba(255, 255, 255, 0.20); margin-bottom: 30px;"></div>
+          
+          <!-- Bottom Bar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+              <div style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">© 2024 72 Hours. All rights reserved.</div>
+              <a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: underline; transition: color 0.3s ease;">Privacy Policy</a>
+              <a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: underline; transition: color 0.3s ease;">Terms of Service</a>
+              <a href="#" style="color: rgba(255, 255, 255, 0.8); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.5; text-decoration: underline; transition: color 0.3s ease;">Cookie Settings</a>
             </div>
-            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
-              <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-                <div data-alternate="True" data-type="Default" style="flex: 1 1 0; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: var(--Opacity-White-10, rgba(255, 255, 255, 0.10)); border-radius: 12px; outline: 1px var(--Opacity-Transparent, rgba(255, 255, 255, 0)) solid; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                  <div style="flex: 1 1 0; color: var(--Opacity-White-60, rgba(255, 255, 255, 0.60)); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; word-wrap: break-word">Your email here</div>
-                </div>
-                <div data-alternate="True" data-icon-position="No icon" data-small="False" data-style="Secondary" style="padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; background: var(--Opacity-White-10, rgba(255, 255, 255, 0.10)); border-radius: 100px; outline: 1px var(--Opacity-Transparent, rgba(255, 255, 255, 0)) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-                  <div style="color: var(--Color-White, white); font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 27px; word-wrap: break-word">Subscribe</div>
-                </div>
-              </div>
-              <div style="align-self: stretch; color: var(--Color-Scheme-1-Text, white); font-size: 12px; font-family: Montserrat; font-weight: 400; line-height: 18px; word-wrap: break-word">By subscribing, you consent to our Privacy Policy and receiving updates.</div>
-            </div>
-          </div>
-        </div>
-        <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
-          <div style="align-self: stretch; height: 0px; outline: 1px var(--Color-Scheme-1-Border, rgba(255, 255, 255, 0.20)) solid; outline-offset: -0.50px"></div>
-          <div style="align-self: stretch; justify-content: space-between; align-items: flex-start; display: inline-flex">
-            <div style="justify-content: flex-start; align-items: center; gap: 24px; display: flex">
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 24px; word-wrap: break-word">© 2024 Relume. All rights reserved.</div>
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; text-decoration: underline; line-height: 24px; word-wrap: break-word">Privacy Policy</div>
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; text-decoration: underline; line-height: 24px; word-wrap: break-word">Terms of Service</div>
-              <div style="color: var(--Color-Scheme-1-Text, white); font-size: 16px; font-family: Montserrat; font-weight: 400; text-decoration: underline; line-height: 24px; word-wrap: break-word">Cookie Settings</div>
-            </div>
-            <div style="justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
-              <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                <div style="width: 20px; height: 20px; left: 2px; top: 2.24px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-              </div>
-              <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                <div style="width: 18px; height: 18px; left: 3px; top: 3.24px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-              </div>
-              <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                <div style="width: 18px; height: 16px; left: 3px; top: 4.24px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-              </div>
-              <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                <div style="width: 18px; height: 18px; left: 3px; top: 3.24px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-              </div>
-              <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                <div style="width: 20.01px; height: 14.01px; left: 1.99px; top: 5px; position: absolute; background: var(--Color-Scheme-1-Text, white)"></div>
-              </div>
+            
+            <!-- Social Media -->
+            <div style="display: flex; gap: 15px;">
+              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
+                <div style="width: 20px; height: 20px; background: white;"></div>
+              </a>
+              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
+                <div style="width: 18px; height: 18px; background: white;"></div>
+              </a>
+              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
+                <div style="width: 18px; height: 16px; background: white;"></div>
+              </a>
+              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
+                <div style="width: 18px; height: 18px; background: white;"></div>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   </div>
   
   <script>
@@ -448,5 +636,16 @@
       const banner = document.getElementById('urgency-banner');
       banner.style.display = 'none';
     }
+    
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
-</body></html>
+</body>
+</html>
