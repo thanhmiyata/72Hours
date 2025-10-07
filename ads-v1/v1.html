@@ -165,36 +165,35 @@
 <body>
   <div style="width: 100%; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
     <!-- Header -->
-    <header style="align-self: stretch; background: white; overflow: hidden; border-bottom: 1px rgba(10, 7, 2, 0.15) solid; flex-direction: column; justify-content: flex-start; align-items: center; display: flex; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-      <div class="container" style="align-self: stretch; height: 72px; padding-left: 20px; padding-right: 20px; overflow: hidden; justify-content: space-between; align-items: center; display: flex">
-        <div style="flex: 1 1 0; justify-content: space-between; align-items: center; display: flex">
-          <div style="justify-content: flex-start; align-items: center; gap: 24px; display: flex">
-            <!-- Logo -->
-            <div data-alternate="False" style="width: 84px; height: 36px; position: relative; overflow: hidden">
-              <img style="width: 100%; height: 100%; object-fit: contain;" src="assess/logo.png" alt="72 Hours Logo">
-            </div>
-            <!-- Navigation -->
-            <nav style="overflow: hidden; justify-content: flex-start; align-items: center; gap: 32px; display: flex">
-              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Home Page</a>
-              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">About Us</a>
-              <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Services</a>
-              <div style="justify-content: center; align-items: center; gap: 4px; display: flex; cursor: pointer;">
-                <div style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px;">Resources</div>
-                <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-                  <div style="width: 12.59px; height: 7.13px; left: 5.70px; top: 8.70px; position: absolute; background: #0A0702"></div>
-                </div>
+    <header style="align-self: stretch; background: white; overflow: hidden; border-bottom: 1px rgba(10, 7, 2, 0.15) solid; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+      <div class="container" style="height: 72px; padding-left: 20px; padding-right: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <!-- Left: Logo + Navigation -->
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 24px;">
+          <!-- Logo -->
+          <div data-alternate="False" style="width: 84px; height: 36px; position: relative; overflow: hidden;">
+            <img style="width: 100%; height: 100%; object-fit: contain;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/logo.avif?v=1759772678" alt="72 Hours Logo">
+          </div>
+          <!-- Navigation -->
+          <nav style="display: flex; justify-content: flex-start; align-items: center; gap: 32px;">
+            <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Home Page</a>
+            <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">About Us</a>
+            <a href="#" style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px; text-decoration: none; transition: color 0.3s ease;">Services</a>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 4px; cursor: pointer;">
+              <div style="color: #0A0702; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 27px;">Resources</div>
+              <div style="width: 24px; height: 24px; position: relative; overflow: hidden;">
+                <div style="width: 12.59px; height: 7.13px; left: 5.70px; top: 8.70px; position: absolute; background: #0A0702;"></div>
               </div>
-            </nav>
-          </div>
-          <!-- Buttons -->
-          <div style="justify-content: center; align-items: center; gap: 16px; display: flex">
-            <a href="#" class="btn-secondary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
-              Join
-            </a>
-            <a href="#" class="btn-primary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
-              Learn
-            </a>
-          </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Right: Buttons -->
+        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
+          <a href="#" class="btn-secondary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+            Join
+          </a>
+          <a href="#" class="btn-primary" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+            Learn
+          </a>
         </div>
       </div>
     </header>
@@ -216,7 +215,7 @@
         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
           <div data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Primary" style="padding: 10px 25px; background: white; color: #DC2627; border-radius: 100px; font-family: Montserrat; font-weight: 600; font-size: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
             <span style="margin-right: 10px;">Offer ends in:</span>
-            <span>24:59:59:59</span>
+            <span id="countdown-timer">24:00:00</span>
           </div>
           
           <!-- Close Button -->
@@ -229,27 +228,31 @@
       </div>
     </div>
     <!-- Hero Section -->
-    <section style="align-self: stretch; height: 900px; position: relative; background: #000000; overflow: hidden; display: flex; align-items: center;">
-      <div class="container" style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-        <!-- Text Content -->
-        <div style="width: 50%; padding-right: 40px;">
-          <h1 style="color: #FF3B30; font-family: 'Poppins', sans-serif; font-size: 54px; font-weight: 700; line-height: 1.2; text-transform: uppercase; margin-bottom: 24px;">
-            The Wake-Up Call
-            <span style="color: white; display: block;">West Coast Families Are Finally Hearing</span>
-          </h1>
-          <p style="color: white; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.6; margin-bottom: 32px;">
-            Living on the West Coast means living with earthquakes. In Japan, disaster kits are common household items. Here, many moms quietly plan <em style="font-style: italic;">"figure it out later"</em>.
-          </p>
-          <p style="color: white; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.6; margin-bottom: 32px;">
-            But experts like the Red Cross and FEMA warn that every household needs its own <strong style="font-weight: 700;">72hours emergency kit</strong>. When the ground shakes, you won't have time to run to the store. You'll need safe water, ready-to-eat food, reliable light, warmth, and first aid already at the door. Keeping those critical supplies on hand gives you peace of mind that your family can manage on its own for at least the first three days after a disaster.
-          </p>
-        </div>
-        <!-- Image Gallery -->
-        <div class="image-gallery-hover" style="width: 50%; position: relative;">
-          <div style="position: relative; height: 700px;">
-            <img class="center-img" style="width: 640px; height: 640px; position: absolute; top: 0; right: 0; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);" src="assess/1.jpg" alt="Emergency Kit">
-            <img class="left-img" style="width: 211px; height: 211px; position: absolute; bottom: 0; left: 0; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" src="assess/2.jpg" alt="Emergency Supplies">
-            <img class="right-img" style="width: 155px; height: 155px; position: absolute; bottom: 50px; right: 50px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" src="assess/3.jpg" alt="Emergency Water">
+    <section style="align-self: stretch; height: 935px; position: relative; background: #000000; overflow: hidden;">
+      <div style="width: 1280px; height: 823px; position: absolute; left: 80px; top: 112px;">
+        <div style="width: 1280px; height: 759px; position: absolute; left: 0; top: 0;">
+          <!-- Image Gallery Component -->
+          <div class="image-gallery-hover" style="width: 765px; height: 758px; position: absolute; left: 604px; top: 25px;">
+            <img class="center-img" style="width: 595px; height: 595px; position: absolute; left: 48.14px; top: -1.13px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/1_8dacca2e-e944-4fed-836b-7115afb3e8c5.jpg?v=1759772680" alt="Emergency Kit">
+            <img class="left-img" style="width: 196px; height: 196px; position: absolute; left: 15.81px; top: 517px; transform: rotate(1deg); transform-origin: top left; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2_8d897ab5-48dc-41a6-881d-3df4b2e88d91.jpg?v=1759772679" alt="Emergency Supplies">
+            <img class="right-img" style="width: 144px; height: 144px; position: absolute; left: 550.26px; top: 557.74px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/3_d99a0dd8-6e64-4fa7-a854-cd5208231703.jpg?v=1759772679" alt="Emergency Water">
+          </div>
+          
+          <!-- Text Content Column -->
+          <div style="width: 502px; height: 823px; position: absolute; left: 0; top: 0; display: inline-flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 32px;">
+            <div style="align-self: stretch; height: 857px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px;">
+              <h1 style="width: 580px; height: 320px; justify-content: flex-start;">
+                <span style="color: #FF3B30; font-size: 54px; font-family: 'Poppins', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 72px;">The Wake-Up Call</span>
+                <span style="color: white; font-size: 54px; font-family: 'Poppins', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 72px;"> West Coast Families Are Finally Hearing</span>
+              </h1>
+              <div style="width: 481px; justify-content: flex-start;">
+                <span style="color: white; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 32px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Living on the West Coast means living with earthquakes. In Japan, disaster kits are common household items. Here, many moms quietly plan </span>
+                <span style="color: white; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 32px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">"figure it out later".<br/></span>
+                <span style="color: white; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 32px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">But experts like the Red Cross and FEMA warn that every household needs its own </span>
+                <span style="color: white; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 32px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">72hours emergency kit</span>
+                <span style="color: white; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 32px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">. When the ground shakes, you won't have time to run to the store. You'll need safe water, ready-to-eat food, reliable light, warmth, and first aid already at the door. Keeping those critical supplies on hand gives you peace of mind that your family can manage on its own for at least the first three days after a disaster.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -261,24 +264,24 @@
       </svg>
     </div> -->
     <!-- Know The Risk Section -->
-    <section style="align-self: stretch; padding: 80px 0 0 0; position: relative; overflow: hidden; background: #f8f9fa;">
-      <div style="align-self: stretch; height: 951px; position: relative; overflow: hidden; background-image: url(assess/background_risk.png); background-size: cover; background-position: center;">
+    <section style="align-self: stretch; padding: 0; position: relative; z-index: 1; background: #f8f9fa;">
+      <div style="width: 1440px; height: 951px; margin: 0 auto; position: relative; overflow: hidden; background-image: url(https://cdn.shopify.com/s/files/1/0077/1092/files/background_risk.png?v=1759772678); background-size: cover; background-position: center;">
       <div style="width: 1280px; max-width: 1280px; left: 80px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
         <div style="width: 1280px; height: 169px; position: relative; overflow: hidden">
-          <div style="height: 105px; left: 13px; top: 32px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 151px; display: inline-flex">
+          <div style="height: 105px; left: 13px; top: 23px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 151px; display: inline-flex">
             <div style="width: 508px"><span style="color: black; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word">Know </span><span style="color: var(--Colors-Red, #FF3B30); font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word">The RISK</span><span style="color: black; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 60px; word-wrap: break-word"> </span></div>
             <div style="width: 599px; height: 89px; text-align: right; justify-content: center; display: flex; flex-direction: column; color: var(--Labels-Primary, black); font-size: 20px; font-family: Montserrat; font-weight: 400; line-height: 30px; word-wrap: break-word">Some emergencies are seasonal, others can strike without warning. From earthquakes on the West Coast to ice storms in the East, every region of Canada has unique risks. Knowing your zone helps you prepare the right way.</div>
           </div>
         </div>
-        <div style="align-self: stretch; height: 782px; overflow: hidden; border-radius: 30px; flex-direction: column; justify-content: center; align-items: center; gap: 64px; display: flex">
-          <img style="width: 100%; height: auto;" src="assess/hazard map_.jpg" alt="Hazard Map">
+        <div style="align-self: stretch; overflow: hidden; border-radius: 30px; display: flex; align-items: flex-end;">
+          <img style="width: 1280px; height: 784px; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/hazard_map.jpg?v=1759772679" alt="Hazard Map">
         </div>
       </div>
     </div>
     </section>
     <!-- The 10-Minute Reality Check Section -->
-    <section style="align-self: stretch; padding: 112px 0; background: #0A0702; overflow: hidden;">
-      <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <section style="width: 1440px; height: 789px; margin: 0 auto; padding: 112px 80px; background: #0A0702; overflow: hidden; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 1280px;">
         <div style="margin-bottom: 80px; max-width: 965px;">
           <h2 class="section-title" style="color: #FF3B30; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 24px;">
             The 10‑Minute <span style="color: white;">Reality Check</span>
@@ -293,7 +296,7 @@
           <!-- Water -->
           <div style="width: 233.6px; height: 351px; background: #0A0702; padding: 20px; text-align: center; display: flex; flex-direction: column;">
             <div style="width: 100%; flex: 1; background: white; border-radius: 25px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-1.jpg" alt="Water">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2-1.jpg?v=1759772679" alt="Water">
             </div>
             <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Water</h3>
             <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Taps break fast <br> 1 gallon per person per day is essential.</p>
@@ -302,7 +305,7 @@
           <!-- Power & Light -->
           <div style="width: 233.6px; height: 351px; background: #0A0702; padding: 20px; text-align: center; display: flex; flex-direction: column;">
             <div style="width: 100%; flex: 1; background: white; border-radius: 25px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-2.png" alt="Power & Light">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2-2.png?v=1759772679" alt="Power & Light">
             </div>
             <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Power & Light</h3>
             <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Outages happen instantly. Hands-free light keeps you safe.</p>
@@ -311,7 +314,7 @@
           <!-- Communication -->
           <div style="width: 233.6px; height: 351px; background: #0A0702; padding: 20px; text-align: center; display: flex; flex-direction: column;">
             <div style="width: 100%; flex: 1; background: white; border-radius: 25px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-3.jpg" alt="Communication">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2-3.jpg?v=1759772679" alt="Communication">
             </div>
             <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Communication</h3>
             <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Phones jam. A crank radio delivers lifesaving updates.</p>
@@ -320,7 +323,7 @@
           <!-- Food & Energy -->
           <div style="width: 233.6px; height: 351px; background: #0A0702; padding: 20px; text-align: center; display: flex; flex-direction: column;">
             <div style="width: 100%; flex: 1; background: white; border-radius: 25px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-4.png" alt="Food & Energy">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2-4.png?v=1759772679" alt="Food & Energy">
             </div>
             <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Food & Energy</h3>
             <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Stress burns calories. Ready-to-eat meals keep you moving.</p>
@@ -329,7 +332,7 @@
           <!-- Cold & Warmth -->
           <div style="width: 233.6px; height: 351px; background: #0A0702; padding: 20px; text-align: center; display: flex; flex-direction: column;">
             <div style="width: 100%; flex: 1; background: white; border-radius: 25px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img style="width: 100%; height: 100%; object-fit: cover;" src="assess/2-5.jpg" alt="Cold & Warmth">
+              <img style="width: 100%; height: 100%; object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2-5.jpg?v=1759772679" alt="Cold & Warmth">
             </div>
             <h3 style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 700; line-height: 1.5; margin-bottom: 10px;">Cold & Warmth</h3>
             <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.5;">Nights get cold. One blanket or bag per person is critical.</p>
@@ -338,8 +341,8 @@
       </div>
     </section>
     <!-- Why 72 Hours Section -->
-    <section style="align-self: stretch; padding: 100px 0 0 0; position: relative; background: #F2F2F7; overflow: hidden;">
-      <div class="container" style="text-align: center;">
+    <section style="width: 1440px; height: 793px; margin: 0 auto; padding: 100px 80px 0 80px; position: relative; background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/Container.png?v=1759857401'); background-size: cover; background-position: center; overflow: hidden;">
+      <div style="text-align: center;">
         <h2 class="section-title" style="color: black; font-size: 60px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.3; margin-bottom: 80px;">
           Why <span style="color: #FF3B30;">72 Hours</span> Is the Magic Number
         </h2>
@@ -351,32 +354,32 @@
           <div class="timeline-slider-track" style="display: flex; transition: transform 0.5s ease; gap: 30px;">
             <!-- Clone last slide for infinite loop -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card3.png" alt="Day 4" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card3.png?v=1759772678" alt="Day 4" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
             
             <!-- Slide 0 -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card0.png" alt="Day 1" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card0.png?v=1759772678" alt="Day 1" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
             
             <!-- Slide 1 -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card1.png" alt="Day 2" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card1.png?v=1759772678" alt="Day 2" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
             
             <!-- Slide 2 -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card2.png" alt="Day 3" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card2.png?v=1759772678" alt="Day 3" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
             
             <!-- Slide 3 -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card3.png" alt="Day 4" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card3.png?v=1759772678" alt="Day 4" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
             
             <!-- Clone first slide for infinite loop -->
             <div class="timeline-slide" style="flex-shrink: 0; width: calc(100% - 300px); max-width: 976px; display: flex; justify-content: center; align-items: center;">
-              <img src="assess/Card0.png" alt="Day 1" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Card0.png?v=1759772678" alt="Day 1" style="width: 100%; height: auto; border-radius: 30px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
             </div>
           </div>
         </div>
@@ -469,85 +472,108 @@
       </script>
     </section>
     <!-- Testimonial Section -->
-    <section style="align-self: stretch; padding: 100px 0; position: relative; background: #D1232A; overflow: hidden;">
+    <section style="align-self: stretch; height: 576px; position: relative; background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/testimonial.png?v=1759853129'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; display: flex; align-items: center; justify-content: center;">
       <style>
-        @keyframes borderGlow {
+        @keyframes moveBorder {
           0% {
-            stroke-dashoffset: 1000;
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
           }
           100% {
-            stroke-dashoffset: 0;
+            background-position: 0% 50%;
           }
         }
         
-        .testimonial-box {
+        .testimonial-container {
+          width: 1440px;
+          height: 576px;
           position: relative;
-          max-width: 1400px;
           margin: 0 auto;
         }
         
-        .outer-border {
+        .frame-1 {
           position: absolute;
-          top: -10px;
-          left: -10px;
-          right: -10px;
-          bottom: -10px;
-          border: 2px solid rgba(255, 255, 255, 0.3);
+          left: 66px;
+          top: 78px;
+          width: 1280px;
+          height: 420px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
           border-radius: 50px;
+        }
+        
+        .frame-2 {
+          position: absolute;
+          left: 84px;
+          top: 96px;
+          width: 1280px;
+          height: 420px;
+          border-radius: 50px;
+          background: transparent;
+        }
+        
+        .frame-2::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 50px;
+          padding: 2px;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.3) 25%,
+            rgba(255, 255, 255, 0.9) 50%,
+            rgba(255, 255, 255, 0.3) 75%,
+            rgba(255, 255, 255, 0.9) 100%
+          );
+          background-size: 300% 100%;
+          animation: moveBorder 3s linear infinite;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: exclude;
           pointer-events: none;
         }
         
-        .outer-border svg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        
-        .outer-border svg rect {
-          fill: none;
-          stroke: rgba(255, 255, 255, 0.8);
-          stroke-width: 2;
-          stroke-dasharray: 20 80;
-          animation: borderGlow 3s linear infinite;
-        }
-        
-        .inner-content {
+        .frame-2-content {
           position: relative;
-          background: rgba(167, 28, 33, 0.20);
-          border: 1px solid rgba(255, 255, 255, 0.20);
-          border-radius: 40px;
-          padding: 60px 80px;
           z-index: 1;
+          padding: 60px 80px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
         }
       </style>
       
-      <div class="container" style="position: relative; z-index: 2;">
-        <div class="testimonial-box">
-          <!-- Outer border with animation -->
-          <div class="outer-border">
-            <svg>
-              <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="50" ry="50"/>
-            </svg>
-          </div>
-          
-          <!-- Inner content -->
-          <div class="inner-content">
-            <div style="text-align: center;">
-              <h2 style="color: white; font-size: 48px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.2; margin-bottom: 30px;">
-                "Every household should be prepared to be self-sufficient for at least 72 hours."
+      <div class="testimonial-container">
+        <!-- Frame 1: Static border at x=66, y=78 -->
+        <div class="frame-1"></div>
+        
+        <!-- Frame 2: Animated gradient border with content at x=84, y=96 -->
+        <div class="frame-2">
+          <div class="frame-2-content">
+            <div>
+              <h2 style="color: white; font-size: 56px; font-family: Poppins; font-weight: 700; text-transform: uppercase; line-height: 1.1; margin-bottom: 24px; max-width: 1100px;">
+                "EVERY HOUSEHOLD SHOULD BE PREPARED TO BE SELF-SUFFICIENT FOR AT LEAST 72 HOURS."
               </h2>
-              <p style="color: white; font-size: 20px; font-family: Montserrat; font-weight: 400; line-height: 1.6; margin-bottom: 40px;">
-                — Red Cross & FEMA Emergency Guidelines<br>
-                That's why experts call 72 hours the magic number. Your survival window depends on what you have ready before help arrives.
+              <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.6; margin-bottom: 8px;">
+                — Red Cross & FEMA Emergency Guidelines
+              </p>
+              <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.6; ">
+                That's why experts call 72 hours the magic number. Your survival window depends
+              </p>
+               <p style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 1.6; margin-bottom: 32px;">
+                 on what you have ready before help arrives.
               </p>
               
               <div style="display: flex; justify-content: center; gap: 16px;">
-                <a href="#" style="background: white; color: #0A0702; border-radius: 100px; padding: 14px 32px; font-weight: 600; font-size: 18px; font-family: Montserrat; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
+                <a href="#" style="background: white; color: #0A0702; border-radius: 100px; padding: 12px 28px; font-weight: 600; font-size: 16px; font-family: Montserrat; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
                   Learn More
                 </a>
-                <a href="#" style="background: rgba(255, 255, 255, 0.10); color: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 100px; padding: 14px 32px; font-weight: 600; font-size: 18px; font-family: Montserrat; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
+                <a href="#" style="background: transparent; color: white; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 100px; padding: 12px 28px; font-weight: 600; font-size: 16px; font-family: Montserrat; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
                   Sign Up
                 </a>
               </div>
@@ -555,14 +581,13 @@
           </div>
         </div>
       </div>
-      
-      <!-- Decorative Elements -->
-      <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);"></div>
-      <div style="position: absolute; bottom: -150px; right: -150px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);"></div>
     </section>
     <!-- What Works Best For You Section -->
     <section style="align-self: stretch; padding: 80px 0 80px; background: white; overflow: hidden;">
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <!-- Decorative Frame -->
+        <div style="width: 1203px; height: 120px; background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/Frame_20.png?v=1759857652'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+        
         <!-- Header -->
         <div style="margin-bottom: 60px; max-width: 966px; text-align: center;">
           <h2 class="section-title" style="color: #0A0702; font-size: 30px; font-family: Poppins; font-weight: 600; line-height: 1.5; margin-bottom: 20px;">What Works Best For You?</h2>
@@ -577,13 +602,13 @@
         <!-- Comparison Content -->
         <div style="width: 100%; max-width: 1280px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
           <!-- Left Side: DIY Checklist -->
-          <div style="background: white; border-radius: 24px; border: 1px solid #E5E5EA; padding: 40px;">
+          <div style="height: 901px; background: white; border-radius: 24px; border: 1px solid #E5E5EA; padding: 40px; display: flex; flex-direction: column;">
             <h3 style="color: #FF3B30; font-size: 24px; font-family: Poppins; font-weight: 700; margin-bottom: 30px;">
               DIY Emergency Kit Checklist
             </h3>
             
             <!-- Select All Items -->
-            <div style="background: #F2F2F7; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="background: #F2F2F7; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;">
               <label style="display: flex; align-items: center; cursor: pointer;">
                 <input type="checkbox" id="selectAll" style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
                 <span style="color: #0A0702; font-size: 16px; font-family: Montserrat; font-weight: 600;">Select All Items</span>
@@ -591,8 +616,10 @@
               <span id="checkboxCounter" style="color: #86868B; font-size: 14px; font-family: Montserrat; font-weight: 400;">(0/19 selected)</span>
             </div>
             
-            <!-- Checklist Items -->
-            <div style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Scrollable Checklist Items Container -->
+            <div style="flex: 1; overflow-y: auto; margin-bottom: 24px; padding-right: 8px;">
+              <!-- Checklist Items -->
+              <div style="display: flex; flex-direction: column; gap: 16px;">
               <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #F2F2F7;">
                 <label style="display: flex; align-items: center; cursor: pointer; flex: 1;">
                   <input type="checkbox" class="item-checkbox" data-price="40" style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
@@ -744,10 +771,11 @@
                 </label>
                 <span style="color: #0A0702; font-size: 16px; font-family: Montserrat; font-weight: 600;">$25</span>
               </div>
+              </div>
             </div>
             
             <!-- Total -->
-            <div style="margin-top: 32px; padding-top: 24px; border-top: 2px solid #0A0702; display: flex; justify-content: space-between; align-items: center;">
+            <div style="padding-top: 24px; border-top: 2px solid #0A0702; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
               <span style="color: #0A0702; font-size: 20px; font-family: Poppins; font-weight: 700;">Total Your DIY kit:</span>
               <span id="totalPrice" style="color: #FF3B30; font-size: 24px; font-family: Poppins; font-weight: 700;">$0.00</span>
             </div>
@@ -755,18 +783,8 @@
           
           <!-- Right Side: 72Hours Kit Card -->
           <div id="resultCard" style="width: 581px; height: 901px; background: linear-gradient(180deg, rgba(255, 59, 48, 0.05) 0%, rgba(255, 59, 48, 0.1) 100%); border-radius: 24px; padding: 48px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative;">
-            <!-- Warning/Success Icon -->
-            <div id="iconContainer" style="width: 120px; height: 120px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; box-shadow: 0 8px 24px rgba(255, 59, 48, 0.15);">
-              <svg id="warningIcon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="28" stroke="#FF3B30" stroke-width="4"/>
-                <line x1="18" y1="18" x2="46" y2="46" stroke="#FF3B30" stroke-width="4" stroke-linecap="round"/>
-                <line x1="46" y1="18" x2="18" y2="46" stroke="#FF3B30" stroke-width="4" stroke-linecap="round"/>
-              </svg>
-              <svg id="successIcon" style="display: none;" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="28" stroke="#34C759" stroke-width="4"/>
-                <path d="M20 32L28 40L44 24" stroke="#34C759" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
+            <!-- Warning Icon -->
+            <img id="warningIcon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/tick.png?v=1759780507" style="width: 80px; height: 80px; margin-bottom: 32px;" alt="Warning">
             
             <!-- Message -->
             <h3 id="resultHeadline" style="color: #0A0702; font-size: 32px; font-family: Poppins; font-weight: 700; line-height: 1.3; margin-bottom: 16px;">
@@ -792,25 +810,28 @@
             
             <!-- Product Image -->
             <div style="margin-bottom: 32px;">
-              <img src="assess/72Hours-Kit-Card.png" alt="Emergency Kit" style="width: 100%; max-width: 440px; height: auto; object-fit: contain;">
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/72Hours-Kit-Card.png?v=1759772679" alt="Emergency Kit" style="width: 100%; max-width: 440px; height: auto; object-fit: contain;">
             </div>
             
-            <!-- CTA Banner -->
-            <div style="width: calc(100% + 96px); margin-left: -48px; margin-right: -48px; background: #FF3B30; padding: 24px 48px; position: relative;">
-              <!-- Left Arrow -->
-              <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-right: 30px solid #FF3B30;"></div>
+            <!-- CTA Banner with Arrows Wrapper -->
+            <div style="position: relative; width: 100%;">
+              <!-- Left Arrow - Attached to banner -->
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Rectangle_59.png?v=1759857913" alt="Left Arrow" style="position: absolute; left: -67px; top: 50%; transform: translateY(-50%); width: 67px; height: 116px; z-index: 2;">
               
-              <!-- Right Arrow -->
-              <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-left: 30px solid #FF3B30;"></div>
+              <!-- Right Arrow - Attached to banner -->
+              <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Rectangle_58.png?v=1759857987" alt="Right Arrow" style="position: absolute; right: -67px; top: 50%; transform: translateY(-50%); width: 67px; height: 116px; z-index: 2;">
               
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <div style="text-align: left;">
-                  <div style="color: white; font-size: 20px; font-family: Poppins; font-weight: 700; margin-bottom: 4px;">72HRS</div>
-                  <div style="color: white; font-size: 18px; font-family: Poppins; font-weight: 600;">1-Person Deluxe<br>Earthquake Kit</div>
-                </div>
-                <div style="text-align: right;">
-                  <div style="color: white; font-size: 48px; font-family: Poppins; font-weight: 700; line-height: 1;">$259.99</div>
-                  <div style="color: white; font-size: 14px; font-family: Montserrat; font-weight: 400; margin-top: 4px;">+ FREE SHIPPING & FIRE BLANKET</div>
+              <!-- CTA Banner -->
+              <div style="background: #D73630; padding: 24px 48px;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="text-align: left;">
+                    <div style="color: white; font-size: 20px; font-family: Poppins; font-weight: 700; margin-bottom: 4px;">72HRS</div>
+                    <div style="color: white; font-size: 18px; font-family: Poppins; font-weight: 600;">1-Person Deluxe<br>Earthquake Kit</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="color: white; font-size: 48px; font-family: Poppins; font-weight: 700; line-height: 1;">$259.99</div>
+                    <div style="color: white; font-size: 14px; font-family: Montserrat; font-weight: 400; margin-top: 4px;">+ FREE SHIPPING & FIRE BLANKET</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -833,7 +854,6 @@
           const resultPrice = document.getElementById('resultPrice');
           const resultPriceSubtext = document.getElementById('resultPriceSubtext');
           const comparisonText = document.getElementById('comparisonText');
-          const iconContainer = document.getElementById('iconContainer');
           
           const totalItems = itemCheckboxes.length;
           
@@ -862,7 +882,7 @@
             if (checkedCount === totalItems) {
               // All items checked - Show success state
               resultCard.style.background = 'linear-gradient(180deg, rgba(52, 199, 89, 0.05) 0%, rgba(52, 199, 89, 0.1) 100%)';
-              iconContainer.style.boxShadow = '0 8px 24px rgba(52, 199, 89, 0.15)';
+              resultCard.style.boxShadow = 'none';
               warningIcon.style.display = 'none';
               successIcon.style.display = 'block';
               resultHeadline.innerHTML = "✅ You've covered<br>FEMA's full checklist.";
@@ -870,10 +890,10 @@
               resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
               resultPriceSubtext.style.display = 'none';
               comparisonText.style.display = 'block';
-            } else {
-              // Not all items checked - Show warning state
-              resultCard.style.background = 'linear-gradient(180deg, rgba(255, 59, 48, 0.05) 0%, rgba(255, 59, 48, 0.1) 100%)';
-              iconContainer.style.boxShadow = '0 8px 24px rgba(255, 59, 48, 0.15)';
+            } else if (checkedCount > 0) {
+              // Some items checked but not all - Show warning state
+              resultCard.style.background = 'white';
+              resultCard.style.boxShadow = '0 0 25px 5px rgba(255, 0, 0, 0.3)';
               warningIcon.style.display = 'block';
               successIcon.style.display = 'none';
               resultHeadline.innerHTML = "⚠️ Your emergency kit is<br>missing critical essentials.";
@@ -882,6 +902,17 @@
               resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
               resultPriceSubtext.style.display = 'block';
               resultPriceSubtext.textContent = '+ hours of shopping and research';
+              comparisonText.style.display = 'none';
+            } else {
+              // No items checked - Hide warning message, icon and red background
+              resultCard.style.background = 'transparent';
+              resultCard.style.boxShadow = 'none';
+              warningIcon.style.display = 'none';
+              successIcon.style.display = 'none';
+              resultHeadline.innerHTML = "";
+              resultSubtext.style.display = 'none';
+              resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
+              resultPriceSubtext.style.display = 'none';
               comparisonText.style.display = 'none';
             }
           }
@@ -915,7 +946,7 @@
               <div style="width: 1210px; height: 74px; text-align: center"><span style="color: white; font-size: 28px; font-family: Montserrat; font-weight: 400; line-height: 42px; word-wrap: break-word">Your DIY kit totals $330, while our 72HOURS kit is just </span><span style="color: white; font-size: 28px; font-family: Montserrat; font-style: italic; font-weight: 700; line-height: 42px; word-wrap: break-word">$259.99</span><span style="color: white; font-size: 28px; font-family: Montserrat; font-weight: 400; line-height: 42px; word-wrap: break-word"> with </span><span style="color: white; font-size: 28px; font-family: Montserrat; font-style: italic; font-weight: 700; line-height: 42px; word-wrap: break-word">FREE SHIPPING!</span></div>
             </div>
           </div>
-          <img style="align-self: stretch; height: 799px; border-radius: 40px" src="assess/Placeholder-Image.png">
+          <img style="align-self: stretch; height: 799px; border-radius: 40px" src="https://cdn.shopify.com/s/files/1/0077/1092/files/Placeholder-Image.png?v=1759772679">
         </div>
       </div>
     </section>
@@ -1010,12 +1041,12 @@
             </div>
             <div style="justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
               <div data-alternate="True" data-icon-position="No icon" data-small="False" data-style="Primary" style="padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; background: var(--Color-White, white); border-radius: 100px; outline: 1px var(--Color-White, white) solid; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div><span style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 22px; font-family: Montserrat; font-weight: 700; line-height: 33px; word-wrap: break-word">GET 20% OFF TODAY WITH A FREE FIRE BLANKET</span><span style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 22px; font-family: Montserrat; font-weight: 500; line-height: 33px; word-wrap: break-word"> </span></div>
+                <div style="white-space: nowrap"><span style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 22px; font-family: Montserrat; font-weight: 700; line-height: 33px; word-wrap: break-word">GET 20% OFF TODAY WITH A FREE FIRE BLANKET</span><span style="color: var(--Color-Neutral-Darkest, #0A0702); font-size: 22px; font-family: Montserrat; font-weight: 500; line-height: 33px; word-wrap: break-word"> </span></div>
               </div>
             </div>
-            <img style="width: 277px; height: 93px" src="assess/get your kit cta 1.png">
+            <img style="width: 277px; height: 93px" src="https://cdn.shopify.com/s/files/1/0077/1092/files/get_your_kit_cta_1.png?v=1759772678">
           </div>
-          <img style="flex: 1 1 0; align-self: stretch" src="assess/Placeholder Image2.png">
+          <img style="flex: 1 1 0; align-self: stretch" src="https://cdn.shopify.com/s/files/1/0077/1092/files/Placeholder_Image2.png?v=1759772679">
         </div>
       </div>
     </section>
@@ -1028,7 +1059,7 @@
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 60px;">
             <!-- Logo and Description -->
             <div style="grid-column: span 1;">
-              <img data-alternate="True" style="width: 84px; height: 44px; margin-bottom: 20px;" src="assess/72 HRS LOGO 1.png" alt="72 Hours Logo">
+              <img data-alternate="True" style="width: 84px; height: 44px; margin-bottom: 20px;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/72_HRS_LOGO_1.png?v=1759772678" alt="72 Hours Logo">
               <p style="color: white; font-size: 16px; font-family: Montserrat; font-weight: 400; line-height: 1.6;">
                 Preparing families for emergencies with comprehensive 72-hour emergency kits.
               </p>
@@ -1108,6 +1139,41 @@
   </div>
   
   <script>
+    // Countdown Timer
+    function startCountdown() {
+      const countdownElement = document.getElementById('countdown-timer');
+      if (!countdownElement) return;
+      
+      // Set countdown to 24 hours from now
+      const endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+      
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        
+        if (distance < 0) {
+          countdownElement.textContent = '00:00:00';
+          clearInterval(countdownInterval);
+          return;
+        }
+        
+        const hours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        countdownElement.textContent = 
+          String(hours).padStart(2, '0') + ':' + 
+          String(minutes).padStart(2, '0') + ':' + 
+          String(seconds).padStart(2, '0');
+      }
+      
+      updateCountdown();
+      const countdownInterval = setInterval(updateCountdown, 1000);
+    }
+    
+    // Start countdown when page loads
+    document.addEventListener('DOMContentLoaded', startCountdown);
+    
     // Close banner function
     function closeBanner() {
       const banner = document.getElementById('urgency-banner');
