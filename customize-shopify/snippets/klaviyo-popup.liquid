@@ -1,0 +1,29 @@
+<div id="klaviyo-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999;">
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:20px; border-radius:8px; max-width:500px; width:90%;">
+    <button id="close-btn" style="position:absolute; top:10px; right:10px; background:#f44336; color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:16px; font-weight:bold; z-index:10000;">✕</button>
+    <div class="klaviyo-form-RtZEP2"></div>
+  </div>
+</div>
+
+<script>
+function closePopup() {
+  document.getElementById('klaviyo-popup').style.display='none';
+  sessionStorage.setItem('klaviyo_popup_closed', '1');
+}
+
+setTimeout(function(){
+  if(!sessionStorage.getItem('klaviyo_popup_closed')){
+    document.getElementById('klaviyo-popup').style.display='block';
+    
+    document.getElementById('close-btn').onclick = function() {
+      closePopup();
+    };
+    
+    document.getElementById('klaviyo-popup').onclick = function(e) {
+      if(e.target === this) {
+        closePopup();
+      }
+    };
+  }
+}, 3000);
+</script>

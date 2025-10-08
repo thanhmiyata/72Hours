@@ -1,0 +1,35 @@
+{% if section.settings.enable %}
+  <script>
+    window.__klaviyoPopupDelay = {{ section.settings.delay_ms | default: 3000 | abs }};
+  </script>
+  {% render 'klaviyo-popup' %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Klaviyo Popup",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable popup",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "delay_ms",
+      "label": "Delay (milliseconds)",
+      "default": 3000,
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "info": "Time after page load before showing popup."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Klaviyo Popup"
+    }
+  ]
+}
+{% endschema %}
