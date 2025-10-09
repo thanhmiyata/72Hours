@@ -721,7 +721,7 @@ body {
 
 .comparison__title {
   color: #40100e;
-  font-family: "Bona Nova", serif;
+  font-family: "Bona Nova";
   font-size: 65px;
   font-weight: 700;
   line-height: 78px;
@@ -732,6 +732,8 @@ body {
   font-size: 25px;
   line-height: 40.75px;
   margin-top: 16px;
+  font-family: Merriweather Sans;
+
 }
 
 /* Table section */
@@ -745,6 +747,8 @@ body {
 .comparison__table-header {
   display: flex;
   align-items: center;
+  font-family: Merriweather Sans;
+
 }
 
 .comparison__column-title {
@@ -752,6 +756,8 @@ body {
   font-size: 22px;
   font-weight: 700;
   color: #40100e;
+  font-family: Merriweather Sans;
+
   padding: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -762,6 +768,8 @@ body {
   padding: 24px;
   background: #40100e;
   color: #fff;
+  font-family: Merriweather Sans;
+
   border-radius: 100px 100px 0 0;
   font-size: 22px;
   font-weight: 700;
@@ -793,6 +801,7 @@ body {
   color: #fff;
   font-weight: 700;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: Merriweather Sans;
 }
 
 /* Total */
@@ -806,6 +815,7 @@ body {
   font-size: 40px;
   font-weight: 800;
   color: #40100e;
+  font-family: Merriweather Sans;
   line-height: 60px;
 }
 
@@ -819,6 +829,7 @@ body {
   border-radius: 0 0 100px 100px;
   padding: 16px 24px;
   line-height: 60px;
+  font-family: Merriweather Sans;
 }
 
 /* Quote */
@@ -826,7 +837,7 @@ body {
   width: 1024px;
   background: #6b1c20;
   color: #fff;
-  font-family: "Bona Nova", serif;
+  font-family: "Bona Nova";
   font-size: 28px;
   line-height: 42px;
   border-top-right-radius: 100px;
