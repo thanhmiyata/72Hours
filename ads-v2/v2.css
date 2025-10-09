@@ -328,6 +328,7 @@ body {
 .Advert2Mockup .Layout426 .TaglineWrapper {
   display: flex;
   justify-content: flex-start;
+  font-family: 'Merriweather Sans';
   align-items: center;
 }
 
@@ -335,7 +336,7 @@ body {
   color: #333;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Merriweather Sans';
   line-height: 36px;
 }
 
@@ -462,7 +463,7 @@ body {
 }
 
 .Advert2Mockup .Layout86 .Frame23 {
-  width: 128px;
+  width: 100%;
   height: 80px;
   position: relative;
   overflow: hidden;
