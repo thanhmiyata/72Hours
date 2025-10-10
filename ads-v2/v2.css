@@ -25,10 +25,10 @@ body {
   margin: auto;
 }
 
-/* Banner Styles */
+
 .Advert2Mockup .Banner7 {
   background: #f5f5f5;
-  /* Light background for banner */
+  
   color: #333;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
@@ -45,7 +45,7 @@ body {
   gap: 16px;
 }
 
-/* Banner Content */
+
 .Advert2Mockup .Banner7 .Container .Content {
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@ body {
   padding: 0;
 }
 
-/* Shop Icon */
+
 .Advert2Mockup .Banner7 .Shop {
   width: 32px;
   height: 32px;
@@ -73,13 +73,13 @@ body {
   width: 100%;
   height: 100%;
   fill: #d84343;
-  /* Color-Valencia */
+  
 }
 
-/* Text Styles */
+
 .Advert2Mockup .Banner7 .Heading {
   color: #333;
-  /* Dark text for better contrast on light background */
+  
   font-size: 16px;
   font-weight: bold;
   font-family: 'Merriweather Sans', sans-serif;
@@ -89,7 +89,7 @@ body {
 
 .Advert2Mockup .Banner7 .Text {
   color: #666;
-  /* Medium gray for secondary text */
+  
   font-size: 14px;
   font-weight: normal;
   font-family: 'Merriweather Sans', sans-serif;
@@ -97,11 +97,11 @@ body {
   margin: 0;
 }
 
-/* Button Styles */
+
 .Advert2Mockup .Banner7 .Button {
   padding: 8px 20px;
   background: #d84343;
-  /* Color-Valencia */
+  
   border-radius: 100px;
   border: none;
   display: flex;
@@ -115,7 +115,7 @@ body {
   font-size: 16px;
   color: #ffffff;
   white-space: nowrap;
-  /* Creates the bottom border effect */
+  
 }
 
 
@@ -125,14 +125,14 @@ body {
 
 .Advert2Mockup .Banner7 .Button .Button {
   color: #ffffff;
-  /* Color-White */
+  
   font-size: 16px;
   font-weight: bold;
   font-family: 'Merriweather Sans', sans-serif;
   line-height: normal;
 }
 
-/* Actions */
+
 .Advert2Mockup .Banner7 .Actions {
   display: flex;
   justify-content: flex-end;
@@ -157,7 +157,7 @@ body {
   fill: #333;
 }
 
-/* Header Hero Section */
+
 .Header30 {
   max-width: 2188px;
   margin: auto;
@@ -167,7 +167,7 @@ body {
   width: 100%;
   height: 900px;
   padding: 0 64px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/header.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://cdn.shopify.com/s/files/1/0077/1092/files/header.jpg?v=1759861231') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,38 +205,38 @@ body {
   gap: 24px;
 }
 
-/* Hero Headline */
+
 .Advert2Mockup .MediumLengthHeroHeadlineGoesHere {
   align-self: stretch;
   text-align: center;
   color: #ffffff;
-  /* Color-White */
+  
   font-size: 88px;
-  /* text-8xl */
+  
   font-weight: normal;
   font-family: "Bona Nova";
   line-height: 108px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  /* Added text shadow for better readability */
+  
 }
 
-/* Hero Description */
+
 .Advert2Mockup .LoremIpsumDolorSitAmetConsecteturAdipiscingElitSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNullaUtCommodoDiamLiberoVitaeErat {
   width: 1092px;
   text-align: center;
   color: #ffffff;
-  /* Color-White */
+  
   font-size: 30px;
-  /* text-3xl */
+  
   font-weight: normal;
   font-family: "Bona Nova";
   line-height: 48.9px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  /* Added text shadow for better readability */
+  
 }
 
 
-/* Layout / 426 / Section */
+
 .Advert2Mockup .Layout426 {
   width: 100%;
   padding: 112px 64px;
@@ -249,12 +249,12 @@ body {
   overflow: hidden;
   max-width: 2188px;
   margin: auto;
-  position: sticky; /* stick when section reaches top */
+  position: sticky; 
   top: 0;
-  z-index: 1; /* stay under following sections */
+  z-index: 1; 
 }
 
-/* Ensure all sections after Layout426 appear above it */
+
 .Advert2Mockup .Layout426 ~ * {
   position: relative;
   z-index: 2;
@@ -373,7 +373,7 @@ body {
   line-height: 40px;
 }
 
-/* Layout / 86 / Section */
+
 .Advert2Mockup .Layout86 {
   width: 100%;
   padding: 112px 64px 56px 64px;
@@ -490,7 +490,7 @@ body {
   line-height: 32px;
 }
 
-/* Gallery / 1 / Section */
+
 .Advert2Mockup .Gallery1 {
   width: 100%;
   padding: 112px 64px;
@@ -502,7 +502,7 @@ body {
   overflow: hidden;
   max-width: 2188px;
   margin: auto;
-  background: url('./assets/emergency_bg.png');
+  background: url('https://cdn.shopify.com/s/files/1/0077/1092/files/emergency_bg.png?v=1760078467');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -532,7 +532,7 @@ body {
   align-self: stretch;
   text-align: center;
   color: #40100E;
-  /* orange-950 */
+  
   font-size: 64px;
   font-weight: bold;
   font-family: "Bona Nova";
@@ -561,7 +561,7 @@ body {
 
 
 
-/* Layout / 456 / Section */
+
 .Advert2Mockup .Layout456 {
   width: 100%;
   height: 1467px;
@@ -574,7 +574,7 @@ body {
   overflow: hidden;
   max-width: 2188px;
   margin: auto;
-  background: url('./assets/line_top.png');
+  background: url('https://cdn.shopify.com/s/files/1/0077/1092/files/line_top.png?v=1760078613');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -627,7 +627,7 @@ body {
 .Advert2Mockup .Layout456 .Heading {
   width: 871px;
   color: #7c2d12;
-  /* pink-950 */
+  
   font-size: 48px;
   font-weight: bold;
   font-family: "Bona Nova";
@@ -670,7 +670,7 @@ body {
   background-position: center;
 }
 
-/* Frame 19 */
+
 
 .Frame19 {
   width: 100%;
@@ -687,9 +687,9 @@ body {
   height: auto;
 }
 
-/* Comparison */
+
 .comparison {
-  background: url('./assets/line_bottom.png');
+  background: url('https://cdn.shopify.com/s/files/1/0077/1092/files/line_bottom.png?v=1760078637');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -713,7 +713,7 @@ body {
   gap: 40px;
 }
 
-/* Header */
+
 .comparison__header {
   text-align: center;
   max-width: 768px;
@@ -736,7 +736,7 @@ body {
 
 }
 
-/* Table section */
+
 .comparison__table {
   width: 100%;
   display: flex;
@@ -775,7 +775,7 @@ body {
   font-weight: 700;
 }
 
-/* Row items */
+
 .comparison__row {
   display: flex;
   align-items: center;
@@ -804,7 +804,7 @@ body {
   font-family: Merriweather Sans;
 }
 
-/* Total */
+
 .comparison__total {
   display: flex;
   align-items: center;
@@ -832,7 +832,7 @@ body {
   font-family: Merriweather Sans;
 }
 
-/* Quote */
+
 .comparison__quote {
   width: 1024px;
   background: #6b1c20;
@@ -846,7 +846,7 @@ body {
   text-align: center;
 }
 
-/* Layout 308 */
+
 .layout308 {
   width: 100%;
   height: 100%;
@@ -867,7 +867,7 @@ body {
   margin: auto;
 }
 
-/* container chính */
+
 .layout308>div {
   width: 100%;
   max-width: 1280px;
@@ -879,7 +879,7 @@ body {
   margin: auto;
 }
 
-/* khối đầu */
+
 .layout308>div>div:first-child {
   align-self: stretch;
   display: inline-flex;
@@ -888,7 +888,7 @@ body {
   gap: 80px;
 }
 
-/* cột trái */
+
 .layout308>div>div:first-child>div:first-child {
   flex: 1 1 0;
   overflow: hidden;
@@ -899,7 +899,7 @@ body {
   gap: 16px;
 }
 
-/* chữ Smart */
+
 .layout308>div>div:first-child>div:first-child>div>div {
   color: var(--Color-Scheme-2-Text, #0b0302);
   font-size: 25px;
@@ -909,7 +909,7 @@ body {
   word-wrap: break-word;
 }
 
-/* tiêu đề lớn */
+
 .layout308>div>div:first-child>div:first-child>div+div {
   width: 670px;
   color: #6b2f45;
@@ -920,7 +920,7 @@ body {
   word-wrap: break-word;
 }
 
-/* đoạn mô tả bên phải */
+
 .layout308>div>div:first-child>div+div {
   width: 533px;
   color: var(--Color-Scheme-2-Text, #0b0302);
@@ -931,7 +931,7 @@ body {
   word-wrap: break-word;
 }
 
-/* nhóm 4 khối icon */
+
 .layout308>div>div:nth-child(2) {
   align-self: stretch;
   display: flex;
@@ -941,7 +941,7 @@ body {
   gap: 64px;
 }
 
-/* hàng chứa 4 cột */
+
 .layout308>div>div:nth-child(2)>div {
   align-self: stretch;
   display: inline-flex;
@@ -950,7 +950,7 @@ body {
   gap: 32px;
 }
 
-/* từng cột */
+
 .layout308>div>div:nth-child(2)>div>div {
   flex: 1 1 0;
   display: inline-flex;
@@ -960,7 +960,7 @@ body {
   gap: 24px;
 }
 
-/* tiêu đề mỗi cột */
+
 .layout308>div>div:nth-child(2)>div>div>div>div:first-child {
   color: var(--Color-Scheme-2-Text, #0b0302);
   font-size: 28px;
@@ -970,7 +970,7 @@ body {
   word-wrap: break-word;
 }
 
-/* mô tả mỗi cột */
+
 .layout308>div>div:nth-child(2)>div>div>div>div:last-child {
   color: var(--Color-Scheme-2-Text, #0b0302);
   font-size: 20px;
@@ -980,16 +980,16 @@ body {
   word-wrap: break-word;
 }
 
-/* spacer cuối */
+
 .layout308>div>div:last-child {
   width: 88px;
   height: 24px;
 }
 
-/* Testimonial1 */
+
 
 .Testimonial1 {
-  /* Remove container opacity to prevent see-through over sticky section */
+  
   opacity: 1;
   width: 100%;
   height: 100%;
@@ -1005,7 +1005,7 @@ body {
   max-width: 2188px;
   margin: auto;
   overflow: hidden;
-  position: relative; /* create stacking context above sticky */
+  position: relative; 
   z-index: 2;
 }
 
@@ -1035,7 +1035,7 @@ body {
   align-self: stretch;
   text-align: center;
   color: white;
-  /* var(--Color-Scheme-4-Text, white) */
+  
   font-size: 35px;
   font-family: "Bona Nova", serif;
   font-weight: 400;
@@ -1044,7 +1044,7 @@ body {
 }
 
 
-/* Layout 482 */
+
 
 .layout482 {
   background-color: #f5f5f5;
@@ -1164,7 +1164,7 @@ body {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  /* đảm bảo iframe bị cắt theo border-radius */
+  
 }
 
 .layout482-video iframe {
@@ -1175,7 +1175,7 @@ body {
   left: 0;
   top: 0;
   border-radius: 30px;
-  /* áp dụng cho iframe nữa để chắc chắn */
+  
 }
 
 .player video {
@@ -1186,7 +1186,7 @@ body {
   border-radius: 30px;
 }
 
-/* Layout 413 CSS */
+
 .layout413 {
   width: 100%;
   max-width: 2188px;
@@ -1198,7 +1198,7 @@ body {
   margin: auto;
   padding-top: 70px;
   padding-bottom: 80px;
-  background: url('./assets/day7.png');
+  background: url('https://cdn.shopify.com/s/files/1/0077/1092/files/day7.png?v=1760078688');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1361,7 +1361,7 @@ body {
   word-wrap: break-word;
 }
 
-/* layout 228 */
+
 .header64 {
   width: 100%;
   height: 100%;
@@ -1433,7 +1433,7 @@ body {
 }
 
 
-/* Header 64 */
+
 
 .layout228 {
   width: 100%;
@@ -1504,7 +1504,7 @@ body {
 }
 
 
-/* CTA39 */
+
 
 .CTA39 {
   width: 100%;
@@ -1665,7 +1665,7 @@ body {
 }
 
 
-/* Footer */
+
 .Footer {
   width: 100%;
   height: 100%;

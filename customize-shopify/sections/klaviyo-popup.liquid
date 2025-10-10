@@ -2,7 +2,7 @@
   <script>
     window.__klaviyoPopupDelay = {{ section.settings.delay_ms | default: 3000 | abs }};
   </script>
-  {% render 'klaviyo-popup' %}
+  {% render 'klaviyo-popup', form_id: section.settings.form_id %}
 {% endif %}
 
 {% schema %}
@@ -24,6 +24,13 @@
       "max": 5000,
       "step": 100,
       "info": "Time after page load before showing popup."
+    },
+    {
+      "type": "text",
+      "id": "form_id",
+      "label": "Klaviyo form ID",
+      "default": "RtZEP2",
+      "info": "Value after 'klaviyo-form-' in your Klaviyo embed."
     }
   ],
   "presets": [
