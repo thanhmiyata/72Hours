@@ -1,0 +1,8 @@
+page_type,title_template,meta_description_template,h1_template,url_pattern,notes
+Home,"Earthquake Kits & 72 Hour Emergency Supplies | 72 HRS","Be prepared for earthquakes with FEMA-aligned 72 hour kits and emergency supplies. Fast shipping across the US.","Earthquake Kits & Emergency Supplies","/","Brand + primary value prop; keep under ~60 chars"
+Collection,"{collection_title} | Earthquake & Emergency Kits","Shop {collection_title} including {top_product} for fast, reliable preparedness.","{collection_title}","/collections/{handle}","Use transactional modifiers; include primary variant (2/4 person)"
+Product,"{product_title} | {primary_benefit} – 72 HRS","{product_title}: includes {key_inclusions}. Ships fast in the US. FEMA-aligned.","{product_title}","/products/{handle}","Sync price/availability with schema; avoid boilerplate duplication"
+Blog Article,"{article_title} | Earthquake Preparedness Guide","Learn {primary_topic}: expert, up-to-date tips for US households.","{article_title}","/blogs/{blog_handle}/{slug}","Add FAQ where relevant; cite FEMA/USGS"
+FAQ,"{faq_topic} – FAQs | 72 HRS","Answers to common questions about {faq_topic}.","{faq_topic}: Frequently Asked Questions","/pages/{slug}","Use FAQPage schema; keep answers concise"
+
+

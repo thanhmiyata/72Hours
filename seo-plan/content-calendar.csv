@@ -1,0 +1,10 @@
+week,start_date,content_type,title_slug,owner,target_keyword,stage,due_date,notes
+1,2025-10-13,commercial,collection-optimization-earthquake-kits,SEO,earthquake kit,in_progress,2025-10-17,Boost copy H1/H2, add FAQs, internal links
+2,2025-10-20,pillar,earthquake-preparedness-checklist,Content,earthquake preparedness checklist,brief,2025-10-24,Include FAQ/HowTo schema
+3,2025-10-27,commercial,collection-optimization-best-earthquake-kit,SEO,best earthquake kit,planning,2025-10-31,Address evaluative intent in collection copy
+4,2025-11-03,pillar,what-to-put-in-an-earthquake-kit,Content,what to put in an earthquake kit,brief,2025-11-07,Link to top PDPs
+5,2025-11-10,commercial,collection-optimization-72-hour-earthquake-kit,SEO,72 hour earthquake kit,planning,2025-11-14,Reinforce overlap intent within collection
+6,2025-11-17,commercial,pdp-optimization-72-hour-kit,SEO,72 hour kit,optimization,2025-11-21,Variant canonicals
+7,2025-11-24,guide,fema-72-hour-list,Content,FEMA 72 hour list,draft,2025-11-27,Cite FEMA/Ready.gov
+8,2025-12-01,comparison,bug-out-bag-vs-earthquake-kit,Content,bug out bag vs earthquake kit,draft,2025-12-05,Clarify use-cases
+
