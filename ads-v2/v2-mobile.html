@@ -7,14 +7,80 @@
     <link rel="stylesheet" href="v2-mobile.css" />
     <script src="v2.js" defer></script>
     <style>
+      /* Xóa padding mặc định và ngăn scroll ngang */
+      html,
       body {
-        margin: 0px;
+        overflow-x: hidden;
+      }
+      #lp-pom-root,
+      #lp-pom-content,
+      .lp-positioned-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      /* Unbounce mobile overrides: full-bleed canvas + fluid widgets */
+      /* Full-bleed for the Custom HTML block (replace #lp-code-18 if different) */
+      #lp-code-18 {
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: auto !important;         /* auto-size container */
+        min-height: 0 !important;
+        margin: 0 !important;
+      }
+
+      /* Ensure the lp-element wrapper doesn't lock a fixed height */
+      #lp-code-18.lp-element.lp-code { height: auto !important; min-height: 0 !important; }
+      /* Inner root should not force extra height */
+      #lp-code-18 .HomeMobile { height: auto !important; }
+
+      /* Ensure content inside the custom block spans full width */
+      #lp-code-18 .HomeMobile,
+      #lp-code-18 > div {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Remove fixed widths from Unbounce image widgets (e.g., 480px) */
+      #lp-pom-root .lp-pom-image-container,
+      #lp-pom-root .lp-image,
+      #lp-pom-root .lp-pom-image-container img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Make Unbounce buttons fluid if used */
+      #lp-pom-root .lp-pom-button,
+      #lp-pom-root .lp-pom-button a {
+        width: 100% !important;
+        display: block !important;
+      }
+
+      /* Phần tử tràn 2 bên (full-bleed) */
+      .ub-fullbleed {
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        width: 100vw;
+        max-width: 100vw;
+      }
+
+      /* Nội dung bên trong full-bleed fill toàn chiều ngang */
+      .ub-fullbleed > img,
+      .ub-fullbleed > video,
+      .ub-fullbleed > picture,
+      .ub-fullbleed > .bg,
+      .ub-fullbleed > .wrapper {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
       }
 
       /* Container chính */
@@ -1186,25 +1252,27 @@
 
       .Layout482 {
         width: 100%;
-        height: 100%;
-        padding: 112px 64px;
+        height: auto;
+        padding: 20px 0; /* even tighter */
         overflow: hidden;
         display: inline-flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 80px;
+        gap: 12px; /* tighter space */
         background: #f5f5f5;
       }
 
       .Layout482 .layout-container {
-        width: 400px;
-        max-width: 1280px;
+        width: 100%;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 80px;
+        gap: 12px; /* was 24px */
+        padding: 0 20px;
+        box-sizing: border-box;
       }
 
       .Layout482 .layout-content {
@@ -1253,19 +1321,19 @@
       .Layout482 .layout-subtitle {
         text-align: center;
         color: #420e24;
-        font-size: 55px;
+        font-size: 38px; /* smaller for mobile */
         font-family: "Bona Nova", serif;
         font-weight: 700;
-        line-height: 66px;
+        line-height: 1.2;
       }
 
       .Layout482 .layout-description {
         text-align: center;
         color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 25px;
+        font-size: 16px; /* smaller for mobile */
         font-family: "Merriweather Sans", sans-serif;
         font-weight: 400;
-        line-height: 40.75px;
+        line-height: 1.6;
       }
 
       .Layout482 .layout-button-group {
@@ -1295,19 +1363,22 @@
 
       .Layout482 .layout-button-text {
         color: var(--Color-Neutral-Darkest, #0b0302);
-        font-size: 25px;
+        font-size: 18px; /* smaller for mobile */
         font-family: "Merriweather Sans", sans-serif;
         font-weight: 700;
-        line-height: 37.5px;
+        line-height: 1.5;
       }
 
       .layout482-video {
-        align-self: stretch;
-        height: 480px;
+        width: 100vw;            /* full-bleed width */
+        max-width: 100vw;
+        left: 50%;
         position: relative;
+        transform: translateX(-50%); /* center the 100vw element */
+        aspect-ratio: 16 / 9;   /* responsive height */
         border-radius: 30px;
-        overflow: hidden;
-        /* đảm bảo iframe bị cắt theo border-radius */
+        overflow: hidden;       /* keep rounded corners */
+        margin: -20px 0;        /* negative vertical spacing to tuck closer */
       }
 
       .layout482-video iframe {
@@ -1318,7 +1389,6 @@
         left: 0;
         top: 0;
         border-radius: 30px;
-        /* áp dụng cho iframe nữa để chắc chắn */
       }
 
       .player video {
