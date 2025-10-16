@@ -14,9 +14,7 @@ function closePopup() {
   sessionStorage.setItem('klaviyo_popup_closed', '1');
 }
 
-var delay = (typeof window !== 'undefined' && typeof window.__klaviyoPopupDelay === 'number') ? window.__klaviyoPopupDelay : 3000;
-
-setTimeout(function(){
+function showPopup() {
   if(!sessionStorage.getItem('klaviyo_popup_closed')){
     var popup = document.getElementById('klaviyo-popup');
     if (popup) {
@@ -32,5 +30,23 @@ setTimeout(function(){
       };
     }
   }
+}
+
+// Wait for Klaviyo script to load before showing popup
+function waitForKlaviyo() {
+  var klaviyoForm = document.querySelector('.klaviyo-form-{{ form_id | default: 'RtZEP2' }}');
+  if (klaviyoForm && klaviyoForm.children.length > 0) {
+    // Klaviyo form has loaded, show popup
+    showPopup();
+  } else {
+    // Check again in 100ms
+    setTimeout(waitForKlaviyo, 100);
+  }
+}
+
+var delay = (typeof window !== 'undefined' && typeof window.__klaviyoPopupDelay === 'number') ? window.__klaviyoPopupDelay : 3000;
+
+setTimeout(function(){
+  waitForKlaviyo();
 }, delay);
 </script>
