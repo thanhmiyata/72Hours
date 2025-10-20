@@ -57,6 +57,28 @@
     }
   </script>
   <style>
+    /* Local Bona Nova font family */
+    @font-face {
+      font-family: 'Bona Nova';
+      src: url('./assets/Bona_Nova/BonaNova-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Bona Nova';
+      src: url('./assets/Bona_Nova/BonaNova-Italic.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Bona Nova';
+      src: url('./assets/Bona_Nova/BonaNova-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
     /* Smooth fonts and better image rendering */
     html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     img { display: block; max-width: 100%; height: auto; }
@@ -604,26 +626,37 @@
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-52 relative bg-zinc-100 overflow-hidden">
-      <div data-layer="Vector 1" class="Vector1 w-[1734px] h-24 left-[-134px] top-[97.20px] absolute bg-black outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
+      <img alt="Decorative wave edge" src="./Frame%2017.png" class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: Gallery / 3 / -->
-    <div data-layer="Gallery / 3 /" class="Gallery3 self-stretch px-16 py-28 bg-Color-Scheme-3-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
-      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-        <div data-layer="Section Title" class="SectionTitle w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
-          <div data-layer="Heading" class="Heading w-[846px] text-center justify-start"><span class="text-Color-Scheme-3-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">See Why Influencers & Families </span><span class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">Choose 72HRS</span></div>
-          <div data-layer="Text" class="Text self-stretch text-center justify-start text-Color-Scheme-3-Text text-2xl font-normal font-['Poppins'] leading-9">Discover why families trust 72HRS for safety.</div>
+    <div data-layer="Gallery / 3 /" class="Gallery3 self-stretch relative px-16 py-24 bg-[#7D291B] flex flex-col justify-start items-center gap-16 overflow-hidden">
+      <div data-layer="Container" class="Container relative z-10 w-full max-w-[1280px] flex flex-col justify-start items-center gap-16">
+        <div data-layer="Section Title" class="SectionTitle w-full max-w-[938px] flex flex-col justify-start items-center gap-4 text-center">
+          <h2 data-layer="Heading" class="Heading w-[938px] h-[140px] flex flex-col justify-center items-center text-center font-['Bona Nova'] font-bold text-white text-[70px] leading-[70px] drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
+            <span>See Why Influencers &amp;</span>
+            <span>Families Choose 72HRS</span>
+          </h2>
+          <p data-layer="Text" class="Text w-full text-center text-white/90 text-lg font-normal font-['Poppins'] leading-[30px] drop-shadow-[0_2px_0_rgba(0,0,0,0.25)]">
+            Discover why families trust 72HRS for safety.
+          </p>
         </div>
-        <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-8">
-          <img data-layer="Placeholder Image 1" class="PlaceholderImage1 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
-          <img data-layer="Placeholder Image 2" class="PlaceholderImage2 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
-          <img data-layer="Placeholder Image 3" class="PlaceholderImage3 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
+        <div data-layer="Content" class="Content w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8">
+          <div class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            <img data-layer="Gallery Image 1" class="absolute inset-0 w-full h-full object-cover" src="./assets/fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+          </div>
+          <div class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            <img data-layer="Gallery Image 2" class="absolute inset-0 w-full h-full object-cover" src="./assets/fml2.png" alt="Customer holding 72HRS drinking water packs" loading="lazy" />
+          </div>
+          <div class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            <img data-layer="Gallery Image 3" class="absolute inset-0 w-full h-full object-cover" src="./assets/fml3.png" alt="Community member sharing their 72HRS experience" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-zinc-100 overflow-hidden">
-      <div data-layer="Vector 1" class="Vector1 w-[1734px] h-24 left-[-134px] top-[-0.20px] absolute bg-black outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
+      <img alt="Decorative wave edge" src="./Frame%2017_2.png" class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: FAQ / 6 / -->
     <div data-layer="FAQ / 6 /" class="Faq6 self-stretch px-16 py-28 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
