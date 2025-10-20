@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>72HRS – Sales Page Web V1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Map Figma color tokens to Tailwind utility classes used in this file
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'Color': {
+              'White': '#ffffff',
+              'Neutral-Darkest': '#0b0302',
+              'Amaranth': '#E21B3C',
+              'Valencia': '#D64545',
+              'Valencia-Darker': '#B23333',
+              'Scheme-1': {
+                'Background': '#ffffff',
+                'Foreground': '#ffffff',
+                'Text': '#111827',
+                'Accent': '#E21B3C',
+                'Border': '#D1D5DB'
+              },
+              'Scheme-2': {
+                'Background': '#F7F7F7',
+                'Foreground': '#ffffff',
+                'Text': '#111827',
+                'Border': '#E5E7EB'
+              },
+              'Scheme-3': {
+                'Background': '#ffffff',
+                'Text': '#111827'
+              },
+              'Scheme-4': {
+                'Background': '#0b0302',
+                'Text': '#ffffff',
+                'Border': '#2D2D2D'
+              }
+            },
+            'Opacity': {
+              'Transparent': '#000000',
+              'Neutral-Darkest-15': '#0b0302'
+            }
+          },
+          fontFamily: {
+            'Poppins': ['Poppins', 'ui-sans-serif', 'system-ui'],
+            'Roboto': ['Roboto', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth fonts and better image rendering */
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    img { display: block; max-width: 100%; height: auto; }
+    /* Allow the layout to center on large screens while remaining responsive */
+    body { background-color: #ffffff; }
+    .SalesPageWebV1 { margin: 0 auto; }
+    /* CTA flare effect */
+    .btn-flare { position: relative; border-radius: 14px; z-index: 1; }
+    .btn-flare::before {
+      content: "";
+      position: absolute;
+      inset: -16px;
+      /* ring-style glow: transparent center, glow on the border, fade out */
+      background: radial-gradient(closest-side, rgba(226,27,60,0) 62%, rgba(226,27,60,0.45) 72%, rgba(226,27,60,0.25) 86%, rgba(226,27,60,0) 100%);
+      filter: blur(12px);
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 24px;
+    }
+    .btn-flare:hover::before { filter: blur(14px); }
+    /* Countdown glowing animated border */
+    .countdown-glow { position: relative; border-radius: 20px; }
+    .countdown-glow::before {
+      content: ""; position: absolute; inset: -3px; border-radius: 24px;
+      background: conic-gradient(from 0deg,
+        rgba(226,27,60,0) 0%, rgba(226,27,60,0.6) 15%, rgba(255,255,255,0.9) 45%, rgba(226,27,60,0.8) 75%, rgba(226,27,60,0) 100%);
+      animation: spin 4s linear infinite;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; padding: 5px;
+      pointer-events: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    /* Alt flare: bright animated border glow per request */
+    .flare-border-btn {
+      position: relative; overflow: visible; z-index: 1; border-radius: 14px;
+      border-width: 1px; border-style: solid; border-color: #E21B3C !important; /* force pink border */
+      outline: none; box-shadow: none;
+    }
+    .flare-border-btn::before {
+      content: ""; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+      border-radius: 18px; pointer-events: none; z-index: 0;
+      /* white core glow + pink outer halos for a pink→white gradient look */
+      box-shadow:
+        0 0 6px 2px rgba(255,255,255,0.95),
+        0 0 18px 8px rgba(226,27,60,0.65),
+        0 0 36px 16px rgba(226,27,60,0.40);
+      animation: flare-anim 1.6s infinite ease-in-out; border: 1px solid transparent;
+      mix-blend-mode: screen;
+    }
+    @keyframes flare-anim {
+      0% { box-shadow: 0 0 6px 2px rgba(255,255,255,0.90), 0 0 18px 8px rgba(226,27,60,0.60), 0 0 36px 16px rgba(226,27,60,0.35);} 
+      50% { box-shadow: 0 0 10px 4px rgba(255,255,255,1), 0 0 28px 12px rgba(226,27,60,0.85), 0 0 56px 22px rgba(226,27,60,0.55);} 
+      100% { box-shadow: 0 0 6px 2px rgba(255,255,255,0.90), 0 0 18px 8px rgba(226,27,60,0.60), 0 0 36px 16px rgba(226,27,60,0.35);} 
+    }
+    /* Animated pink→white gradient border (generic wrapper) */
+    .border-animated { position: relative; border-radius: 20px; }
+    .border-animated::before {
+      content: ""; position: absolute; inset: 0; padding: 2px; border-radius: 22px;
+      background: linear-gradient(90deg, rgba(226,27,60,0.95), #ffffff, rgba(226,27,60,0.95));
+      background-size: 200% 100%; animation: border-move 3s linear infinite; pointer-events: none;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+    }
+    @keyframes border-move { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+    /* Image tilt on hover for Header / 131 / */
+    .image-tilt .img-tilt-large, .image-tilt .img-tilt-small { transition: transform 500ms ease, box-shadow 500ms ease; transform-origin: center; }
+    .image-tilt:hover .img-tilt-large { transform: rotate(-5deg); }
+    .image-tilt:hover .img-tilt-small { transform: rotate(5deg); }
+    /* Countdown separator: thin gray vertical bar, slightly taller than numbers, shorter than labels */
+    .count-sep { width: 1px; background-color: #e5e7eb; /* gray-200 */ height: 88px; margin: 0 28px; align-self: center; }
+    /* Active tab style for What's inside */
+    .TabHorizontal { background-color: transparent; transition: background-color 200ms ease, border-color 200ms ease, border-radius 200ms ease; }
+    .tab-active { background-color: #ffffff !important; border-left: 4px solid #D64545 !important; border-top-left-radius: 16px; border-bottom-left-radius: 16px; }
+    .tab-inactive { background-color: transparent; border-left: 0; border-top-left-radius: 16px; border-bottom-left-radius: 16px; }
+    /* Tab title typography */
+    .TabsMenu .ShortHeadingGoesHere {
+      color: var(--Color-Scheme-1-Text, #0B0302);
+      font-family: 'Bona Nova', serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 52px; /* 130% */
+      letter-spacing: 0;
+      text-transform: none !important;
+    }
+    /* Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
+    .Layout254 .SectionTitle .Tagline { color: #561513; font-family: 'Poppins', ui-sans-serif, system-ui; font-weight: 600; }
+    .Layout254 .SectionTitle .Heading { font-family: 'Bona Nova', serif; color: #561513; }
+    .Layout254 .SectionTitle .Text { color: #111827; }
+    .Layout254 .Column .Heading { font-family: 'Bona Nova', serif; color: #561513; }
+    .Layout254 .Column .Text { color: #111827; }
+    .Layout254 .ContentRow { display: inline-flex; align-items: center; gap: 12px; transition: gap 320ms ease; }
+    .Layout254 .CenterImage { width: 520px; height: 560.4px; border-radius: 16px; overflow: hidden; transition: width 320ms ease; }
+    .Layout254 .ContentRow .Column { transition: transform 320ms ease; }
+    .Layout254 .ContentRow.expanded { gap: 48px; }
+    .Layout254 .ContentRow.expanded .CenterImage { width: 760px; }
+    .Layout254 .ContentRow.expanded .Column:first-child { transform: translateX(-24px); }
+    .Layout254 .ContentRow.expanded .Column:last-child { transform: translateX(24px); }
+  </style>
+  <!-- Basic FAQ accordion (optional, progressive enhancement) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-layer="Accordion"]')?.forEach(acc => {
+        const header = acc.querySelector('[data-layer="Question"]');
+        const answer = acc.querySelector('[data-layer="Answer"]');
+        if (header && answer) {
+          answer.style.display = 'none';
+          header.style.cursor = 'pointer';
+          header.addEventListener('click', () => {
+            const open = answer.style.display !== 'none';
+            answer.style.display = open ? 'none' : 'flex';
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-Color-Scheme-1-Background">
+  <!-- Layer: Sales Page Web V1 (root wrapper) -->
+  <div data-layer="Sales Page Web V1" class="SalesPageWebV1 w-[1600px] inline-flex flex-col justify-start items-start overflow-hidden">
+    <!-- Layer: Navbar / 1 / -->
+    <div data-layer="Navbar / 1 /" class="Navbar1 self-stretch h-16 px-16 bg-Color-Scheme-1-Background flex flex-col justify-center items-center">
+      <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
+        <div data-layer="Content" class="Content w-20 h-10 flex justify-center items-center">
+          <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-20 h-9 relative overflow-hidden">
+            <div data-layer="Logo-wide 1" class="LogoWide1 w-16 h-9 left-[6.67px] top-0 absolute overflow-hidden">
+              <img data-layer="72 HRS LOGO 1" class="HrsLogo1 w-36 h-28 left-[-40.17px] top-[-38.50px] absolute" src="https://placehold.co/150x113" />
+            </div>
+          </div>
+        </div>
+        <div data-layer="Column" class="Column size- flex justify-center items-center gap-8">
+          <div data-layer="Nav links" class="NavLinks size- flex justify-end items-center gap-8">
+            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
+              <div data-layer="Link text" class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Kits</div>
+            </div>
+            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
+              <div data-layer="Link text" class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Gear</div>
+            </div>
+            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
+              <div data-layer="Link text" class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Learn</div>
+            </div>
+            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
+              <div data-layer="Nav Link Dropdown" class="NavLinkDropdown size- flex justify-start items-center gap-1">
+                <div data-layer="Link text" class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Resources</div>
+                <div data-layer="Chevron Down" class="ChevronDown size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector w-3 h-2 left-[5.70px] top-[8.70px] absolute bg-Color-Scheme-1-Text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-layer="Actions" class="Actions size- flex justify-center items-center gap-4">
+            <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Secondary" class="Button size- px-5 py-2 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
+              <div data-layer="Button" class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">Buy</div>
+            </div>
+            <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True" data-style="Primary" class="Button size- px-5 py-2 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
+              <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Demo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Header / 5 / -->
+    <div data-layer="Header / 5 /" class="Header5 self-stretch h-[900px] px-16 inline-flex justify-center items-center overflow-hidden relative" style="background-image:url('./assets/header.jpg'); background-size:cover; background-position:center;">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div data-layer="Container" class="Container flex-1 max-w-[1280px] inline-flex flex-col justify-start items-start gap-6 relative">
+        <div class="w-full max-w-[720px] flex flex-col justify-start items-start gap-6">
+          <div class="text-Color-White font-['Poppins'] font-extrabold uppercase leading-[1.05] text-[79px] tracking-tight">
+            <span class="text-Color-Valencia">Only Today:</span><br/>
+            20% Off<br/>
+            + Free Fire<br/>
+            Blanket<br/>
+            Auto-Added<br/>
+            At Checkout
+          </div>
+          <div class="text-Color-White/90 text-lg font-['Poppins'] leading-relaxed max-w-[640px]">
+            Protect Your Family. Be Ready For Every Emergency Situations.<br/>
+            Kits for 1–4 People | Made in Canada | Trusted by 75,000+ Families.
+          </div>
+          <div class="inline-flex">
+            <a href="#product" class="flare-border-btn px-6 py-3 bg-Color-White text-Color-Neutral-Darkest text-lg font-semibold font-['Poppins']">Shop Deluxe Kits Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Logo / 2 / -->
+    <div data-layer="Logo / 2 /" class="Logo2 self-stretch px-16 py-10 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Component" class="Component self-stretch inline-flex justify-start items-center gap-16">
+          <div data-layer="Heading" class="Heading w-auto whitespace-nowrap justify-start text-Color-Scheme-2-Text text-2xl font-bold font-['Poppins'] leading-9">Trusted by 10,000+ organizations</div>
+          <div data-layer="Content" class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
+            <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
+              <img alt="Trusted logos" class="w-[720px] h-auto" src="./assets/logo2.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Event Item Header / 2 / -->
+    <div data-layer="Event Item Header / 2 /" class="EventItemHeader2 self-stretch px-16 py-14 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Content" class="Content w-full max-w-[768px] flex flex-col justify-center items-center gap-8">
+          <div data-layer="Events details" class="EventsDetails self-stretch flex flex-col justify-center items-center gap-6">
+            <div data-layer="Section Title" class="SectionTitle self-stretch flex flex-col justify-start items-center gap-4">
+              <div data-layer="Subheading" class="Subheading self-stretch text-center justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">Ready</div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-6">
+                <div data-layer="Heading" class="Heading self-stretch text-center justify-start"><span class="text-Color-Valencia text-6xl font-bold font-['Poppins'] uppercase leading-[60px]">Act Early.</span><span class="text-Color-Scheme-1-Text text-6xl font-bold font-['Poppins'] uppercase leading-[60px]"> Stay Safe.</span></div>
+              </div>
+            </div>
+            <div data-layer="Events date" class="EventsDate self-stretch flex flex-col justify-center items-center gap-8">
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-center items-center gap-4">
+                <div data-layer="Date" class="Date self-stretch text-center justify-start text-Color-Scheme-1-Text text-xl font-semibold font-['Poppins'] leading-loose">Offer Ends In:</div>
+                <div data-layer="Tag" data-alternate="False" data-icon-position="No Icon" data-text-only="False" class="Tag size- px-2.5 py-1 bg-Opacity-Transparent/0 rounded-sm outline outline-2 outline-offset-[-2px] outline-Color-Neutral-Darkest inline-flex justify-start items-start">
+                  <div data-layer="Text" class="Text justify-start text-Color-Neutral-Darkest text-base font-semibold font-['Poppins'] leading-normal">Kits nearly gone</div>
+                </div>
+              </div>
+            <div data-layer="Content" class="Content size- px-6 py-4 bg-Color-Scheme-1-Foreground rounded-2xl inline-flex justify-start items-center gap-4 border-animated">
+                <div data-layer="Event time" class="EventTime w-16 inline-flex flex-col justify-center items-center">
+                  <div data-layer="Text" id="cd-days" class="Text justify-start text-Color-Valencia text-5xl font-bold font-['Poppins'] uppercase leading-[48px]">45</div>
+                  <div data-layer="Text" class="Text justify-start text-Color-Scheme-1-Text text-lg font-bold font-['Poppins'] leading-relaxed">Days</div>
+                </div>
+                <div class="count-sep"></div>
+                <div data-layer="Event time" class="EventTime w-16 inline-flex flex-col justify-center items-center">
+                  <div data-layer="Text" id="cd-hours" class="Text justify-start text-Color-Valencia text-5xl font-bold font-['Poppins'] uppercase leading-[48px]">12</div>
+                  <div data-layer="Text" class="Text justify-start text-Color-Scheme-1-Text text-lg font-bold font-['Poppins'] leading-relaxed">Hours</div>
+                </div>
+                <div class="count-sep"></div>
+                <div data-layer="Event time" class="EventTime w-16 inline-flex flex-col justify-center items-center">
+                  <div data-layer="Text" id="cd-mins" class="Text justify-start text-Color-Valencia text-5xl font-bold font-['Poppins'] uppercase leading-[48px]">44</div>
+                  <div data-layer="Text" class="Text justify-start text-Color-Scheme-1-Text text-lg font-bold font-['Poppins'] leading-relaxed">Mins</div>
+                </div>
+                <div class="count-sep"></div>
+                <div data-layer="Event time" class="EventTime w-16 inline-flex flex-col justify-center items-center">
+                  <div data-layer="Text" id="cd-secs" class="Text justify-start text-Color-Valencia text-5xl font-bold font-['Poppins'] uppercase leading-[48px]">29</div>
+                  <div data-layer="Text" class="Text justify-start text-Color-Scheme-1-Text text-lg font-bold font-['Poppins'] leading-relaxed">Secs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-layer="Actions" class="Actions w-[480px] flex flex-col justify-center items-center gap-4">
+            <div data-layer="Form" class="Form self-stretch inline-flex justify-center items-start gap-4">
+              <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Primary" class="Button size- px-6 py-2.5 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
+                <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Order your kit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Header / 131 / -->
+    <div data-layer="Header / 131 /" class="Header131 self-stretch px-16 py-28 bg-Color-Neutral-Darkest text-Color-White flex flex-col justify-start items-center gap-20 overflow-hidden" style="height:1300px;">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
+            <div data-layer="Heading" class="Heading w-[637px] justify-start flex flex-col gap-2">
+              <div class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px]"><span class="text-Color-White">GET YOUR </span><span class="text-[#D73630]">FREE</span></div>
+              <div class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px] text-[#D1232A]">FIRE BLANKET</div>
+              <div class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px] text-Color-White">TODAY!</div>
+            </div>
+          </div>
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-8">
+            <div data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla." class="TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla w-[560px] max-w-[560px] justify-start">
+              <div class="text-Color-White text-5xl font-semibold font-['Poppins'] leading-tight">Save <span class="font-bold">20%</span> Today – Offer Ends Soon.</div>
+              <div class="text-Color-White text-2xl font-normal font-['Poppins'] leading-9 mt-6">Every Deluxe Kit order today includes a <span class="font-bold text-2xl">FREE Fire Blanket</span> (Value $21.99)</div>
+              <div class="text-Color-White text-2xl font-normal font-['Poppins'] leading-9 mt-6">A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!</div>
+            </div>
+          </div>
+        </div>
+        <div data-layer="Image container" class="ImageContainer self-stretch h-[746px] relative image-tilt">
+          <img alt="package" class="img-tilt-large w-[1088px] h-[746px] left-0 top-[0.22px] absolute rounded-2xl object-cover" src="./assets/package.png" />
+          <img alt="fire blanket" class="img-tilt-small size-96 left-[896px] top-[80px] absolute rounded-2xl object-cover" src="./assets/fire blanket.png" />
+        </div>
+      </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
+      <img alt="wave" src="./assets/Frame 17.png" class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+    <!-- Layer: Header / 147 / (Video Lightbox) -->
+    <div data-layer="Header / 147 /" class="Header147 self-stretch flex flex-col justify-start items-center overflow-hidden" style="background-image:url('./assets/header147.png'); background-size:cover; background-position:center;">
+      <div data-layer="Content" class="Content self-stretch px-16 pt-28 pb-12 flex flex-col justify-start items-center gap-20">
+        <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+          <div data-layer="Column" class="Column w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+              <div data-layer="Heading" class="Heading w-auto text-center justify-start whitespace-nowrap">
+                <div class="text-[#6A1B1B] text-[63px] leading-[84px] font-['Bona Nova'] font-semibold">Built to Meet FEMA & Canadian Guidelines</div>
+              </div>
+              <div data-layer="Text" class="Text w-[950px] text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">See exactly how the 72HRS Deluxe Kit checks every box experts recommend for emergency preparedness.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img data-layer="Placeholder Lightbox" class="PlaceholderLightbox self-stretch h-[900px] rounded-2xl object-cover" src="./assets/video147.png" alt="Video placeholder" />
+    </div>
+    <!-- Layer: Header / 64 / (What's inside - title) -->
+    <div data-layer="Header / 64 /" class="Header64 self-stretch px-16 pt-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Component" class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
+          <div data-layer="What’s inside" class="WhatSInside self-stretch text-center justify-start">
+            <div class="font-['Bona Nova'] font-bold text-[70px] leading-[84px] text-[#561513]">What’s Inside</div>
+          </div>
+          <div data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours." class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours self-stretch text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Layout / 28 / (What's inside - tabs) -->
+    <div data-layer="Layout / 28 /" class="Layout28 self-stretch px-16 py-28 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Component" class="Component self-stretch inline-flex justify-start items-center">
+          <div data-layer="Tabs Menu" class="TabsMenu flex-1 inline-flex flex-col justify-start items-start gap-10">
+            <div data-layer="Tab Horizontal" data-tab="food-water" class="TabHorizontal self-stretch h-40 px-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+              <div data-layer="Short heading goes here" class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">Food & Water</div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">3600 Cal Food Ration<br/>125ml Water Pouches<br/>Aquatabs</div>
+            </div>
+            <div data-layer="Tab Horizontal" data-tab="shelter-warmth" class="TabHorizontal self-stretch h-44 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+              <div data-layer="Short heading goes here" class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">Shelter & Warmth</div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Sleeping Bag<br/>Tube Tent<br/>Rain Poncho</div>
+            </div>
+            <div data-layer="Tab Horizontal" data-tab="lighting-communication" class="TabHorizontal self-stretch h-56 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+              <div data-layer="Short heading goes here" class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">Lighting & Communication</div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Hand-Crank Flashlight<br/>3-Wick Candle<br/>NOAA Weatherband Radio<br/>AM/FM Radio</div>
+            </div>
+            <div data-layer="Tab Horizontal" data-tab="first-aid-sanitation" class="TabHorizontal self-stretch h-36 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+              <div data-layer="Short heading goes here" class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">First Aid & Sanitation</div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">First Aid Kit 108 Pcs<br/>Emergency Whistle<br/>Dust Masks</div>
+            </div>
+          </div>
+          <div data-layer="Tabs Content" class="TabsContent flex-1 h-[826px] inline-flex flex-col justify-center items-start gap-2">
+            <div class="tab-panel" data-panel="food-water">
+              <div data-layer="Frame 30" class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
+                <img data-layer="food ration" class="FoodRation size-[645px] object-cover" src="./assets/food ration.jpg" />
+              </div>
+              <div data-layer="Frame 33" class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
+                <img data-layer="lifestyle3" class="Lifestyle3 w-80 h-96 object-cover" src="./assets/lifestyle3.jpg" />
+                <img data-layer="aquatabs" class="Aquatabs size-80 object-cover" src="./assets/Aquatabs.jpg" />
+              </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="shelter-warmth">
+              <div data-layer="Frame 30" class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
+                <img alt="shelter" class="size-[645px] object-cover" src="./assets/sleeping bag.jpg" />
+              </div>
+              <div data-layer="Frame 33" class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
+                <img alt="tent" class="w-80 h-96 object-cover" src="./assets/tube tent.jpg" />
+                <img alt="poncho" class="size-80 object-cover" src="./assets/rain poncho.jpg" />
+              </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="lighting-communication">
+              <div data-layer="Frame 30" class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
+                <img alt="lighting" class="size-[645px] object-cover" src="./assets/radio.jpg" />
+              </div>
+              <div data-layer="Frame 33" class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
+                <img alt="radio" class="w-80 h-96 object-cover" src="./assets/flashlight.jpg" />
+                <img alt="flashlight" class="size-80 object-cover" src="./assets/food ration.jpg" />
+              </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="first-aid-sanitation">
+              <div data-layer="Frame 30" class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
+                <img alt="first-aid" class="size-[645px] object-cover" src="./assets/first aid kit.jpg" />
+              </div>
+              <div data-layer="Frame 33" class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
+                <img alt="whistle" class="w-80 h-96 object-cover" src="./assets/whistle.jpg" />
+                <img alt="masks" class="size-80 object-cover" src="./assets/mask.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Layout / 238 / (Trusted standard) -->
+    <div data-layer="Layout / 238 /" class="Layout238 self-stretch h-[587px] relative bg-Color-Scheme-4-Background overflow-hidden" style="background-image:url('./assets/238.png'); background-size:cover; background-position:center;">
+      </div>
+    <!-- Layer: Stats / 26 / -->
+    <div data-layer="Stats / 26 /" class="Stats26 self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden" style="background: linear-gradient(90deg, #ffe6eb 0%, #ffffff 50%, #ffe6eb 100%);">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
+            <div data-layer="Heading" class="Heading self-stretch justify-start font-['Bona Nova'] font-bold" style="color: var(--Color-Valencia-Darker, #561513); font-size:55px; line-height:52px; letter-spacing:0;">Families Approved. <br/>Peace of Mind Proven</div>
+          </div>
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
+            <div data-layer="Text" class="Text self-stretch justify-start text-[#111827] text-xl font-normal font-['Poppins'] leading-loose">When families choose the 72HRS kit, they gain confidence in their preparedness. Our customers report feeling equipped to handle emergencies effectively. Join the thousands who have made the smart choice for safety.</div>
+          </div>
+        </div>
+        <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-12">
+          <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
+            <div data-layer="Stat" class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]"><span class="stat-count" data-target="97">0</span>%</div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">Say they feel more prepared after getting their 72HRS kit</div>
+              </div>
+            </div>
+            <div data-layer="Stat" class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]"><span class="stat-count" data-target="95">0</span>%</div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">Said the kit had everything they needed for emergencies</div>
+              </div>
+            </div>
+            <div data-layer="Stat" class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]"><span class="stat-count" data-target="97">0</span>%</div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                <div data-layer="Text" class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">Said they would recommend 72HRS kits to friends & family</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
+      <img alt="wave" src="./assets/Vector 1.png" class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+    <!-- Layer: Product / 4 / (Choose the Right Kit) -->
+    <div data-layer="Product / 4 /" class="Product4 self-stretch px-16 pt-7 pb-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Title" class="Title w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
+          <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
+            <div data-layer="Tagline" class="Tagline text-center justify-start text-[#561513] text-xl font-semibold font-['Poppins'] leading-8">Find your Kit</div>
+          </div>
+          <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+            <div data-layer="Heading" class="Heading self-stretch text-center justify-start font-['Bona Nova'] font-bold" style="color:#561513; font-size:64px; line-height:72px;">Choose the Right Kit for Your Family</div>
+            <div data-layer="Text" class="Text w-[908px] text-center justify-start text-[#111827] text-xl font-normal font-['Poppins'] leading-8">Each kit supports 1 person for 72 hours.<br/>Select your household size and we’ll show you the perfect match.</div>
+          </div>
+        </div>
+        <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-16">
+            <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
+            <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover" src="./assets/1person.jpeg" />
+              <div data-layer="Content Bottom" class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Heading" class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8" style="color:#0B0302;">1 Person</div>
+                    <div data-layer="Text" class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">Solo, car trunk, student</div>
+                  </div>
+                  <div data-layer="Price" class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">$259.99</div>
+                </div>
+                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
+                  <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Add 1-Person Kit to Cart</div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover" src="./assets/2person.jpeg" />
+              <div data-layer="Content Bottom" class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Heading" class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8" style="color:#0B0302;">2 Person</div>
+                    <div data-layer="Text" class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">Couples, roommates</div>
+                  </div>
+                  <div data-layer="Price" class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">$284.99</div>
+                </div>
+                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
+                  <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Add 2-Person Kit to Cart</div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover" src="./assets/3person.jpeg" />
+              <div data-layer="Content Bottom" class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Heading" class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8" style="color:#0B0302;">3 Person</div>
+                    <div data-layer="Text" class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">Small Family</div>
+                  </div>
+                  <div data-layer="Price" class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">$374.99</div>
+                </div>
+                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
+                  <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Add 3-Person Kit to Cart</div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Product" class="Product flex-1 bg-white inline-flex flex-col justify-start items-start gap-4">
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover" src="./assets/4person.jpeg" />
+              <div data-layer="Content Bottom" class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
+                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Heading" class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8" style="color:#0B0302;">4 Person</div>
+                    <div data-layer="Text" class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">Full Household</div>
+                  </div>
+                  <div data-layer="Price" class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">$404.99</div>
+                </div>
+                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
+                  <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Add 4-Person Kit to Cart</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-layer="Frame 20" class="Frame20 w-[1203px] h-28 relative">
+        <div style="width: 100%; height: 120px; background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/Frame_20.png?v=1759857652'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+      </div>
+    </div>
+    <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
+    <div data-layer="Layout / 254 /" class="Layout254 self-stretch px-16 pt-28 pb-8 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Section Title" class="SectionTitle w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
+          <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
+            <div data-layer="Tagline" class="Tagline text-center justify-start text-Color-Scheme-2-Text text-2xl font-semibold font-['Poppins'] leading-9">Choose the Amount of people you want the Kit For</div>
+          </div>
+          <div data-layer="Content" class="Content w-[818px] flex flex-col justify-start items-center gap-6">
+            <div data-layer="Heading" class="Heading self-stretch text-center justify-start"><span class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">4 Person Kit</span><span class="text-Color-Scheme-2-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]"> </span><span class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">–</span><span class="text-Color-Scheme-2-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]"> Everything You Need for Emergencies</span></div>
+            <div data-layer="Text" class="Text w-[1206px] text-center justify-start text-Color-Scheme-2-Text text-2xl font-normal font-['Poppins'] leading-9">The 72HRS Deluxe Emergency Kit is designed to ensure your family is ready for any situation.<br/>With essential supplies and trusted quality, peace of mind is just a click away.</div>
+          </div>
+        </div>
+        <div data-layer="Content" class="Content w-[1340px] inline-flex justify-start items-center gap-12 ContentRow">
+          <div data-layer="Column" class="Column flex-1 h-[653px] inline-flex flex-col justify-center items-center gap-16">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+              <div data-layer="water_do" class="WaterDo size-12 relative">
+                <div data-layer="Vector" class="Vector w-8 h-10 left-[7.70px] top-[4.46px] absolute bg-Color-Valencia"></div>
+              </div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Heading" class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">Food & Water</div>
+                <div data-layer="Text" class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">4 × 72HRS Food Rations <br/>(3,600 Cal each)<br/>48 × Emergency Water Pouches <br/>(125 ml each)<br/>10 x Aquatabs Water Purification Tablet</div>
+              </div>
+            </div>
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+              <div data-layer="Vector" class="Vector size-10 bg-Color-Valencia"></div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Heading" class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">Shelter & Warmth</div>
+                <div data-layer="Text" class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">4 × Sleeping Bags<br/>4 × Rain Ponchos<br/>2 × Tube Tent</div>
+              </div>
+            </div>
+          </div>
+          <img data-layer="Placeholder Image" class="PlaceholderImage CenterImage object-cover" src="./assets/4person.jpeg" />
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-center gap-16">
+            <div data-layer="Content" class="Content w-96 flex flex-col justify-start items-center gap-6">
+              <div data-layer="Vector" class="Vector size-10 bg-Color-Valencia"></div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Heading" class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">First Aid & Essentials</div>
+                <div data-layer="Text" class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">1 × 108-Piece First Aid Kit<br/>1 × Hand-Crank Radio<br/>1 × 36-Hour Emergency Candles<br/>1 x 72HRS Dust Masks<br/>2 x 72HRS Deluxe Backpack</div>
+              </div>
+            </div>
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+              <div data-layer="Vector" class="Vector w-10 h-11 bg-Color-Valencia"></div>
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
+                <div data-layer="Heading" class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">Tools & Safety</div>
+                <div data-layer="Text" class="Text w-96 text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">1 × Multi-tool Knife<br/>1 × Whistle<br/>1 × Duct Tape Roll<br/>1 x Aluminum Alloy Emergency Whistle<br/>4 x 72HRS Tissue Pack<br/>1 x 72HRS 50FT Nylon Utility Cord <br/>   3 x LED Rechargeable Flashlight<br/>    1 x 72HRS Roll Duct Tape</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-layer="Actions" class="Actions w-56 h-12 flex flex-col justify-center items-center gap-6">
+          <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
+            <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">See Full Spec Sheet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-52 relative bg-zinc-100 overflow-hidden">
+      <div data-layer="Vector 1" class="Vector1 w-[1734px] h-24 left-[-134px] top-[97.20px] absolute bg-black outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+    </div>
+    <!-- Layer: Gallery / 3 / -->
+    <div data-layer="Gallery / 3 /" class="Gallery3 self-stretch px-16 py-28 bg-Color-Scheme-3-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Section Title" class="SectionTitle w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
+          <div data-layer="Heading" class="Heading w-[846px] text-center justify-start"><span class="text-Color-Scheme-3-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">See Why Influencers & Families </span><span class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">Choose 72HRS</span></div>
+          <div data-layer="Text" class="Text self-stretch text-center justify-start text-Color-Scheme-3-Text text-2xl font-normal font-['Poppins'] leading-9">Discover why families trust 72HRS for safety.</div>
+        </div>
+        <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-8">
+          <img data-layer="Placeholder Image 1" class="PlaceholderImage1 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
+          <img data-layer="Placeholder Image 2" class="PlaceholderImage2 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
+          <img data-layer="Placeholder Image 3" class="PlaceholderImage3 flex-1 h-96 rounded-2xl" src="https://placehold.co/405x405" />
+        </div>
+      </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-zinc-100 overflow-hidden">
+      <div data-layer="Vector 1" class="Vector1 w-[1734px] h-24 left-[-134px] top-[-0.20px] absolute bg-black outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+    </div>
+    <!-- Layer: FAQ / 6 / -->
+    <div data-layer="FAQ / 6 /" class="Faq6 self-stretch px-16 py-28 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Component" class="Component self-stretch inline-flex justify-start items-start gap-20">
+          <div data-layer="Section Title" class="SectionTitle w-[500px] inline-flex flex-col justify-start items-start gap-8">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-6">
+              <div data-layer="Got questions?" class="GotQuestions self-stretch justify-start"><span class="text-Color-Scheme-2-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">Got </span><span class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">questions?</span></div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-2-Text text-2xl font-normal font-['Poppins'] leading-9">Find answers to your most pressing questions about our emergency kits.</div>
+            </div>
+            <div data-layer="Actions" class="Actions size- bg-black inline-flex justify-start items-center gap-6">
+              <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
+                <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Contact</div>
+              </div>
+            </div>
+          </div>
+          <div data-layer="Accordion List" class="AccordionList flex-1 inline-flex flex-col justify-start items-start gap-4">
+            <div data-layer="Accordion" class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-2-Border/20 flex flex-col justify-start items-start">
+              <div data-layer="Question" class="Question self-stretch px-6 py-5 inline-flex justify-start items-center gap-6 overflow-hidden">
+                <div data-layer="Question" class="Question flex-1 justify-start text-Color-Scheme-2-Text text-xl font-bold font-['Poppins'] leading-loose">Why 72 hours?</div>
+                <div data-layer="close" class="Close size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector size-3.5 left-[5.42px] top-[5.43px] absolute bg-Color-Scheme-2-Text border border-Color-Scheme-2-Text"></div>
+                </div>
+              </div>
+              <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start gap-4">
+                <div data-layer="Text" class="Text flex-1 justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">FEMA and Canada both recommend being prepared for at least 72 hours. This kit is built to cover that critical period.</div>
+              </div>
+            </div>
+            <div data-layer="Accordion" class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-2-Border/20 flex flex-col justify-start items-start">
+              <div data-layer="Question" class="Question self-stretch px-6 py-5 inline-flex justify-start items-center gap-6 overflow-hidden">
+                <div data-layer="Question" class="Question flex-1 justify-start text-Color-Scheme-2-Text text-xl font-bold font-['Poppins'] leading-loose">Shelf-life of the food and water?</div>
+                <div data-layer="close" class="Close size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector size-3.5 left-[5.42px] top-[5.43px] absolute bg-Color-Scheme-2-Text border border-Color-Scheme-2-Text"></div>
+                </div>
+              </div>
+              <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start gap-4">
+                <div data-layer="Text" class="Text flex-1 justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">All our Food and water have up to a 5-year shelf life (delivered within 1-6 months after the manufacturing date). The food & water will need to be replenished after the expiration date. We have our own food & water refill kits, so it saves you the convenience of having to find the items yourselves!</div>
+              </div>
+            </div>
+            <div data-layer="Accordion" class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-2-Border/20 flex flex-col justify-start items-start">
+              <div data-layer="Question" class="Question self-stretch px-6 py-5 inline-flex justify-start items-center gap-6 overflow-hidden">
+                <div data-layer="Question" class="Question flex-1 justify-start text-Color-Scheme-2-Text text-xl font-bold font-['Poppins'] leading-loose">Can the kit be customized to meet specific needs or requirements?</div>
+                <div data-layer="close" class="Close size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector size-3.5 left-[5.42px] top-[5.43px] absolute bg-Color-Scheme-2-Text border border-Color-Scheme-2-Text"></div>
+                </div>
+              </div>
+              <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start gap-4">
+                <div data-layer="Text" class="Text flex-1 justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">Yes, our emergency kits can be customized to meet your specific needs. Please contact us directly, and we'll work with you to create a personalized kit tailored to your requirements.</div>
+              </div>
+            </div>
+            <div data-layer="Accordion" class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-2-Border/20 flex flex-col justify-start items-start">
+              <div data-layer="Question" class="Question self-stretch px-6 py-5 inline-flex justify-start items-center gap-6 overflow-hidden">
+                <div data-layer="Question" class="Question flex-1 justify-start text-Color-Scheme-2-Text text-xl font-bold font-['Poppins'] leading-loose">Are the food rations gluten-free?</div>
+                <div data-layer="close" class="Close size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector size-3.5 left-[5.42px] top-[5.43px] absolute bg-Color-Scheme-2-Text border border-Color-Scheme-2-Text"></div>
+                </div>
+              </div>
+              <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start gap-4">
+                <div data-layer="Text" class="Text flex-1 justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">The standard food ration bars in our Emergency Kits are all nut-free and vegetarian friendly but are not gluten free. If you have a gluten allergy, please reach out to us and we'll happily work with you to make sure you've got a solution.</div>
+              </div>
+            </div>
+            <div data-layer="Accordion" class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-2-Border/20 flex flex-col justify-start items-start">
+              <div data-layer="Question" class="Question self-stretch px-6 py-5 inline-flex justify-start items-center gap-6 overflow-hidden">
+                <div data-layer="Question" class="Question flex-1 justify-start text-Color-Scheme-2-Text text-xl font-bold font-['Poppins'] leading-loose">Do you do custom Emergency Kit orders for large groups?</div>
+                <div data-layer="close" class="Close size-6 relative overflow-hidden">
+                  <div data-layer="Vector" class="Vector size-3.5 left-[5.42px] top-[5.43px] absolute bg-Color-Scheme-2-Text border border-Color-Scheme-2-Text"></div>
+                </div>
+              </div>
+              <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start gap-4">
+                <div data-layer="Text" class="Text flex-1 justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">Yes, we do accept custom orders for large groups. For inquiries regarding custom orders, please email us directly at orders@72hours.ca. We'll be happy to discuss your specific requirements and provide you with a tailored solution to meet the needs of your group.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Layer: CTA / 39 / -->
+    <div data-layer="CTA / 39 /" class="Cta39 self-stretch px-16 py-28 bg-Color-Scheme-4-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Card" class="Card self-stretch bg-Color-Valencia-Darker rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Scheme-4-Border/20 inline-flex justify-start items-center overflow-hidden">
+          <div data-layer="Column" class="Column flex-1 p-12 inline-flex flex-col justify-center items-start gap-8">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-6">
+              <div data-layer="Heading" class="Heading self-stretch justify-start text-Color-Scheme-4-Text text-6xl font-bold font-['Poppins'] uppercase leading-[60px]">Save 20% Today - Offer Ends Soon</div>
+              <div data-layer="Text" class="Text self-stretch justify-start text-Color-Scheme-4-Text text-xl font-normal font-['Poppins'] leading-loose">Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don't miss out!</div>
+            </div>
+            <div data-layer="Actions" class="Actions size- inline-flex justify-start items-start gap-4">
+              <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Primary" class="Button size- px-6 py-2.5 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
+                <div data-layer="Button" class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">GET 20% OFF TODAY!</div>
+              </div>
+            </div>
+          </div>
+          <img data-layer="Placeholder Image" class="PlaceholderImage flex-1 self-stretch" src="https://placehold.co/640x439" />
+        </div>
+      </div>
+    </div>
+    <!-- Layer: Footer / 2 / -->
+    <div data-layer="Footer / 2 /" class="Footer2 self-stretch px-16 py-20 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <div data-layer="Container" class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+        <div data-layer="Content" class="Content self-stretch h-60 inline-flex justify-start items-start gap-32">
+          <div data-layer="Links" class="Links flex-1 flex justify-start items-start gap-10">
+            <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start overflow-hidden">
+              <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-20 h-9 relative overflow-hidden">
+                <div data-layer="Logo-wide 1" class="LogoWide1 w-16 h-9 left-[6.67px] top-0 absolute overflow-hidden">
+                  <div data-layer="Vector" class="Vector w-5 h-4 left-[50.82px] top-[10.88px] absolute bg-Color-Neutral-Darkest"></div>
+                  <div data-layer="Vector" class="Vector w-5 h-6 left-[34.33px] top-[11.32px] absolute bg-Color-Neutral-Darkest"></div>
+                  <div data-layer="Vector" class="Vector w-5 h-4 left-[18.55px] top-[10.88px] absolute bg-Color-Neutral-Darkest"></div>
+                  <div data-layer="Vector" class="Vector w-5 h-4 left-0 top-[10.24px] absolute bg-Color-Neutral-Darkest"></div>
+                  <div data-layer="Vector" class="Vector w-4 h-2.5 left-[1.15px] top-0 absolute bg-Color-Neutral-Darkest"></div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
+              <div data-layer="Company" class="Company self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">Company</div>
+              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="About us" class="AboutUs flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">About us</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Careers" class="Careers flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Careers</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Press" class="Press flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Press</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Contact" class="Contact flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Contact</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Mission" class="Mission flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Mission</div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
+              <div data-layer="Resources" class="Resources self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">Resources</div>
+              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Blog" class="Blog flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Blog</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Guides" class="Guides flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Guides</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Tools" class="Tools flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Tools</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Support" class="Support flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Support</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Community" class="Community flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Community</div>
+                </div>
+              </div>
+            </div>
+            <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
+              <div data-layer="Legal" class="Legal self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">Legal</div>
+              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Terms" class="Terms flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Terms</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Privacy" class="Privacy flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Privacy</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Cookies" class="Cookies flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Cookies</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Compliance" class="Compliance flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Compliance</div>
+                </div>
+                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
+                  <div data-layer="Subscribe" class="Subscribe flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Subscribe</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-layer="Newslatter" class="Newslatter w-96 inline-flex flex-col justify-start items-start gap-6">
+            <div data-layer="Frame 13" class="Frame13 self-stretch flex flex-col justify-start items-start gap-4">
+              <div data-layer="Stay informed about emergency preparedness" class="StayInformedAboutEmergencyPreparedness self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">Stay informed about emergency preparedness</div>
+              <div data-layer="Email address" class="EmailAddress self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">Email address</div>
+            </div>
+            <div data-layer="Actions" class="Actions size- flex flex-col justify-start items-start gap-3">
+              <div data-layer="Form" class="Form self-stretch inline-flex justify-start items-start gap-4">
+                <div data-layer="Text input" data-alternate="False" data-type="Default" class="TextInput flex-1 px-3 py-2 bg-Opacity-Transparent/0 rounded-xl outline outline-1 outline-Opacity-Neutral-Darkest-15/20 flex justify-start items-center gap-2">
+                  <div data-layer="Placeholder" class="Placeholder flex-1 justify-start text-Opacity-Neutral-Darkest-60/60 text-lg font-normal font-['Poppins'] leading-relaxed">Subscribe</div>
+                </div>
+                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False" data-style="Secondary" class="Button size- px-6 py-2.5 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
+                  <div data-layer="Button" class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">By subscribing, you agree to our privacy policy and consent to receive updates.</div>
+                </div>
+              </div>
+              <div data-layer="Thank you for subscribing!" class="ThankYouForSubscribing self-stretch justify-start text-Color-Scheme-1-Text text-xs font-normal font-['Poppins'] leading-none">Thank you for subscribing!</div>
+            </div>
+          </div>
+        </div>
+        <div data-layer="Credits" class="Credits self-stretch flex flex-col justify-start items-start gap-8">
+          <div data-layer="Divider" class="Divider self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-Color-Scheme-1-Border/20"></div>
+          <div data-layer="Row" class="Row self-stretch inline-flex justify-between items-start">
+            <div data-layer="Credits" class="Credits size- flex justify-start items-center gap-6">
+              <div data-layer="Privacy policy" class="PrivacyPolicy justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">Privacy policy</div>
+              <div data-layer="Terms of service" class="TermsOfService justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">Terms of service</div>
+              <div data-layer="Cookies settings" class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">Cookies settings</div>
+              <div data-layer="Cookies Settings" class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">Cookies Settings</div>
+            </div>
+            <div data-layer="Social Links" class="SocialLinks size- flex justify-start items-start gap-3">
+              <div data-layer="Facebook" class="Facebook size-6 relative overflow-hidden">
+                <div data-layer="Vector" class="Vector size-5 left-[2px] top-[2.24px] absolute bg-Color-Scheme-1-Text"></div>
+              </div>
+              <div data-layer="Instagram" class="Instagram size-6 relative overflow-hidden">
+                <div data-layer="Vector" class="Vector size-4 left-[3px] top-[3.24px] absolute bg-Color-Scheme-1-Text"></div>
+              </div>
+              <div data-layer="X" class="X size-6 relative overflow-hidden">
+                <div data-layer="Vector" class="Vector size-4 left-[3px] top-[4.24px] absolute bg-Color-Scheme-1-Text"></div>
+              </div>
+              <div data-layer="LinkedIn" class="Linkedin size-6 relative overflow-hidden">
+                <div data-layer="Vector" class="Vector size-4 left-[3px] top-[3.24px] absolute bg-Color-Scheme-1-Text"></div>
+              </div>
+              <div data-layer="Youtube" class="Youtube size-6 relative overflow-hidden">
+                <div data-layer="Vector" class="Vector w-5 h-3.5 left-[1.99px] top-[5px] absolute bg-Color-Scheme-1-Text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Simple countdown to a target date (set 45 days from now by default)
+    (function(){
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+      if(!daysEl || !hoursEl || !minsEl || !secsEl) return;
+      const target = new Date(Date.now() + 45*24*60*60*1000); // demo target: 45 days from now
+      const tick = () => {
+        const now = new Date();
+        let diff = Math.max(0, target - now);
+        const days = Math.floor(diff / (24*60*60*1000)); diff -= days*(24*60*60*1000);
+        const hours = Math.floor(diff / (60*60*1000)); diff -= hours*(60*60*1000);
+        const mins = Math.floor(diff / (60*1000)); diff -= mins*(60*1000);
+        const secs = Math.floor(diff / 1000);
+        daysEl.textContent = String(days).padStart(2,'0');
+        hoursEl.textContent = String(hours).padStart(2,'0');
+        minsEl.textContent = String(mins).padStart(2,'0');
+        secsEl.textContent = String(secs).padStart(2,'0');
+      };
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Tabs logic for "What's inside"
+    (function(){
+      const root = document.querySelector('.Layout28');
+      if(!root) return;
+      const menu = root.querySelector('.TabsMenu');
+      const panels = root.querySelectorAll('.tab-panel');
+      const tabs = menu?.querySelectorAll('[data-tab]');
+      if(!menu || panels.length === 0 || !tabs) return;
+      function show(panelName){
+        panels.forEach(p => p.classList.toggle('hidden', p.getAttribute('data-panel') !== panelName));
+        tabs.forEach(t => {
+          const isActive = t.getAttribute('data-tab') === panelName;
+          t.classList.toggle('tab-active', isActive);
+          t.classList.toggle('tab-inactive', !isActive);
+        });
+      }
+      // default active
+      show('food-water');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => show(tab.getAttribute('data-tab')));
+      });
+    })();
+
+    // Count-up on scroll for Stats section + loop every 3s (0 -> target)
+    (function(){
+      const statsSection = document.querySelector('[data-layer="Stats / 26 /"]');
+      if(!statsSection) return;
+      const counters = statsSection.querySelectorAll('.stat-count');
+      let hasRun = false;
+      const animateOnce = () => {
+        counters.forEach(el => {
+          const target = parseInt(el.getAttribute('data-target') || '0', 10);
+          const duration = 1200; // ms
+          const start = performance.now();
+          const tick = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const value = Math.floor(progress * target);
+            el.textContent = String(value);
+            if(progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      };
+      const cycle = () => {
+        // reset to 0%
+        counters.forEach(el => { el.textContent = '0'; });
+        // animate up
+        animateOnce();
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting && !hasRun) { hasRun = true; cycle(); setInterval(cycle, 3000); io.disconnect(); } });
+      }, { threshold: 0.3 });
+      io.observe(statsSection);
+    })();
+
+    // Hover expand behavior for Layout / 254 /
+    (function(){
+      const row = document.querySelector('.Layout254 .ContentRow');
+      const img = document.querySelector('.Layout254 .CenterImage');
+      if(!row || !img) return;
+      const enter = () => row.classList.add('expanded');
+      const leave = () => row.classList.remove('expanded');
+      img.addEventListener('mouseenter', enter);
+      img.addEventListener('mouseleave', leave);
+      img.addEventListener('focus', enter);
+      img.addEventListener('blur', leave);
+    })();
+  </script>
+</body>
+</html>

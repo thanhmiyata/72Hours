@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ai-devkit": {
+      "command": "npx",
+      "args": [
+        "ai-devkit",
+        "start-mcp-server"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
+
