@@ -826,18 +826,20 @@
 
         .Frame17 {
             position: relative;
-            width: min(100%, 100rem);
-            height: 8.625rem;
-            background: #F2F2F2;
+            width: 100%;
+            background: transparent;
+            margin: 0;
             overflow: hidden;
-            margin: 0 auto;
+        }
+
+        .Frame17--overlap {
+            margin-top: -2rem;
         }
 
         .Frame17 img {
             display: block;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
         }
 
         .Header147 {
@@ -955,6 +957,189 @@
             pointer-events: none;
         }
 
+        .Stats26 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem 2rem;
+            gap: 5rem;
+            width: min(100%, 100rem);
+            background: linear-gradient(92.19deg, #F9DEE0 2.08%, #FFFFFF 50.23%, #F8DEE4 98.39%);
+            color: #0B0302;
+            margin: 0 auto;
+        }
+
+        .Stats26__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5rem;
+            width: min(100%, 80rem);
+        }
+
+        .Stats26__intro {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 5rem;
+            width: 100%;
+        }
+
+        .Stats26__col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .Stats26__heading {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3.4375rem;
+            line-height: 3.25rem;
+            color: #561513;
+        }
+
+        .Stats26__copy {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: #0B0302;
+        }
+
+        .Stats26__grid {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .StatCard {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2rem;
+            gap: 3rem;
+            flex: 1 1 0;
+            border: 1px solid #D73630;
+            border-radius: 1rem;
+            background: rgba(0, 0, 0, 0.001);
+        }
+
+        .StatCard__value {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 1.3;
+            color: #D73630;
+        }
+
+        .StatCard__label {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.625rem;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: #D73630;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .Stats26 {
+                padding: 5rem 2.5rem;
+            }
+
+            .Stats26__intro {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .Stats26__grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        .TrustedStandard {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 7rem 4rem 5rem;
+            width: min(100%, 100rem);
+            margin: 0 auto;
+            color: #ffffff;
+            background:
+                linear-gradient(180deg, rgba(86, 21, 19, 0.55), rgba(86, 21, 19, 0.75)),
+                url('./assets/trust standard mobile.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .TrustedStandard__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            width: min(100%, 25rem);
+            text-align: center;
+        }
+
+        .TrustedStandard__title {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        .TrustedStandard__list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            width: 100%;
+        }
+
+        .TrustedStandard__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .TrustedStandard__icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .TrustedStandard__heading {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .TrustedStandard__copy {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
         @media (max-width: 768px) {
 
             html,
@@ -970,7 +1155,7 @@
                 width: 100% !important;
                 max-width: 420px;
                 margin: 0 auto;
-                padding: 0 1.25rem 4rem;
+                padding: 0 1.25rem;
                 gap: 48px !important;
             }
 
@@ -1426,7 +1611,7 @@
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 w-full h-[138px] relative bg-neutral-100 overflow-hidden">
+        <div data-layer="Frame 17" class="Frame17 Frame17--overlap">
             <img alt="wave" src="./assets/Frame17_test.png" />
         </div>
         <!-- Layer: Header / 147 / (Video Lightbox) -->
@@ -1574,26 +1759,39 @@
             </div>
         </div>
         <!-- Layer: Layout / 238 / (Trusted standard) -->
-        <div data-layer="Layout / 238 /"
-            class="Layout238 self-stretch h-[587px] relative bg-Color-Scheme-4-Background overflow-hidden"
-            style="background-image:url('./assets/238.png'); background-size:cover; background-position:center;">
+        <div data-layer="Layout / 238 /" class="TrustedStandard">
+            <div class="TrustedStandard__container">
+                <div class="TrustedStandard__title">Built on Trusted Standard</div>
+                <div class="TrustedStandard__list">
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/list_alt_check.svg" alt="Checklist icon" loading="lazy" />
+                        <div class="TrustedStandard__heading">FEMA-ALIGNED</div>
+                        <p class="TrustedStandard__copy">Built to meet FEMA &amp; Ready.gov 72-hour kit guidelines.</p>
+                    </div>
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/globe_uk.svg" alt="Globe icon" loading="lazy" />
+                        <div class="TrustedStandard__heading">CANADIAN-RECOMMENDED</div>
+                        <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness advice. Proudly assembled in Canada.</p>
+                    </div>
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/verified.svg" alt="Verified badge icon" loading="lazy" />
+                        <div class="TrustedStandard__heading">20+ YEARS OF TRUST</div>
+                        <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two decades.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Layer: Stats / 26 / -->
-        <div data-layer="Stats / 26 /"
-            class="Stats26 self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden"
-            style="background: linear-gradient(90deg, #ffe6eb 0%, #ffffff 50%, #ffe6eb 100%);">
-            <div data-layer="Container"
-                class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
-                <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
-                    <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
-                        <div data-layer="Heading"
-                            class="Heading self-stretch justify-start font-['Bona Nova'] font-bold"
-                            style="color: var(--Color-Valencia-Darker, #561513); font-size:55px; line-height:52px; letter-spacing:0;">
-                            Families Approved. <br />Peace of Mind Proven</div>
+        <div data-layer="Stats / 26 /" class="Stats26">
+            <div data-layer="Container" class="Stats26__container">
+                <div data-layer="Content" class="Stats26__intro">
+                    <div data-layer="Column" class="Stats26__col">
+                        <div data-layer="Heading" class="Stats26__heading">
+                            Families Approved.<br />Peace of Mind Proven
+                        </div>
                     </div>
-                    <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
-                        <div data-layer="Text"
-                            class="Text self-stretch justify-start text-[#111827] text-xl font-normal font-['Poppins'] leading-loose">
+                    <div data-layer="Column" class="Stats26__col">
+                        <div data-layer="Text" class="Stats26__copy">
                             When families choose the 72HRS kit, they gain confidence in their preparedness. Our
                             customers report
                             feeling equipped to handle emergencies effectively. Join the thousands who have made the
@@ -1601,54 +1799,38 @@
                             safety.</div>
                     </div>
                 </div>
-                <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-12">
-                    <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
-                        <div data-layer="Stat"
-                            class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
-                            <div data-layer="Text"
-                                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
-                                <span class="stat-count" data-target="97">0</span>%
-                            </div>
-                            <div data-layer="Content"
-                                class="Content self-stretch flex flex-col justify-start items-start gap-2">
-                                <div data-layer="Text"
-                                    class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
-                                    Say they feel more prepared after getting their 72HRS kit</div>
-                            </div>
+                <div data-layer="Content" class="Stats26__grid">
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="97">0</span><span>%</span>
                         </div>
-                        <div data-layer="Stat"
-                            class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
-                            <div data-layer="Text"
-                                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
-                                <span class="stat-count" data-target="95">0</span>%
-                            </div>
-                            <div data-layer="Content"
-                                class="Content self-stretch flex flex-col justify-start items-start gap-2">
-                                <div data-layer="Text"
-                                    class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
-                                    Said the kit had everything they needed for emergencies</div>
-                            </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Say they feel more prepared after getting their 72HRS kit
+                        </p>
                         </div>
-                        <div data-layer="Stat"
-                            class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
-                            <div data-layer="Text"
-                                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
-                                <span class="stat-count" data-target="97">0</span>%
-                            </div>
-                            <div data-layer="Content"
-                                class="Content self-stretch flex flex-col justify-start items-start gap-2">
-                                <div data-layer="Text"
-                                    class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
-                                    Said they would recommend 72HRS kits to friends & family</div>
-                            </div>
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="95">0</span><span>%</span>
+                        </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Said the kit had everything they needed for emergencies
+                        </p>
+                        </div>
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="97">0</span><span>%</span>
+                        </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Said they would recommend 72HRS kits to friends & family
+                        </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-            <img alt="wave" src="./assets/Vector 1.png" class="absolute inset-0 w-full h-full object-cover" />
+        <div data-layer="Frame 17" class="Frame17">
+            <img alt="wave" src="./assets/Frame17_hong_mobile.png" />
         </div>
         <!-- Layer: Product / 4 / (Choose the Right Kit) -->
         <div data-layer="Product / 4 /"
@@ -1944,7 +2126,7 @@
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
+        <div data-layer="Frame 17" class="Frame17">
             <img alt="Decorative wave edge" src="./assets/Frame%2017.png"
                 class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
         </div>
@@ -1987,7 +2169,7 @@
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
+        <div data-layer="Frame 17" class="Frame17">
             <img alt="Decorative wave edge" src="./assets/Frame%2017_2.png"
                 class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
         </div>
