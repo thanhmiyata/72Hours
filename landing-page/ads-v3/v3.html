@@ -60,30 +60,6 @@
     }
   </script>
   <style>
-    /* Local Bona Nova font family */
-    @font-face {
-      font-family: 'Bona Nova';
-      src: url('./assets/Bona_Nova/BonaNova-Regular.ttf') format('truetype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Bona Nova';
-      src: url('./assets/Bona_Nova/BonaNova-Italic.ttf') format('truetype');
-      font-weight: 400;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Bona Nova';
-      src: url('./assets/Bona_Nova/BonaNova-Bold.ttf') format('truetype');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
 
     /* Smooth fonts and better image rendering */
     html {
@@ -322,7 +298,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      transition: gap 320ms ease;
+      transition: gap 300ms ease;
     }
 
     .Layout254 .CenterImage {
@@ -330,27 +306,30 @@
       height: 560.4px;
       border-radius: 16px;
       overflow: hidden;
-      transition: width 320ms ease;
+      transition: transform 300ms ease;
+      cursor: pointer;
+      transform-origin: center;
     }
 
     .Layout254 .ContentRow .Column {
-      transition: transform 320ms ease;
+      transition: transform 300ms ease;
     }
 
-    .Layout254 .ContentRow.expanded {
-      gap: 48px;
+    /* New hover effect: scale image and expand gaps */
+    .Layout254 .ContentRow:hover {
+      gap: 60px;
     }
 
-    .Layout254 .ContentRow.expanded .CenterImage {
-      width: 760px;
+    .Layout254 .ContentRow:hover .CenterImage {
+      transform: scale(1.05);
     }
 
-    .Layout254 .ContentRow.expanded .Column:first-child {
-      transform: translateX(-24px);
+    .Layout254 .ContentRow:hover .Column:first-child {
+      transform: translateX(-30px);
     }
 
-    .Layout254 .ContentRow.expanded .Column:last-child {
-      transform: translateX(24px);
+    .Layout254 .ContentRow:hover .Column:last-child {
+      transform: translateX(30px);
     }
 
     .cta-glow {
@@ -385,6 +364,37 @@
       opacity: 0.8;
       z-index: -1;
     }
+
+    /* Enhanced CTA button with animated border light */
+    .cta-glow::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, 
+        rgba(255,255,255,0.8) 0%, 
+        rgba(226,27,60,0.9) 25%, 
+        rgba(255,255,255,0.8) 50%, 
+        rgba(226,27,60,0.9) 75%, 
+        rgba(255,255,255,0.8) 100%);
+      background-size: 200% 200%;
+      animation: border-light-flow 2s linear infinite;
+      z-index: -1;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask-composite: xor;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      padding: 2px;
+    }
+
+    @keyframes border-light-flow {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 200% 200%;
+      }
+    }
   </style>
   <!-- Basic FAQ accordion (optional, progressive enhancement) -->
   <script>
@@ -417,7 +427,7 @@
           <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-20 h-9 relative overflow-hidden">
             <div data-layer="Logo-wide 1" class="LogoWide1 w-16 h-9 left-[6.67px] top-0 absolute overflow-hidden">
               <img data-layer="72 HRS LOGO 1" class="HrsLogo1 w-36 h-28 left-[-40.17px] top-[-38.50px] absolute"
-                src="https://placehold.co/150x113" />
+                src="https://cdn.shopify.com/s/files/1/0077/1092/files/72_HRS_LOGO_1.png?v=1759772678" />
             </div>
           </div>
         </div>
@@ -472,7 +482,7 @@
     <!-- Layer: Header / 5 / -->
     <div data-layer="Header / 5 /"
       class="Header5 self-stretch h-[900px] px-16 inline-flex justify-center items-center overflow-hidden relative"
-      style="background-image:url('./assets/header.jpg'); background-size:cover; background-position:center;">
+      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-header.jpg'); background-size:cover; background-position:center;">
       <div class="absolute inset-0 bg-black/50"></div>
       <div data-layer="Container"
         class="Container flex-1 max-w-[1280px] inline-flex flex-col justify-start items-start gap-6 relative">
@@ -509,7 +519,7 @@
             Trusted by 10,000+ organizations</div>
           <div data-layer="Content" class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
             <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
-              <img alt="Trusted logos" class="w-[720px] h-auto" src="./assets/logo2.png" />
+              <img alt="Trusted logos" class="w-[720px] h-auto" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-logo2.png" />
             </div>
           </div>
         </div>
@@ -636,21 +646,21 @@
         <div data-layer="Image container" class="ImageContainer self-stretch h-[746px] relative image-tilt">
           <img alt="package"
             class="img-tilt-large w-[1088px] h-[746px] left-0 top-[0.22px] absolute rounded-2xl object-cover"
-            src="./assets/package.png" />
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-package.png" />
           <img alt="fire blanket"
             class="img-tilt-small size-96 left-[896px] top-[80px] absolute rounded-2xl object-cover"
-            src="./assets/fire blanket.png" />
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fireblanket.png" />
         </div>
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-      <img alt="wave" src="./assets/Frame 17_2.png" class="absolute inset-0 w-full h-full object-cover" />
+      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png" class="absolute inset-0 w-full h-full object-cover" />
     </div>
     <!-- Layer: Header / 147 / (Video Lightbox) -->
     <div data-layer="Header / 147 /"
       class="Header147 self-stretch flex flex-col justify-start items-center overflow-hidden"
-      style="background-image:url('./assets/header147.png'); background-size:cover; background-position:center;">
+      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-header147.png'); background-size:cover; background-position:center;">
       <div data-layer="Content"
         class="Content self-stretch px-16 pt-28 pb-12 flex flex-col justify-start items-center gap-20">
         <div data-layer="Container"
@@ -670,29 +680,32 @@
         </div>
       </div>
       <img data-layer="Placeholder Lightbox" class="PlaceholderLightbox self-stretch h-[900px] rounded-2xl object-cover"
-        src="./assets/video147.png" alt="Video placeholder" />
+        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-video147.png" alt="Video placeholder" />
     </div>
-    <!-- Layer: Header / 64 / (What's inside - title) -->
-    <div data-layer="Header / 64 /"
-      class="Header64 self-stretch px-16 pt-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
-      <div data-layer="Container"
-        class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-        <div data-layer="Component"
-          class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
-          <div data-layer="What’s inside" class="WhatSInside self-stretch text-center justify-start">
-            <div class="font-['Bona Nova'] font-bold text-[70px] leading-[84px] text-[#561513]">What’s Inside</div>
+    <!-- Wrapper for What's Inside sections with background -->
+    <div class="WhatsInsideWrapper self-stretch flex flex-col justify-start items-center overflow-hidden"
+      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-whatsinsideweb.png'); background-size:cover; background-position:center;">
+      <!-- Layer: Header / 64 / (What's inside - title) -->
+      <div data-layer="Header / 64 /"
+        class="Header64 self-stretch px-16 pt-10 bg-transparent flex flex-col justify-start items-center gap-8 overflow-hidden">
+        <div data-layer="Container"
+          class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+          <div data-layer="Component"
+            class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
+            <div data-layer="What's inside" class="WhatSInside self-stretch text-center justify-start">
+              <div class="font-['Bona Nova'] font-bold text-[70px] leading-[84px] text-[#561513]">What's Inside</div>
+            </div>
+            <div
+              data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
+              class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours self-stretch text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">
+              Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72
+              hours.</div>
           </div>
-          <div
-            data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
-            class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours self-stretch text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">
-            Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72
-            hours.</div>
         </div>
       </div>
-    </div>
-    <!-- Layer: Layout / 28 / (What's inside - tabs) -->
-    <div data-layer="Layout / 28 /"
-      class="Layout28 self-stretch px-16 py-28 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      <!-- Layer: Layout / 28 / (What's inside - tabs) -->
+      <div data-layer="Layout / 28 /"
+        class="Layout28 self-stretch px-16 py-28 bg-transparent flex flex-col justify-start items-center gap-20 overflow-hidden">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
         <div data-layer="Component" class="Component self-stretch inline-flex justify-start items-center">
@@ -740,55 +753,56 @@
               <div data-layer="Frame 30"
                 class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
                 <img data-layer="food ration" class="FoodRation size-[645px] object-cover"
-                  src="./assets/food ration.jpg" />
+                  src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-foodration.jpg" />
               </div>
               <div data-layer="Frame 33"
                 class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
-                <img data-layer="lifestyle3" class="Lifestyle3 w-80 h-96 object-cover" src="./assets/lifestyle3.jpg" />
-                <img data-layer="aquatabs" class="Aquatabs size-80 object-cover" src="./assets/Aquatabs.jpg" />
+                <img data-layer="lifestyle3" class="Lifestyle3 w-80 h-96 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-lifestyle3.jpg" />
+                <img data-layer="aquatabs" class="Aquatabs size-80 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-aquatabs.jpg" />
               </div>
             </div>
             <div class="tab-panel hidden" data-panel="shelter-warmth">
               <div data-layer="Frame 30"
                 class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
-                <img alt="shelter" class="size-[645px] object-cover" src="./assets/sleeping bag.jpg" />
+                <img alt="shelter" class="size-[645px] object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-sleepingbag.jpg" />
               </div>
               <div data-layer="Frame 33"
                 class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
-                <img alt="tent" class="w-80 h-96 object-cover" src="./assets/tube tent.jpg" />
-                <img alt="poncho" class="size-80 object-cover" src="./assets/rain poncho.jpg" />
+                <img alt="tent" class="w-80 h-96 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tubetent.jpg" />
+                <img alt="poncho" class="size-80 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-rainponcho.jpg" />
               </div>
             </div>
             <div class="tab-panel hidden" data-panel="lighting-communication">
               <div data-layer="Frame 30"
                 class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
-                <img alt="lighting" class="size-[645px] object-cover" src="./assets/radio.jpg" />
+                <img alt="lighting" class="size-[645px] object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-radio.jpg" />
               </div>
               <div data-layer="Frame 33"
                 class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
-                <img alt="radio" class="w-80 h-96 object-cover" src="./assets/flashlight.jpg" />
-                <img alt="flashlight" class="size-80 object-cover" src="./assets/food ration.jpg" />
+                <img alt="radio" class="w-80 h-96 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-flashlight.jpg" />
+                <img alt="flashlight" class="size-80 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-foodration.jpg" />
               </div>
             </div>
             <div class="tab-panel hidden" data-panel="first-aid-sanitation">
               <div data-layer="Frame 30"
                 class="Frame30 self-stretch h-[546px] rounded-3xl inline-flex justify-start items-center gap-2.5 overflow-hidden">
-                <img alt="first-aid" class="size-[645px] object-cover" src="./assets/first aid kit.jpg" />
+                <img alt="first-aid" class="size-[645px] object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-firstaidkit.jpg" />
               </div>
               <div data-layer="Frame 33"
                 class="Frame33 self-stretch h-64 rounded-3xl inline-flex justify-start items-start gap-2.5 overflow-hidden">
-                <img alt="whistle" class="w-80 h-96 object-cover" src="./assets/whistle.jpg" />
-                <img alt="masks" class="size-80 object-cover" src="./assets/mask.jpg" />
+                <img alt="whistle" class="w-80 h-96 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-whistle.jpg" />
+                <img alt="masks" class="size-80 object-cover" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-mask.jpg" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
     <!-- Layer: Layout / 238 / (Trusted standard) -->
     <div data-layer="Layout / 238 /"
       class="Layout238 self-stretch h-[587px] relative bg-Color-Scheme-4-Background overflow-hidden"
-      style="background-image:url('./assets/238.png'); background-size:cover; background-position:center;">
+      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-238.png'); background-size:cover; background-position:center;">
     </div>
     <!-- Layer: Stats / 26 / -->
     <div data-layer="Stats / 26 /"
@@ -854,7 +868,7 @@
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-      <img alt="wave" src="./assets/Vector 1.png" class="absolute inset-0 w-full h-full object-cover" />
+      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector1.png" class="absolute inset-0 w-full h-full object-cover" />
     </div>
     <!-- Layer: Product / 4 / (Choose the Right Kit) -->
     <div data-layer="Product / 4 /"
@@ -881,7 +895,7 @@
           <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
               <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="./assets/1person.jpeg" />
+                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-1person.jpg" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -908,7 +922,7 @@
             </div>
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
               <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="./assets/2person.jpeg" />
+                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-2person.jpg" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -935,7 +949,7 @@
             </div>
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
               <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="./assets/3person.jpeg" />
+                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-3person.jpg" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -963,7 +977,7 @@
             <div data-layer="Product"
               class="Product flex-1 bg-white inline-flex flex-col justify-start items-start gap-4">
               <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="./assets/4person.jpeg" />
+                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -1006,20 +1020,17 @@
           class="SectionTitle w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
           <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
             <div data-layer="Tagline"
-              class="Tagline text-center justify-start text-Color-Scheme-2-Text text-2xl font-semibold font-['Poppins'] leading-9">
+              class="Tagline text-center justify-start text-[#333333] text-xl font-normal font-['Poppins'] leading-8">
               Choose the Amount of people you want the Kit For</div>
           </div>
           <div data-layer="Content" class="Content w-[818px] flex flex-col justify-start items-center gap-6">
-            <div data-layer="Heading" class="Heading self-stretch text-center justify-start"><span
-                class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">4 Person
-                Kit</span><span
-                class="text-Color-Scheme-2-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">
-              </span><span
-                class="text-Color-Valencia text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">–</span><span
-                class="text-Color-Scheme-2-Text text-7xl font-bold font-['Poppins'] uppercase leading-[70px]">
-                Everything You Need for Emergencies</span></div>
+            <div data-layer="Heading" class="Heading self-stretch text-center justify-start">
+              <div class="text-[#561513] text-[64px] font-bold font-['Bona Nova'] leading-[72px]">
+                4 Person Kit – Everything You Need for Emergencies
+              </div>
+            </div>
             <div data-layer="Text"
-              class="Text w-[1206px] text-center justify-start text-Color-Scheme-2-Text text-2xl font-normal font-['Poppins'] leading-9">
+              class="Text w-[1206px] text-center justify-start text-[#333333] text-xl font-normal font-['Poppins'] leading-8">
               The 72HRS Deluxe Emergency Kit is designed to ensure your family is ready for any situation.<br />With
               essential supplies and trusted quality, peace of mind is just a click away.</div>
           </div>
@@ -1030,14 +1041,14 @@
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
               <div data-layer="water_do"
                 class="WaterDo inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="./assets/Vector.svg" alt="" class="w-8 h-8 select-none" loading="lazy" />
+                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt="" class="w-8 h-8 select-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
                   Food & Water</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
                   4 × 72HRS Food Rations <br />(3,600 Cal each)<br />48 × Emergency Water Pouches <br />(125 ml
                   each)<br />10 x Aquatabs Water Purification Tablet</div>
               </div>
@@ -1045,33 +1056,33 @@
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
               <div data-layer="Vector"
                 class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="./assets/tuyet.png" alt="" class="w-10 h-10 object-contain select-none" loading="lazy" />
+                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt="" class="w-10 h-10 object-contain select-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
                   Shelter & Warmth</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
                   4 × Sleeping Bags<br />4 × Rain Ponchos<br />2 × Tube Tent</div>
               </div>
             </div>
           </div>
           <img data-layer="Placeholder Image" class="PlaceholderImage CenterImage object-cover"
-            src="./assets/4person.jpeg" />
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
           <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-center gap-16">
             <div data-layer="Content" class="Content w-96 flex flex-col justify-start items-center gap-6">
               <div data-layer="Vector"
                 class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="./assets/medical_services.png" alt="" class="w-10 h-10 object-contain select-none"
+                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png" alt="" class="w-10 h-10 object-contain select-none"
                   loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
                   First Aid & Essentials</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
                   1 × 108-Piece First Aid Kit<br />1 × Hand-Crank Radio<br />1 × 36-Hour Emergency Candles<br />1 x
                   72HRS Dust Masks<br />2 x 72HRS Deluxe Backpack</div>
               </div>
@@ -1079,14 +1090,14 @@
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
               <div data-layer="Vector"
                 class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="./assets/fix.png" alt="" class="w-10 h-10 object-contain select-none" loading="lazy" />
+                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt="" class="w-10 h-10 object-contain select-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-Color-Scheme-2-Text text-3xl font-bold font-['Poppins'] uppercase leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
                   Tools & Safety</div>
                 <div data-layer="Text"
-                  class="Text w-96 text-center justify-start text-Color-Scheme-2-Text text-lg font-normal font-['Poppins'] leading-relaxed">
+                  class="Text w-96 text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
                   1 × Multi-tool Knife<br />1 × Whistle<br />1 × Duct Tape Roll<br />1 x Aluminum Alloy Emergency
                   Whistle<br />4 x 72HRS Tissue Pack<br />1 x 72HRS 50FT Nylon Utility Cord <br /> 3 x LED Rechargeable
                   Flashlight<br /> 1 x 72HRS Roll Duct Tape</div>
@@ -1101,21 +1112,21 @@
             class="Button inline-flex justify-center items-center gap-2 w-[231px] h-[47px] bg-Color-Amaranth text-Color-White rounded-[6px] shadow-[0_12px_24px_-20px_rgba(226,58,58,0.8)]">
             <span class="text-Color-White text-lg font-semibold font-['Poppins'] leading-relaxed">See Full Spec Sheet</span>
           </div>
-          <div class="inline-flex items-center gap-2 text-Color-Scheme-2-Text text-base font-semibold font-['Poppins']">
+          <div class="inline-flex items-center gap-2 text-[#333333] text-base font-semibold font-['Poppins']">
             <span>Orig Price $399.99</span>
-            <img src="./assets/Vector.png" alt="" class="w-3 h-3 select-none" loading="lazy" />
+            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.png" alt="" class="w-3 h-3 select-none" loading="lazy" />
           </div>
         </div>
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
-      <img alt="Decorative wave edge" src="./assets/Frame%2017.png"
+      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17.png"
         class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: Gallery / 3 / -->
     <div data-layer="Gallery / 3 /"
-      class="Gallery3 self-stretch relative px-16 py-24 bg-[#7D291B] flex flex-col justify-start items-center gap-16 overflow-hidden">
+      class="Gallery3 self-stretch relative px-16 py-24 pt-0 bg-[#7D291B] flex flex-col justify-start items-center gap-16 overflow-hidden">
       <div data-layer="Container"
         class="Container relative z-10 w-full max-w-[1280px] flex flex-col justify-start items-center gap-16">
         <div data-layer="Section Title"
@@ -1133,26 +1144,26 @@
         <div data-layer="Content"
           class="Content w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8">
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 1" class="absolute inset-0 w-full h-full object-cover"
-              src="./assets/fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
           </div>
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 2" class="absolute inset-0 w-full h-full object-cover"
-              src="./assets/fml2.png" alt="Customer holding 72HRS drinking water packs" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs" loading="lazy" />
           </div>
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] border border-white/15 bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 3" class="absolute inset-0 w-full h-full object-cover"
-              src="./assets/fml3.png" alt="Community member sharing their 72HRS experience" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience" loading="lazy" />
           </div>
         </div>
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
-      <img alt="Decorative wave edge" src="./assets/Frame%2017_2.png"
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative pt-0 overflow-hidden">
+      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
         class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: FAQ / 6 / -->
@@ -1189,7 +1200,7 @@
                   class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] font-semibold font-['Poppins']">
                   Why 72 hours?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
-                  <img src="./assets/close.png" alt="Close" class="size-6 select-none pointer-events-none"
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close" class="size-6 select-none pointer-events-none"
                     loading="lazy" />
                 </div>
               </div>
@@ -1208,7 +1219,7 @@
                   class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] font-semibold font-['Poppins']">
                   Shelf-life of the food and water?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
-                  <img src="./assets/close.png" alt="Close" class="size-6 select-none pointer-events-none"
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close" class="size-6 select-none pointer-events-none"
                     loading="lazy" />
                 </div>
               </div>
@@ -1229,7 +1240,7 @@
                   class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] font-semibold font-['Poppins']">
                   Can the kit be customized to meet specific needs or requirements?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
-                  <img src="./assets/close.png" alt="Close" class="size-6 select-none pointer-events-none"
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close" class="size-6 select-none pointer-events-none"
                     loading="lazy" />
                 </div>
               </div>
@@ -1248,7 +1259,7 @@
                   class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] font-semibold font-['Poppins']">
                   Are the food rations gluten-free?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
-                  <img src="./assets/close.png" alt="Close" class="size-6 select-none pointer-events-none"
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close" class="size-6 select-none pointer-events-none"
                     loading="lazy" />
                 </div>
               </div>
@@ -1268,7 +1279,7 @@
                   class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] font-semibold font-['Poppins']">
                   Do you do custom Emergency Kit orders for large groups?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
-                  <img src="./assets/close.png" alt="Close" class="size-6 select-none pointer-events-none"
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close" class="size-6 select-none pointer-events-none"
                     loading="lazy" />
                 </div>
               </div>
@@ -1287,7 +1298,7 @@
     <!-- Layer: CTA / 39 / -->
     <div data-layer="CTA / 39 /"
       class="Cta39 self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden"
-      style="background: linear-gradient(135deg, #F4DDDA 0%, #FBEFEF 100%);">
+      style="background: linear-gradient(180deg, #F4DDDA 0%, #ffffff 50%, #F4DDDA 100%);">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-start">
         <div data-layer="Card"
@@ -1312,7 +1323,7 @@
             </div>
           </div>
           <img data-layer="Placeholder Image" class="PlaceholderImage flex-1 h-full object-cover"
-            src="./assets/Placeholder Image.png" alt="Customer preparing emergency supplies" loading="lazy" />
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-PlaceholderImage.png" alt="Customer preparing emergency supplies" loading="lazy" />
         </div>
       </div>
     </div>
@@ -1582,18 +1593,6 @@
       io.observe(statsSection);
     })();
 
-    // Hover expand behavior for Layout / 254 /
-    (function () {
-      const row = document.querySelector('.Layout254 .ContentRow');
-      const img = document.querySelector('.Layout254 .CenterImage');
-      if (!row || !img) return;
-      const enter = () => row.classList.add('expanded');
-      const leave = () => row.classList.remove('expanded');
-      img.addEventListener('mouseenter', enter);
-      img.addEventListener('mouseleave', leave);
-      img.addEventListener('focus', enter);
-      img.addEventListener('blur', leave);
-    })();
   </script>
 </body>
 
