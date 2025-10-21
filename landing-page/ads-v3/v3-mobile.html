@@ -713,6 +713,248 @@
             line-height: 1.5;
         }
 
+        .Header131 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem;
+            gap: 5rem;
+            width: 30rem;
+            max-width: 100%;
+            background: #7D291C;
+            color: #FFFFFF;
+        }
+
+        .Header131 .Container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 5rem;
+            width: 25rem;
+            max-width: 100%;
+        }
+
+        .Header131 .Content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.25rem;
+            width: 100%;
+        }
+
+        .Header131 .Content .Column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            width: 100%;
+        }
+
+        .Header131 .Content .Column.heading-column {
+            gap: 1rem;
+        }
+
+        .Header131 .Heading {
+            width: 100%;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .Header131 .Content .Column.copy-column {
+            gap: 2rem;
+        }
+
+        .Header131 .BodyCopy {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.875rem;
+            line-height: 1.5;
+            color: #FFFFFF;
+        }
+
+        .Header131 .BodyCopy p {
+            margin: 0;
+        }
+
+        .Header131 .BodyCopy strong {
+            font-weight: 700;
+        }
+
+        .Header131 .ImageContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.1875rem;
+            width: 100%;
+        }
+
+        .Header131 .ImageFrame {
+            width: 100%;
+            height: 25rem;
+            border-radius: 1rem;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .Header131 .ImageFrame .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .Frame17 {
+            position: relative;
+            width: min(100%, 100rem);
+            height: 8.625rem;
+            background: #F2F2F2;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .Frame17 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .Header147 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: min(100%, 30rem);
+            background: #F2F2F2;
+            color: #0B0302;
+            margin: 0 auto;
+        }
+
+        .Header147__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: -3.1875rem 0 0;
+            gap: 2.5rem;
+        }
+
+        .Header147__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem 3.5rem;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .Header147__column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .Header147__copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .Header147 .Heading {
+            width: 100%;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1;
+            text-align: center;
+            color: #561513;
+        }
+
+        .Header147__intro {
+            width: 100%;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #0B0302;
+            padding: 0 1rem 0;
+        }
+
+        .Header147__video {
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            aspect-ratio: 480 / 757;
+        }
+
+        .Header147__play {
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .Header147__play svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #7D291C;
+        }
+
+        .Header147__video img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .Header147__video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            pointer-events: none;
+        }
+
         @media (max-width: 768px) {
 
             html,
@@ -1154,86 +1396,63 @@
             </div>
         </div>
         <!-- Layer: Header / 131 / -->
-        <div data-layer="Header / 131 /"
-            class="Header131 self-stretch px-16 py-28 bg-Color-Neutral-Darkest text-Color-White flex flex-col justify-start items-center gap-20 overflow-hidden"
-            style="height:1300px;">
-            <div data-layer="Container"
-                class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
-                <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
-                    <div data-layer="Column"
-                        class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-                        <div data-layer="Heading" class="Heading w-[637px] justify-start flex flex-col gap-2">
-                            <div class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px]"><span
-                                    class="text-Color-White">GET YOUR </span><span class="text-[#D73630]">FREE</span>
-                            </div>
-                            <div class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px] text-[#D1232A]">
-                                FIRE BLANKET
-                            </div>
-                            <div
-                                class="font-['Poppins'] uppercase font-bold text-[68px] leading-[70px] text-Color-White">
-                                TODAY!</div>
+        <div data-layer="Header / 131 /" class="Header131">
+            <div data-layer="Container" class="Container">
+                <div data-layer="Content" class="Content">
+                    <div data-layer="Column" class="Column heading-column">
+                        <div data-layer="Heading" class="Heading">
+                            Get Your Free Fire Blanket Today!
                         </div>
                     </div>
-                    <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-8">
+                    <div data-layer="Column" class="Column copy-column">
                         <div data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
-                            class="TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla w-[560px] max-w-[560px] justify-start">
-                            <div class="text-Color-White text-5xl font-semibold font-['Poppins'] leading-tight">Save
-                                <span class="font-bold">20%</span> Today – Offer Ends Soon.
-                            </div>
-                            <div class="text-Color-White text-2xl font-normal font-['Poppins'] leading-9 mt-6">Every
-                                Deluxe Kit order
-                                today includes a <span class="font-bold text-2xl">FREE Fire Blanket</span> (Value
-                                $21.99)</div>
-                            <div class="text-Color-White text-2xl font-normal font-['Poppins'] leading-9 mt-6">A fast,
-                                simple way to
-                                smother small flames (kitchen or electrical). Limited-time bonus!</div>
+                            class="BodyCopy">
+                            <p>Save <strong>20%</strong> Today – Offer Ends Soon.</p>
+                            <p>Every Deluxe Kit order today includes a <strong>FREE Fire Blanket</strong> (Value
+                                $21.99).</p>
+                            <p>A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div data-layer="Image container" class="ImageContainer self-stretch h-[746px] relative image-tilt">
-                    <img alt="package"
-                        class="img-tilt-large w-[1088px] h-[746px] left-0 top-[0.22px] absolute rounded-2xl object-cover"
-                        src="./assets/package.png" />
-                    <img alt="fire blanket"
-                        class="img-tilt-small size-96 left-[896px] top-[80px] absolute rounded-2xl object-cover"
-                        src="./assets/fire blanket.png" />
+                <div data-layer="Image container" class="ImageContainer">
+                    <div class="ImageFrame" style="background-image: url('./assets/package.png');">
+                        <span class="sr-only">Emergency readiness kit contents displayed.</span>
+                    </div>
+                    <div class="ImageFrame" style="background-image: url('./assets/fire blanket.png');">
+                        <span class="sr-only">Fire blanket being deployed to smother flames.</span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-            <img alt="wave" src="./assets/Frame 17_2.png" class="absolute inset-0 w-full h-full object-cover" />
+        <div data-layer="Frame 17" class="Frame17 w-full h-[138px] relative bg-neutral-100 overflow-hidden">
+            <img alt="wave" src="./assets/Frame17_test.png" />
         </div>
         <!-- Layer: Header / 147 / (Video Lightbox) -->
-        <div data-layer="Header / 147 /"
-            class="Header147 self-stretch flex flex-col justify-start items-center overflow-hidden"
-            style="background-image:url('./assets/header147.png'); background-size:cover; background-position:center;">
-            <div data-layer="Content"
-                class="Content self-stretch px-16 pt-28 pb-12 flex flex-col justify-start items-center gap-20">
-                <div data-layer="Container"
-                    class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-                    <div data-layer="Column"
-                        class="Column w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
-                        <div data-layer="Content"
-                            class="Content self-stretch flex flex-col justify-start items-center gap-6">
-                            <div data-layer="Heading"
-                                class="Heading w-auto text-center justify-start whitespace-nowrap">
-                                <div class="text-[#6A1B1B] text-[63px] leading-[84px] font-['Bona Nova'] font-semibold">
-                                    Built to Meet
-                                    FEMA & Canadian Guidelines</div>
+        <div data-layer="Header / 147 /" class="Header147">
+            <div data-layer="Content" class="Header147__content">
+                <div data-layer="Container" class="Header147__container">
+                    <div data-layer="Column" class="Header147__column">
+                        <div data-layer="Content" class="Header147__copy">
+                            <div data-layer="Heading" class="Heading">
+                                Built to Meet FEMA &amp; Canadian Guidelines
                             </div>
-                            <div data-layer="Text"
-                                class="Text w-[950px] text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">
-                                See exactly how the 72HRS Deluxe Kit checks every box experts recommend for emergency
-                                preparedness.
+                            <div data-layer="Text" class="Header147__intro">
+                                See exactly how the 72HRS Deluxe Kit checks every box experts recommend for emergency preparedness.
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="Header147__video">
+                    <img src="./assets/Placeholder Lightbox.png" alt="72HRS Deluxe Kit aerial footage preview" />
+                    <button type="button" class="Header147__play" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 7l8 5-8 5V7z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <img data-layer="Placeholder Lightbox"
-                class="PlaceholderLightbox self-stretch h-[900px] rounded-2xl object-cover" src="./assets/video147.png"
-                alt="Video placeholder" />
         </div>
         <!-- Layer: Header / 64 / (What's inside - title) -->
         <div data-layer="Header / 64 /"
