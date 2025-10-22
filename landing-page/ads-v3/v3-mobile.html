@@ -1404,67 +1404,37 @@
         class="SalesPageWebV1 w-[1600px] px-0 flex-col justify-start items-start overflow-hidden">
         <!-- Layer: Navbar / 1 / -->
         <div data-layer="Navbar / 1 /"
-            class="Navbar1 self-stretch h-16 px-16 bg-Color-Scheme-1-Background flex flex-col justify-center items-center">
-            <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-                <div data-layer="Content" class="Content w-20 h-10 flex justify-center items-center">
-                    <div data-layer="Company Logo" data-alternate="False"
-                        class="CompanyLogo w-20 h-9 relative overflow-hidden">
-                        <div data-layer="Logo-wide 1"
-                            class="LogoWide1 w-16 h-9 left-[6.67px] top-0 absolute overflow-hidden">
-                            <img data-layer="72 HRS LOGO 1"
-                                class="HrsLogo1 w-36 h-28 left-[-40.17px] top-[-38.50px] absolute"
-                                src="https://placehold.co/150x113" />
-                        </div>
+            class="Navbar1 mx-auto flex h-[69px] w-full max-w-[480px] items-center border-b border-[rgba(11,3,2,0.15)] bg-white">
+            <div data-layer="Container"
+                class="Container flex h-full w-full items-center justify-between gap-0">
+                <div data-layer="Content"
+                    class="Content relative flex flex-1 items-center gap-2">
+                    <span class="flex h-10 w-10 items-center justify-center">
+                        <img src="./assets/shop.jpg" alt="Shopping bag icon"
+                            class="h-6 w-6 object-contain" />
+                    </span>
+                    <div data-layer="Content" class="flex flex-col gap-[2px]">
+                        <p data-layer="Heading"
+                            class="font-['Merriweather Sans'] text-[12px] font-semibold leading-[16px] text-[#0B0302]">
+                            Limited Time: 20% OFF + Free Blanket!
+                        </p>
+                        <p data-layer="Text"
+                            class="font-['Merriweather Sans'] text-[10px] font-normal leading-[14px] text-[#0B0302]">
+                            Hurry, offer ends soon—don't miss out!
+                        </p>
                     </div>
                 </div>
-                <div data-layer="Column" class="Column size- flex justify-center items-center gap-8">
-                    <div data-layer="Nav links" class="NavLinks size- flex justify-end items-center gap-8">
-                        <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-                            <div data-layer="Link text"
-                                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                                Kits</div>
-                        </div>
-                        <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-                            <div data-layer="Link text"
-                                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                                Gear</div>
-                        </div>
-                        <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-                            <div data-layer="Link text"
-                                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                                Learn</div>
-                        </div>
-                        <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-                            <div data-layer="Nav Link Dropdown"
-                                class="NavLinkDropdown size- flex justify-start items-center gap-1">
-                                <div data-layer="Link text"
-                                    class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                                    Resources</div>
-                                <div data-layer="Chevron Down" class="ChevronDown size-6 relative overflow-hidden">
-                                    <div data-layer="Vector"
-                                        class="Vector w-3 h-2 left-[5.70px] top-[8.70px] absolute bg-Color-Scheme-1-Text">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-layer="Actions" class="Actions size- flex justify-center items-center gap-4">
-                        <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True"
-                            data-style="Secondary"
-                            class="Button size- px-5 py-2 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
-                            <div data-layer="Button"
-                                class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">
-                                Buy</div>
-                        </div>
-                        <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True"
-                            data-style="Primary"
-                            class="Button size- px-5 py-2 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
-                            <div data-layer="Button"
-                                class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
-                                Demo
-                            </div>
-                        </div>
-                    </div>
+                <div data-layer="Actions" class="relative flex h-8 items-center">
+                    <a data-layer="Button"
+                        class="inline-flex h-[32px] min-w-[64px] items-center justify-center rounded-full border border-[#AC2B26] border-b-[4px] border-l-[1.5px] border-r-[1.5px] border-t-[1.5px] bg-[#D73630] text-center font-['Merriweather Sans'] text-[11px] font-semibold leading-[14px] tracking-[0.2px] text-white"
+                        href="#shop">
+                        Shop
+                    </a>
+                    <button type="button"
+                        class="absolute -left-5 flex h-8 w-8 items-center justify-center text-[#0B0302]"
+                        aria-label="Dismiss banner">
+                        <img src="./assets/Actions.png" alt="Close banner" class="h-5 w-5 object-contain" />
+                    </button>
                 </div>
             </div>
         </div>
@@ -1671,13 +1641,13 @@
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
                                     Food &amp; Water</h3>
                             </div>
-                            <figure class="relative w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
                                 <img src="./assets/carousel1.png" alt="Family preparing food and water rations"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
-                                class="flex w-full max-w-[400px] flex-col items-start gap-4 border-l border-[#D73630] pl-8">
-                                <p class="mt-4 font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
                                     3600 Cal Food Ration<br />125ml Water Pouches<br />Aquatabs
                                 </p>
                             </div>
@@ -1690,13 +1660,13 @@
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
                                     Shelter &amp; Warmth</h3>
                             </div>
-                            <figure class="relative w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
                                 <img src="./assets/carousel2.png" alt="Emergency shelter supplies providing warmth"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
-                                class="flex w-full max-w-[400px] flex-col items-start gap-4 border-l border-[#D73630] pl-8">
-                                <p class="mt-4 font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
                                     Sleeping Bag<br />Tube Tent<br />Rain Poncho
                                 </p>
                             </div>
@@ -1709,13 +1679,13 @@
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
                                     Lighting &amp; Communication</h3>
                             </div>
-                            <figure class="relative w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
                                 <img src="./assets/carousel3.png" alt="Lighting and communication tools in use"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
-                                class="flex w-full max-w-[400px] flex-col items-start gap-4 border-l border-[#D73630] pl-8">
-                                <p class="mt-4 font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
                                     Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM
                                     Radio
                                 </p>
@@ -1729,13 +1699,13 @@
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
                                     First Aid &amp; Sanitation</h3>
                             </div>
-                            <figure class="relative w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
                                 <img src="./assets/carousel4.png" alt="First aid and sanitation gear ready"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
-                                class="flex w-full max-w-[400px] flex-col items-start gap-4 border-l border-[#D73630] pl-8">
-                                <p class="mt-4 font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
                                     First Aid Kit 108 Pcs<br />Emergency Whistle<br />Dust Masks
                                 </p>
                             </div>
