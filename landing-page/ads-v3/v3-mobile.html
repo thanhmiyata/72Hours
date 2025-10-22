@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>72HRS – Sales Page Web V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Map Figma color tokens to Tailwind utility classes used in this file
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'Color': {
+                            'White': '#ffffff',
+                            'Neutral-Darkest': '#0b0302',
+                            'Amaranth': '#E21B3C',
+                            'Valencia': '#D64545',
+                            'Valencia-Darker': '#B23333',
+                            'Scheme-1': {
+                                'Background': '#ffffff',
+                                'Foreground': '#ffffff',
+                                'Text': '#111827',
+                                'Accent': '#E21B3C',
+                                'Border': '#D1D5DB'
+                            },
+                            'Scheme-2': {
+                                'Background': '#F7F7F7',
+                                'Foreground': '#ffffff',
+                                'Text': '#111827',
+                                'Border': '#E5E7EB'
+                            },
+                            'Scheme-3': {
+                                'Background': '#ffffff',
+                                'Text': '#111827'
+                            },
+                            'Scheme-4': {
+                                'Background': '#0b0302',
+                                'Text': '#ffffff',
+                                'Border': '#2D2D2D'
+                            }
+                        },
+                        'Opacity': {
+                            'Transparent': '#000000',
+                            'Neutral-Darkest-15': '#0b0302'
+                        }
+                    },
+                    fontFamily: {
+                        'Poppins': ['Poppins', 'ui-sans-serif', 'system-ui'],
+                        'Roboto': ['Roboto', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Local Bona Nova font family */
+        @font-face {
+            font-family: 'Bona Nova';
+            src: url('./assets/Bona_Nova/BonaNova-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Bona Nova';
+            src: url('./assets/Bona_Nova/BonaNova-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Bona Nova';
+            src: url('./assets/Bona_Nova/BonaNova-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Smooth fonts and better image rendering */
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Allow the layout to center on large screens while remaining responsive */
+        body {
+            background-color: #ffffff;
+        }
+
+        .SalesPageWebV1 {
+            margin: 0 auto;
+        }
+
+        /* CTA flare effect */
+        .btn-flare {
+            position: relative;
+            border-radius: 14px;
+            z-index: 1;
+        }
+
+        .btn-flare::before {
+            content: "";
+            position: absolute;
+            inset: -16px;
+            /* ring-style glow: transparent center, glow on the border, fade out */
+            background: radial-gradient(closest-side, rgba(226, 27, 60, 0) 62%, rgba(226, 27, 60, 0.45) 72%, rgba(226, 27, 60, 0.25) 86%, rgba(226, 27, 60, 0) 100%);
+            filter: blur(12px);
+            z-index: 0;
+            pointer-events: none;
+            border-radius: 24px;
+        }
+
+        .btn-flare:hover::before {
+            filter: blur(14px);
+        }
+
+        /* Countdown glowing animated border */
+        .countdown-glow {
+            position: relative;
+            border-radius: 20px;
+        }
+
+        .countdown-glow::before {
+            content: "";
+            position: absolute;
+            inset: -3px;
+            border-radius: 24px;
+            background: conic-gradient(from 0deg,
+                    rgba(226, 27, 60, 0) 0%, rgba(226, 27, 60, 0.6) 15%, rgba(255, 255, 255, 0.9) 45%, rgba(226, 27, 60, 0.8) 75%, rgba(226, 27, 60, 0) 100%);
+            animation: spin 4s linear infinite;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            padding: 5px;
+            pointer-events: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Alt flare: bright animated border glow per request */
+        .flare-border-btn {
+            position: relative;
+            overflow: visible;
+            z-index: 1;
+            border-radius: 14px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #E21B3C !important;
+            /* force pink border */
+            outline: none;
+            box-shadow: none;
+        }
+
+        .flare-border-btn::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 18px;
+            pointer-events: none;
+            z-index: 0;
+            /* white core glow + pink outer halos for a pink→white gradient look */
+            box-shadow:
+                0 0 6px 2px rgba(255, 255, 255, 0.95),
+                0 0 18px 8px rgba(226, 27, 60, 0.65),
+                0 0 36px 16px rgba(226, 27, 60, 0.40);
+            animation: flare-anim 1.6s infinite ease-in-out;
+            border: 1px solid transparent;
+            mix-blend-mode: screen;
+        }
+
+        @keyframes flare-anim {
+            0% {
+                box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.90), 0 0 18px 8px rgba(226, 27, 60, 0.60), 0 0 36px 16px rgba(226, 27, 60, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1), 0 0 28px 12px rgba(226, 27, 60, 0.85), 0 0 56px 22px rgba(226, 27, 60, 0.55);
+            }
+
+            100% {
+                box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.90), 0 0 18px 8px rgba(226, 27, 60, 0.60), 0 0 36px 16px rgba(226, 27, 60, 0.35);
+            }
+        }
+
+        /* Animated pink→white gradient border (generic wrapper) */
+        .border-animated {
+            position: relative;
+            border-radius: 20px;
+        }
+
+        .border-animated::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            border-radius: 22px;
+            background: linear-gradient(90deg, rgba(226, 27, 60, 0.95), #ffffff, rgba(226, 27, 60, 0.95));
+            background-size: 200% 100%;
+            animation: border-move 3s linear infinite;
+            pointer-events: none;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        @keyframes border-move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        /* Image tilt on hover for Header / 131 / */
+        .image-tilt .img-tilt-large,
+        .image-tilt .img-tilt-small {
+            transition: transform 500ms ease, box-shadow 500ms ease;
+            transform-origin: center;
+        }
+
+        .image-tilt:hover .img-tilt-large {
+            transform: rotate(-5deg);
+        }
+
+        .image-tilt:hover .img-tilt-small {
+            transform: rotate(5deg);
+        }
+
+        /* Countdown separator: thin gray vertical bar, slightly taller than numbers, shorter than labels */
+        .count-sep {
+            width: 1px;
+            background-color: #e5e7eb;
+            /* gray-200 */
+            height: 88px;
+            margin: 0 28px;
+            align-self: center;
+        }
+
+        /* Active tab style for What's inside */
+        .TabHorizontal {
+            background-color: transparent;
+            transition: background-color 200ms ease, border-color 200ms ease, border-radius 200ms ease;
+        }
+
+        .tab-active {
+            background-color: #ffffff !important;
+            border-left: 4px solid #D64545 !important;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
+        .tab-inactive {
+            background-color: transparent;
+            border-left: 0;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
+        /* Tab title typography */
+        .TabsMenu .ShortHeadingGoesHere {
+            color: var(--Color-Scheme-1-Text, #0B0302);
+            font-family: 'Bona Nova', serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            /* 130% */
+            letter-spacing: 0;
+            text-transform: none !important;
+        }
+
+        /* Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
+        .Layout254 .SectionTitle .Tagline {
+            color: #561513;
+            font-family: 'Poppins', ui-sans-serif, system-ui;
+            font-weight: 600;
+        }
+
+        .Layout254 .SectionTitle .Heading {
+            font-family: 'Bona Nova', serif;
+            color: #561513;
+        }
+
+        .Layout254 .SectionTitle .Text {
+            color: #111827;
+        }
+
+        .Layout254 .Column .Heading {
+            font-family: 'Bona Nova', serif;
+            color: #561513;
+        }
+
+        .Layout254 .Column .Text {
+            color: #111827;
+        }
+
+        .Layout254 .ContentRow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: gap 320ms ease;
+        }
+
+        .Layout254 .CenterImage {
+            width: 520px;
+            height: 560.4px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: width 320ms ease;
+        }
+
+        .Layout254 .ContentRow .Column {
+            transition: transform 320ms ease;
+        }
+
+        .Layout254 .ContentRow.expanded {
+            gap: 48px;
+        }
+
+        .Layout254 .ContentRow.expanded .CenterImage {
+            width: 760px;
+        }
+
+        .Layout254 .ContentRow.expanded .Column:first-child {
+            transform: translateX(-24px);
+        }
+
+        .Layout254 .ContentRow.expanded .Column:last-child {
+            transform: translateX(24px);
+        }
+
+        .cta-glow {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 231px;
+            height: 44px;
+            padding: 0;
+            border-radius: 6px;
+            background: linear-gradient(180deg, #FF6A6A 0%, #E23A3A 100%);
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            color: #ffffff;
+            font-family: 'Poppins', ui-sans-serif, system-ui;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 0 18px 10px rgba(255, 255, 255, 0.6);
+            isolation: isolate;
+            overflow: visible;
+        }
+
+        .cta-glow::before {
+            content: "";
+            position: absolute;
+            inset: -12px;
+            border-radius: 10px;
+            background: radial-gradient(60% 80% at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(244, 118, 123, 0.65) 50%, rgba(100, 30, 26, 0) 100%);
+            filter: blur(8px);
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .mobile-hero {
+            min-height: 780px;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-bottom: 2rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mobile-hero__content {
+            height: 100%;
+            width: 100%;
+            padding: 3rem 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .mobile-hero__panel {
+            width: 100%;
+            max-width: 320px;
+            padding: 20px 18px 24px;
+            border-radius: 30px;
+            background: linear-gradient(180deg, rgba(11, 3, 2, 0.7) 0%, rgba(11, 3, 2, 0.96) 100%);
+            box-shadow: 0 40px 70px -32px rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            gap: 0.75rem;
+        }
+
+        .mobile-hero__eyebrow {
+            font-family: 'Bona Nova', serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: 0;
+            color: #D64545;
+        }
+
+        .mobile-hero__heading {
+            font-family: 'Bona Nova', serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: 0;
+        }
+
+        .mobile-hero__subcopy {
+            font-family: 'Poppins', ui-sans-serif, system-ui;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.4;
+            letter-spacing: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .mobile-hero__cta-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+            height: 40px;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-hero__cta-wrap::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #E0C2A5 0%, #E8B29C 44%, #FFFFFF 100%);
+            z-index: 0;
+        }
+
+        .mobile-hero__cta-wrap::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: 10px;
+            background: radial-gradient(65% 85% at 50% 35%, rgba(255, 255, 255, 1) 0%, rgba(255, 232, 232, 0.92) 50%, rgba(244, 118, 123, 0.7) 72%, rgba(0, 0, 0, 0) 100%);
+            opacity: 1;
+            filter: blur(6px);
+            z-index: -1;
+        }
+
+        .mobile-hero__cta {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            background: #ffffff;
+            border: none;
+            text-decoration: none;
+            color: #0b0302;
+            padding: 0 18px;
+            font-size: 11px;
+            box-shadow: none;
+        }
+
+        /* Gradient border for countdown timer only */
+        /* Countdown timer styling based on provided CSS */
+        .EventItemHeader2 .border-animated {
+            position: relative;
+            width: 21rem;
+            border-radius: 0.75rem;
+            background: transparent;
+            overflow: visible;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            padding: 0.875rem 1.5rem;
+        }
+
+        .EventItemHeader2 .border-animated>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .EventItemHeader2 .EventTime {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.25rem;
+            overflow: hidden;
+        }
+
+        .EventItemHeader2 .EventTime .Text:first-child {
+            width: auto;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.875rem;
+            line-height: 1;
+            color: #D73630;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .EventItemHeader2 .EventTime .Text:last-child {
+            width: auto;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.6875rem;
+            line-height: 1.2;
+            color: #0B0302;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .EventItemHeader2 .count-sep {
+            width: 0.0625rem;
+            align-self: stretch;
+            border-left: 0.0625rem solid rgba(11, 3, 2, 0.18);
+            flex: 0 0 0.0625rem;
+            margin: 0 0.625rem;
+        }
+
+        .EventItemHeader2 .SectionTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 1rem;
+            width: 25rem;
+            max-width: 100%;
+            min-height: 9.1875rem;
+            margin: 0 auto;
+        }
+
+        .EventItemHeader2 .SectionTitle .Subheading {
+            width: 100%;
+            min-height: 1.6875rem;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #0B0302;
+        }
+
+        .EventItemHeader2 .SectionTitle .Content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.5rem;
+            width: 100%;
+            min-height: 6.5rem;
+        }
+
+        .EventItemHeader2 .SectionTitle .Heading {
+            width: 100%;
+            min-height: 6.5rem;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.625rem;
+            line-height: 3.25rem;
+            text-align: center;
+            color: #561513;
+        }
+
+        .EventItemHeader2 .EventsDate {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 1.5rem;
+            width: 25rem;
+            max-width: 100%;
+            min-height: 4.875rem;
+            margin: 0 auto;
+        }
+
+        .EventItemHeader2 .EventsDate>.Content:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 1rem;
+            width: 100%;
+            min-height: 4.875rem;
+        }
+
+        .EventItemHeader2 .EventsDate .Date {
+            width: 100%;
+            min-height: 1.875rem;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #0B0302;
+        }
+
+        .EventItemHeader2 .EventsDate .Tag {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0.25rem 0.625rem;
+            width: 10rem;
+            min-height: 2rem;
+            border: 0.125rem solid #0B0302;
+            border-radius: 0.25rem;
+        }
+
+        .EventItemHeader2 .EventsDate .Tag .Text {
+            width: 8.75rem;
+            min-height: 1.5rem;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #0B0302;
+        }
+
+        .EventItemHeader2 .Actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 1rem;
+            width: 30rem;
+            max-width: 100%;
+            min-height: 2.9375rem;
+            margin: 0 auto;
+        }
+
+        .EventItemHeader2 .Actions .Form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1rem;
+            width: 100%;
+            min-height: 2.9375rem;
+        }
+
+        .EventItemHeader2 .Actions .Button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0.625rem 1.5rem;
+            gap: 0.5rem;
+            width: 10.6875rem !important;
+            min-height: 2.9375rem;
+            background: #E63946;
+            box-shadow:
+                0px 1px 2px rgba(11, 3, 2, 0.05),
+                inset 0px 32px 24px rgba(255, 255, 255, 0.05),
+                inset 0px 2px 1px rgba(255, 255, 255, 0.25),
+                inset 0px 0px 0px 1px rgba(11, 3, 2, 0.15),
+                inset 0px -2px 1px rgba(0, 0, 0, 0.20);
+            border-radius: 0.375rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+
+        .Header131 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem;
+            gap: 5rem;
+            width: 30rem;
+            max-width: 100%;
+            background: #7D291C;
+            color: #FFFFFF;
+        }
+
+        .Header131 .Container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 5rem;
+            width: 25rem;
+            max-width: 100%;
+        }
+
+        .Header131 .Content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.25rem;
+            width: 100%;
+        }
+
+        .Header131 .Content .Column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            width: 100%;
+        }
+
+        .Header131 .Content .Column.heading-column {
+            gap: 1rem;
+        }
+
+        .Header131 .Heading {
+            width: 100%;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .Header131 .Content .Column.copy-column {
+            gap: 2rem;
+        }
+
+        .Header131 .BodyCopy {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.875rem;
+            line-height: 1.5;
+            color: #FFFFFF;
+        }
+
+        .Header131 .BodyCopy p {
+            margin: 0;
+        }
+
+        .Header131 .BodyCopy strong {
+            font-weight: 700;
+        }
+
+        .Header131 .ImageContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.1875rem;
+            width: 100%;
+        }
+
+        .Header131 .ImageFrame {
+            width: 100%;
+            height: 25rem;
+            border-radius: 1rem;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .Header131 .ImageFrame .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .Frame17 {
+            position: relative;
+            width: 100%;
+            background: transparent;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .Frame17--overlap {
+            margin-top: -2rem;
+        }
+
+        .Frame17 img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .Header147 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: min(100%, 30rem);
+            background: #F2F2F2;
+            color: #0B0302;
+            margin: 0 auto;
+        }
+
+        .Header147__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: -3.1875rem 0 0;
+            gap: 2.5rem;
+        }
+
+        .Header147__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem 3.5rem;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .Header147__column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .Header147__copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .Header147 .Heading {
+            width: 100%;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1;
+            text-align: center;
+            color: #561513;
+        }
+
+        .Header147__intro {
+            width: 100%;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #0B0302;
+            padding: 0 1rem 0;
+        }
+
+        .Header147__video {
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            aspect-ratio: 480 / 757;
+        }
+
+        .Header147__play {
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .Header147__play svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #7D291C;
+        }
+
+        .Header147__video img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .Header147__video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            pointer-events: none;
+        }
+
+        .Stats26 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem 4rem 2rem;
+            gap: 5rem;
+            width: min(100%, 100rem);
+            background: linear-gradient(92.19deg, #F9DEE0 2.08%, #FFFFFF 50.23%, #F8DEE4 98.39%);
+            color: #0B0302;
+            margin: 0 auto;
+        }
+
+        .Stats26__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5rem;
+            width: min(100%, 80rem);
+        }
+
+        .Stats26__intro {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 5rem;
+            width: 100%;
+        }
+
+        .Stats26__col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .Stats26__heading {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3.4375rem;
+            line-height: 3.25rem;
+            color: #561513;
+        }
+
+        .Stats26__copy {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: #0B0302;
+        }
+
+        .Stats26__grid {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .StatCard {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2rem;
+            gap: 3rem;
+            flex: 1 1 0;
+            border: 1px solid #D73630;
+            border-radius: 1rem;
+            background: rgba(0, 0, 0, 0.001);
+        }
+
+        .StatCard__value {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 1.3;
+            color: #D73630;
+        }
+
+        .StatCard__label {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.625rem;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: #D73630;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .Stats26 {
+                padding: 5rem 2.5rem;
+            }
+
+            .Stats26__intro {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .Stats26__grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        .TrustedStandard {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 7rem 4rem 5rem;
+            width: min(100%, 100rem);
+            margin: 0 auto;
+            color: #ffffff;
+            background:
+                linear-gradient(180deg, rgba(86, 21, 19, 0.55), rgba(86, 21, 19, 0.75)),
+                url('./assets/trust standard mobile.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .TrustedStandard__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            width: min(100%, 25rem);
+            text-align: center;
+        }
+
+        .TrustedStandard__title {
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        .TrustedStandard__list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            width: 100%;
+        }
+
+        .TrustedStandard__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .TrustedStandard__icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .TrustedStandard__heading {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .TrustedStandard__copy {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .SalesPageWebV1 {
+                width: 100% !important;
+                max-width: 420px;
+                margin: 0 auto;
+                padding: 0 1.25rem;
+                gap: 48px !important;
+            }
+
+            .SalesPageWebV1>* {
+                width: 100% !important;
+            }
+
+            .SalesPageWebV1 [class*="max-w-["],
+            .SalesPageWebV1 [class*="w-["],
+            .SalesPageWebV1 [class*="min-w-["] {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .SalesPageWebV1 [class*="h-["] {
+                height: auto !important;
+            }
+
+            .SalesPageWebV1 .px-16 {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+
+            .SalesPageWebV1 .px-6 {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+
+            .SalesPageWebV1 .py-28,
+            .SalesPageWebV1 .py-24 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+
+            .SalesPageWebV1 .py-20,
+            .SalesPageWebV1 .py-14 {
+                padding-top: 2.25rem !important;
+                padding-bottom: 2.25rem !important;
+            }
+
+            .SalesPageWebV1 .py-10 {
+                padding-top: 1.75rem !important;
+                padding-bottom: 1.75rem !important;
+            }
+
+            .SalesPageWebV1 .inline-flex {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+
+            .SalesPageWebV1 [class*="gap-20"] {
+                gap: 2.5rem !important;
+            }
+
+            .SalesPageWebV1 [class*="gap-16"] {
+                gap: 2rem !important;
+            }
+
+            .SalesPageWebV1 [class*="gap-12"] {
+                gap: 1.75rem !important;
+            }
+
+            .SalesPageWebV1 .border-animated,
+            .SalesPageWebV1 .Tag,
+            .SalesPageWebV1 .cta-glow {
+                flex-direction: row !important;
+                align-items: center !important;
+            }
+
+            .SalesPageWebV1 .Tag {
+                gap: 8px !important;
+            }
+
+            .SalesPageWebV1 .count-sep {
+                width: 1px;
+                height: 48px;
+                margin: 0 12px;
+                background-color: rgba(229, 231, 235, 1);
+            }
+
+            .SalesPageWebV1 .Navbar1 {
+                padding: 1rem 1.25rem !important;
+                height: auto !important;
+            }
+
+            .SalesPageWebV1 .Navbar1 .NavLinks,
+            .SalesPageWebV1 .Navbar1 .Actions {
+                display: none !important;
+            }
+
+            .SalesPageWebV1 .Navbar1 .Container {
+                justify-content: center !important;
+            }
+
+            .SalesPageWebV1 .image-tilt {
+                height: auto !important;
+            }
+
+            .SalesPageWebV1 .image-tilt .img-tilt-large {
+                position: relative !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .SalesPageWebV1 .image-tilt .img-tilt-small {
+                display: none !important;
+            }
+
+            .SalesPageWebV1 .text-6xl,
+            .SalesPageWebV1 .text-\[88px\],
+            .SalesPageWebV1 .text-\[79px\],
+            .SalesPageWebV1 .text-\[70px\],
+            .SalesPageWebV1 .text-\[68px\],
+            .SalesPageWebV1 .text-\[63px\],
+            .SalesPageWebV1 .text-\[52px\],
+            .SalesPageWebV1 .text-\[48px\] {
+                font-size: clamp(28px, 8vw, 36px) !important;
+                line-height: 1.15 !important;
+            }
+
+            .SalesPageWebV1 .text-5xl {
+                font-size: clamp(24px, 7vw, 32px) !important;
+                line-height: 1.2 !important;
+            }
+
+            .SalesPageWebV1 .text-4xl {
+                font-size: clamp(22px, 6.5vw, 28px) !important;
+                line-height: 1.2 !important;
+            }
+
+            .SalesPageWebV1 .text-3xl {
+                font-size: clamp(20px, 6vw, 26px) !important;
+                line-height: 1.25 !important;
+            }
+
+            .SalesPageWebV1 .text-2xl {
+                font-size: clamp(18px, 5.5vw, 22px) !important;
+                line-height: 1.35 !important;
+            }
+
+            .SalesPageWebV1 .text-xl {
+                font-size: 18px !important;
+                line-height: 1.45 !important;
+            }
+
+            .SalesPageWebV1 .Actions .Button,
+            .SalesPageWebV1 .Form .Button {
+                width: 100% !important;
+            }
+
+            .SalesPageWebV1 .Button {
+                justify-content: center !important;
+            }
+
+            .EventItemHeader2 .Actions .Button {
+                width: 10.6875rem !important;
+            }
+
+            .SalesPageWebV1 .Row,
+            .SalesPageWebV1 .List {
+                gap: 1.5rem !important;
+            }
+
+            .SalesPageWebV1 .Frame30,
+            .SalesPageWebV1 .Frame33 {
+                height: auto !important;
+            }
+
+            .SalesPageWebV1 .Layout254 .ContentRow {
+                gap: 24px !important;
+            }
+
+            .SalesPageWebV1 .Layout254 .CenterImage {
+                width: 100% !important;
+            }
+
+            .SalesPageWebV1 .Layout254 .ContentRow .Column {
+                transform: none !important;
+            }
+
+            .SalesPageWebV1 .Footer3 {
+                padding-bottom: 3rem !important;
+            }
+
+            .mobile-hero {
+                justify-content: flex-end !important;
+                align-items: flex-start !important;
+                padding: 0 1.25rem 2rem !important;
+                min-height: 100vh;
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+                margin-right: calc(50% - 50vw);
+                background-position: top center !important;
+                background-size: cover !important;
+            }
+
+            .mobile-hero__content {
+                padding: 3rem 1.25rem 1.5rem !important;
+                align-items: flex-start !important;
+                max-width: 100% !important;
+                gap: 1rem !important;
+            }
+
+            .mobile-hero__panel {
+                max-width: 320px !important;
+                padding: 20px 18px 24px !important;
+                gap: 0.75rem !important;
+            }
+
+            .mobile-hero__eyebrow,
+            .mobile-hero__heading {
+                font-size: 24px !important;
+                line-height: 34px !important;
+            }
+
+            .mobile-hero__subcopy {
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+            }
+        }
+    </style>
+    <!-- Basic FAQ accordion (optional, progressive enhancement) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-layer="Accordion"]')?.forEach(acc => {
+                const header = acc.querySelector('[data-layer="Question"]');
+                const answer = acc.querySelector('[data-layer="Answer"]');
+                if (header && answer) {
+                    answer.style.display = 'flex';
+                    header.style.cursor = 'pointer';
+                    header.addEventListener('click', () => {
+                        const open = answer.style.display !== 'none';
+                        answer.style.display = open ? 'none' : 'flex';
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-Color-Scheme-1-Background">
+    <!-- Layer: Sales Page Web V1 (root wrapper) -->
+    <div data-layer="Sales Page Web V1"
+        class="SalesPageWebV1 w-[1600px] px-0 flex-col justify-start items-start overflow-hidden">
+        <!-- Layer: Navbar / 1 / -->
+        <div data-layer="Navbar / 1 /"
+            class="Navbar1 mx-auto flex h-[69px] w-full max-w-[480px] items-center border-b border-[rgba(11,3,2,0.15)] bg-white">
+            <div data-layer="Container"
+                class="Container flex h-full w-full items-center justify-between gap-0">
+                <div data-layer="Content"
+                    class="Content relative flex flex-1 items-center gap-2">
+                    <span class="flex h-10 w-10 items-center justify-center">
+                        <img src="./assets/shop.jpg" alt="Shopping bag icon"
+                            class="h-6 w-6 object-contain" />
+                    </span>
+                    <div data-layer="Content" class="flex flex-col gap-[2px]">
+                        <p data-layer="Heading"
+                            class="font-['Merriweather Sans'] text-[12px] font-semibold leading-[16px] text-[#0B0302]">
+                            Limited Time: 20% OFF + Free Blanket!
+                        </p>
+                        <p data-layer="Text"
+                            class="font-['Merriweather Sans'] text-[10px] font-normal leading-[14px] text-[#0B0302]">
+                            Hurry, offer ends soon—don't miss out!
+                        </p>
+                    </div>
+                </div>
+                <div data-layer="Actions" class="relative flex h-8 items-center">
+                    <a data-layer="Button"
+                        class="inline-flex h-[32px] min-w-[64px] items-center justify-center rounded-full border border-[#AC2B26] border-b-[4px] border-l-[1.5px] border-r-[1.5px] border-t-[1.5px] bg-[#D73630] text-center font-['Merriweather Sans'] text-[11px] font-semibold leading-[14px] tracking-[0.2px] text-white"
+                        href="#shop">
+                        Shop
+                    </a>
+                    <button type="button"
+                        class="absolute -left-5 flex h-8 w-8 items-center justify-center text-[#0B0302]"
+                        aria-label="Dismiss banner">
+                        <img src="./assets/Actions.png" alt="Close banner" class="h-5 w-5 object-contain" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Header / 5 / -->
+        <div data-layer="Header / 5 /"
+            class="Header5 mobile-hero self-stretch px-16 inline-flex justify-center items-center overflow-hidden relative"
+            style="background-image:url('./assets/sale page main_mobile 1.png'); background-size:cover; background-position:center;">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="mobile-hero__content relative z-10 w-full flex flex-col justify-end items-start">
+                <div class="mobile-hero__panel flex flex-col items-start gap-3 text-left">
+                    <p class="mobile-hero__eyebrow">
+                        Only Today:
+                    </p>
+                    <h1 class="mobile-hero__heading text-Color-White">
+                        20% OFF+ Free Fire Blanket Auto-Added at Checkout.
+                    </h1>
+                    <p class="mobile-hero__subcopy">
+                        Protect Your Family. Be Ready For Every Emergency Situations.<br />
+                        Kits for 1–4 People | Made in Canada | Trusted by 75,000+ Families.
+                    </p>
+                    <div class="mobile-hero__cta-wrap">
+                        <a href="#product"
+                            class="mobile-hero__cta px-6 py-3 text-Color-Neutral-Darkest text-xs font-semibold font-['Poppins']">
+                            Shop Deluxe Kits Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Logo / 2 / -->
+        <div data-layer="Logo / 2 /"
+            class="Logo2 self-stretch px-16 py-10 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+            <div data-layer="Container"
+                class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+                <div data-layer="Component"
+                    class="Component self-stretch inline-flex justify-start items-center gap-16">
+                    <div data-layer="Heading"
+                        class="Heading w-auto whitespace-nowrap justify-start text-Color-Scheme-2-Text text-lg font-bold font-['Poppins'] leading-9">
+                        Trusted by 10,000+ organizations</div>
+                    <div data-layer="Content"
+                        class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
+                        <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
+                            <img alt="Trusted logos" class="w-[720px] h-auto" src="./assets/logo2.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Event Item Header / 2 / -->
+        <div data-layer="Event Item Header / 2 /"
+            class="EventItemHeader2 self-stretch px-16 py-14 flex flex-col justify-start items-center gap-20 overflow-hidden"
+            style="background: linear-gradient(180deg, #E0C2A5 0%, #E8B29C 44%, #FFFFFF 100%);">
+            <div data-layer="Container"
+                class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+                <div data-layer="Content"
+                    class="Content w-full max-w-[768px] flex flex-col justify-center items-center gap-8">
+                    <div data-layer="Events details"
+                        class="EventsDetails self-stretch flex flex-col justify-center items-center gap-6">
+                        <div data-layer="Section Title" class="SectionTitle">
+                            <div data-layer="Subheading" class="Subheading">
+                                Ready</div>
+                            <div data-layer="Content" class="Content">
+                                <div data-layer="Heading" class="Heading">Act Early.<br />Stay Safe.</div>
+                            </div>
+                        </div>
+                        <div data-layer="Events date" class="EventsDate">
+                            <div data-layer="Content" class="Content">
+                                <div data-layer="Date" class="Date">
+                                    Offer Ends In:</div>
+                                <div data-layer="Tag" data-alternate="False" data-icon-position="No Icon"
+                                    data-text-only="False" class="Tag">
+                                    <div data-layer="Text" class="Text">
+                                        Kits nearly gone</div>
+                                </div>
+                            </div>
+                            <div data-layer="Content" class="Content border-animated">
+                                <div data-layer="Event time" class="EventTime">
+                                    <div data-layer="Text" id="cd-days" class="Text">
+                                        45</div>
+                                    <div data-layer="Text" class="Text">
+                                        Days</div>
+                                </div>
+                                <div class="count-sep"></div>
+                                <div data-layer="Event time" class="EventTime">
+                                    <div data-layer="Text" id="cd-hours" class="Text">
+                                        12</div>
+                                    <div data-layer="Text" class="Text">
+                                        Hours</div>
+                                </div>
+                                <div class="count-sep"></div>
+                                <div data-layer="Event time" class="EventTime">
+                                    <div data-layer="Text" id="cd-mins" class="Text">
+                                        44</div>
+                                    <div data-layer="Text" class="Text">
+                                        Mins</div>
+                                </div>
+                                <div class="count-sep"></div>
+                                <div data-layer="Event time" class="EventTime">
+                                    <div data-layer="Text" id="cd-secs" class="Text">
+                                        29</div>
+                                    <div data-layer="Text" class="Text">
+                                        Secs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-layer="Actions" class="Actions">
+                        <div data-layer="Form" class="Form">
+                            <a data-layer="Button" class="Button" href="#product">
+                                Order your kit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Header / 131 / -->
+        <div data-layer="Header / 131 /" class="Header131">
+            <div data-layer="Container" class="Container">
+                <div data-layer="Content" class="Content">
+                    <div data-layer="Column" class="Column heading-column">
+                        <div data-layer="Heading" class="Heading">
+                            Get Your Free Fire Blanket Today!
+                        </div>
+                    </div>
+                    <div data-layer="Column" class="Column copy-column">
+                        <div data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+                            class="BodyCopy">
+                            <p>Save <strong>20%</strong> Today – Offer Ends Soon.</p>
+                            <p>Every Deluxe Kit order today includes a <strong>FREE Fire Blanket</strong> (Value
+                                $21.99).</p>
+                            <p>A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-layer="Image container" class="ImageContainer">
+                    <div class="ImageFrame" style="background-image: url('./assets/package.png');">
+                        <span class="sr-only">Emergency readiness kit contents displayed.</span>
+                    </div>
+                    <div class="ImageFrame" style="background-image: url('./assets/fire blanket.png');">
+                        <span class="sr-only">Fire blanket being deployed to smother flames.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Separator: Frame 17 (wave) -->
+        <div data-layer="Frame 17" class="Frame17 Frame17--overlap">
+            <img alt="wave" src="./assets/Frame17_test.png" />
+        </div>
+        <!-- Layer: Header / 147 / (Video Lightbox) -->
+        <div data-layer="Header / 147 /" class="Header147">
+            <div data-layer="Content" class="Header147__content">
+                <div data-layer="Container" class="Header147__container">
+                    <div data-layer="Column" class="Header147__column">
+                        <div data-layer="Content" class="Header147__copy">
+                            <div data-layer="Heading" class="Heading">
+                                Built to Meet FEMA &amp; Canadian Guidelines
+                            </div>
+                            <div data-layer="Text" class="Header147__intro">
+                                See exactly how the 72HRS Deluxe Kit checks every box experts recommend for emergency
+                                preparedness.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Header147__video">
+                    <img src="./assets/Placeholder Lightbox.png" alt="72HRS Deluxe Kit aerial footage preview" />
+                    <button type="button" class="Header147__play" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 7l8 5-8 5V7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Header / 64 / (What's inside - title) -->
+        <div data-layer="Header / 64 /"
+            class="Header64 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-16 pt-20 pb-0 gap-[31px] overflow-hidden">
+            <div data-layer="Container" class="Container w-full max-w-[352px] flex flex-col items-center gap-20">
+                <div data-layer="Component" class="Component w-full max-w-[352px] flex flex-col items-center gap-6">
+                    <div data-layer="What’s inside" class="WhatSInside w-full text-center">
+                        <div class="font-['Bona Nova'] font-bold text-[32px] leading-[32px] text-[#561513]">What’s
+                            Inside
+                        </div>
+                    </div>
+                    <div data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
+                        class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours w-full text-center text-[#0B0302] font-['Poppins'] text-[20px] leading-[30px]">
+                        Preparation is key to survival in chaos, so explore durable products that ensure your readiness
+                        beyond 72 hours.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Layout / 28 / (What's inside - cards) -->
+        <div data-layer="Layout / 28 /"
+            class="Layout28 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-6 pt-[42px] pb-[112px]">
+            <div id="whatsInsideCarousel" class="w-full" data-carousel="slide" data-carousel-touch="true"
+                data-carousel-autoplay="true" data-carousel-interval="6000">
+                <div class="relative min-h-[640px] overflow-hidden rounded-[36px]">
+                    <div class="duration-700 ease-in-out" data-carousel-item="active">
+                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                            <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
+                                <h3
+                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                    Food &amp; Water</h3>
+                            </div>
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                                <img src="./assets/carousel1.png" alt="Family preparing food and water rations"
+                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                            </figure>
+                            <div
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                    3600 Cal Food Ration<br />125ml Water Pouches<br />Aquatabs
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                            <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
+                                <h3
+                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                    Shelter &amp; Warmth</h3>
+                            </div>
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                                <img src="./assets/carousel2.png" alt="Emergency shelter supplies providing warmth"
+                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                            </figure>
+                            <div
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                    Sleeping Bag<br />Tube Tent<br />Rain Poncho
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                            <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
+                                <h3
+                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                    Lighting &amp; Communication</h3>
+                            </div>
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                                <img src="./assets/carousel3.png" alt="Lighting and communication tools in use"
+                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                            </figure>
+                            <div
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                    Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM
+                                    Radio
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                            <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
+                                <h3
+                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                    First Aid &amp; Sanitation</h3>
+                            </div>
+                            <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
+                                <img src="./assets/carousel4.png" alt="First aid and sanitation gear ready"
+                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                            </figure>
+                            <div
+                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
+                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                    First Aid Kit 108 Pcs<br />Emergency Whistle<br />Dust Masks
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div data-layer="Frame 9" class="Frame9 mt-8 flex items-center justify-center gap-3">
+                    <button type="button"
+                        class="CardDot h-2 w-2 rounded-full bg-[#D4CEC9] transition-all duration-300 aria-[current=true]:w-6 aria-[current=true]:rounded-full aria-[current=true]:bg-[#0B0302]"
+                        aria-current="true" aria-label="Food and Water" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="CardDot h-2 w-2 rounded-full bg-[#D4CEC9] transition-all duration-300 aria-[current=true]:w-6 aria-[current=true]:rounded-full aria-[current=true]:bg-[#0B0302]"
+                        aria-label="Shelter and Warmth" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="CardDot h-2 w-2 rounded-full bg-[#D4CEC9] transition-all duration-300 aria-[current=true]:w-6 aria-[current=true]:rounded-full aria-[current=true]:bg-[#0B0302]"
+                        aria-label="Lighting and Communication" data-carousel-slide-to="2"></button>
+                    <button type="button"
+                        class="CardDot h-2 w-2 rounded-full bg-[#D4CEC9] transition-all duration-300 aria-[current=true]:w-6 aria-[current=true]:rounded-full aria-[current=true]:bg-[#0B0302]"
+                        aria-label="First Aid and Sanitation" data-carousel-slide-to="3"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Layout / 238 / (Trusted standard) -->
+        <div data-layer="Layout / 238 /" class="TrustedStandard">
+            <div class="TrustedStandard__container">
+                <div class="TrustedStandard__title">Built on Trusted Standard</div>
+                <div class="TrustedStandard__list">
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/list_alt_check.svg" alt="Checklist icon"
+                            loading="lazy" />
+                        <div class="TrustedStandard__heading">FEMA-ALIGNED</div>
+                        <p class="TrustedStandard__copy">Built to meet FEMA &amp; Ready.gov 72-hour kit guidelines.</p>
+                    </div>
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/globe_uk.svg" alt="Globe icon"
+                            loading="lazy" />
+                        <div class="TrustedStandard__heading">CANADIAN-RECOMMENDED</div>
+                        <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness advice.
+                            Proudly assembled in Canada.</p>
+                    </div>
+                    <div class="TrustedStandard__item">
+                        <img class="TrustedStandard__icon" src="./assets/verified.svg" alt="Verified badge icon"
+                            loading="lazy" />
+                        <div class="TrustedStandard__heading">20+ YEARS OF TRUST</div>
+                        <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two decades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Layer: Stats / 26 / -->
+        <div data-layer="Stats / 26 /" class="Stats26">
+            <div data-layer="Container" class="Stats26__container">
+                <div data-layer="Content" class="Stats26__intro">
+                    <div data-layer="Column" class="Stats26__col">
+                        <div data-layer="Heading" class="Stats26__heading">
+                            Families Approved.<br />Peace of Mind Proven
+                        </div>
+                    </div>
+                    <div data-layer="Column" class="Stats26__col">
+                        <div data-layer="Text" class="Stats26__copy">
+                            When families choose the 72HRS kit, they gain confidence in their preparedness. Our
+                            customers report
+                            feeling equipped to handle emergencies effectively. Join the thousands who have made the
+                            smart choice for
+                            safety.</div>
+                    </div>
+                </div>
+                <div data-layer="Content" class="Stats26__grid">
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="97">0</span><span>%</span>
+                        </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Say they feel more prepared after getting their 72HRS kit
+                        </p>
+                    </div>
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="95">0</span><span>%</span>
+                        </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Said the kit had everything they needed for emergencies
+                        </p>
+                    </div>
+                    <div data-layer="Stat" class="StatCard">
+                        <div data-layer="Text" class="StatCard__value">
+                            <span class="stat-count" data-target="97">0</span><span>%</span>
+                        </div>
+                        <p data-layer="Text" class="StatCard__label">
+                            Said they would recommend 72HRS kits to friends & family
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17">
+        <img alt="wave" src="./assets/Frame17_hong_mobile.png" />
+    </div>
+    <!-- Layer: Product / 4 / (Choose the Right Kit) -->
+    <div data-layer="Product / 4 /"
+        class="Product4 flex w-full max-w-3xl flex-col items-center gap-8 bg-white px-4 pb-10 pt-6 sm:px-10 lg:px-12">
+        <div data-layer="Container" class="Container flex w-full flex-col items-center gap-16">
+            <div data-layer="Title" class="Title flex w-full flex-col items-center gap-4 text-center">
+                <div data-layer="Tagline Wrapper" class="TaglineWrapper inline-flex items-center justify-center">
+                    <div data-layer="Tagline"
+                        class="Tagline text-center font-['Poppins'] text-base font-semibold leading-6 text-[#0B0302]">
+                        Find your Kit</div>
+                </div>
+                <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                    <div data-layer="Heading"
+                        class="Heading w-full text-center font-['Bona Nova'] text-3xl font-bold leading-tight text-[#561513] sm:text-4xl">
+                        Choose the Right Kit for Your Family</div>
+                    <div data-layer="Text"
+                        class="Text w-full max-w-xl text-center font-['Poppins'] text-lg font-normal leading-7 text-[#0B0302]">
+                        Each kit supports 1 person for 72 hours.<br />Select your household size and we’ll show you
+                        the perfect match.</div>
+                </div>
+            </div>
+            <div data-layer="Content" class="Content flex w-full flex-col gap-12">
+                <div data-layer="Row" class="Row grid w-full grid-cols-2 justify-items-center gap-10">
+                    <div data-layer="Product"
+                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                            src="./assets/1person.jpeg" />
+                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                                    <div data-layer="Heading"
+                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        1 Person</div>
+                                    <div data-layer="Text"
+                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        Solo, car trunk, student</div>
+                                </div>
+                                <div data-layer="Price"
+                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    $259.99</div>
+                            </div>
+                            <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
+                                data-small="False" data-style="Secondary"
+                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                <div data-layer="Button"
+                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    Add to Cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-layer="Product"
+                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                            src="./assets/2person.jpeg" />
+                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                                    <div data-layer="Heading"
+                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        2 Person</div>
+                                    <div data-layer="Text"
+                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        Couples, roommates</div>
+                                </div>
+                                <div data-layer="Price"
+                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    $284.99</div>
+                            </div>
+                            <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
+                                data-small="False" data-style="Secondary"
+                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                <div data-layer="Button"
+                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    Add to Cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-layer="Product"
+                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                            src="./assets/3person.jpeg" />
+                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                                    <div data-layer="Heading"
+                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        3 Person</div>
+                                    <div data-layer="Text"
+                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        Small Family</div>
+                                </div>
+                                <div data-layer="Price"
+                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    $374.99</div>
+                            </div>
+                            <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
+                                data-small="False" data-style="Secondary"
+                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                <div data-layer="Button"
+                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    Add to Cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-layer="Product"
+                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                            src="./assets/4person.jpeg" />
+                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                                    <div data-layer="Heading"
+                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        4 Person</div>
+                                    <div data-layer="Text"
+                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        Full Household</div>
+                                </div>
+                                <div data-layer="Price"
+                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    $404.99</div>
+                            </div>
+                            <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
+                                data-small="False" data-style="Secondary"
+                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                <div data-layer="Button"
+                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    Add to Cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-layer="Frame 20" class="Frame20 flex w-full justify-end pt-12">
+            <img src="./assets/Frame 20.png" alt="Decorative dotted divider"
+                class="h-24 w-auto max-w-xs object-contain" />
+        </div>
+    </div>
+    <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
+    <div data-layer="Layout / 254 /"
+        class="Layout254 mx-auto flex w-full max-w-[480px] flex-col items-center gap-20 bg-[#F2F2F2] px-8 pb-5 pt-28">
+        <div data-layer="Container" class="Container flex w-full max-w-[400px] flex-col items-center gap-10">
+            <div data-layer="Section Title" class="SectionTitle flex w-full flex-col items-center gap-5 text-center">
+                <div data-layer="Tagline Wrapper" class="TaglineWrapper flex w-full items-center justify-center">
+                    <div data-layer="Tagline"
+                        class="Tagline w-full font-['Poppins'] text-xl font-semibold leading-[30px] text-[#0B0302]">
+                        Choose the Amount of people you want the Kit For</div>
+                </div>
+                <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                    <div data-layer="Heading"
+                        class="Heading w-full font-['Bona Nova'] text-[2rem] font-bold leading-[2rem] text-[#561513]">
+                        4 Person Kit – Everything You Need for Emergencies</div>
+                    <div data-layer="Text"
+                        class="Text w-full font-['Poppins'] text-[1.5625rem] font-normal leading-[2.375rem] text-[#0B0302]">
+                        The 72HRS Deluxe Emergency Kit is designed to ensure your family is ready for any
+                        situation.<br />With essential supplies and trusted quality, peace of mind is just a click
+                        away.</div>
+                </div>
+            </div>
+            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-12">
+                <div data-layer="Column" class="Column flex w-full flex-col items-center gap-10">
+                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                        <div data-layer="water_do"
+                            class="WaterDo inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            <img src="./assets/Vector.svg" alt="" class="h-8 w-8 select-none" loading="lazy" />
+                        </div>
+                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                            <div data-layer="Heading"
+                                class="Heading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
+                                Food &amp; Water</div>
+                            <div data-layer="Text"
+                                class="Text w-full text-center font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                4 × 72HRS Food Rations (3,600 Cal each)<br />48 × Emergency Water Pouches (125 ml
+                                each)<br />10 × Aquatabs Water Purification Tablet</div>
+                        </div>
+                    </div>
+                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                        <div data-layer="Vector"
+                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            <img src="./assets/tuyet.png" alt="" class="h-10 w-10 select-none object-contain"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                            <div data-layer="Heading"
+                                class="Heading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
+                                Shelter &amp; Warmth</div>
+                            <div data-layer="Text"
+                                class="Text w-full text-center font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                4 × Sleeping Bags<br />4 × Rain Ponchos<br />2 × Tube Tent</div>
+                        </div>
+                    </div>
+                </div>
+                <div data-layer="Placeholder Wrapper" class="PlaceholderWrapper relative -mx-8 w-[calc(100%+4rem)]">
+                    <img data-layer="Placeholder Image" class="PlaceholderImage h-full w-full object-cover"
+                        src="./assets/4person.jpeg" />
+                </div>
+                <div data-layer="Column" class="Column flex w-full flex-col items-center gap-14">
+                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                        <div data-layer="Vector"
+                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            <img src="./assets/medical_services.png" alt="" class="h-10 w-10 select-none object-contain"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                            <div data-layer="Heading"
+                                class="Heading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
+                                First Aid &amp; Essentials</div>
+                            <div data-layer="Text"
+                                class="Text w-full text-center font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                1 × 108-Piece First Aid Kit<br />1 × Hand-Crank Radio<br />1 × 36-Hour Emergency
+                                Candles<br />1 × 72HRS Dust Masks<br />2 × 72HRS Deluxe Backpack</div>
+                        </div>
+                    </div>
+                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                        <div data-layer="Vector"
+                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            <img src="./assets/fix.png" alt="" class="h-10 w-10 select-none object-contain"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                            <div data-layer="Heading"
+                                class="Heading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
+                                Tools &amp; Safety</div>
+                            <div data-layer="Text"
+                                class="Text w-full text-center font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                1 × Multi-tool Knife<br />1 × Whistle<br />1 × Duct Tape Roll<br />1 × Aluminum
+                                Alloy Emergency Whistle<br />4 × 72HRS Tissue Pack<br />1 × 72HRS 50FT Nylon
+                                Utility Cord<br />3 × LED Rechargeable Flashlight<br />1 × 72HRS Roll Duct Tape
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-layer="Actions" class="Actions flex w-full flex-col items-center gap-4">
+                <div data-layer="ButtonRow" class="ButtonRow flex w-full items-center justify-center gap-3">
+                    <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
+                        data-style="Secondary"
+                        class="Button inline-flex items-center justify-center gap-2 rounded-md bg-[#D73630] px-4 py-1.5 text-[0.75rem] font-medium font-['Poppins'] leading-5 text-white shadow-[0_0.75rem_1.5rem_-1.25rem_rgba(226,58,58,0.8)]">
+                        See Full Spec Sheet
+                    </div>
+                    <div
+                        class="inline-flex items-center gap-2 text-[0.75rem] font-medium font-['Poppins'] text-[#0B0302]">
+                        <span>Orig Price $399.99</span>
+                        <img src="./assets/Vector.png" alt="" class="h-3 w-3 select-none" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17">
+        <img alt="Decorative wave edge" src="./assets/Frame17_nau.png"
+            class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
+    </div>
+    <!-- Layer: Gallery / 3 / -->
+    <div data-layer="Gallery / 3 /"
+        class="Gallery3 relative flex w-full justify-center overflow-hidden bg-[#7D291C] px-0 pb-10 pt-px">
+        <div data-layer="Container"
+            class="Container relative z-10 flex w-full max-w-[480px] flex-col items-center gap-20 px-0">
+            <div data-layer="Section Title"
+                class="SectionTitle flex w-full flex-col items-center gap-6 px-16 text-center">
+                <h2 data-layer="Heading"
+                    class="Heading flex w-full max-w-[374px] flex-col items-center justify-center font-['Bona Nova'] text-[2rem] font-bold leading-none text-white">
+                    See Why Influencers &amp; Families Choose 72HRS</h2>
+                <p data-layer="Text"
+                    class="Text w-full max-w-[400px] font-['Poppins'] text-lg font-normal leading-[27px] text-white">
+                    Discover why families trust 72HRS for safety.</p>
+            </div>
+            <div data-layer="Content"
+                class="Content flex w-full max-w-[600px] shrink-0 items-start gap-[15px] overflow-x-auto px-0">
+                <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
+                    <img data-layer="Gallery Image 1" class="absolute inset-0 h-full w-full object-cover"
+                        src="./assets/fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+                </div>
+                <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
+                    <img data-layer="Gallery Image 2" class="absolute inset-0 h-full w-full object-cover"
+                        src="./assets/fml2.png" alt="Customer holding 72HRS drinking water packs" loading="lazy" />
+                </div>
+                <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
+                    <img data-layer="Gallery Image 3" class="absolute inset-0 h-full w-full object-cover"
+                        src="./assets/fml3.png" alt="Community member sharing their 72HRS experience" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Separator: Frame 17 (wave) -->
+    <div data-layer="Frame 17" class="Frame17">
+        <img alt="Decorative wave edge" src="./assets/Frame17_nau_2.png"
+            class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
+    </div>
+    <!-- Layer: FAQ / 6 / -->
+    <div data-layer="FAQ / 6 /" class="Faq6 flex w-full justify-center bg-[#F2F2F2] px-16 pb-20 pt-0">
+        <div data-layer="Container" class="Container flex w-full max-w-[480px] flex-col items-center gap-20">
+            <div data-layer="Component" class="Component flex w-full flex-col items-center gap-20">
+                <div data-layer="Section Title"
+                    class="SectionTitle flex w-full max-w-[400px] flex-col items-center gap-8 text-center">
+                    <div data-layer="Content" class="Content flex w-full flex-col items-start gap-6">
+                        <h2 data-layer="Got questions?"
+                            class="GotQuestions w-full font-['Bona Nova'] text-[2rem] font-bold leading-none text-[#561513]">
+                            Got questions?</h2>
+                        <p data-layer="Text"
+                            class="Text w-full font-['Poppins'] text-lg font-normal leading-[27px] text-[#0B0302]">
+                            Find answers to your most pressing questions about our emergency kits.</p>
+                    </div>
+                    <div data-layer="Actions" class="Actions flex w-full justify-center">
+                        <button type="button" data-layer="Button" data-style="Secondary"
+                            class="Button inline-flex h-[47px] w-[122px] items-center justify-center gap-2 rounded-[6px] border border-black bg-black px-6 py-2 text-[18px] font-medium font-['Poppins'] leading-[27px] text-white shadow-[0_1px_2px_rgba(11,3,2,0.05)]">
+                            Contact
+                        </button>
+                    </div>
+                </div>
+                <div data-layer="Accordion List" class="AccordionList flex w-full max-w-[400px] flex-col gap-4">
+                    <div data-layer="Accordion"
+                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        <div data-layer="Question"
+                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question"
+                                class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
+                                Why 72 hours?</h3>
+                            <img src="./assets/close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                            <p data-layer="Text"
+                                class="Text font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                FEMA and Canada both recommend being prepared for at least 72 hours. This kit is built
+                                to cover that critical period.</p>
+                        </div>
+                    </div>
+                    <div data-layer="Accordion"
+                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        <div data-layer="Question"
+                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question"
+                                class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
+                                Shelf-life of the food and water?</h3>
+                            <img src="./assets/close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                            <p data-layer="Text"
+                                class="Text font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                All our food and water have up to a 5-year shelf life (delivered within 1-6 months after
+                                the manufacturing date). The food &amp; water will need to be replenished after the
+                                expiration date. We have our own food &amp; water refill kits, so it saves you the
+                                convenience of having to find the items yourselves!</p>
+                        </div>
+                    </div>
+                    <div data-layer="Accordion"
+                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        <div data-layer="Question"
+                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question"
+                                class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
+                                Can the kit be customized to meet specific needs or requirements?</h3>
+                            <img src="./assets/close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                            <p data-layer="Text"
+                                class="Text font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                Yes, our emergency kits can be customized to meet your specific needs. Please contact us
+                                directly, and we'll work with you to create a personalized kit tailored to your
+                                requirements.</p>
+                        </div>
+                    </div>
+                    <div data-layer="Accordion"
+                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        <div data-layer="Question"
+                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question"
+                                class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
+                                Are the food rations gluten-free?</h3>
+                            <img src="./assets/close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                            <p data-layer="Text"
+                                class="Text font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                The standard food ration bars in our emergency kits are all nut-free and vegetarian
+                                friendly but are not gluten free. If you have a gluten allergy, please reach out to us
+                                and we'll happily work with you to make sure you've got a solution.</p>
+                        </div>
+                    </div>
+                    <div data-layer="Accordion"
+                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        <div data-layer="Question"
+                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question"
+                                class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
+                                Do you do custom Emergency Kit orders for large groups?</h3>
+                            <img src="./assets/close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
+                                loading="lazy" />
+                        </div>
+                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                            <p data-layer="Text"
+                                class="Text font-['Poppins'] text-[18px] font-normal leading-[27px] text-[#0B0302]">
+                                Yes, we do accept custom orders for large groups. For inquiries regarding custom orders,
+                                please email us directly at orders@72hours.ca. We'll be happy to discuss your specific
+                                requirements and provide you with a tailored solution to meet the needs of your
+                                group.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Layer: CTA / 39 / -->
+    <div data-layer="CTA / 39 /" class="Cta39 flex w-full justify-center px-16"
+        style="background:linear-gradient(98.37deg,#F9DEE0 -17.16%,#FFFFFF 44.38%,#F8DEE4 82.91%);">
+        <div data-layer="Container" class="Container flex w-full max-w-[480px] flex-col items-center gap-16 py-[75px]">
+            <div data-layer="Card"
+                class="Card flex w-full max-w-[352px] flex-col items-center overflow-hidden rounded-[20px] border border-white/25 bg-[#561513] shadow-[0_30px_60px_-35px_rgba(90,20,20,0.6)]">
+                <div data-layer="Column"
+                    class="Column flex w-full max-w-[352px] flex-col items-start gap-8 px-12 py-12 text-left">
+                    <div data-layer="Content" class="Content flex w-full max-w-[256px] flex-col items-start gap-4">
+                        <h2 data-layer="Heading"
+                            class="Heading font-['Poppins'] text-[21px] font-semibold leading-[28px] text-white">
+                            Save 20% Today – Offer Ends Soon</h2>
+                        <p data-layer="Text"
+                            class="Text font-['Poppins'] text-[12.5px] font-normal leading-[18px] text-white/85">
+                            Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don’t miss out!</p>
+                    </div>
+                    <div data-layer="Actions" class="Actions relative flex w-full justify-start isolate">
+                        <span
+                            class="pointer-events-none absolute left-1/2 top-1/2 h-[62px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-[16px] bg-white/20 blur-[36px]"></span>
+                        <span
+                            class="pointer-events-none absolute left-1/2 top-1/2 h-[40px] w-[188px] -translate-x-1/2 -translate-y-1/2 rounded-[10px] bg-white/65 blur-[18px]"></span>
+                        <button data-layer="Button" data-style="Primary"
+                            class="Button relative inline-flex h-[36px] w-[174px] items-center justify-center gap-[3px] rounded-[6px] border border-[rgba(11,3,2,0.15)] bg-[#E63946] px-3 py-1 text-[8px] font-semibold font-['Poppins'] uppercase tracking-[0.22em] text-white">
+                            GET 20% OFF TODAY!
+                        </button>
+                    </div>
+                </div>
+                <img data-layer="Placeholder Image" class="PlaceholderImage h-[343px] w-full object-cover"
+                    src="./assets/binhga.png" alt="Family using 72HRS emergency kit" loading="lazy" />
+            </div>
+        </div>
+    </div>
+    <!-- Layer: Footer / 2 / -->
+    <div data-layer="Footer / 2 /"
+        class="Footer2 w-full max-w-[480px] mx-auto flex flex-col items-center px-16 py-20 gap-20 bg-Color-Scheme-1-Background">
+        <div data-layer="Container" class="Container w-full max-w-[352px] flex flex-col items-start gap-20">
+            <div data-layer="Content" class="Content w-full flex flex-col items-start gap-6">
+                <div data-layer="Frame 13" class="Frame13 w-full flex flex-col items-start gap-4">
+                    <div data-layer="Stay informed about emergency preparedness"
+                        class="StayInformedAboutEmergencyPreparedness w-full text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-[1.5]">
+                        Stay informed about emergency preparedness</div>
+                    <div data-layer="Email address"
+                        class="EmailAddress w-full text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-[1.5]">
+                        Email address</div>
+                    <div data-layer="Input Divider" class="InputDivider w-full border-b border-[rgba(11,3,2,0.15)]">
+                    </div>
+                </div>
+            </div>
+            <div data-layer="Credits" class="Credits w-full flex flex-col items-start gap-8">
+                <div data-layer="Divider" class="Divider w-full border-b border-[rgba(11,3,2,0.15)]"></div>
+                <div data-layer="Row" class="Row w-full flex justify-center items-center">
+                    <div data-layer="Social Links" class="SocialLinks flex items-center gap-3">
+                        <a data-layer="Facebook" href="#"
+                            class="Facebook w-6 h-6 inline-flex items-center justify-center">
+                            <img src="../ads-v2/assets/Facebook.svg" alt="Facebook" class="w-6 h-6" loading="lazy" />
+                        </a>
+                        <a data-layer="Instagram" href="#"
+                            class="Instagram w-6 h-6 inline-flex items-center justify-center">
+                            <img src="../ads-v2/assets/Instagram.svg" alt="Instagram" class="w-6 h-6" loading="lazy" />
+                        </a>
+                        <a data-layer="X" href="#" class="X w-6 h-6 inline-flex items-center justify-center">
+                            <img src="../ads-v2/assets/X.svg" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
+                        </a>
+                        <a data-layer="LinkedIn" href="#"
+                            class="Linkedin w-6 h-6 inline-flex items-center justify-center">
+                            <img src="../ads-v2/assets/LinkedIn.svg" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
+                        </a>
+                        <a data-layer="Youtube" href="#"
+                            class="Youtube w-6 h-6 inline-flex items-center justify-center">
+                            <img src="../ads-v2/assets/Youtube.svg" alt="YouTube" class="w-6 h-6" loading="lazy" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        // Simple countdown to a target date (set 45 days from now by default)
+        (function () {
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+            if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+            const target = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000); // demo target: 45 days from now
+            const tick = () => {
+                const now = new Date();
+                let diff = Math.max(0, target - now);
+                const days = Math.floor(diff / (24 * 60 * 60 * 1000)); diff -= days * (24 * 60 * 60 * 1000);
+                const hours = Math.floor(diff / (60 * 60 * 1000)); diff -= hours * (60 * 60 * 1000);
+                const mins = Math.floor(diff / (60 * 1000)); diff -= mins * (60 * 1000);
+                const secs = Math.floor(diff / 1000);
+                daysEl.textContent = String(days).padStart(2, '0');
+                hoursEl.textContent = String(hours).padStart(2, '0');
+                minsEl.textContent = String(mins).padStart(2, '0');
+                secsEl.textContent = String(secs).padStart(2, '0');
+            };
+            tick();
+            setInterval(tick, 1000);
+        })();
+        // Count-up on scroll for Stats section + loop every 3s (0 -> target)
+        (function () {
+            const statsSection = document.querySelector('[data-layer="Stats / 26 /"]');
+            if (!statsSection) return;
+            const counters = statsSection.querySelectorAll('.stat-count');
+            let hasRun = false;
+            const animateOnce = () => {
+                counters.forEach(el => {
+                    const target = parseInt(el.getAttribute('data-target') || '0', 10);
+                    const duration = 1200; // ms
+                    const start = performance.now();
+                    const tick = (now) => {
+                        const progress = Math.min(1, (now - start) / duration);
+                        const value = Math.floor(progress * target);
+                        el.textContent = String(value);
+                        if (progress < 1) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                });
+            };
+            const cycle = () => {
+                // reset to 0%
+                counters.forEach(el => { el.textContent = '0'; });
+                // animate up
+                animateOnce();
+            };
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting && !hasRun) { hasRun = true; cycle(); setInterval(cycle, 3000); io.disconnect(); } });
+            }, { threshold: 0.3 });
+            io.observe(statsSection);
+        })();
+
+        // Hover expand behavior for Layout / 254 /
+        (function () {
+            const row = document.querySelector('.Layout254 .ContentRow');
+            const img = document.querySelector('.Layout254 .CenterImage');
+            if (!row || !img) return;
+            const enter = () => row.classList.add('expanded');
+            const leave = () => row.classList.remove('expanded');
+            img.addEventListener('mouseenter', enter);
+            img.addEventListener('mouseleave', leave);
+            img.addEventListener('focus', enter);
+            img.addEventListener('blur', leave);
+        })();
+    </script>
+</body>
+
+</html>
