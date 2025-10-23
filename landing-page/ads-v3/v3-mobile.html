@@ -826,14 +826,14 @@
         .Header131 .BodyCopy {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.25rem;
             width: 100%;
             max-width: 25rem;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 1.5rem;
-            line-height: 1.5;
+            font-size: 1.0625rem;
+            line-height: 1.55;
             color: #FFFFFF;
         }
 
@@ -841,8 +841,25 @@
             margin: 0;
         }
 
+        .Header131 .BodyCopy p:first-child {
+            font-size: 1.25rem;
+            line-height: 1.32;
+            letter-spacing: -0.01em;
+        }
+
+        .Header131 .BodyCopy p:nth-child(n+2) {
+            font-size: 0.965rem;
+            line-height: 1.5;
+        }
+
         .Header131 .BodyCopy strong {
             font-weight: 700;
+        }
+
+        .Header131 .BodyCopy .BodyCopy__highlight {
+            font-size: 1.125rem;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
         }
 
         .Header131 .ImageContainer {
@@ -1610,11 +1627,9 @@
                     <div data-layer="Column" class="Column copy-column">
                         <div data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
                             class="BodyCopy">
-                            <p>Save <strong>20%</strong> Today – Offer Ends Soon.</p>
-                            <p>Every Deluxe Kit order today includes a <strong>FREE Fire Blanket</strong> (Value
-                                $21.99).</p>
-                            <p>A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!
-                            </p>
+                            <p>Save <span class="font-semibold">20%</span> Today – Offer Ends Soon.</p>
+                            <p>Every Deluxe Kit order today includes a <span class="font-bold tracking-tight BodyCopy__highlight">FREE Fire Blanket</span> <span class="font-medium">(Value $21.99).</span></p>
+                            <p>A fast, simple way to smother small flames <span class="font-medium">(kitchen or electrical).</span> Limited-time bonus!</p>
                         </div>
                     </div>
                 </div>
