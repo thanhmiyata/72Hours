@@ -757,7 +757,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 7rem 4rem;
+            padding: 7rem 2rem;
             gap: 5rem;
             width: 30rem;
             max-width: 100%;
@@ -782,6 +782,7 @@
             padding: 0;
             gap: 1.25rem;
             width: 100%;
+            max-width: 25rem;
         }
 
         .Header131 .Content .Column {
@@ -794,23 +795,32 @@
 
         .Header131 .Content .Column.heading-column {
             gap: 1rem;
+            max-width: 25rem;
+            width: 100%;
         }
 
         .Header131 .Heading {
             width: 100%;
+            max-width: 25rem;
+            min-height: 4rem;
             font-family: 'Bona Nova';
             font-style: normal;
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 1.75rem;
             line-height: 1;
             color: #FFFFFF;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
+            text-align: left;
             text-transform: uppercase;
+            flex-wrap: wrap;
         }
 
         .Header131 .Content .Column.copy-column {
             gap: 2rem;
+            max-width: 25rem;
+            width: 100%;
         }
 
         .Header131 .BodyCopy {
@@ -818,10 +828,11 @@
             flex-direction: column;
             gap: 2rem;
             width: 100%;
+            max-width: 25rem;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 1.875rem;
+            font-size: 1.5rem;
             line-height: 1.5;
             color: #FFFFFF;
         }
@@ -1444,13 +1455,10 @@
         <!-- Layer: Navbar / 1 / -->
         <div data-layer="Navbar / 1 /"
             class="Navbar1 mx-auto flex h-[69px] w-full max-w-[480px] items-center border-b border-[rgba(11,3,2,0.15)] bg-white">
-            <div data-layer="Container"
-                class="Container flex h-full w-full items-center justify-between gap-0">
-                <div data-layer="Content"
-                    class="Content relative flex flex-1 items-center gap-2">
+            <div data-layer="Container" class="Container flex h-full w-full items-center justify-between gap-0">
+                <div data-layer="Content" class="Content relative flex flex-1 items-center gap-2">
                     <span class="flex h-10 w-10 items-center justify-center">
-                        <img src="./assets/shop.jpg" alt="Shopping bag icon"
-                            class="h-6 w-6 object-contain" />
+                        <img src="./assets/shop.jpg" alt="Shopping bag icon" class="h-6 w-6 object-contain" />
                     </span>
                     <div data-layer="Content" class="flex flex-col gap-[2px]">
                         <p data-layer="Heading"
@@ -2045,8 +2053,8 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="./assets/ads-v3-medical_services.png" alt="" class="h-10 w-10 select-none object-contain"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-medical_services.png" alt=""
+                                class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2121,11 +2129,13 @@
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 2" class="absolute inset-0 h-full w-full object-cover"
-                        src="./assets/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs" loading="lazy" />
+                        src="./assets/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs"
+                        loading="lazy" />
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 3" class="absolute inset-0 h-full w-full object-cover"
-                        src="./assets/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience" loading="lazy" />
+                        src="./assets/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience"
+                        loading="lazy" />
                 </div>
             </div>
         </div>
@@ -2164,8 +2174,8 @@
                             <h3 data-layer="Question"
                                 class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
                                 Why 72 hours?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-close.png" alt="Close"
+                                class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
                             <p data-layer="Text"
@@ -2181,8 +2191,8 @@
                             <h3 data-layer="Question"
                                 class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
                                 Shelf-life of the food and water?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-close.png" alt="Close"
+                                class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
                             <p data-layer="Text"
@@ -2200,8 +2210,8 @@
                             <h3 data-layer="Question"
                                 class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
                                 Can the kit be customized to meet specific needs or requirements?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-close.png" alt="Close"
+                                class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
                             <p data-layer="Text"
@@ -2218,8 +2228,8 @@
                             <h3 data-layer="Question"
                                 class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
                                 Are the food rations gluten-free?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-close.png" alt="Close"
+                                class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
                             <p data-layer="Text"
@@ -2236,8 +2246,8 @@
                             <h3 data-layer="Question"
                                 class="Question flex-1 font-['Bona Nova'] text-[1.75rem] font-bold leading-9 text-[#0B0302]">
                                 Do you do custom Emergency Kit orders for large groups?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close" class="h-6 w-6 select-none pointer-events-none"
-                                loading="lazy" />
+                            <img src="./assets/ads-v3-close.png" alt="Close"
+                                class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
                             <p data-layer="Text"
