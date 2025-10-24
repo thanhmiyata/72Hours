@@ -1335,6 +1335,92 @@
             flex-grow: 0;
         }
 
+        /* Gallery text style */
+        .GalleryText {
+            width: 400px;
+            height: 27px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+            color: #FFFFFF;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* FAQ heading style */
+        .FAQHeading {
+            width: 400px;
+            height: 32px;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 100%;
+            color: #561513;
+            text-align: left;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* FAQ text style */
+        .FAQText {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #0B0302;
+            text-align: left;
+        }
+
+        /* FAQ Actions style */
+        .FAQActions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 24px;
+            width: 122px;
+            height: 47px;
+            background: #000000;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* FAQ Button style */
+        .FAQButton {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 24px;
+            gap: 8px;
+            width: 122px;
+            height: 47px;
+            box-shadow: inset 0px 0px 0px 1px rgba(11, 3, 2, 0.05), inset 0px -2px 1px rgba(11, 3, 2, 0.05);
+            filter: drop-shadow(0px 1px 2px rgba(11, 3, 2, 0.05));
+            border-radius: 6px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            background: #000000;
+            border: none;
+            color: #FFFFFF;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            cursor: pointer;
+        }
+
         .Stats26__copy {
             font-family: 'Poppins';
             font-style: normal;
@@ -2403,8 +2489,7 @@
                 <h2 data-layer="Heading"
                     class="Heading GalleryHeading flex w-full max-w-[374px] flex-col items-center justify-center">
                     See Why Influencers &amp;<br />Families Choose 72HRS</h2>
-                <p data-layer="Text"
-                    class="Text w-full max-w-[400px] font-['Poppins'] text-lg font-normal leading-[27px] text-white">
+                <p data-layer="Text" class="Text GalleryText w-full max-w-[400px]">
                     Discover why families trust 72HRS for safety.</p>
             </div>
             <div data-layer="Content"
@@ -2432,22 +2517,19 @@
             class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: FAQ / 6 / -->
-    <div data-layer="FAQ / 6 /" class="Faq6 flex w-full justify-center bg-[#F2F2F2] px-16 pb-20 pt-0">
+    <div data-layer="FAQ / 6 /" class="Faq6 flex w-full justify-center bg-[#F2F2F2] px-8 pb-20 pt-0">
         <div data-layer="Container" class="Container flex w-full max-w-[480px] flex-col items-center gap-20">
             <div data-layer="Component" class="Component flex w-full flex-col items-center gap-20">
                 <div data-layer="Section Title"
                     class="SectionTitle flex w-full max-w-[400px] flex-col items-center gap-8 text-center">
                     <div data-layer="Content" class="Content flex w-full flex-col items-start gap-6">
-                        <h2 data-layer="Got questions?"
-                            class="GotQuestions w-full font-['Bona Nova'] text-[2rem] font-bold leading-none text-[#561513]">
+                        <h2 data-layer="Got questions?" class="GotQuestions FAQHeading w-full">
                             Got questions?</h2>
-                        <p data-layer="Text"
-                            class="Text w-full font-['Poppins'] text-lg font-normal leading-[27px] text-[#0B0302]">
-                            Find answers to your most pressing questions about our emergency kits.</p>
+                        <p data-layer="Text" class="Text FAQText w-full">
+                            Find answers to your most pressing<br />questions about our emergency kits.</p>
                     </div>
-                    <div data-layer="Actions" class="Actions flex w-full justify-center">
-                        <button type="button" data-layer="Button" data-style="Secondary"
-                            class="Button inline-flex h-[47px] w-[122px] items-center justify-center gap-2 rounded-[6px] border border-black bg-black px-6 py-2 text-[18px] font-medium font-['Poppins'] leading-[27px] text-white shadow-[0_1px_2px_rgba(11,3,2,0.05)]">
+                    <div data-layer="Actions" class="Actions FAQActions flex  justify-center">
+                        <button type="button" data-layer="Button" data-style="Secondary" class="Button FAQButton">
                             Contact
                         </button>
                     </div>
