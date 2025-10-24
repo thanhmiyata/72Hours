@@ -972,11 +972,41 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 0.9375rem;
-            line-height: 1.5;
+            font-size: 0.875rem;
+            line-height: 1.45;
             text-align: center;
             color: #0B0302;
             padding: 0 1rem 0;
+        }
+
+        .WhatSInside__heading {
+            color: var(--Color-Valencia-Darker, #561513);
+            text-align: center;
+            font-family: 'Bona Nova';
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0;
+        }
+
+        .PreparationCopy {
+            color: #0B0302;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 1.125rem;
+            line-height: 1.45;
+            font-weight: 400;
+            letter-spacing: 0;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .PreparationCopy span {
+            display: block;
+            white-space: nowrap;
         }
 
         .Header147__video {
@@ -1682,14 +1712,17 @@
             <div data-layer="Container" class="Container w-full max-w-[352px] flex flex-col items-center gap-20">
                 <div data-layer="Component" class="Component w-full max-w-[352px] flex flex-col items-center gap-6">
                     <div data-layer="What’s inside" class="WhatSInside w-full text-center">
-                        <div class="font-['Bona Nova'] font-bold text-[32px] leading-[32px] text-[#561513]">What’s
-                            Inside
+                        <div class="WhatSInside__heading">
+                            What’s Inside
                         </div>
                     </div>
                     <div data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
-                        class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours w-full text-center text-[#0B0302] font-['Poppins'] text-[20px] leading-[30px]">
-                        Preparation is key to survival in chaos, so explore durable products that ensure your readiness
-                        beyond 72 hours.</div>
+                        class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours w-full font-['Poppins'] PreparationCopy">
+                        <span>Preparation is key to survival in</span>
+                        <span>chaos, so explore durable products</span>
+                        <span>that ensure your readiness beyond</span>
+                        <span>72 hours.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1698,9 +1731,9 @@
             class="Layout28 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-6 pt-[42px] pb-[112px]">
             <div id="whatsInsideCarousel" class="w-full" data-carousel="slide" data-carousel-touch="true"
                 data-carousel-autoplay="true" data-carousel-interval="6000">
-                <div class="relative min-h-[640px] overflow-hidden rounded-[36px]">
+                <div class="relative min-h-[585px] overflow-hidden rounded-[36px]">
                     <div class="duration-700 ease-in-out" data-carousel-item="active">
-                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                        <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
                                 <h3
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
@@ -1719,7 +1752,7 @@
                         </article>
                     </div>
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                        <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
                                 <h3
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
@@ -1738,7 +1771,7 @@
                         </article>
                     </div>
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                        <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
                                 <h3
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
@@ -1758,7 +1791,7 @@
                         </article>
                     </div>
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <article class="flex w-full flex-col items-center px-4 pb-10 pt-8">
+                        <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
                                 <h3
                                     class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
