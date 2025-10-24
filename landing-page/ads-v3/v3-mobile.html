@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,29 +61,22 @@
         }
     </script>
     <style>
-        /* Local Bona Nova font family */
-        @font-face {
-            font-family: 'Bona Nova';
-            src: url('./assets/Bona_Nova/BonaNova-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
+        /* Bona Nova font from Google Fonts */
+
+        /* Full width content with 120px margins */
+        .full-width-content {
+            width: 100vw !important;
+            margin-left: calc(50% - 50vw) !important;
+            margin-right: calc(50% - 50vw) !important;
+            padding-left: 120px !important;
+            padding-right: 120px !important;
         }
 
-        @font-face {
-            font-family: 'Bona Nova';
-            src: url('./assets/Bona_Nova/BonaNova-Italic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Bona Nova';
-            src: url('./assets/Bona_Nova/BonaNova-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
+        @media (max-width: 768px) {
+            .full-width-content {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
         }
 
         /* Smooth fonts and better image rendering */
@@ -146,6 +139,7 @@
             animation: spin 4s linear infinite;
             -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             -webkit-mask-composite: xor;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask-composite: exclude;
             padding: 5px;
             pointer-events: none;
@@ -262,6 +256,7 @@
             pointer-events: none;
             -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             -webkit-mask-composite: xor;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask-composite: exclude;
         }
 
@@ -438,26 +433,27 @@
         }
 
         .mobile-hero__content {
-            height: 100%;
-            width: 100%;
-            padding: 3rem 1.25rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-end;
-            gap: 1rem;
+            height: 100% !important;
+            width: 100% !important;
+            padding: 3rem 1.25rem 1.5rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            gap: 1rem !important;
         }
 
         .mobile-hero__panel {
-            width: 100%;
-            max-width: 320px;
-            padding: 20px 18px 24px;
-            border-radius: 30px;
-            background: linear-gradient(180deg, rgba(11, 3, 2, 0.7) 0%, rgba(11, 3, 2, 0.96) 100%);
-            box-shadow: 0 40px 70px -32px rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            gap: 0.75rem;
+            width: 100% !important;
+            max-width: 320px !important;
+            padding: 20px 18px 24px !important;
+            border-radius: 30px !important;
+            background: linear-gradient(180deg, rgba(11, 3, 2, 0.7) 0%, rgba(11, 3, 2, 0.96) 100%) !important;
+            box-shadow: 0 40px 70px -32px rgba(0, 0, 0, 0.9) !important;
+            backdrop-filter: blur(3px) !important;
+            -webkit-backdrop-filter: blur(3px) !important;
+            gap: 0.75rem !important;
+            text-align: center !important;
         }
 
         .mobile-hero__eyebrow {
@@ -1826,7 +1822,7 @@
             color: #ffffff;
             background:
                 linear-gradient(180deg, rgba(86, 21, 19, 0.55), rgba(86, 21, 19, 0.75)),
-                url('./assets/trust standard mobile.png');
+                url('https://cdn.shopify.com/s/files/1/0077/1092/trust standard mobile.png');
             background-size: cover;
             background-position: center;
         }
@@ -2153,7 +2149,7 @@
             <div data-layer="Container" class="Container flex h-full w-full items-center justify-between gap-0">
                 <div data-layer="Content" class="Content relative flex flex-1 items-center gap-2">
                     <span class="flex h-10 w-10 items-center justify-center">
-                        <img src="./assets/shop.jpg" alt="Shopping bag icon" class="h-6 w-6 object-contain" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-shop.jpg?v=1761324875" alt="Shopping bag icon" class="h-6 w-6 object-contain" />
                     </span>
                     <div data-layer="Content" class="flex flex-col gap-[2px]">
                         <p data-layer="Heading"
@@ -2175,7 +2171,7 @@
                     <button type="button"
                         class="absolute -left-5 flex h-8 w-8 items-center justify-center text-[#0B0302]"
                         aria-label="Dismiss banner">
-                        <img src="./assets/Actions.png" alt="Close banner" class="h-5 w-5 object-contain" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-actions.png?v=1761324875" alt="Close banner" class="h-5 w-5 object-contain" />
                     </button>
                 </div>
             </div>
@@ -2183,7 +2179,7 @@
         <!-- Layer: Header / 5 / -->
         <div data-layer="Header / 5 /"
             class="Header5 mobile-hero self-stretch px-16 inline-flex justify-center items-center overflow-hidden relative"
-            style="background-image:url('./assets/sale page main_mobile 1.png'); background-size:cover; background-position:center;">
+            style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-sale-page-main-mobile-1.png'); background-size:cover; background-position:center;">
             <div class="absolute inset-0 bg-black/50"></div>
             <div class="mobile-hero__content relative z-10 w-full flex flex-col justify-end items-start">
                 <div class="mobile-hero__panel flex flex-col items-start gap-3 text-left">
@@ -2219,7 +2215,7 @@
                     <div data-layer="Content"
                         class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
                         <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
-                            <img alt="Trusted logos" class="w-[720px] h-auto" src="./assets/ads-v3-logo2.png" />
+                            <img alt="Trusted logos" class="w-[720px] h-auto" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-logo2.png?v=1761032996" />
                         </div>
                     </div>
                 </div>
@@ -2315,10 +2311,10 @@
                     </div>
                 </div>
                 <div data-layer="Image container" class="ImageContainer">
-                    <div class="ImageFrame" style="background-image: url('./assets/ads-v3-package.png');">
+                    <div class="ImageFrame" style="background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-package.png');">
                         <span class="sr-only">Emergency readiness kit contents displayed.</span>
                     </div>
-                    <div class="ImageFrame" style="background-image: url('./assets/ads-v3-fireblanket.png');">
+                    <div class="ImageFrame" style="background-image: url('hfiles/files/ads-v3-fireblanket.png?v=1761032997');">
                         <span class="sr-only">Fire blanket being deployed to smother flames.</span>
                     </div>
                 </div>
@@ -2326,7 +2322,7 @@
         </div>
         <!-- Separator: Frame 17 (wave) -->
         <div data-layer="Frame 17" class="Frame17 Frame17--overlap">
-            <img alt="wave" src="./assets/Frame17_test.png" />
+            <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-test.png" />
         </div>
         <!-- Layer: Header / 147 / (Video Lightbox) -->
         <div data-layer="Header / 147 /" class="Header147">
@@ -2345,7 +2341,7 @@
                     </div>
                 </div>
                 <div class="Header147__video">
-                    <img src="./assets/Placeholder Lightbox.png" alt="72HRS Deluxe Kit aerial footage preview" />
+                    <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-placeholder-lightbox.png" alt="72HRS Deluxe Kit aerial footage preview" />
                     <button type="button" class="Header147__play" aria-label="Play video">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M9 7l8 5-8 5V7z" />
@@ -2388,7 +2384,7 @@
                                     Food &amp; Water</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="./assets/carousel1.png" alt="Family preparing food and water rations"
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel1.png" alt="Family preparing food and water rations"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
@@ -2407,7 +2403,7 @@
                                     Shelter &amp; Warmth</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="./assets/carousel2.png" alt="Emergency shelter supplies providing warmth"
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel2.png" alt="Emergency shelter supplies providing warmth"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
@@ -2426,7 +2422,7 @@
                                     Lighting &amp; Communication</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="./assets/carousel3.png" alt="Lighting and communication tools in use"
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel3.png" alt="Lighting and communication tools in use"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
@@ -2446,7 +2442,7 @@
                                     First Aid &amp; Sanitation</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="./assets/carousel4.png" alt="First aid and sanitation gear ready"
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel4.png" alt="First aid and sanitation gear ready"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
@@ -2475,25 +2471,25 @@
             </div>
         </div>
         <!-- Layer: Layout / 238 / (Trusted standard) -->
-        <div data-layer="Layout / 238 /" class="TrustedStandard">
+        <div data-layer="Layout / 238 /" class="TrustedStandard full-width-content">
             <div class="TrustedStandard__container">
                 <div class="TrustedStandard__title">Built on Trusted Standard</div>
                 <div class="TrustedStandard__list">
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="./assets/list_alt_check.svg" alt="Checklist icon"
+                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-list-alt-check.svg" alt="Checklist icon"
                             loading="lazy" />
                         <div class="TrustedStandard__heading">FEMA-ALIGNED</div>
                         <p class="TrustedStandard__copy">Built to meet FEMA &amp; Ready.gov 72-hour kit guidelines.</p>
                     </div>
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="./assets/globe_uk.svg" alt="Globe icon"
+                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-globe-uk.svg" alt="Globe icon"
                             loading="lazy" />
                         <div class="TrustedStandard__heading">CANADIAN-RECOMMENDED</div>
                         <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness advice.
                             Proudly assembled in Canada.</p>
                     </div>
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="./assets/verified.svg" alt="Verified badge icon"
+                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-verified.svg" alt="Verified badge icon"
                             loading="lazy" />
                         <div class="TrustedStandard__heading">20+ YEARS OF TRUST</div>
                         <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two decades.</p>
@@ -2502,7 +2498,7 @@
             </div>
         </div>
         <!-- Layer: Stats / 26 / -->
-        <div data-layer="Stats / 26 /" class="Stats26">
+        <div data-layer="Stats / 26 /" class="Stats26 full-width-content">
             <div data-layer="Container" class="Stats26__container">
                 <div data-layer="Content" class="Stats26__intro">
                     <div data-layer="Column" class="Stats26__col">
@@ -2550,7 +2546,7 @@
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17">
-        <img alt="wave" src="./assets/Frame17_hong_mobile.png" />
+        <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-hong-mobile.png" />
     </div>
     <!-- Layer: Product / 4 / (Choose the Right Kit) -->
     <div data-layer="Product / 4 /"
@@ -2577,7 +2573,7 @@
                     <div data-layer="Product"
                         class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
-                            src="./assets/ads-v3-1person.jpeg" />
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-1person.jpg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
                             <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
                                 <div data-layer="Header" class="Header flex w-full flex-col items-center">
@@ -2604,7 +2600,7 @@
                     <div data-layer="Product"
                         class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
-                            src="./assets/ads-v3-2person.jpeg" />
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-2person.jpg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
                             <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
                                 <div data-layer="Header" class="Header flex w-full flex-col items-center">
@@ -2631,7 +2627,7 @@
                     <div data-layer="Product"
                         class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
-                            src="./assets/ads-v3-3person.jpeg" />
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-3person.jpg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
                             <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
                                 <div data-layer="Header" class="Header flex w-full flex-col items-center">
@@ -2658,7 +2654,7 @@
                     <div data-layer="Product"
                         class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
-                            src="./assets/ads-v3-4person.jpeg" />
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
                             <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
                                 <div data-layer="Header" class="Header flex w-full flex-col items-center">
@@ -2686,7 +2682,7 @@
             </div>
         </div>
         <div data-layer="Frame 20" class="Frame20 flex w-full justify-end pt-12">
-            <img src="./assets/Frame 20.png" alt="Decorative dotted divider"
+            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame20.png" alt="Decorative dotted divider"
                 class="h-24 w-auto max-w-xs object-contain" />
         </div>
     </div>
@@ -2716,7 +2712,7 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="water_do"
                             class="WaterDo inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="./assets/ads-v3-Vector.svg" alt="" class="h-8 w-8 select-none" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt="" class="h-8 w-8 select-none" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2731,7 +2727,7 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="./assets/ads-v3-tuyet.png" alt="" class="h-10 w-10 select-none object-contain"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt="" class="h-10 w-10 select-none object-contain"
                                 loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
@@ -2746,13 +2742,13 @@
                 </div>
                 <div data-layer="Placeholder Wrapper" class="PlaceholderWrapper relative -mx-8 w-[calc(100%+4rem)]">
                     <img data-layer="Placeholder Image" class="PlaceholderImage h-full w-full object-cover"
-                        src="./assets/ads-v3-4person.jpeg" />
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
                 </div>
                 <div data-layer="Column" class="Column flex w-full flex-col items-center gap-14">
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="./assets/ads-v3-medical_services.png" alt=""
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png" alt=""
                                 class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
@@ -2768,7 +2764,7 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="./assets/ads-v3-fix.png" alt="" class="h-10 w-10 select-none object-contain"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt="" class="h-10 w-10 select-none object-contain"
                                 loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
@@ -2795,7 +2791,7 @@
                     <div
                         class="inline-flex items-center gap-2 text-[0.875rem] font-medium font-['Poppins'] text-[#0B0302] whitespace-nowrap">
                         <span>Orig Price $399.99</span>
-                        <img src="./assets/ads-v3-Vector.png" alt="" class="h-3 w-3 select-none" loading="lazy" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.png" alt="" class="h-3 w-3 select-none" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -2803,7 +2799,7 @@
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17">
-        <img alt="Decorative wave edge" src="./assets/Frame17_nau.png"
+        <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-nau.png"
             class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: Gallery / 3 / -->
@@ -2823,16 +2819,16 @@
                 class="Content flex w-full max-w-[600px] shrink-0 items-start gap-[15px] overflow-x-auto px-0">
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 1" class="absolute inset-0 h-full w-full object-cover"
-                        src="./assets/ads-v3-fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 2" class="absolute inset-0 h-full w-full object-cover"
-                        src="./assets/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs"
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs"
                         loading="lazy" />
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 3" class="absolute inset-0 h-full w-full object-cover"
-                        src="./assets/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience"
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience"
                         loading="lazy" />
                 </div>
             </div>
@@ -2840,7 +2836,7 @@
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17">
-        <img alt="Decorative wave edge" src="./assets/Frame17_nau_2.png"
+        <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-nau-2.png"
             class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: FAQ / 6 / -->
@@ -2867,7 +2863,7 @@
                         <div data-layer="Question" class="Question FAQQuestionContainer">
                             <h3 data-layer="Question" class="Question FAQQuestionText">
                                 Why 72 hours?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="FAQCloseIcon select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer FAQAnswerContainer">
@@ -2882,7 +2878,7 @@
                             class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
                             <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
                                 Shelf-life of the food<br />and water?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
@@ -2901,7 +2897,7 @@
                             class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
                             <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
                                 Can the kit be<br />customized to meet<br />specific needs or<br />requirements?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
@@ -2918,7 +2914,7 @@
                             class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
                             <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
                                 Are the food rations<br />gluten-free?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
@@ -2936,7 +2932,7 @@
                             class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
                             <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
                                 Do you do custom<br />Emergency Kit orders<br />for large groups?</h3>
-                            <img src="./assets/ads-v3-close.png" alt="Close"
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
                         <div data-layer="Answer" class="Answer w-full px-6 pb-6">
@@ -2974,7 +2970,7 @@
                     </div>
                 </div>
                 <img data-layer="Placeholder Image" class="PlaceholderImage h-[343px] w-full object-cover"
-                    src="./assets/binhga.png" alt="Family using 72HRS emergency kit" loading="lazy" />
+                    src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-binhga.png" alt="Family using 72HRS emergency kit" loading="lazy" />
             </div>
         </div>
     </div>
@@ -2997,19 +2993,19 @@
                 <div data-layer="Row" class="Row">
                     <div data-layer="Social Links" class="SocialLinks">
                         <a data-layer="Facebook" href="#" class="Facebook SocialIcon">
-                            <img src="./assets/ads-v3-Facebook.png" alt="Facebook" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Facebook.png" alt="Facebook" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="Instagram" href="#" class="Instagram SocialIcon">
-                            <img src="./assets/ads-v3-Instagram.png" alt="Instagram" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Instagram.png" alt="Instagram" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="X" href="#" class="X SocialIcon">
-                            <img src="./assets/ads-v3-X.png" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-X.png" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="LinkedIn" href="#" class="Linkedin SocialIcon">
-                            <img src="./assets/ads-v3-LinkedIn.png" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-LinkedIn.png" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="Youtube" href="#" class="Youtube SocialIcon">
-                            <img src="./assets/ads-v3-Youtube.png" alt="YouTube" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Youtube.png" alt="YouTube" class="w-6 h-6" loading="lazy" />
                         </a>
                     </div>
                 </div>

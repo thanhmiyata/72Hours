@@ -1,0 +1,33 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <tr>
+      <td style="padding: 20px;">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <!-- Product Image Column -->
+            <td width="200" style="vertical-align: top; padding-right: 20px;">
+              <div style="text-align: center;">
+                <img src="{{ event.ImageURL|default:'' }}" alt="Product Image" style="max-width: 180px; height: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              </div>
+            </td>
+            
+            <!-- Product Details Column -->
+            <td style="vertical-align: top;">
+              <div style="padding-left: 10px;">
+                <!-- Product Title -->
+                <h3 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600; color: #333333; line-height: 1.3;">
+                  {{ event|lookup:'Product Name' }}
+                </h3>
+                
+                <!-- Product Price -->
+                <div style="margin: 15px 0;">
+                  <span style="font-size: 20px; font-weight: 700; color: #e74c3c;">$
+                    {{ event|lookup:'Price' }}
+                  </span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
