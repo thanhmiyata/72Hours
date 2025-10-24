@@ -1100,6 +1100,151 @@
             color: #561513;
         }
 
+        .Stats26__heading .small-text {
+            font-size: 1.9rem;
+            line-height: 1.5rem;
+        }
+
+        /* Choose the Right Kit for Your Family heading */
+        .Product4 .Heading {
+            width: 400px;
+            height: 91px;
+            font-family: 'Bona Nova';
+            font-style: normal;
+            font-weight: 700;
+            text-align: center;
+            color: #561513;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        /* Text description under heading */
+        .Product4 .Text {
+            width: 352px;
+            height: 120px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            text-align: center;
+            color: #0B0302;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Product card styles */
+        .ProductCard .ContentBottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            width: 160px;
+            height: 125px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .ProductCard .Header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            width: 160px;
+            height: 78px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .ProductCard .Heading {
+            width: 160px;
+            height: 30px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 150%;
+            text-align: center;
+            color: #0B0302;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .ProductCard .Text {
+            width: 160px;
+            height: 48px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            color: #0B0302;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .ProductCard .Price {
+            width: 160px;
+            height: 39px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 150%;
+            text-align: center;
+            color: #0B0302;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .Product4 .Row {
+            height: 85vh;
+        }
+
+        /* Điều chỉnh khoảng cách vừa phải */
+        .ProductCard .Content {
+            gap: 4px !important;
+        }
+
+        .ProductCard .Header {
+            gap: 2px !important;
+            height: auto !important;
+        }
+
+        .ProductCard .Heading {
+            height: auto !important;
+            line-height: 1.2 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .ProductCard .Text {
+            height: auto !important;
+            line-height: 1.2 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .ProductCard .Price {
+            height: auto !important;
+            line-height: 1.2 !important;
+            margin-top: 0 !important;
+        }
+
         .Stats26__copy {
             font-family: 'Poppins';
             font-style: normal;
@@ -1859,7 +2004,7 @@
                 <div data-layer="Content" class="Stats26__intro">
                     <div data-layer="Column" class="Stats26__col">
                         <div data-layer="Heading" class="Stats26__heading">
-                            Families Approved.<br />Peace of Mind Proven
+                            Families Approved.<br /><span class="small-text">Peace of Mind Proven</span>
                         </div>
                     </div>
                     <div data-layer="Column" class="Stats26__col">
@@ -1927,7 +2072,7 @@
             <div data-layer="Content" class="Content flex w-full flex-col gap-12">
                 <div data-layer="Row" class="Row grid w-full grid-cols-2 justify-items-center gap-10">
                     <div data-layer="Product"
-                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
                             src="./assets/ads-v3-1person.jpeg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
@@ -1954,7 +2099,7 @@
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
                             src="./assets/ads-v3-2person.jpeg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
@@ -1981,7 +2126,7 @@
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
                             src="./assets/ads-v3-3person.jpeg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
@@ -2008,7 +2153,7 @@
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
                         <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
                             src="./assets/ads-v3-4person.jpeg" />
                         <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
