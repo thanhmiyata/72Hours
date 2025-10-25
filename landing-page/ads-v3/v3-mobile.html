@@ -63,6 +63,31 @@
     <style>
         /* Bona Nova font from Google Fonts */
 
+        /* Carousel heading style */
+        .carousel-heading {
+            font-family: 'Bona Nova' !important;
+            font-size: 28px !important;
+            line-height: 36px !important;
+        }
+
+        /* Carousel text content style */
+        .carousel-text {
+            width: 368px;
+            height: 81px;
+            font-family: 'Poppins' !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #0B0302;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
         /* Full width content with 120px margins */
         .full-width-content {
             width: 100vw !important;
@@ -2149,7 +2174,8 @@
             <div data-layer="Container" class="Container flex h-full w-full items-center justify-between gap-0">
                 <div data-layer="Content" class="Content relative flex flex-1 items-center gap-2">
                     <span class="flex h-10 w-10 items-center justify-center">
-                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-shop.jpg?v=1761324875" alt="Shopping bag icon" class="h-6 w-6 object-contain" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-shop.jpg?v=1761324875"
+                            alt="Shopping bag icon" class="h-6 w-6 object-contain" />
                     </span>
                     <div data-layer="Content" class="flex flex-col gap-[2px]">
                         <p data-layer="Heading"
@@ -2171,7 +2197,8 @@
                     <button type="button"
                         class="absolute -left-5 flex h-8 w-8 items-center justify-center text-[#0B0302]"
                         aria-label="Dismiss banner">
-                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-actions.png?v=1761324875" alt="Close banner" class="h-5 w-5 object-contain" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-actions.png?v=1761324875"
+                            alt="Close banner" class="h-5 w-5 object-contain" />
                     </button>
                 </div>
             </div>
@@ -2215,7 +2242,8 @@
                     <div data-layer="Content"
                         class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
                         <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
-                            <img alt="Trusted logos" class="w-[720px] h-auto" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-logo2.png?v=1761032996" />
+                            <img alt="Trusted logos" class="w-[720px] h-auto"
+                                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-logo2.png?v=1761032996" />
                         </div>
                     </div>
                 </div>
@@ -2311,10 +2339,12 @@
                     </div>
                 </div>
                 <div data-layer="Image container" class="ImageContainer">
-                    <div class="ImageFrame" style="background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-package.png');">
+                    <div class="ImageFrame"
+                        style="background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-package.png');">
                         <span class="sr-only">Emergency readiness kit contents displayed.</span>
                     </div>
-                    <div class="ImageFrame" style="background-image: url('hfiles/files/ads-v3-fireblanket.png?v=1761032997');">
+                    <div class="ImageFrame"
+                        style="background-image: url('hfiles/files/ads-v3-fireblanket.png?v=1761032997');">
                         <span class="sr-only">Fire blanket being deployed to smother flames.</span>
                     </div>
                 </div>
@@ -2341,7 +2371,8 @@
                     </div>
                 </div>
                 <div class="Header147__video">
-                    <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-placeholder-lightbox.png" alt="72HRS Deluxe Kit aerial footage preview" />
+                    <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-placeholder-lightbox.png"
+                        alt="72HRS Deluxe Kit aerial footage preview" />
                     <button type="button" class="Header147__play" aria-label="Play video">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M9 7l8 5-8 5V7z" />
@@ -2375,21 +2406,21 @@
             class="Layout28 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-6 pt-[42px] pb-[112px]">
             <div id="whatsInsideCarousel" class="w-full" data-carousel="slide" data-carousel-touch="true"
                 data-carousel-autoplay="true" data-carousel-interval="6000">
-                <div class="relative min-h-[585px] overflow-hidden rounded-[36px]">
+                <div class="relative min-h-[517px] overflow-hidden rounded-[36px]">
                     <div class="duration-700 ease-in-out" data-carousel-item="active">
                         <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
-                                <h3
-                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                <h3 class="carousel-heading font-bold text-[#0B0302] text-left">
                                     Food &amp; Water</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel1.png" alt="Family preparing food and water rations"
-                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel1.png"
+                                    alt="Family preparing food and water rations" class="h-[320px] w-full object-cover"
+                                    loading="lazy" />
                             </figure>
                             <div
-                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
-                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="flex flex-col items-center w-full max-w-[400px] gap-3 border-l border-[#D73630] pl-8 h-[28.125rem]">
+                                <p class="carousel-text text-left">
                                     3600 Cal Food Ration<br />125ml Water Pouches<br />Aquatabs
                                 </p>
                             </div>
@@ -2398,17 +2429,17 @@
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
-                                <h3
-                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                <h3 class="carousel-heading font-bold text-[#0B0302] text-left">
                                     Shelter &amp; Warmth</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel2.png" alt="Emergency shelter supplies providing warmth"
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel2.png"
+                                    alt="Emergency shelter supplies providing warmth"
                                     class="h-[320px] w-full object-cover" loading="lazy" />
                             </figure>
                             <div
-                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
-                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="flex flex-col items-center w-full max-w-[400px] gap-3 border-l border-[#D73630] pl-8 h-[28.125rem]">
+                                <p class="carousel-text text-left">
                                     Sleeping Bag<br />Tube Tent<br />Rain Poncho
                                 </p>
                             </div>
@@ -2417,17 +2448,17 @@
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
-                                <h3
-                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                <h3 class="carousel-heading font-bold text-[#0B0302] text-left">
                                     Lighting &amp; Communication</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel3.png" alt="Lighting and communication tools in use"
-                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel3.png"
+                                    alt="Lighting and communication tools in use" class="h-[320px] w-full object-cover"
+                                    loading="lazy" />
                             </figure>
                             <div
-                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
-                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="flex flex-col items-center w-full max-w-[400px] gap-3 border-l border-[#D73630] pl-8 h-[28.125rem]">
+                                <p class="carousel-text text-left">
                                     Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM
                                     Radio
                                 </p>
@@ -2437,17 +2468,17 @@
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <article class="flex w-full flex-col items-center px-4 pt-8">
                             <div class="flex w-full max-w-[400px] flex-col items-center gap-4 px-8">
-                                <h3
-                                    class="font-['Bona Nova'] text-[40px] font-bold leading-[52px] text-[#0B0302] text-center">
+                                <h3 class="carousel-heading font-bold text-[#0B0302] text-left">
                                     First Aid &amp; Sanitation</h3>
                             </div>
                             <figure class="mt-4 w-full max-w-[400px] overflow-hidden rounded-[28px]">
-                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel4.png" alt="First aid and sanitation gear ready"
-                                    class="h-[320px] w-full object-cover" loading="lazy" />
+                                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-carousel4.png"
+                                    alt="First aid and sanitation gear ready" class="h-[320px] w-full object-cover"
+                                    loading="lazy" />
                             </figure>
                             <div
-                                class="mt-2 flex w-full max-w-[400px] flex-col items-start gap-3 border-l border-[#D73630] pl-8">
-                                <p class="font-['Poppins'] text-[18px] leading-[27px] text-left text-[#0B0302]">
+                                class="flex flex-col items-center w-full max-w-[400px] gap-3 border-l border-[#D73630] pl-8 h-[28.125rem]">
+                                <p class="carousel-text text-left">
                                     First Aid Kit 108 Pcs<br />Emergency Whistle<br />Dust Masks
                                 </p>
                             </div>
@@ -2476,21 +2507,24 @@
                 <div class="TrustedStandard__title">Built on Trusted Standard</div>
                 <div class="TrustedStandard__list">
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-list-alt-check.svg" alt="Checklist icon"
-                            loading="lazy" />
+                        <img class="TrustedStandard__icon"
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-list-alt-check.svg"
+                            alt="Checklist icon" loading="lazy" />
                         <div class="TrustedStandard__heading">FEMA-ALIGNED</div>
                         <p class="TrustedStandard__copy">Built to meet FEMA &amp; Ready.gov 72-hour kit guidelines.</p>
                     </div>
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-globe-uk.svg" alt="Globe icon"
+                        <img class="TrustedStandard__icon"
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-globe-uk.svg" alt="Globe icon"
                             loading="lazy" />
                         <div class="TrustedStandard__heading">CANADIAN-RECOMMENDED</div>
                         <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness advice.
                             Proudly assembled in Canada.</p>
                     </div>
                     <div class="TrustedStandard__item">
-                        <img class="TrustedStandard__icon" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-verified.svg" alt="Verified badge icon"
-                            loading="lazy" />
+                        <img class="TrustedStandard__icon"
+                            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-verified.svg"
+                            alt="Verified badge icon" loading="lazy" />
                         <div class="TrustedStandard__heading">20+ YEARS OF TRUST</div>
                         <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two decades.</p>
                     </div>
@@ -2682,8 +2716,8 @@
             </div>
         </div>
         <div data-layer="Frame 20" class="Frame20 flex w-full justify-end pt-12">
-            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame20.png" alt="Decorative dotted divider"
-                class="h-24 w-auto max-w-xs object-contain" />
+            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame20.png"
+                alt="Decorative dotted divider" class="h-24 w-auto max-w-xs object-contain" />
         </div>
     </div>
     <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
@@ -2712,7 +2746,8 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="water_do"
                             class="WaterDo inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt="" class="h-8 w-8 select-none" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt=""
+                                class="h-8 w-8 select-none" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2727,8 +2762,8 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt="" class="h-10 w-10 select-none object-contain"
-                                loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt=""
+                                class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2748,8 +2783,8 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png" alt=""
-                                class="h-10 w-10 select-none object-contain" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png"
+                                alt="" class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2764,8 +2799,8 @@
                     <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
                             class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt="" class="h-10 w-10 select-none object-contain"
-                                loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt=""
+                                class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
                         <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
@@ -2791,7 +2826,8 @@
                     <div
                         class="inline-flex items-center gap-2 text-[0.875rem] font-medium font-['Poppins'] text-[#0B0302] whitespace-nowrap">
                         <span>Orig Price $399.99</span>
-                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.png" alt="" class="h-3 w-3 select-none" loading="lazy" />
+                        <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.png" alt=""
+                            class="h-3 w-3 select-none" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -2819,17 +2855,18 @@
                 class="Content flex w-full max-w-[600px] shrink-0 items-start gap-[15px] overflow-x-auto px-0">
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 1" class="absolute inset-0 h-full w-full object-cover"
-                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png" alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png"
+                        alt="Customer reviewing the 72HRS backpack" loading="lazy" />
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 2" class="absolute inset-0 h-full w-full object-cover"
-                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png" alt="Customer holding 72HRS drinking water packs"
-                        loading="lazy" />
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png"
+                        alt="Customer holding 72HRS drinking water packs" loading="lazy" />
                 </div>
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 3" class="absolute inset-0 h-full w-full object-cover"
-                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png" alt="Community member sharing their 72HRS experience"
-                        loading="lazy" />
+                        src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png"
+                        alt="Community member sharing their 72HRS experience" loading="lazy" />
                 </div>
             </div>
         </div>
@@ -2970,7 +3007,8 @@
                     </div>
                 </div>
                 <img data-layer="Placeholder Image" class="PlaceholderImage h-[343px] w-full object-cover"
-                    src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-binhga.png" alt="Family using 72HRS emergency kit" loading="lazy" />
+                    src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-binhga.png"
+                    alt="Family using 72HRS emergency kit" loading="lazy" />
             </div>
         </div>
     </div>
@@ -2993,19 +3031,24 @@
                 <div data-layer="Row" class="Row">
                     <div data-layer="Social Links" class="SocialLinks">
                         <a data-layer="Facebook" href="#" class="Facebook SocialIcon">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Facebook.png" alt="Facebook" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Facebook.png"
+                                alt="Facebook" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="Instagram" href="#" class="Instagram SocialIcon">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Instagram.png" alt="Instagram" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Instagram.png"
+                                alt="Instagram" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="X" href="#" class="X SocialIcon">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-X.png" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-X.png" alt="X (Twitter)"
+                                class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="LinkedIn" href="#" class="Linkedin SocialIcon">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-LinkedIn.png" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-LinkedIn.png"
+                                alt="LinkedIn" class="w-6 h-6" loading="lazy" />
                         </a>
                         <a data-layer="Youtube" href="#" class="Youtube SocialIcon">
-                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Youtube.png" alt="YouTube" class="w-6 h-6" loading="lazy" />
+                            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Youtube.png"
+                                alt="YouTube" class="w-6 h-6" loading="lazy" />
                         </a>
                     </div>
                 </div>
