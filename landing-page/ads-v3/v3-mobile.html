@@ -254,13 +254,31 @@
         }
 
         .cta-glow::after {
-            inset: -22px;
-            background: radial-gradient(ellipse at center,
-                    rgba(230, 57, 70, 0.55) 10%,
-                    rgba(230, 57, 70, 0.32) 58%,
-                    rgba(86, 21, 19, 0.1) 82%,
-                    rgba(86, 21, 19, 0) 100%);
-            filter: blur(18px);
+            inset: -2px;
+            border-radius: 8px;
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.8) 0%,
+                    rgba(226, 27, 60, 0.9) 25%,
+                    rgba(255, 255, 255, 0.8) 50%,
+                    rgba(226, 27, 60, 0.9) 75%,
+                    rgba(255, 255, 255, 0.8) 100%);
+            background-size: 200% 200%;
+            animation: border-light-flow 2s linear infinite;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask-composite: xor;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            padding: 2px;
+        }
+
+        @keyframes border-light-flow {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 200% 200%;
+            }
         }
 
         /* Animated pink→white gradient border (generic wrapper) */
