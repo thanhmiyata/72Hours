@@ -1,0 +1,177 @@
+{% comment %} Newsletter Section with Klaviyo Integration {% endcomment %}
+{%- if section.settings.klaviyo_company_id != blank -%}
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ section.settings.klaviyo_company_id }}"></script>
+{%- endif -%}
+
+{%- if section.settings.bg_img != blank -%}
+<div class="newsletter-section lazyload" data-bg="{{ section.settings.bg_img | img_url: 'master' }}">
+{%- else -%}
+<div class="newsletter-section">
+{%- endif -%}
+  <div class="index-section newsletter-{{ section.id }} color-scheme-{{ section.settings.color_scheme }}">
+    {%- if section.settings.color_scheme != 'none' -%}
+      {%- render 'color-scheme-texture', color_scheme: section.settings.color_scheme -%}
+    {%- endif -%}
+    <div class="page-width{% if section.settings.narrow_container %} page-width--narrow{% endif %} text-center">
+      {%- for block in section.blocks -%}
+        <div class="theme-block" {{ block.shopify_attributes }}>
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+            {%- when 'title' -%}
+              <div class="newsletter-title-text">
+                {%- if block.settings.title != blank -%}
+                  <p class="h2">{{ block.settings.title | escape }}</p>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="newsletter--title h3">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- when 'text' -%}
+              {%- if block.settings.text != blank -%}
+                <div class="rte" {{ block.shopify_attributes }}>
+                  <div class="enlarge-text">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- when 'form' -%}
+              {%- if block.settings.klaviyo_form_id != blank -%}
+                <div class="klaviyo-form-{{ block.settings.klaviyo_form_id }}"></div>
+              {%- else -%}
+                <div class="klaviyo-form-TiiAPR"></div>
+              {%- endif -%}
+            {%- when 'share_buttons' -%}
+              {%- render 'social-sharing' -%}
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "t:sections.newsletter.blocks.title.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.newsletter.blocks.title.settings.title.label",
+          "default": "Sign up and save"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.newsletter.blocks.text.settings.text.label",
+          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.newsletter.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.newsletter.blocks.text.settings.text.label",
+          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "t:sections.newsletter.blocks.form.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "klaviyo_form_id",
+          "label": "Klaviyo Form ID",
+          "default": "TiiAPR",
+          "info": "Nhập Form ID từ Klaviyo (vd: TiiAPR)"
+        }
+      ]
+    },
+    {
+      "type": "share_buttons",
+      "name": "t:sections.newsletter.blocks.share_buttons.name",
+      "limit": 1
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "klaviyo_company_id",
+      "label": "Klaviyo Company ID",
+      "info": "Nhập Company ID từ Klaviyo để load script (vd: AbCdEf). Tìm trong Settings > Account > API Keys trên Klaviyo."
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_container",
+      "label": "Narrow container",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background Image"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.content"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:sections.newsletter.settings.color_scheme.label",
+      "default": "1",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.newsletter.settings.color_scheme.options.none.label"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.email_signup.name",
+      "blocks": [
+        {
+          "type": "title"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
