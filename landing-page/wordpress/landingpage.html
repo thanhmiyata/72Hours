@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trademark & Copyright Protection | GBC Law</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for professional look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Light gray background */
+        }
+        .gbc-primary {
+            background-color: #0d47a1; /* Deep Blue - primary color */
+        }
+        .gbc-secondary {
+            color: #0d47a1;
+        }
+        .gbc-hover:hover {
+            background-color: #1565c0; /* Slightly lighter blue for hover */
+        }
+        .card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0d47a1',
+                        'secondary-gray': '#4b5563',
+                    }
+                }
+            }
+        }
+
+        // Simple script for form submission message (no actual backend implementation)
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const messageBox = document.getElementById('form-message');
+
+            // Simulate form submission success
+            form.reset();
+            messageBox.textContent = 'Thank you! Your request for consultation has been submitted. We will contact you within 2 business hours.';
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('bg-green-100', 'border-green-400', 'text-green-700');
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation (Simple version mimicking professional layout) -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Placeholder -->
+            <div class="text-2xl font-bold gbc-secondary">GBC Law</div>
+            <!-- Navigation Links (Simplified for Landing Page) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-primary-blue transition duration-150">Services</a>
+                <a href="#enforcement" class="text-gray-600 hover:text-primary-blue transition duration-150">Enforcement</a>
+                <a href="#contact" class="text-white gbc-primary py-2 px-4 rounded-lg font-medium gbc-hover transition duration-150">Get Started</a>
+            </nav>
+            <!-- Mobile Menu Placeholder -->
+            <button class="md:hidden text-gray-600 hover:text-primary-blue">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section - The main focus for Google Ads -->
+    <section class="gbc-primary text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Headline: Incorporating the core value proposition -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+                Protect Your Brand. <span class="text-yellow-300">Secure Your Creations.</span>
+            </h1>
+            <!-- Sub-headline: Value proposition from client content -->
+            <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8">
+                Your brand and your creative work are two of your most valuable assets. We help you protect both – trademarks for your names and logos, and copyright for your original content.
+            </p>
+            <p class="text-lg font-medium max-w-4xl mx-auto mb-10 text-blue-200">
+                Our approach is straightforward: clear searches, clean filings, practical agreements, and fast responses when issues arise.
+            </p>
+
+            <!-- Main CTA Button -->
+            <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-primary-blue bg-yellow-300 hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-xl">
+                Start Your Protection Strategy Today
+            </a>
+            <p class="mt-4 text-sm font-medium">Confidential Consultation. We respond within 2 hours.</p>
+        </div>
+    </section>
+
+    <!-- 2. Core Trademark & Copyright Service Offerings Section -->
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
+                Comprehensive Trademark & Copyright Services
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- Service 1: Trademark Content -->
+                <div class="card p-8 bg-gray-50 rounded-2xl border-t-4 border-primary-blue">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <svg class="w-10 h-10 gbc-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002 12c0 2.76.82 5.38 2.373 7.5a13.923 13.923 0 008.254 3.5h.746a13.923 13.923 0 008.254-3.5C21.18 17.38 22 14.76 22 12c0-2.47-1.12-4.71-2.91-6.06z"></path></svg>
+                        <h3 class="text-2xl font-bold text-gray-900">Trademarks (Names, Logos, Taglines)</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        A strong trademark strategy starts with clearance. We search for conflicts and assess distinctiveness. If the mark is viable, we file with the Canadian Intellectual Property Office (CIPO) under the Nice Classification, and manage the application through examination, publication, opposition, and registration.
+                    </p>
+                    <h4 class="font-semibold text-gray-800 mt-6 mb-2">What We Handle:</h4>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside ml-4">
+                        <li>Clearance searches and opinion letters</li>
+                        <li>Filing strategies (word mark vs. design mark; classes and descriptions)</li>
+                        <li>Office actions and evidence of distinctiveness</li>
+                        <li>Assignments and licensing (including franchise and co‑branding)</li>
+                        <li>Watch services and enforcement letters</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Copyright Content -->
+                <div class="card p-8 bg-gray-50 rounded-2xl border-t-4 border-primary-blue">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <svg class="w-10 h-10 gbc-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <h3 class="text-2xl font-bold text-gray-900">Copyright (Creative Works)</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Copyright protects original literary, artistic, musical, and dramatic works, as well as sound recordings and performances. In Canada, protection is automatic on creation; registration is optional but helpful for enforcement. We draft assignments and licenses that match how you actually monetize – streaming, broadcast, print, live, and digital platforms. We also advise on moral rights and attribution.
+                    </p>
+                    <h4 class="font-semibold text-gray-800 mt-6 mb-2">Typical Copyright Work:</h4>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside ml-4">
+                        <li>Rights ownership reviews and work‑made‑for‑hire alternatives that fit Canadian law</li>
+                        <li>Assignment and license agreements (exclusive and non‑exclusive)</li>
+                        <li>Collaboration agreements and commission agreements</li>
+                        <li>Fair dealing assessments and quoting/clip clearances</li>
+                        <li>Takedown and enforcement strategies (including Notice‑and‑Notice)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 3. Monetization & Enforcement Section -->
+    <section id="enforcement" class="py-16 sm:py-24 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
+                Monetization and Dispute Resolution
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Monetization & Content Deals -->
+                <div class="card bg-white p-8 rounded-2xl border-l-4 border-yellow-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+                        <svg class="w-7 h-7 mr-3 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.485 0-4 2-4 4v2a2 2 0 002 2h4a2 2 0 002-2v-2c0-2-1.515-4-4-4z"></path></svg>
+                        Monetization & Content Deals
+                    </h3>
+                    <p class="text-gray-600">
+                        We negotiate distribution, platform, and brand content agreements – defining scope, exclusivity, territory, term, revenue shares, and audit rights. For creators and agencies, we align rights with deliverables so there are no surprises later.
+                    </p>
+                </div>
+                <!-- Enforcement & Disputes -->
+                <div class="card bg-white p-8 rounded-2xl border-l-4 border-red-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+                        <svg class="w-7 h-7 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 0012 21.722a9 9 0 006.364-3.358m0 0l-3.35-3.35m3.35 3.35L21.72 12l-3.35-3.35m-14.72 0l3.35 3.35m-3.35-3.35L2.28 12l3.35 3.35"></path></svg>
+                        Enforcement & Disputes
+                    </h3>
+                    <p class="text-gray-600">
+                        When someone uses your brand or work without permission, we act quickly and proportionately. We send demand letters, negotiate settlements, and, when necessary, start court or tribunal proceedings. We balance the cost and benefit, so you’re not spending more than the problem is worth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAQ Section -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
+                Frequently Asked Questions (FAQs)
+            </h2>
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-bold text-primary-blue mb-2">Q: Do I have to register a trademark to use ™ or ®?</h3>
+                    <p class="text-gray-700">A: You can use **™** without registration. The **®** symbol should only be used once your mark is registered in Canada.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-bold text-primary-blue mb-2">Q: How long does a Canadian trademark take?</h3>
+                    <p class="text-gray-700">A: Timelines vary, but expect many months to almost a year or longer from filing to registration. Responding promptly to office actions keeps things moving.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-bold text-primary-blue mb-2">Q: Is copyright automatic or do I have to register?</h3>
+                    <p class="text-gray-700">A: Copyright is **automatic on creation**. Registration isn’t required, but it strengthens your evidence if you need to enforce your rights.</p>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-bold text-primary-blue mb-2">Q: Someone posted my content without permission. What’s my first step?</h3>
+                    <p class="text-gray-700">A: Document and make copies of the unauthorized use, identify the host/platform, and send a “cease and desist” notice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact Form Section (The Final CTA) -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card bg-primary-blue text-white p-8 sm:p-12 rounded-3xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-yellow-300 text-center">
+                    Ready to Secure Your Intellectual Property?
+                </h2>
+                <p class="text-lg font-light text-center mb-8">
+                    Fill out the form below. Our dedicated IP lawyer will contact you for a confidential assessment.
+                </p>
+
+                <!-- Success Message Box -->
+                <div id="form-message" class="hidden border px-4 py-3 rounded relative mb-4" role="alert">
+                    <strong class="font-bold">Success!</strong>
+                    <span class="block sm:inline"></span>
+                </div>
+
+                <!-- Contact Form -->
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium">Full Name (*)</label>
+                        <input type="text" id="name" name="name" required
+                               class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500 text-gray-800">
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium">Email (*)</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500 text-gray-800">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium">Phone Number (*)</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500 text-gray-800">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium">Describe Your Consultation Request</label>
+                        <textarea id="message" name="message" rows="4"
+                                  class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500 text-gray-800"
+                                  placeholder="Example: I need to register a word mark for a new software product and review a licensing agreement."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-sm text-primary-blue bg-yellow-300 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-300 transform hover:scale-[1.02]">
+                            Submit Consultation Request &rarr;
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Mimicking professional law firm style) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2 text-lg font-semibold">GBC Law - Business Legal Counsel</p>
+            <p class="text-sm text-gray-400">&copy; 2024 GBC Law. All rights reserved.</p>
+            <div class="mt-4 space-x-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
