@@ -2163,7 +2163,10 @@
     <!-- Basic FAQ accordion (optional, progressive enhancement) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('[data-layer="Accordion"]')?.forEach(acc => {
+            const mobileRoot = document.querySelector('.Mobile');
+            if (!mobileRoot) return;
+
+            mobileRoot.querySelectorAll('[data-layer="Accordion"]')?.forEach(acc => {
                 const header = acc.querySelector('[data-layer="Question"]');
                 const answer = acc.querySelector('[data-layer="Answer"]');
                 if (header && answer) {
@@ -2292,28 +2295,28 @@
                             </div>
                             <div data-layer="Content" class="ContentMobile border-animated-mobile">
                                 <div data-layer="Event time" class="EventTimeMobile">
-                                    <div data-layer="Text" id="cd-days" class="TextMobile">
+                                    <div data-layer="Text" id="cd-days-mobile" class="TextMobile">
                                         45</div>
                                     <div data-layer="Text" class="TextMobile">
                                         Days</div>
                                 </div>
                                 <div class="count-sep-mobile"></div>
                                 <div data-layer="Event time" class="EventTimeMobile">
-                                    <div data-layer="Text" id="cd-hours" class="TextMobile">
+                                    <div data-layer="Text" id="cd-hours-mobile" class="TextMobile">
                                         12</div>
                                     <div data-layer="Text" class="TextMobile">
                                         Hours</div>
                                 </div>
                                 <div class="count-sep-mobile"></div>
                                 <div data-layer="Event time" class="EventTimeMobile">
-                                    <div data-layer="Text" id="cd-mins" class="TextMobile">
+                                    <div data-layer="Text" id="cd-mins-mobile" class="TextMobile">
                                         44</div>
                                     <div data-layer="Text" class="TextMobile">
                                         Mins</div>
                                 </div>
                                 <div class="count-sep-mobile"></div>
                                 <div data-layer="Event time" class="EventTimeMobile">
-                                    <div data-layer="Text" id="cd-secs" class="TextMobile">
+                                    <div data-layer="Text" id="cd-secs-mobile" class="TextMobile">
                                         29</div>
                                     <div data-layer="Text" class="TextMobile">
                                         Secs</div>
@@ -3072,10 +3075,12 @@
     <script>
         // Simple countdown to a target date (set 45 days from now by default)
         (function () {
-            const daysEl = document.getElementById('cd-days');
-            const hoursEl = document.getElementById('cd-hours');
-            const minsEl = document.getElementById('cd-mins');
-            const secsEl = document.getElementById('cd-secs');
+            const mobileRoot = document.querySelector('.Mobile');
+            if (!mobileRoot) return;
+            const daysEl = mobileRoot.querySelector('#cd-days-mobile');
+            const hoursEl = mobileRoot.querySelector('#cd-hours-mobile');
+            const minsEl = mobileRoot.querySelector('#cd-mins-mobile');
+            const secsEl = mobileRoot.querySelector('#cd-secs-mobile');
             if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
             const target = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000); // demo target: 45 days from now
             const tick = () => {
@@ -3095,7 +3100,7 @@
         })();
         // Count-up on scroll for Stats section + loop every 3s (0 -> target)
         (function () {
-            const statsSection = document.querySelector('[data-layer="Stats / 26 /"]');
+            const statsSection = document.querySelector('.Mobile [data-layer="Stats / 26 /"]');
             if (!statsSection) return;
             const counters = statsSection.querySelectorAll('.stat-count');
             let hasRun = false;
@@ -3127,8 +3132,10 @@
 
         // Hover expand behavior for Layout / 254 /
         (function () {
-            const row = document.querySelector('.Layout254Mobile .ContentRowMobile');
-            const img = document.querySelector('.Layout254Mobile .CenterImageMobile');
+            const mobileRoot = document.querySelector('.Mobile');
+            if (!mobileRoot) return;
+            const row = mobileRoot.querySelector('.Layout254Mobile .ContentRowMobile');
+            const img = mobileRoot.querySelector('.Layout254Mobile .CenterImageMobile');
             if (!row || !img) return;
             const enter = () => row.classList.add('expanded');
             const leave = () => row.classList.remove('expanded');
