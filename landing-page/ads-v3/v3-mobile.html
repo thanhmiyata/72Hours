@@ -126,13 +126,13 @@
         }
 
         /* CTA flare effect */
-        .btn-flare {
+        .btn-flare-mobile {
             position: relative;
             border-radius: 14px;
             z-index: 1;
         }
 
-        .btn-flare::before {
+        .btn-flare-mobile::before {
             content: "";
             position: absolute;
             inset: -16px;
@@ -144,17 +144,17 @@
             border-radius: 24px;
         }
 
-        .btn-flare:hover::before {
+        .btn-flare-mobile:hover::before {
             filter: blur(14px);
         }
 
         /* Countdown glowing animated border */
-        .countdown-glow {
+        .countdown-glow-mobile {
             position: relative;
             border-radius: 20px;
         }
 
-        .countdown-glow::before {
+        .countdown-glow-mobile::before {
             content: "";
             position: absolute;
             inset: -3px;
@@ -177,7 +177,7 @@
         }
 
         /* Alt flare: bright animated border glow per request */
-        .flare-border-btn {
+        .flare-border-btn-mobile {
             position: relative;
             overflow: visible;
             z-index: 1;
@@ -190,7 +190,7 @@
             box-shadow: none;
         }
 
-        .flare-border-btn::before {
+        .flare-border-btn-mobile::before {
             content: "";
             position: absolute;
             top: -4px;
@@ -225,7 +225,7 @@
         }
 
         /* CTA glowing halo wrapper */
-        .cta-glow {
+        .cta-glow-mobile {
             position: relative;
             z-index: 0;
             box-shadow:
@@ -234,8 +234,8 @@
                 0 0 50px 28px rgba(87, 21, 19, 0.60);
         }
 
-        .cta-glow::before,
-        .cta-glow::after {
+        .cta-glow-mobile::before,
+        .cta-glow-mobile::after {
             content: "";
             position: absolute;
             pointer-events: none;
@@ -243,7 +243,7 @@
             z-index: -1;
         }
 
-        .cta-glow::before {
+        .cta-glow-mobile::before {
             inset: -12px;
             background: radial-gradient(ellipse at center,
                     rgba(255, 255, 255, 0.95) 0%,
@@ -253,7 +253,7 @@
             filter: blur(6px);
         }
 
-        .cta-glow::after {
+        .cta-glow-mobile::after {
             inset: -2px;
             border-radius: 8px;
             background: linear-gradient(45deg,
@@ -282,12 +282,12 @@
         }
 
         /* Animated pink→white gradient border (generic wrapper) */
-        .border-animated {
+        .border-animated-mobile {
             position: relative;
             border-radius: 20px;
         }
 
-        .border-animated::before {
+        .border-animated-mobile::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -314,22 +314,22 @@
         }
 
         /* Image tilt on hover for Header / 131 / */
-        .image-tilt .img-tilt-large,
-        .image-tilt .img-tilt-small {
+        .image-tilt-mobile .img-tilt-large-mobile,
+        .image-tilt-mobile .img-tilt-small-mobile {
             transition: transform 500ms ease, box-shadow 500ms ease;
             transform-origin: center;
         }
 
-        .image-tilt:hover .img-tilt-large {
+        .image-tilt-mobile:hover .img-tilt-large-mobile {
             transform: rotate(-5deg);
         }
 
-        .image-tilt:hover .img-tilt-small {
+        .image-tilt-mobile:hover .img-tilt-small-mobile {
             transform: rotate(5deg);
         }
 
         /* Countdown separator: thin gray vertical bar, slightly taller than numbers, shorter than labels */
-        .count-sep {
+        .count-sep-mobile {
             width: 1px;
             background-color: #e5e7eb;
             /* gray-200 */
@@ -339,19 +339,19 @@
         }
 
         /* Active tab style for What's inside */
-        .TabHorizontal {
+        .TabHorizontalMobile {
             background-color: transparent;
             transition: background-color 200ms ease, border-color 200ms ease, border-radius 200ms ease;
         }
 
-        .tab-active {
+        .tab-active-mobile {
             background-color: #ffffff !important;
             border-left: 4px solid #D64545 !important;
             border-top-left-radius: 16px;
             border-bottom-left-radius: 16px;
         }
 
-        .tab-inactive {
+        .tab-inactive-mobile {
             background-color: transparent;
             border-left: 0;
             border-top-left-radius: 16px;
@@ -359,7 +359,7 @@
         }
 
         /* Tab title typography */
-        .TabsMenu .ShortHeadingGoesHere {
+        .TabsMenuMobile .ShortHeadingGoesHereMobile {
             color: var(--Color-Scheme-1-Text, #0B0302);
             font-family: 'Bona Nova', serif;
             font-size: 40px;
@@ -372,38 +372,38 @@
         }
 
         /* Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
-        .Layout254 .SectionTitle .Tagline {
+        .Layout254Mobile .SectionTitleMobile .TaglineMobile {
             color: #561513;
             font-family: 'Poppins', ui-sans-serif, system-ui;
             font-weight: 600;
         }
 
-        .Layout254 .SectionTitle .Heading {
+        .Layout254Mobile .SectionTitleMobile .HeadingMobile {
             font-family: 'Bona Nova', serif;
             color: #561513;
         }
 
-        .Layout254 .SectionTitle .Text {
+        .Layout254Mobile .SectionTitleMobile .TextMobile {
             color: #111827;
         }
 
-        .Layout254 .Column .Heading {
+        .Layout254Mobile .ColumnMobile .HeadingMobile {
             font-family: 'Bona Nova', serif;
             color: #561513;
         }
 
-        .Layout254 .Column .Text {
+        .Layout254Mobile .ColumnMobile .TextMobile {
             color: #111827;
         }
 
-        .Layout254 .ContentRow {
+        .Layout254Mobile .ContentRowMobile {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             transition: gap 320ms ease;
         }
 
-        .Layout254 .CenterImage {
+        .Layout254Mobile .CenterImageMobile {
             width: 520px;
             height: 560.4px;
             border-radius: 16px;
@@ -411,27 +411,27 @@
             transition: width 320ms ease;
         }
 
-        .Layout254 .ContentRow .Column {
+        .Layout254Mobile .ContentRowMobile .ColumnMobile {
             transition: transform 320ms ease;
         }
 
-        .Layout254 .ContentRow.expanded {
+        .Layout254Mobile .ContentRowMobile.expanded {
             gap: 48px;
         }
 
-        .Layout254 .ContentRow.expanded .CenterImage {
+        .Layout254Mobile .ContentRowMobile.expanded .CenterImageMobile {
             width: 760px;
         }
 
-        .Layout254 .ContentRow.expanded .Column:first-child {
+        .Layout254Mobile .ContentRowMobile.expanded .ColumnMobile:first-child {
             transform: translateX(-24px);
         }
 
-        .Layout254 .ContentRow.expanded .Column:last-child {
+        .Layout254Mobile .ContentRowMobile.expanded .ColumnMobile:last-child {
             transform: translateX(24px);
         }
 
-        .cta-glow {
+        .cta-glow-mobile {
             position: relative;
             display: inline-flex;
             align-items: center;
@@ -453,7 +453,7 @@
             overflow: visible;
         }
 
-        .cta-glow::before {
+        .cta-glow-mobile::before {
             content: "";
             position: absolute;
             inset: -12px;
@@ -575,7 +575,7 @@
 
         /* Gradient border for countdown timer only */
         /* Countdown timer styling based on provided CSS */
-        .EventItemHeader2 .border-animated {
+        .EventItemHeader2Mobile .border-animated-mobile {
             position: relative;
             width: 21rem;
             border-radius: 0.75rem;
@@ -587,12 +587,12 @@
             padding: 0.875rem 1.5rem;
         }
 
-        .EventItemHeader2 .border-animated>* {
+        .EventItemHeader2Mobile .border-animated-mobile>* {
             position: relative;
             z-index: 1;
         }
 
-        .EventItemHeader2 .EventTime {
+        .EventItemHeader2Mobile .EventTimeMobile {
             flex: 1 1 0;
             min-width: 0;
             display: flex;
@@ -603,7 +603,7 @@
             overflow: hidden;
         }
 
-        .EventItemHeader2 .EventTime .Text:first-child {
+        .EventItemHeader2Mobile .EventTimeMobile .TextMobile:first-child {
             width: auto;
             font-family: 'Bona Nova';
             font-style: normal;
@@ -616,7 +616,7 @@
             justify-content: center;
         }
 
-        .EventItemHeader2 .EventTime .Text:last-child {
+        .EventItemHeader2Mobile .EventTimeMobile .TextMobile:last-child {
             width: auto;
             font-family: 'Poppins';
             font-style: normal;
@@ -629,7 +629,7 @@
             justify-content: center;
         }
 
-        .EventItemHeader2 .count-sep {
+        .EventItemHeader2Mobile .count-sep-mobile {
             width: 0.0625rem;
             align-self: stretch;
             border-left: 0.0625rem solid rgba(11, 3, 2, 0.18);
@@ -637,7 +637,7 @@
             margin: 0 0.625rem;
         }
 
-        .EventItemHeader2 .SectionTitle {
+        .EventItemHeader2Mobile .SectionTitleMobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -649,7 +649,7 @@
             margin: 0 auto;
         }
 
-        .EventItemHeader2 .SectionTitle .Subheading {
+        .EventItemHeader2Mobile .SectionTitleMobile .SubheadingMobile {
             width: 100%;
             min-height: 1.6875rem;
             font-family: 'Poppins';
@@ -661,7 +661,7 @@
             color: #0B0302;
         }
 
-        .EventItemHeader2 .SectionTitle .Content {
+        .EventItemHeader2Mobile .SectionTitleMobile .ContentMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -671,7 +671,7 @@
             min-height: 6.5rem;
         }
 
-        .EventItemHeader2 .SectionTitle .Heading {
+        .EventItemHeader2Mobile .SectionTitleMobile .HeadingMobile {
             width: 100%;
             min-height: 6.5rem;
             font-family: 'Bona Nova';
@@ -683,7 +683,7 @@
             color: #561513;
         }
 
-        .EventItemHeader2 .EventsDate {
+        .EventItemHeader2Mobile .EventsDateMobile {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -696,7 +696,7 @@
             margin: 0 auto;
         }
 
-        .EventItemHeader2 .EventsDate>.Content:first-child {
+        .EventItemHeader2Mobile .EventsDateMobile>.ContentMobile:first-child {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -707,7 +707,7 @@
             min-height: 4.875rem;
         }
 
-        .EventItemHeader2 .EventsDate .Date {
+        .EventItemHeader2Mobile .EventsDateMobile .DateMobile {
             width: 100%;
             min-height: 1.875rem;
             font-family: 'Poppins';
@@ -719,7 +719,7 @@
             color: #0B0302;
         }
 
-        .EventItemHeader2 .EventsDate .Tag {
+        .EventItemHeader2Mobile .EventsDateMobile .TagMobile {
             box-sizing: border-box;
             display: flex;
             flex-direction: row;
@@ -731,7 +731,7 @@
             border-radius: 0.25rem;
         }
 
-        .EventItemHeader2 .EventsDate .Tag .Text {
+        .EventItemHeader2Mobile .EventsDateMobile .TagMobile .TextMobile {
             width: 8.75rem;
             min-height: 1.5rem;
             font-family: 'Poppins';
@@ -742,7 +742,7 @@
             color: #0B0302;
         }
 
-        .EventItemHeader2 .Actions {
+        .EventItemHeader2Mobile .ActionsMobile {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -755,7 +755,7 @@
             margin: 0 auto;
         }
 
-        .EventItemHeader2 .Actions .Form {
+        .EventItemHeader2Mobile .ActionsMobile .FormMobile {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -766,7 +766,7 @@
             min-height: 2.9375rem;
         }
 
-        .EventItemHeader2 .Actions .Button {
+        .EventItemHeader2Mobile .ActionsMobile .ButtonMobile {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -792,7 +792,7 @@
             line-height: 1.5;
         }
 
-        .Header131 {
+        .Header131Mobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -804,7 +804,7 @@
             color: #FFFFFF;
         }
 
-        .Header131 .Container {
+        .Header131Mobile .ContainerMobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -814,7 +814,7 @@
             max-width: 100%;
         }
 
-        .Header131 .Content {
+        .Header131Mobile .ContentMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -824,7 +824,7 @@
             max-width: 25rem;
         }
 
-        .Header131 .Content .Column {
+        .Header131Mobile .ContentMobile .ColumnMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -832,13 +832,13 @@
             width: 100%;
         }
 
-        .Header131 .Content .Column.heading-column {
+        .Header131Mobile .ContentMobile .ColumnMobile.heading-column {
             gap: 1rem;
             max-width: 25rem;
             width: 100%;
         }
 
-        .Header131 .Heading {
+        .Header131Mobile .HeadingMobile {
             width: 100%;
             max-width: 25rem;
             min-height: 4rem;
@@ -856,13 +856,13 @@
             flex-wrap: wrap;
         }
 
-        .Header131 .Content .Column.copy-column {
+        .Header131Mobile .ContentMobile .ColumnMobile.copy-column {
             gap: 2rem;
             max-width: 25rem;
             width: 100%;
         }
 
-        .Header131 .BodyCopy {
+        .Header131Mobile .BodyCopy {
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
@@ -876,32 +876,32 @@
             color: #FFFFFF;
         }
 
-        .Header131 .BodyCopy p {
+        .Header131Mobile .BodyCopy p {
             margin: 0;
         }
 
-        .Header131 .BodyCopy p:first-child {
+        .Header131Mobile .BodyCopy p:first-child {
             font-size: 1.25rem;
             line-height: 1.32;
             letter-spacing: -0.01em;
         }
 
-        .Header131 .BodyCopy p:nth-child(n+2) {
+        .Header131Mobile .BodyCopy p:nth-child(n+2) {
             font-size: 0.965rem;
             line-height: 1.5;
         }
 
-        .Header131 .BodyCopy strong {
+        .Header131Mobile .BodyCopy strong {
             font-weight: 700;
         }
 
-        .Header131 .BodyCopy .BodyCopy__highlight {
+        .Header131Mobile .BodyCopy .BodyCopy__highlight {
             font-size: 1.125rem;
             line-height: 1.3;
             letter-spacing: -0.01em;
         }
 
-        .Header131 .ImageContainer {
+        .Header131Mobile .ImageContainerMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -910,7 +910,7 @@
             width: 100%;
         }
 
-        .Header131 .ImageFrame {
+        .Header131Mobile .ImageFrame {
             width: 100%;
             height: 25rem;
             border-radius: 1rem;
@@ -919,7 +919,7 @@
             position: relative;
         }
 
-        .Header131 .ImageFrame .sr-only {
+        .Header131Mobile .ImageFrame .sr-only {
             position: absolute;
             width: 1px;
             height: 1px;
@@ -931,7 +931,7 @@
             border: 0;
         }
 
-        .Frame17 {
+        .Frame17Mobile {
             position: relative;
             width: 100%;
             background: transparent;
@@ -939,17 +939,17 @@
             overflow: hidden;
         }
 
-        .Frame17--overlap {
+        .Frame17Mobile--overlap {
             margin-top: -2rem;
         }
 
-        .Frame17 img {
+        .Frame17Mobile img {
             display: block;
             width: 100%;
             height: auto;
         }
 
-        .Header147 {
+        .Header147Mobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -995,7 +995,7 @@
             width: 100%;
         }
 
-        .Header147 .Heading {
+        .Header147Mobile .HeadingMobile {
             width: 100%;
             font-family: 'Bona Nova';
             font-style: normal;
@@ -1094,7 +1094,7 @@
             pointer-events: none;
         }
 
-        .Stats26 {
+        .Stats26Mobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1145,7 +1145,7 @@
         }
 
         /* Choose the Right Kit for Your Family heading */
-        .Product4 .Heading {
+        .Product4Mobile .HeadingMobile {
             width: 400px;
             height: 91px;
             font-family: 'Bona Nova';
@@ -1159,7 +1159,7 @@
         }
 
         /* Text description under heading */
-        .Product4 .Text {
+        .Product4Mobile .TextMobile {
             width: 352px;
             height: 120px;
             font-family: 'Poppins';
@@ -1176,7 +1176,7 @@
         }
 
         /* Product card styles */
-        .ProductCard .ContentBottom {
+        .ProductCard .ContentBottomMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1190,7 +1190,7 @@
             flex-grow: 0;
         }
 
-        .ProductCard .Header {
+        .ProductCard .HeaderMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1203,7 +1203,7 @@
             flex-grow: 0;
         }
 
-        .ProductCard .Heading {
+        .ProductCard .HeadingMobile {
             width: 160px;
             height: 30px;
             font-family: 'Poppins';
@@ -1219,7 +1219,7 @@
             flex-grow: 0;
         }
 
-        .ProductCard .Text {
+        .ProductCard .TextMobile {
             width: 160px;
             height: 48px;
             font-family: 'Poppins';
@@ -1235,7 +1235,7 @@
             flex-grow: 0;
         }
 
-        .ProductCard .Price {
+        .ProductCard .PriceMobile {
             width: 160px;
             height: 39px;
             font-family: 'Poppins';
@@ -1251,34 +1251,34 @@
             flex-grow: 0;
         }
 
-        .Product4 .Row {
+        .Product4Mobile .RowMobile {
             height: 85vh;
         }
 
         /* Điều chỉnh khoảng cách nhiều hơn */
-        .ProductCard .Content {
+        .ProductCard .ContentMobile {
             gap: 8px !important;
         }
 
-        .ProductCard .Header {
+        .ProductCard .HeaderMobile {
             gap: 4px !important;
             height: auto !important;
         }
 
-        .ProductCard .Heading {
+        .ProductCard .HeadingMobile {
             height: auto !important;
             line-height: 1.3 !important;
             margin-bottom: 0 !important;
         }
 
-        .ProductCard .Text {
+        .ProductCard .TextMobile {
             height: auto !important;
             line-height: 1.3 !important;
             margin-top: 0 !important;
             margin-bottom: 0 !important;
         }
 
-        .ProductCard .Price {
+        .ProductCard .PriceMobile {
             height: auto !important;
             line-height: 1.3 !important;
             margin-top: 0 !important;
@@ -1290,7 +1290,7 @@
         }
 
         /* Tagline style nhỏ và màu đen */
-        .Layout254 .Tagline {
+        .Layout254Mobile .TaglineMobile {
             width: 300px;
             height: 40px;
             font-family: 'Poppins';
@@ -1306,7 +1306,7 @@
         }
 
         /* Heading style cho phần "4 Person Kit – Everything You Need for Emergencies" */
-        .Layout254 .Heading {
+        .Layout254Mobile .HeadingMobile {
             height: 64px;
             font-family: 'Bona Nova';
             font-style: normal;
@@ -1322,7 +1322,7 @@
         }
 
         /* Text description riêng cho Layout254 */
-        .Layout254 .Content .Text {
+        .Layout254Mobile .ContentMobile .TextMobile {
             font-size: 21px !important;
             line-height: 1.4 !important;
         }
@@ -1345,7 +1345,7 @@
         }
 
         /* Text description với size nhỏ hơn */
-        .Layout254 .Content .Text {
+        .Layout254Mobile .ContentMobile .TextMobile {
             font-size: 18px !important;
             line-height: 1.4 !important;
         }
@@ -1622,7 +1622,7 @@
         }
 
         /* Footer style */
-        .Footer2 {
+        .Footer2Mobile {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1683,7 +1683,7 @@
         }
 
         /* Frame 13 style */
-        .Frame13 {
+        .Frame13Mobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1714,7 +1714,7 @@
         }
 
         /* Email address style */
-        .EmailAddress {
+        .EmailAddressMobile {
             width: 100%;
             height: 27px;
             font-family: 'Poppins';
@@ -1731,7 +1731,7 @@
         }
 
         /* Credits style */
-        .Credits {
+        .CreditsMobile {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1746,7 +1746,7 @@
         }
 
         /* Divider style */
-        .Divider {
+        .DividerMobile {
             width: 100%;
             height: 0px;
             border: 1px solid rgba(11, 3, 2, 0.15);
@@ -1757,7 +1757,7 @@
         }
 
         /* Row style */
-        .Row {
+        .RowMobile {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -1773,7 +1773,7 @@
         }
 
         /* Social Links style */
-        .SocialLinks {
+        .SocialLinksMobile {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -1838,7 +1838,7 @@
         }
 
         @media (max-width: 1024px) {
-            .Stats26 {
+            .Stats26Mobile {
                 padding: 5rem 2.5rem;
             }
 
@@ -2001,49 +2001,49 @@
                 gap: 1.75rem !important;
             }
 
-            .Mobile .border-animated,
-            .Mobile .Tag,
-            .Mobile .cta-glow {
+            .Mobile .border-animated-mobile,
+            .Mobile .TagMobile,
+            .Mobile .cta-glow-mobile {
                 flex-direction: row !important;
                 align-items: center !important;
             }
 
-            .Mobile .Tag {
+            .Mobile .TagMobile {
                 gap: 8px !important;
             }
 
-            .Mobile .count-sep {
+            .Mobile .count-sep-mobile {
                 width: 1px;
                 height: 48px;
                 margin: 0 12px;
                 background-color: rgba(229, 231, 235, 1);
             }
 
-            .Mobile .Navbar1 {
+            .Mobile .Navbar1Mobile {
                 padding: 1rem 1.25rem !important;
                 height: auto !important;
             }
 
-            .Mobile .Navbar1 .NavLinks,
-            .Mobile .Navbar1 .Actions {
+            .Mobile .Navbar1Mobile .NavLinks,
+            .Mobile .Navbar1Mobile .ActionsMobile {
                 display: none !important;
             }
 
-            .Mobile .Navbar1 .Container {
+            .Mobile .Navbar1Mobile .ContainerMobile {
                 justify-content: center !important;
             }
 
-            .Mobile .image-tilt {
+            .Mobile .image-tilt-mobile {
                 height: auto !important;
             }
 
-            .Mobile .image-tilt .img-tilt-large {
+            .Mobile .image-tilt-mobile .img-tilt-large-mobile {
                 position: relative !important;
                 width: 100% !important;
                 height: auto !important;
             }
 
-            .Mobile .image-tilt .img-tilt-small {
+            .Mobile .image-tilt-mobile .img-tilt-small-mobile {
                 display: none !important;
             }
 
@@ -2084,20 +2084,20 @@
                 line-height: 1.45 !important;
             }
 
-            .Mobile .Actions .Button,
-            .Mobile .Form .Button {
+            .Mobile .ActionsMobile .ButtonMobile,
+            .Mobile .FormMobile .ButtonMobile {
                 width: 100% !important;
             }
 
-            .Mobile .Button {
+            .Mobile .ButtonMobile {
                 justify-content: center !important;
             }
 
-            .EventItemHeader2 .Actions .Button {
+            .EventItemHeader2Mobile .ActionsMobile .ButtonMobile {
                 width: 10.6875rem !important;
             }
 
-            .Mobile .Row,
+            .Mobile .RowMobile,
             .Mobile .List {
                 gap: 1.5rem !important;
             }
@@ -2107,15 +2107,15 @@
                 height: auto !important;
             }
 
-            .Mobile .Layout254 .ContentRow {
+            .Mobile .Layout254Mobile .ContentRowMobile {
                 gap: 24px !important;
             }
 
-            .Mobile .Layout254 .CenterImage {
+            .Mobile .Layout254Mobile .CenterImageMobile {
                 width: 100% !important;
             }
 
-            .Mobile .Layout254 .ContentRow .Column {
+            .Mobile .Layout254Mobile .ContentRowMobile .ColumnMobile {
                 transform: none !important;
             }
 
@@ -2184,9 +2184,9 @@
     <div data-layer="mobile" class="Mobile w-[1600px] px-0 flex-col justify-start items-start overflow-hidden">
         <!-- Layer: Navbar / 1 / -->
         <div data-layer="Navbar / 1 /"
-            class="Navbar1 mx-auto flex h-[69px] w-full max-w-[480px] items-center border-b border-[rgba(11,3,2,0.15)] bg-white">
-            <div data-layer="Container" class="Container flex h-full w-full items-center justify-between gap-0">
-                <div data-layer="Content" class="Content relative flex flex-1 items-center gap-2">
+            class="Navbar1Mobile mx-auto flex h-[69px] w-full max-w-[480px] items-center border-b border-[rgba(11,3,2,0.15)] bg-white">
+            <div data-layer="Container" class="ContainerMobile flex h-full w-full items-center justify-between gap-0">
+                <div data-layer="Content" class="ContentMobile relative flex flex-1 items-center gap-2">
                     <span class="flex h-10 w-10 items-center justify-center">
                         <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-shop.jpg?v=1761324875"
                             alt="Shopping bag icon" class="h-6 w-6 object-contain" />
@@ -2219,7 +2219,7 @@
         </div>
         <!-- Layer: Header / 5 / -->
         <div data-layer="Header / 5 /"
-            class="Header5 mobile-hero self-stretch px-16 inline-flex justify-center items-center overflow-hidden relative"
+            class="Header5Mobile mobile-hero self-stretch px-16 inline-flex justify-center items-center overflow-hidden relative"
             style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-sale-page-main-mobile-1.png'); background-size:cover; background-position:center;">
             <div class="absolute inset-0 bg-black/50"></div>
             <div class="mobile-hero__content relative z-10 w-full flex flex-col justify-end items-start">
@@ -2245,17 +2245,17 @@
         </div>
         <!-- Layer: Logo / 2 / -->
         <div data-layer="Logo / 2 /"
-            class="Logo2 self-stretch px-16 py-10 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+            class="Logo2Mobile self-stretch px-16 py-10 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
             <div data-layer="Container"
-                class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+                class="ContainerMobile w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
                 <div data-layer="Component"
-                    class="Component self-stretch inline-flex justify-start items-center gap-16">
+                    class="ComponentMobile self-stretch inline-flex justify-start items-center gap-16">
                     <div data-layer="Heading"
-                        class="Heading w-auto whitespace-nowrap justify-start text-Color-Scheme-2-Text text-lg font-bold font-['Poppins'] leading-9">
+                        class="HeadingMobile w-auto whitespace-nowrap justify-start text-Color-Scheme-2-Text text-lg font-bold font-['Poppins'] leading-9">
                         Trusted by 10,000+ organizations</div>
                     <div data-layer="Content"
-                        class="Content w-[913px] inline-flex flex-col justify-start items-start gap-4">
-                        <div data-layer="Row" class="Row w-[896px] flex-1 inline-flex justify-end items-center">
+                        class="ContentMobile w-[913px] inline-flex flex-col justify-start items-start gap-4">
+                        <div data-layer="Row" class="RowMobile w-[896px] flex-1 inline-flex justify-end items-center">
                             <img alt="Trusted logos" class="w-[720px] h-auto"
                                 src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-logo2.png?v=1761032996" />
                         </div>
@@ -2265,65 +2265,65 @@
         </div>
         <!-- Layer: Event Item Header / 2 / -->
         <div data-layer="Event Item Header / 2 /"
-            class="EventItemHeader2 self-stretch px-16 py-14 flex flex-col justify-start items-center gap-20 overflow-hidden"
+            class="EventItemHeader2Mobile self-stretch px-16 py-14 flex flex-col justify-start items-center gap-20 overflow-hidden"
             style="background: linear-gradient(180deg, #E0C2A5 0%, #E8B29C 44%, #FFFFFF 100%);">
             <div data-layer="Container"
-                class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+                class="ContainerMobile w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
                 <div data-layer="Content"
-                    class="Content w-full max-w-[768px] flex flex-col justify-center items-center gap-8">
+                    class="ContentMobile w-full max-w-[768px] flex flex-col justify-center items-center gap-8">
                     <div data-layer="Events details"
-                        class="EventsDetails self-stretch flex flex-col justify-center items-center gap-6">
-                        <div data-layer="Section Title" class="SectionTitle">
-                            <div data-layer="Subheading" class="Subheading">
+                        class="EventsDetailsMobile self-stretch flex flex-col justify-center items-center gap-6">
+                        <div data-layer="Section Title" class="SectionTitleMobile">
+                            <div data-layer="Subheading" class="SubheadingMobile">
                                 Ready</div>
-                            <div data-layer="Content" class="Content">
-                                <div data-layer="Heading" class="Heading">Act Early.<br />Stay Safe.</div>
+                            <div data-layer="Content" class="ContentMobile">
+                                <div data-layer="Heading" class="HeadingMobile">Act Early.<br />Stay Safe.</div>
                             </div>
                         </div>
-                        <div data-layer="Events date" class="EventsDate">
-                            <div data-layer="Content" class="Content">
-                                <div data-layer="Date" class="Date">
+                        <div data-layer="Events date" class="EventsDateMobile">
+                            <div data-layer="Content" class="ContentMobile">
+                                <div data-layer="Date" class="DateMobile">
                                     Offer Ends In:</div>
                                 <div data-layer="Tag" data-alternate="False" data-icon-position="No Icon"
-                                    data-text-only="False" class="Tag">
-                                    <div data-layer="Text" class="Text">
+                                    data-text-only="False" class="TagMobile">
+                                    <div data-layer="Text" class="TextMobile">
                                         Kits nearly gone</div>
                                 </div>
                             </div>
-                            <div data-layer="Content" class="Content border-animated">
-                                <div data-layer="Event time" class="EventTime">
-                                    <div data-layer="Text" id="cd-days" class="Text">
+                            <div data-layer="Content" class="ContentMobile border-animated-mobile">
+                                <div data-layer="Event time" class="EventTimeMobile">
+                                    <div data-layer="Text" id="cd-days" class="TextMobile">
                                         45</div>
-                                    <div data-layer="Text" class="Text">
+                                    <div data-layer="Text" class="TextMobile">
                                         Days</div>
                                 </div>
-                                <div class="count-sep"></div>
-                                <div data-layer="Event time" class="EventTime">
-                                    <div data-layer="Text" id="cd-hours" class="Text">
+                                <div class="count-sep-mobile"></div>
+                                <div data-layer="Event time" class="EventTimeMobile">
+                                    <div data-layer="Text" id="cd-hours" class="TextMobile">
                                         12</div>
-                                    <div data-layer="Text" class="Text">
+                                    <div data-layer="Text" class="TextMobile">
                                         Hours</div>
                                 </div>
-                                <div class="count-sep"></div>
-                                <div data-layer="Event time" class="EventTime">
-                                    <div data-layer="Text" id="cd-mins" class="Text">
+                                <div class="count-sep-mobile"></div>
+                                <div data-layer="Event time" class="EventTimeMobile">
+                                    <div data-layer="Text" id="cd-mins" class="TextMobile">
                                         44</div>
-                                    <div data-layer="Text" class="Text">
+                                    <div data-layer="Text" class="TextMobile">
                                         Mins</div>
                                 </div>
-                                <div class="count-sep"></div>
-                                <div data-layer="Event time" class="EventTime">
-                                    <div data-layer="Text" id="cd-secs" class="Text">
+                                <div class="count-sep-mobile"></div>
+                                <div data-layer="Event time" class="EventTimeMobile">
+                                    <div data-layer="Text" id="cd-secs" class="TextMobile">
                                         29</div>
-                                    <div data-layer="Text" class="Text">
+                                    <div data-layer="Text" class="TextMobile">
                                         Secs</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div data-layer="Actions" class="Actions">
-                        <div data-layer="Form" class="Form">
-                            <a data-layer="Button" class="Button" href="#product">
+                    <div data-layer="Actions" class="ActionsMobile">
+                        <div data-layer="Form" class="FormMobile">
+                            <a data-layer="Button" class="ButtonMobile" href="#product">
                                 Order your kit
                             </a>
                         </div>
@@ -2332,15 +2332,15 @@
             </div>
         </div>
         <!-- Layer: Header / 131 / -->
-        <div data-layer="Header / 131 /" class="Header131">
-            <div data-layer="Container" class="Container">
-                <div data-layer="Content" class="Content">
-                    <div data-layer="Column" class="Column heading-column">
-                        <div data-layer="Heading" class="Heading">
+        <div data-layer="Header / 131 /" class="Header131Mobile">
+            <div data-layer="Container" class="ContainerMobile">
+                <div data-layer="Content" class="ContentMobile">
+                    <div data-layer="Column" class="ColumnMobile heading-column">
+                        <div data-layer="Heading" class="HeadingMobile">
                             Get Your Free Fire Blanket Today!
                         </div>
                     </div>
-                    <div data-layer="Column" class="Column copy-column">
+                    <div data-layer="Column" class="ColumnMobile copy-column">
                         <div data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
                             class="BodyCopy">
                             <p>Save <span class="font-semibold">20%</span> Today – Offer Ends Soon.</p>
@@ -2352,7 +2352,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-layer="Image container" class="ImageContainer">
+                <div data-layer="Image container" class="ImageContainerMobile">
                     <div class="ImageFrame"
                         style="background-image: url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-package.png');">
                         <span class="sr-only">Emergency readiness kit contents displayed.</span>
@@ -2365,16 +2365,16 @@
             </div>
         </div>
         <!-- Separator: Frame 17 (wave) -->
-        <div data-layer="Frame 17" class="Frame17 Frame17--overlap">
+        <div data-layer="Frame 17" class="Frame17Mobile Frame17--overlap">
             <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-test.png" />
         </div>
         <!-- Layer: Header / 147 / (Video Lightbox) -->
-        <div data-layer="Header / 147 /" class="Header147">
+        <div data-layer="Header / 147 /" class="Header147Mobile">
             <div data-layer="Content" class="Header147__content">
                 <div data-layer="Container" class="Header147__container">
                     <div data-layer="Column" class="Header147__column">
                         <div data-layer="Content" class="Header147__copy">
-                            <div data-layer="Heading" class="Heading">
+                            <div data-layer="Heading" class="HeadingMobile">
                                 Built to Meet FEMA &amp; Canadian Guidelines
                             </div>
                             <div data-layer="Text" class="Header147__intro">
@@ -2397,16 +2397,16 @@
         </div>
         <!-- Layer: Header / 64 / (What's inside - title) -->
         <div data-layer="Header / 64 /"
-            class="Header64 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-16 pt-20 pb-0 gap-[31px] overflow-hidden">
-            <div data-layer="Container" class="Container w-full max-w-[352px] flex flex-col items-center gap-20">
-                <div data-layer="Component" class="Component w-full max-w-[352px] flex flex-col items-center gap-6">
-                    <div data-layer="What’s inside" class="WhatSInside w-full text-center">
+            class="Header64Mobile w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-16 pt-20 pb-0 gap-[31px] overflow-hidden">
+            <div data-layer="Container" class="ContainerMobile w-full max-w-[352px] flex flex-col items-center gap-20">
+                <div data-layer="Component" class="ComponentMobile w-full max-w-[352px] flex flex-col items-center gap-6">
+                    <div data-layer="What’s inside" class="WhatSInsideMobile w-full text-center">
                         <div class="WhatSInside__heading">
                             What’s Inside
                         </div>
                     </div>
                     <div data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
-                        class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours w-full font-['Poppins'] PreparationCopy">
+                        class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72HoursMobile w-full font-['Poppins'] PreparationCopy">
                         <span>Preparation is key to survival in</span>
                         <span>chaos, so explore durable products</span>
                         <span>that ensure your readiness beyond</span>
@@ -2417,7 +2417,7 @@
         </div>
         <!-- Layer: Layout / 28 / (What's inside - cards) -->
         <div data-layer="Layout / 28 /"
-            class="Layout28 w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-6 pt-[42px] pb-[112px]">
+            class="Layout28Mobile w-full max-w-[480px] mx-auto flex flex-col items-center bg-[#F2F2F2] px-6 pt-[42px] pb-[112px]">
             <div id="whatsInsideCarousel" class="w-full" data-carousel="slide" data-carousel-touch="true"
                 data-carousel-autoplay="true" data-carousel-interval="6000">
                 <div class="relative min-h-[560px] overflow-hidden rounded-[36px]">
@@ -2546,7 +2546,7 @@
             </div>
         </div>
         <!-- Layer: Stats / 26 / -->
-        <div data-layer="Stats / 26 /" class="Stats26 full-width-content">
+        <div data-layer="Stats / 26 /" class="Stats26Mobile full-width-content">
             <div data-layer="Container" class="Stats26__container">
                 <div data-layer="Content" class="Stats26__intro">
                     <div data-layer="Column" class="Stats26__col">
@@ -2591,135 +2591,135 @@
         </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17">
+    <div data-layer="Frame 17" class="Frame17Mobile">
         <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-hong-mobile.png" />
     </div>
     <!-- Layer: Product / 4 / (Choose the Right Kit) -->
     <div data-layer="Product / 4 /"
-        class="Product4 flex w-full max-w-3xl flex-col items-center gap-8 bg-white px-4 pb-10 pt-6 sm:px-10 lg:px-12">
-        <div data-layer="Container" class="Container flex w-full flex-col items-center gap-16">
-            <div data-layer="Title" class="Title flex w-full flex-col items-center gap-4 text-center">
-                <div data-layer="Tagline Wrapper" class="TaglineWrapper inline-flex items-center justify-center">
+        class="Product4Mobile flex w-full max-w-3xl flex-col items-center gap-8 bg-white px-4 pb-10 pt-6 sm:px-10 lg:px-12">
+        <div data-layer="Container" class="ContainerMobile flex w-full flex-col items-center gap-16">
+            <div data-layer="Title" class="TitleMobile flex w-full flex-col items-center gap-4 text-center">
+                <div data-layer="Tagline Wrapper" class="TaglineWrapperMobile inline-flex items-center justify-center">
                     <div data-layer="Tagline"
-                        class="Tagline text-center font-['Poppins'] text-base font-semibold leading-6 text-[#0B0302]">
+                        class="TaglineMobile text-center font-['Poppins'] text-base font-semibold leading-6 text-[#0B0302]">
                         Find your Kit</div>
                 </div>
-                <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                     <div data-layer="Heading"
-                        class="Heading w-full text-center font-['Bona Nova'] text-3xl font-bold leading-tight text-[#561513] sm:text-4xl">
+                        class="HeadingMobile w-full text-center font-['Bona Nova'] text-3xl font-bold leading-tight text-[#561513] sm:text-4xl">
                         Choose the Right Kit for Your Family</div>
                     <div data-layer="Text"
-                        class="Text w-full max-w-xl text-center font-['Poppins'] text-lg font-normal leading-7 text-[#0B0302]">
+                        class="TextMobile w-full max-w-xl text-center font-['Poppins'] text-lg font-normal leading-7 text-[#0B0302]">
                         Each kit supports 1 person for 72 hours.<br />Select your household size and we’ll show you
                         the perfect match.</div>
                 </div>
             </div>
-            <div data-layer="Content" class="Content flex w-full flex-col gap-12">
-                <div data-layer="Row" class="Row grid w-full grid-cols-2 justify-items-center gap-10">
+            <div data-layer="Content" class="ContentMobile flex w-full flex-col gap-12">
+                <div data-layer="Row" class="RowMobile grid w-full grid-cols-2 justify-items-center gap-10">
                     <div data-layer="Product"
-                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
-                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                        class="ProductMobile ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImageMobile w-full rounded-xl object-cover"
                             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-1person.jpg" />
-                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
-                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
-                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                        <div data-layer="Content Bottom" class="ContentBottomMobile flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="HeaderMobile flex w-full flex-col items-center">
                                     <div data-layer="Heading"
-                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        class="HeadingMobile w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
                                         1 Person</div>
                                     <div data-layer="Text"
-                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        class="TextMobile w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
                                         Solo, car trunk, student</div>
                                 </div>
                                 <div data-layer="Price"
-                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    class="PriceMobile w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
                                     $259.99</div>
                             </div>
                             <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
                                 data-small="False" data-style="Secondary"
-                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                class="ButtonMobile size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
                                 <div data-layer="Button"
-                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    class="ButtonMobile text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
                                     Add to Cart</div>
                             </div>
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
-                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                        class="ProductMobile ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImageMobile w-full rounded-xl object-cover"
                             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-2person.jpg" />
-                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
-                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
-                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                        <div data-layer="Content Bottom" class="ContentBottomMobile flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="HeaderMobile flex w-full flex-col items-center">
                                     <div data-layer="Heading"
-                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        class="HeadingMobile w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
                                         2 Person</div>
                                     <div data-layer="Text"
-                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        class="TextMobile w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
                                         Couples, roommates</div>
                                 </div>
                                 <div data-layer="Price"
-                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    class="PriceMobile w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
                                     $284.99</div>
                             </div>
                             <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
                                 data-small="False" data-style="Secondary"
-                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                class="ButtonMobile size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
                                 <div data-layer="Button"
-                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    class="ButtonMobile text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
                                     Add to Cart</div>
                             </div>
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
-                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                        class="ProductMobile ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImageMobile w-full rounded-xl object-cover"
                             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-3person.jpg" />
-                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
-                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
-                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                        <div data-layer="Content Bottom" class="ContentBottomMobile flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="HeaderMobile flex w-full flex-col items-center">
                                     <div data-layer="Heading"
-                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        class="HeadingMobile w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
                                         3 Person</div>
                                     <div data-layer="Text"
-                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        class="TextMobile w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
                                         Small Family</div>
                                 </div>
                                 <div data-layer="Price"
-                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    class="PriceMobile w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
                                     $374.99</div>
                             </div>
                             <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
                                 data-small="False" data-style="Secondary"
-                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                class="ButtonMobile size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
                                 <div data-layer="Button"
-                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    class="ButtonMobile text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
                                     Add to Cart</div>
                             </div>
                         </div>
                     </div>
                     <div data-layer="Product"
-                        class="Product ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
-                        <img data-layer="Placeholder Image" class="PlaceholderImage w-full rounded-xl object-cover"
+                        class="ProductMobile ProductCard flex w-full max-w-[10rem] flex-col items-center gap-3 text-center">
+                        <img data-layer="Placeholder Image" class="PlaceholderImageMobile w-full rounded-xl object-cover"
                             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
-                        <div data-layer="Content Bottom" class="ContentBottom flex flex-col items-center gap-3">
-                            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-2">
-                                <div data-layer="Header" class="Header flex w-full flex-col items-center">
+                        <div data-layer="Content Bottom" class="ContentBottomMobile flex flex-col items-center gap-3">
+                            <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-2">
+                                <div data-layer="Header" class="HeaderMobile flex w-full flex-col items-center">
                                     <div data-layer="Heading"
-                                        class="Heading w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
+                                        class="HeadingMobile w-full text-center font-['Poppins'] text-xl font-semibold leading-7 text-[#0B0302]">
                                         4 Person</div>
                                     <div data-layer="Text"
-                                        class="Text w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
+                                        class="TextMobile w-full text-center font-['Poppins'] text-base font-normal leading-6 text-[#0B0302]">
                                         Full Household</div>
                                 </div>
                                 <div data-layer="Price"
-                                    class="Price w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
+                                    class="PriceMobile w-full text-center font-['Poppins'] text-2xl font-semibold leading-9 text-[#0B0302]">
                                     $404.99</div>
                             </div>
                             <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
                                 data-small="False" data-style="Secondary"
-                                class="Button size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
+                                class="ButtonMobile size- inline-flex items-center justify-center gap-2 rounded-md bg-Color-Valencia px-6 py-2.5 text-lg font-medium font-['Poppins'] leading-relaxed text-Color-White">
                                 <div data-layer="Button"
-                                    class="Button text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                                    class="ButtonMobile text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
                                     Add to Cart</div>
                             </div>
                         </div>
@@ -2727,99 +2727,99 @@
                 </div>
             </div>
         </div>
-        <div data-layer="Frame 20" class="Frame20 flex w-full justify-end pt-12">
+        <div data-layer="Frame 20" class="Frame20Mobile flex w-full justify-end pt-12">
             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame20.png"
                 alt="Decorative dotted divider" class="h-24 w-auto max-w-xs object-contain" />
         </div>
     </div>
     <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
     <div data-layer="Layout / 254 /"
-        class="Layout254 mx-auto flex w-full max-w-[480px] flex-col items-center gap-20 bg-[#F2F2F2] px-8 pb-5 pt-28">
-        <div data-layer="Container" class="Container flex w-full max-w-[400px] flex-col items-center gap-10">
-            <div data-layer="Section Title" class="SectionTitle flex w-full flex-col items-center gap-5 text-center">
-                <div data-layer="Tagline Wrapper" class="TaglineWrapper flex w-full items-center justify-center">
+        class="Layout254Mobile mx-auto flex w-full max-w-[480px] flex-col items-center gap-20 bg-[#F2F2F2] px-8 pb-5 pt-28">
+        <div data-layer="Container" class="ContainerMobile flex w-full max-w-[400px] flex-col items-center gap-10">
+            <div data-layer="Section Title" class="SectionTitleMobile flex w-full flex-col items-center gap-5 text-center">
+                <div data-layer="Tagline Wrapper" class="TaglineWrapperMobile flex w-full items-center justify-center">
                     <div data-layer="Tagline"
-                        class="Tagline w-full font-['Poppins'] text-xl font-semibold leading-[30px]">
+                        class="TaglineMobile w-full font-['Poppins'] text-xl font-semibold leading-[30px]">
                         Choose the Amount of people you<br />want the Kit For</div>
                 </div>
-                <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                     <div data-layer="Heading"
-                        class="Heading w-full font-['Bona Nova'] text-[2rem] font-bold leading-[2rem] text-[#561513]">
+                        class="HeadingMobile w-full font-['Bona Nova'] text-[2rem] font-bold leading-[2rem] text-[#561513]">
                         4 Person Kit – Everything You Need for Emergencies</div>
                     <div data-layer="Text"
-                        class="Text w-full font-['Poppins'] text-[1.5625rem] font-normal leading-[2.375rem] text-[#0B0302]">
+                        class="TextMobile w-full font-['Poppins'] text-[1.5625rem] font-normal leading-[2.375rem] text-[#0B0302]">
                         The 72HRS Deluxe Emergency<br />Kit is designed to ensure your<br />family is ready for any
                         situation.<br />With essential supplies and<br />trusted quality, peace of mind<br />is just a
                         click away.</div>
                 </div>
             </div>
-            <div data-layer="Content" class="Content flex w-full flex-col items-center gap-12">
-                <div data-layer="Column" class="Column flex w-full flex-col items-center gap-10">
-                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+            <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-12">
+                <div data-layer="Column" class="ColumnMobile flex w-full flex-col items-center gap-10">
+                    <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                         <div data-layer="water_do"
-                            class="WaterDo inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            class="WaterDoMobile inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt=""
                                 class="h-8 w-8 select-none" loading="lazy" />
                         </div>
-                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                        <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
                                 class="TopicHeading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
                                 Food &amp; Water</div>
                             <div data-layer="Text"
-                                class="Text ProductText w-full text-center font-['Poppins'] text-[18px] leading-[27px] text-[#0B0302]">
+                                class="TextMobile ProductText w-full text-center font-['Poppins'] text-[18px] leading-[27px] text-[#0B0302]">
                                 4 x 72HRS Food Rations<br />(3,600 Cal each)<br />48 x Emergency Water Pouches<br />(125
                                 ml each)<br />10 x Aquatabs Water Purification Tablet</div>
                         </div>
                     </div>
-                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                    <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
-                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            class="VectorMobile inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt=""
                                 class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
-                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                        <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
                                 class="TopicHeading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
                                 Shelter &amp; Warmth</div>
                             <div data-layer="Text"
-                                class="Text w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
+                                class="TextMobile w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
                                 4 × Sleeping Bags<br />4 × Rain Ponchos<br />2 × Tube Tent</div>
                         </div>
                     </div>
                 </div>
                 <div data-layer="Placeholder Wrapper" class="PlaceholderWrapper relative -mx-8 w-[calc(100%+4rem)]">
-                    <img data-layer="Placeholder Image" class="PlaceholderImage h-full w-full object-cover"
+                    <img data-layer="Placeholder Image" class="PlaceholderImageMobile h-full w-full object-cover"
                         src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
                 </div>
-                <div data-layer="Column" class="Column flex w-full flex-col items-center gap-14">
-                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                <div data-layer="Column" class="ColumnMobile flex w-full flex-col items-center gap-14">
+                    <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
-                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            class="VectorMobile inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png"
                                 alt="" class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
-                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                        <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
                                 class="TopicHeading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
                                 First Aid &amp; Essentials</div>
                             <div data-layer="Text"
-                                class="Text w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
+                                class="TextMobile w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
                                 1 × 108-Piece First Aid Kit<br />1 × Hand-Crank Radio<br />1 × 36-Hour Emergency
                                 Candles<br />1 × 72HRS Dust Masks<br />2 × 72HRS Deluxe Backpack</div>
                         </div>
                     </div>
-                    <div data-layer="Content" class="Content flex w-full flex-col items-center gap-6">
+                    <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-6">
                         <div data-layer="Vector"
-                            class="Vector inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
+                            class="VectorMobile inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#F3D5D2]/80">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt=""
                                 class="h-10 w-10 select-none object-contain" loading="lazy" />
                         </div>
-                        <div data-layer="Content" class="Content flex w-full flex-col items-center gap-4">
+                        <div data-layer="Content" class="ContentMobile flex w-full flex-col items-center gap-4">
                             <div data-layer="Heading"
                                 class="TopicHeading w-full text-center font-['Bona Nova'] text-[2rem] font-bold leading-[52px] text-[#561513]">
                                 Tools &amp; Safety</div>
                             <div data-layer="Text"
-                                class="Text w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
+                                class="TextMobile w-full text-center font-['Poppins'] text-[18px] ProductText leading-[27px] text-[#0B0302]">
                                 1 × Multi-tool Knife<br />1 × Whistle<br />1 × Duct Tape Roll<br />1 × Aluminum
                                 Alloy Emergency Whistle<br />4 × 72HRS Tissue Pack<br />1 × 72HRS 50FT Nylon
                                 Utility Cord<br />3 × LED Rechargeable Flashlight<br />1 × 72HRS Roll Duct Tape
@@ -2828,11 +2828,11 @@
                     </div>
                 </div>
             </div>
-            <div data-layer="Actions" class="Actions flex w-full flex-col items-center gap-4">
+            <div data-layer="Actions" class="ActionsMobile flex w-full flex-col items-center gap-4">
                 <div data-layer="ButtonRow" class="ButtonRow flex w-full items-center justify-center gap-3">
                     <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                         data-style="Secondary"
-                        class="Button inline-flex items-center justify-center gap-2 rounded-md bg-[#D73630] px-5 py-1.5 text-[0.875rem] font-medium font-['Poppins'] leading-5 text-white shadow-[0_0.75rem_1.5rem_-1.25rem_rgba(226,58,58,0.8)] whitespace-nowrap">
+                        class="ButtonMobile inline-flex items-center justify-center gap-2 rounded-md bg-[#D73630] px-5 py-1.5 text-[0.875rem] font-medium font-['Poppins'] leading-5 text-white shadow-[0_0.75rem_1.5rem_-1.25rem_rgba(226,58,58,0.8)] whitespace-nowrap">
                         See Full Spec Sheet
                     </div>
                     <div
@@ -2846,25 +2846,25 @@
         </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17">
+    <div data-layer="Frame 17" class="Frame17Mobile">
         <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-nau.png"
             class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: Gallery / 3 / -->
     <div data-layer="Gallery / 3 /"
-        class="Gallery3 relative flex w-full justify-center overflow-hidden bg-[#7D291C] px-0 pb-10 pt-px">
+        class="Gallery3Mobile relative flex w-full justify-center overflow-hidden bg-[#7D291C] px-0 pb-10 pt-px">
         <div data-layer="Container"
-            class="Container relative z-10 flex w-full max-w-[480px] flex-col items-center gap-20 px-0">
+            class="ContainerMobile relative z-10 flex w-full max-w-[480px] flex-col items-center gap-20 px-0">
             <div data-layer="Section Title"
-                class="SectionTitle flex w-full flex-col items-center gap-6 px-8 text-center">
+                class="SectionTitleMobile flex w-full flex-col items-center gap-6 px-8 text-center">
                 <h2 data-layer="Heading"
-                    class="Heading GalleryHeading flex w-full max-w-[374px] flex-col items-center justify-center">
+                    class="HeadingMobile GalleryHeading flex w-full max-w-[374px] flex-col items-center justify-center">
                     See Why Influencers &amp;<br />Families Choose 72HRS</h2>
-                <p data-layer="Text" class="Text GalleryText w-full max-w-[400px]">
+                <p data-layer="Text" class="TextMobile GalleryText w-full max-w-[400px]">
                     Discover why families trust 72HRS for safety.</p>
             </div>
             <div data-layer="Content"
-                class="Content flex w-full max-w-[600px] shrink-0 items-start gap-[15px] overflow-x-auto px-0">
+                class="ContentMobile flex w-full max-w-[600px] shrink-0 items-start gap-[15px] overflow-x-auto px-0">
                 <div class="relative h-[190px] w-[190px] flex-shrink-0 overflow-hidden rounded-2xl bg-white/10">
                     <img data-layer="Gallery Image 1" class="absolute inset-0 h-full w-full object-cover"
                         src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png"
@@ -2884,55 +2884,55 @@
         </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17">
+    <div data-layer="Frame 17" class="Frame17Mobile">
         <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame17-nau-2.png"
             class="block w-full select-none object-cover pointer-events-none" loading="lazy" />
     </div>
     <!-- Layer: FAQ / 6 / -->
-    <div data-layer="FAQ / 6 /" class="Faq6 flex w-full justify-center bg-[#F2F2F2] px-8 pb-20 pt-0">
-        <div data-layer="Container" class="Container flex w-full max-w-[480px] flex-col items-center gap-20">
-            <div data-layer="Component" class="Component flex w-full flex-col items-center gap-20">
+    <div data-layer="FAQ / 6 /" class="Faq6Mobile flex w-full justify-center bg-[#F2F2F2] px-8 pb-20 pt-0">
+        <div data-layer="Container" class="ContainerMobile flex w-full max-w-[480px] flex-col items-center gap-20">
+            <div data-layer="Component" class="ComponentMobile flex w-full flex-col items-center gap-20">
                 <div data-layer="Section Title"
-                    class="SectionTitle flex w-full max-w-[400px] flex-col items-center gap-8 text-center">
-                    <div data-layer="Content" class="Content flex w-full flex-col items-start gap-6">
-                        <h2 data-layer="Got questions?" class="GotQuestions FAQHeading w-full">
+                    class="SectionTitleMobile flex w-full max-w-[400px] flex-col items-center gap-8 text-center">
+                    <div data-layer="Content" class="ContentMobile flex w-full flex-col items-start gap-6">
+                        <h2 data-layer="Got questions?" class="GotQuestionsMobile FAQHeading w-full">
                             Got questions?</h2>
-                        <p data-layer="Text" class="Text FAQText w-full">
+                        <p data-layer="Text" class="TextMobile FAQText w-full">
                             Find answers to your most pressing<br />questions about our emergency kits.</p>
                     </div>
-                    <div data-layer="Actions" class="Actions FAQActions flex  justify-center">
-                        <button type="button" data-layer="Button" data-style="Secondary" class="Button FAQButton">
+                    <div data-layer="Actions" class="ActionsMobile FAQActions flex justify-center">
+                        <button type="button" data-layer="Button" data-style="Secondary" class="ButtonMobile FAQButton">
                             Contact
                         </button>
                     </div>
                 </div>
                 <div data-layer="Accordion List"
-                    class="AccordionList FAQAccordionList flex w-full max-w-[400px] flex-col gap-4">
-                    <div data-layer="Accordion" class="Accordion FAQAccordion">
-                        <div data-layer="Question" class="Question FAQQuestionContainer">
-                            <h3 data-layer="Question" class="Question FAQQuestionText">
+                    class="AccordionListMobile FAQAccordionList flex w-full max-w-[400px] flex-col gap-4">
+                    <div data-layer="Accordion" class="AccordionMobile FAQAccordion">
+                        <div data-layer="Question" class="QuestionMobile FAQQuestionContainer">
+                            <h3 data-layer="Question" class="QuestionMobile FAQQuestionText">
                                 Why 72 hours?</h3>
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="FAQCloseIcon select-none pointer-events-none" loading="lazy" />
                         </div>
-                        <div data-layer="Answer" class="Answer FAQAnswerContainer">
-                            <p data-layer="Text" class="Text FAQAnswerText">
+                        <div data-layer="Answer" class="AnswerMobile FAQAnswerContainer">
+                            <p data-layer="Text" class="TextMobile FAQAnswerText">
                                 FEMA and Canada both recommend<br />being prepared for at least 72<br />hours. This kit
                                 is built<br />to cover that critical<br />period.</p>
                         </div>
                     </div>
                     <div data-layer="Accordion"
-                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        class="AccordionMobile flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
                         <div data-layer="Question"
-                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
-                            <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
+                            class="QuestionMobile flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question" class="QuestionMobile FAQQuestionText flex-1">
                                 Shelf-life of the food<br />and water?</h3>
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
-                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                        <div data-layer="Answer" class="AnswerMobile w-full px-6 pb-6">
                             <p data-layer="Text"
-                                class="Text font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
+                                class="TextMobile font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
                                 All our Food and water have up to a 5-<br />year shelf life (delivered within
                                 1-6<br />months after the manufacturing date).<br />The food &amp; water will need to
                                 be<br />replenished after the expiration date.<br />We have our own food &amp; water
@@ -2941,34 +2941,34 @@
                         </div>
                     </div>
                     <div data-layer="Accordion"
-                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        class="AccordionMobile flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
                         <div data-layer="Question"
-                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
-                            <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
+                            class="QuestionMobile flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question" class="QuestionMobile FAQQuestionText flex-1">
                                 Can the kit be<br />customized to meet<br />specific needs or<br />requirements?</h3>
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
-                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                        <div data-layer="Answer" class="AnswerMobile w-full px-6 pb-6">
                             <p data-layer="Text"
-                                class="Text font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
+                                class="TextMobile font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
                                 Yes, our emergency kits can be<br />customized to meet your specific<br />needs. Please
                                 contact us directly, and<br />we'll work with you to create a<br />personalized kit
                                 tailored to your<br />requirements.</p>
                         </div>
                     </div>
                     <div data-layer="Accordion"
-                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        class="AccordionMobile flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
                         <div data-layer="Question"
-                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
-                            <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
+                            class="QuestionMobile flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question" class="QuestionMobile FAQQuestionText flex-1">
                                 Are the food rations<br />gluten-free?</h3>
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
-                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                        <div data-layer="Answer" class="AnswerMobile w-full px-6 pb-6">
                             <p data-layer="Text"
-                                class="Text font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
+                                class="TextMobile font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
                                 The standard food ration bars in our<br />Emergency Kits are all nut-free
                                 and<br />vegetarian friendly but are not gluten<br />free. If you have a gluten
                                 allergy,<br />please reach out to us and we'll<br />happily work with you to make
@@ -2976,17 +2976,17 @@
                         </div>
                     </div>
                     <div data-layer="Accordion"
-                        class="Accordion flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
+                        class="AccordionMobile flex w-full flex-col rounded-2xl border border-[#0B0302]/20 bg-[#F2F2F2]">
                         <div data-layer="Question"
-                            class="Question flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
-                            <h3 data-layer="Question" class="Question FAQQuestionText flex-1">
+                            class="QuestionMobile flex w-full items-center justify-between gap-6 px-6 py-5 text-left">
+                            <h3 data-layer="Question" class="QuestionMobile FAQQuestionText flex-1">
                                 Do you do custom<br />Emergency Kit orders<br />for large groups?</h3>
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
                                 class="h-6 w-6 select-none pointer-events-none" loading="lazy" />
                         </div>
-                        <div data-layer="Answer" class="Answer w-full px-6 pb-6">
+                        <div data-layer="Answer" class="AnswerMobile w-full px-6 pb-6">
                             <p data-layer="Text"
-                                class="Text font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
+                                class="TextMobile font-['Poppins'] text-[14px] font-normal leading-[21px] text-[#0B0302]">
                                 Yes, we do accept custom orders for<br />large groups. For inquiries
                                 regarding<br />custom orders, please email us<br />directly at orders@72hours.ca. We'll
                                 be<br />happy to discuss your specific<br />requirements and provide you with
@@ -2998,67 +2998,67 @@
         </div>
     </div>
     <!-- Layer: CTA / 39 / -->
-    <div data-layer="CTA / 39 /" class="Cta39 flex w-full justify-center px-8"
+    <div data-layer="CTA / 39 /" class="Cta39Mobile flex w-full justify-center px-8"
         style="background:linear-gradient(98.37deg,#F9DEE0 -17.16%,#FFFFFF 44.38%,#F8DEE4 82.91%);">
-        <div data-layer="Container" class="Container flex w-full max-w-[480px] flex-col items-center gap-8 py-[75px]">
+        <div data-layer="Container" class="ContainerMobile flex w-full max-w-[480px] flex-col items-center gap-8 py-[75px]">
             <div data-layer="Card"
-                class="Card flex w-full max-w-[352px] flex-col items-center overflow-hidden rounded-[20px] border border-white/25 bg-[#561513] shadow-[0_30px_60px_-35px_rgba(90,20,20,0.6)]">
+                class="CardMobile flex w-full max-w-[352px] flex-col items-center overflow-hidden rounded-[20px] border border-white/25 bg-[#561513] shadow-[0_30px_60px_-35px_rgba(90,20,20,0.6)]">
                 <div data-layer="Column"
-                    class="Column flex w-full max-w-[352px] flex-col items-start gap-8 px-12 py-12 text-left">
-                    <div data-layer="Content" class="Content flex w-full max-w-[256px] flex-col items-start gap-4">
-                        <h2 data-layer="Heading" class="Heading CTAHeading">
+                    class="ColumnMobile flex w-full max-w-[352px] flex-col items-start gap-8 px-12 py-12 text-left">
+                    <div data-layer="Content" class="ContentMobile flex w-full max-w-[256px] flex-col items-start gap-4">
+                        <h2 data-layer="Heading" class="HeadingMobile CTAHeading">
                             Save 20%<br />Today - Offer<br />Ends Soon</h2>
-                        <p data-layer="Text" class="Text CTAText">
+                        <p data-layer="Text" class="TextMobile CTAText">
                             Includes a Free Fire<br />Blanket with every Deluxe<br />Kit purchased today.<br />Don't
                             miss out!</p>
                     </div>
-                    <div data-layer="Actions" class="Actions relative flex w-full justify-center">
-                        <button data-layer="Button" data-style="Primary" class="Button cta-glow CTAButton">
+                    <div data-layer="Actions" class="ActionsMobile relative flex w-full justify-center">
+                        <button data-layer="Button" data-style="Primary" class="ButtonMobile cta-glow-mobile CTAButton">
                             GET 20% OFF TODAY!
                         </button>
                     </div>
                 </div>
-                <img data-layer="Placeholder Image" class="PlaceholderImage h-[343px] w-full object-cover"
+                <img data-layer="Placeholder Image" class="PlaceholderImageMobile h-[343px] w-full object-cover"
                     src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-binhga.png"
                     alt="Family using 72HRS emergency kit" loading="lazy" />
             </div>
         </div>
     </div>
     <!-- Layer: Footer / 2 / -->
-    <div data-layer="Footer / 2 /" class="Footer2">
+    <div data-layer="Footer / 2 /" class="Footer2Mobile">
         <div data-layer="Container" class="FooterContainer">
             <div data-layer="Content" class="FooterContent">
                 <div data-layer="Newsletter" class="Newsletter">
-                    <div data-layer="Frame 13" class="Frame13">
+                    <div data-layer="Frame 13" class="Frame13Mobile">
                         <div data-layer="Stay informed about emergency preparedness" class="StayInformed">
                             Stay informed about emergency <br /> preparedness</div>
-                        <div data-layer="Email address" class="EmailAddress">
+                        <div data-layer="Email address" class="EmailAddressMobile">
                             Email address</div>
                         <div data-layer="Input Divider" class="InputDivider"></div>
                     </div>
                 </div>
             </div>
-            <div data-layer="Credits" class="Credits">
-                <div data-layer="Divider" class="Divider"></div>
-                <div data-layer="Row" class="Row">
-                    <div data-layer="Social Links" class="SocialLinks">
-                        <a data-layer="Facebook" href="#" class="Facebook SocialIcon">
+            <div data-layer="Credits" class="CreditsMobile">
+                <div data-layer="Divider" class="DividerMobile"></div>
+                <div data-layer="Row" class="RowMobile">
+                    <div data-layer="Social Links" class="SocialLinksMobile">
+                        <a data-layer="Facebook" href="#" class="FacebookMobile SocialIcon">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Facebook.png"
                                 alt="Facebook" class="w-6 h-6" loading="lazy" />
                         </a>
-                        <a data-layer="Instagram" href="#" class="Instagram SocialIcon">
+                        <a data-layer="Instagram" href="#" class="InstagramMobile SocialIcon">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Instagram.png"
                                 alt="Instagram" class="w-6 h-6" loading="lazy" />
                         </a>
-                        <a data-layer="X" href="#" class="X SocialIcon">
+                        <a data-layer="X" href="#" class="XMobile SocialIcon">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-X.png" alt="X (Twitter)"
                                 class="w-6 h-6" loading="lazy" />
                         </a>
-                        <a data-layer="LinkedIn" href="#" class="Linkedin SocialIcon">
+                        <a data-layer="LinkedIn" href="#" class="LinkedinMobile SocialIcon">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-LinkedIn.png"
                                 alt="LinkedIn" class="w-6 h-6" loading="lazy" />
                         </a>
-                        <a data-layer="Youtube" href="#" class="Youtube SocialIcon">
+                        <a data-layer="Youtube" href="#" class="YoutubeMobile SocialIcon">
                             <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Youtube.png"
                                 alt="YouTube" class="w-6 h-6" loading="lazy" />
                         </a>
@@ -3127,8 +3127,8 @@
 
         // Hover expand behavior for Layout / 254 /
         (function () {
-            const row = document.querySelector('.Layout254 .ContentRow');
-            const img = document.querySelector('.Layout254 .CenterImage');
+            const row = document.querySelector('.Layout254Mobile .ContentRowMobile');
+            const img = document.querySelector('.Layout254Mobile .CenterImageMobile');
             if (!row || !img) return;
             const enter = () => row.classList.add('expanded');
             const leave = () => row.classList.remove('expanded');
