@@ -260,6 +260,63 @@
       border-bottom-left-radius: 16px;
     }
 
+    .stats-heading {
+      font-family: 'Bona Nova', 'Times New Roman', serif;
+      font-weight: 700;
+    }
+
+    .stats-body {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    .stats-percentage {
+      font-family: 'Bona Nova', 'Times New Roman', serif;
+      font-weight: 700;
+    }
+
+    .stats-label {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .product-tagline {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+    }
+
+    .product-title {
+      font-family: 'Bona Nova', 'Times New Roman', serif;
+      font-weight: 700;
+    }
+
+    .product-subtitle {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    .product-card-title {
+      font-family: 'Bona Nova', 'Times New Roman', serif;
+      font-weight: 700;
+    }
+
+    .product-card-meta {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    .product-card-price {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+    }
+
+    .product-cta-text {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 500;
+    }
+
     /* Tab title typography */
     .TabsMenu .ShortHeadingGoesHere {
       color: var(--Color-Scheme-1-Text, #0B0302);
@@ -823,13 +880,13 @@
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
         <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
           <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
-            <div data-layer="Heading" class="Heading self-stretch justify-start font-['Bona Nova'] font-bold"
+            <div data-layer="Heading" class="Heading self-stretch justify-start stats-heading"
               style="color: var(--Color-Valencia-Darker, #561513); font-size:55px; line-height:52px; letter-spacing:0;">
               Families Approved. <br />Peace of Mind Proven</div>
           </div>
           <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
             <div data-layer="Text"
-              class="Text self-stretch justify-start text-[#111827] text-xl font-normal font-['Poppins'] leading-loose">
+              class="Text self-stretch justify-start text-[#111827] text-xl stats-body leading-loose">
               When families choose the 72HRS kit, they gain confidence in their preparedness. Our customers report
               feeling equipped to handle emergencies effectively. Join the thousands who have made the smart choice for
               safety.</div>
@@ -840,36 +897,36 @@
             <div data-layer="Stat"
               class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
+                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="97">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
+                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
                   Say they feel more prepared after getting their 72HRS kit</div>
               </div>
             </div>
             <div data-layer="Stat"
               class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
+                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="95">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
+                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
                   Said the kit had everything they needed for emergencies</div>
               </div>
             </div>
             <div data-layer="Stat"
               class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] font-bold font-['Bona Nova'] leading-[96px]">
+                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="97">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-7">
+                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
                   Said they would recommend 72HRS kits to friends & family</div>
               </div>
             </div>
@@ -889,15 +946,15 @@
         <div data-layer="Title" class="Title w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
           <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
             <div data-layer="Tagline"
-              class="Tagline text-center justify-start text-[#561513] text-xl font-semibold font-['Poppins'] leading-8">
+              class="Tagline text-center justify-start text-[#561513] text-xl leading-8 product-tagline">
               Find your Kit</div>
           </div>
           <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
             <div data-layer="Heading"
-              class="Heading self-stretch text-center justify-start font-['Bona Nova'] font-bold"
+              class="Heading self-stretch text-center justify-start product-title"
               style="color:#561513; font-size:64px; line-height:72px;">Choose the Right Kit for Your Family</div>
             <div data-layer="Text"
-              class="Text w-[908px] text-center justify-start text-[#111827] text-xl font-normal font-['Poppins'] leading-8">
+              class="Text w-[908px] text-center justify-start text-[#111827] text-xl leading-8 product-subtitle">
               Each kit supports 1 person for 72 hours.<br />Select your household size and we’ll show you the perfect
               match.</div>
           </div>
@@ -912,21 +969,21 @@
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                   <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
                     <div data-layer="Heading"
-                      class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8"
+                      class="Heading self-stretch text-center justify-start product-card-title text-2xl leading-8"
                       style="color:#0B0302;">1 Person</div>
                     <div data-layer="Text"
-                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">
+                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base leading-normal product-card-meta">
                       Solo, car trunk, student</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">
+                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
                     $259.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                   data-style="Secondary"
                   class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
                   <div data-layer="Button"
-                    class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                    class="Button justify-start text-Color-White text-lg leading-relaxed product-cta-text">
                     Add 1-Person Kit to Cart</div>
                 </div>
               </div>
@@ -939,21 +996,21 @@
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                   <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
                     <div data-layer="Heading"
-                      class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8"
+                      class="Heading self-stretch text-center justify-start product-card-title text-2xl leading-8"
                       style="color:#0B0302;">2 Person</div>
                     <div data-layer="Text"
-                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">
+                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base leading-normal product-card-meta">
                       Couples, roommates</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">
+                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
                     $284.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                   data-style="Secondary"
                   class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
                   <div data-layer="Button"
-                    class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                    class="Button justify-start text-Color-White text-lg leading-relaxed product-cta-text">
                     Add 2-Person Kit to Cart</div>
                 </div>
               </div>
@@ -964,23 +1021,23 @@
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
-                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
                     <div data-layer="Heading"
-                      class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8"
+                      class="Heading self-stretch text-center justify-start product-card-title text-2xl leading-8"
                       style="color:#0B0302;">3 Person</div>
                     <div data-layer="Text"
-                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">
+                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base leading-normal product-card-meta">
                       Small Family</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">
+                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
                     $374.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                   data-style="Secondary"
                   class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
-                  <div data-layer="Button"
-                    class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                <div data-layer="Button"
+                  class="Button justify-start text-Color-White text-lg leading-relaxed product-cta-text">
                     Add 3-Person Kit to Cart</div>
                 </div>
               </div>
@@ -992,23 +1049,23 @@
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
-                  <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
+                    <div data-layer="Header" class="Header self-stretch flex flex-col justify-start items-start">
                     <div data-layer="Heading"
-                      class="Heading self-stretch text-center justify-start font-['Bona Nova'] text-2xl font-bold leading-8"
+                      class="Heading self-stretch text-center justify-start product-card-title text-2xl leading-8"
                       style="color:#0B0302;">4 Person</div>
                     <div data-layer="Text"
-                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base font-normal font-['Poppins'] leading-normal">
+                      class="Text self-stretch text-center justify-start text-[#4B5563] text-base leading-normal product-card-meta">
                       Full Household</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl font-bold font-['Poppins'] leading-10">
+                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
                     $404.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                   data-style="Secondary"
                   class="Button size- px-6 py-2.5 bg-Color-Valencia rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] inline-flex justify-center items-center gap-2 overflow-hidden">
-                  <div data-layer="Button"
-                    class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
+                <div data-layer="Button"
+                  class="Button justify-start text-Color-White text-lg leading-relaxed product-cta-text">
                     Add 4-Person Kit to Cart</div>
                 </div>
               </div>
