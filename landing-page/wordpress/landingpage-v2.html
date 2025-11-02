@@ -22,17 +22,17 @@
             letter-spacing: 0.2px;
         }
         .gbc-primary {
-            background-color: #8c0000; /* Deep Red - primary color from screenshot */
+            background-color: #880025; /* Deep maroon */
         }
         .gbc-secondary {
-            color: #8c0000; /* Deep Red for text accents */
+            color: #880025; /* Deep maroon for text accents */
         }
         .gbc-hover:hover {
-            background-color: #a00000; /* Slightly lighter red for hover */
+            background-color: #6e001e; /* Slightly darker on hover */
         }
         .hero-bg {
-            /* Red overlay + background image for hero */
-            background-image: linear-gradient(rgba(140, 0, 0, 0.75), rgba(140, 0, 0, 0.75)), url('https://gbclaw.ca/wp-content/uploads/iStock-1143092821.jpg');
+            /* Plain background image (overlay removed) */
+            background-image: url('https://gbclaw.ca/wp-content/uploads/iStock-1143092821.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -51,7 +51,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-red': '#8c0000', /* Deep Red */
+                        'primary-red': '#880025', /* Deep Maroon */
                         'accent-white': '#ffffff', /* White for contrast */
                         'accent-light-gray': '#f0f0f0', /* Light gray for buttons/elements on red */
                     }
@@ -80,13 +80,13 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header / Navigation (Simple version mimicking professional layout) - RED THEME --><header class="bg-white shadow-md">
+    <!-- Header / Navigation (Simple version mimicking professional layout) - RED THEME --><header class="gbc-primary shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo Placeholder (GBC Law logo from screenshot has red text) --><div class="text-2xl font-bold gbc-secondary">GBC Law</div>
+            <!-- Logo Placeholder (GBC Law logo from screenshot has red text) --><div class="text-2xl font-bold text-white">GBC Law</div>
             <!-- Navigation Links (Simplified for Landing Page) --><nav class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-primary-red transition duration-150">Services</a>
-                <a href="#enforcement" class="text-gray-600 hover:text-primary-red transition duration-150">Enforcement</a>
-                <a href="#contact" class="text-white gbc-primary py-2 px-4 rounded-lg font-medium gbc-hover transition duration-150">Get Started</a>
+                <a href="#services" class="text-white/90 hover:text-white transition duration-150">Services</a>
+                <a href="#enforcement" class="text-white/90 hover:text-white transition duration-150">Enforcement</a>
+                <a href="#contact" class="text-primary-red bg-white py-2 px-4 rounded-lg font-medium hover:bg-gray-100 transition duration-150">Get Started</a>
             </nav>
             <!-- Mobile Menu Placeholder --><button class="md:hidden text-gray-600 hover:text-primary-red">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -94,22 +94,39 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section - The main focus for Google Ads - RED THEME --><section class="text-white py-16 sm:py-24 hero-bg">
+    <!-- 1. Hero Section - The main focus for Google Ads - RED THEME --><section class="text-gray-800 py-16 sm:py-24 hero-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!-- Headline: Incorporating the core value proposition --><h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+            <!-- Headline: Incorporating the core value proposition --><h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-white">
                 Protect Your Brand. <span class="text-white">Secure Your Creations.</span>
             </h1>
-            <!-- Sub-headline: Value proposition from client content --><p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8">
-                Your brand and your creative work are two of your most valuable assets. We help you protect both – trademarks for your names and logos, and copyright for your original content.
-            </p>
-            <p class="text-lg font-medium max-w-4xl mx-auto mb-10 text-red-200">
-                Our approach is straightforward: clear searches, clean filings, practical agreements, and fast responses when issues arise.
-            </p>
+        </div>
+    </section>
 
-            <!-- Main CTA Button - White/Light Gray accent on red --><a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-primary-red bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
-                Start Your Protection Strategy Today
-            </a>
-            <p class="mt-4 text-sm font-medium">Our team is ready to help, in any way we can – <strong>let’s talk.</strong></p>
+    <!-- 1.1 About Focus Section (matches design) -->
+    <section class="py-[3.2rem] sm:py-[4.8rem] bg-[#faf6f1]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+                <!-- Left: Person Image -->
+                <div class="flex justify-center md:justify-start">
+                    <img src="https://gbclaw.ca/wp-content/uploads/Cynthia-1.png" alt="GBC Law Team Member" class="max-h-[520px] object-contain drop-shadow-xl">
+                </div>
+                <!-- Right: Heading + Copy -->
+                <div>
+                    <h2 class="heading-serif text-3xl sm:text-4xl font-extrabold text-gray-800">Trademark & Copyright </h2>
+                    <div class="h-1 w-24 bg-primary-red mt-3 mb-6"></div>
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            Your brand and your creative work are two of your most valuable assets. We help you protect both – trademarks for your names and logos, and copyright for your original content.
+                        </p>
+                        <p>
+                            Our approach is straightforward: clear searches, clean filings, practical agreements, and fast responses when issues arise. 
+                        </p>
+                        <p>
+                            Our team is ready to help, in any way we can – <strong>let’s talk.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -185,7 +202,7 @@
         </div>
     </section>
 
-    <!-- 4. FAQ Section - RED THEME --><section class="py-16 sm:py-24 bg-white">
+    <!-- 4. FAQ Section - RED THEME --><section class="pt-16 sm:pt-20 pb-8 sm:pb-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
                 Frequently Asked Questions (FAQs)
@@ -212,7 +229,7 @@
     </section>
 
     <!-- 5. Contact Form Section (The Final CTA) - RED THEME -->
-    <section id="contact" class="py-16 sm:py-24 bg-white">
+    <section id="contact" class="pt-8 sm:pt-12 pb-16 sm:pb-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="card gbc-primary text-white p-8 sm:p-12 rounded-3xl">
                 <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white text-center">Let's Talk</h2>
