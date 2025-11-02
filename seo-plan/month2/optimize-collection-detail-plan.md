@@ -1,36 +1,36 @@
-# CHI TIẾT TỐI ƯU COLLECTION PAGE
+# COLLECTION PAGE OPTIMIZATION DETAILS
 ## `/collections/earthquake-kits` - 72hours.com
 
-**Timeline**: Tuần 2 | **Độ ưu tiên**: P0 (Rất cao) | **Chủ trì**: Content Team  
-**Mục tiêu Ranking**: Top 1 cho "earthquake kit" (US market)
+**Timeline**: Week 2 | **Priority**: P0 (Very High) | **Owner**: Content Team  
+**Ranking Goal**: Top 1 for "earthquake kit" (US market)
 
 ---
 
-## 🎯 MỤC TIÊU TỔNG QUAN
+## 🎯 OVERALL OBJECTIVES
 
-- Tối ưu trang collection để rank cao cho từ khóa "earthquake kit"
-- Cải thiện CTR (Click-Through Rate) trong kết quả tìm kiếm
-- Cải thiện trải nghiệm người dùng và tăng conversion
-- Xây dựng topical authority cho chủ đề earthquake kits
-- **Kỳ vọng kết quả**: Top 50 trong tháng đầu, Top 10 trong 3 tháng, Top 1 trong 6 tháng
+- Optimize collection page to rank high for keyword "earthquake kit"
+- Improve CTR (Click-Through Rate) in search results
+- Improve user experience and increase conversion
+- Build topical authority for earthquake kits topic
+- **Expected Results**: Top 50 in first month, Top 10 in 3 months, Top 1 in 6 months
 
 ---
 
-## 🔍 0. NGHIÊN CỨU & PHÂN TÍCH (RESEARCH REQUIRED)
+## 🔍 0. RESEARCH & ANALYSIS (RESEARCH REQUIRED)
 
-### **0.1. Keyword Research - CẦN RESEARCH**
+### **0.1. Keyword Research - RESEARCH REQUIRED**
 
-**Các chỉ số cần thu thập từ công cụ (SEMrush/Ahrefs/Keyword Planner):**
+**Metrics to collect from tools (SEMrush/Ahrefs/Keyword Planner):**
 
 #### **Primary Keyword: "earthquake kit"**
 - [ ] **Search Volume**: 2900/month
 - [ ] **Keyword Difficulty**: n/a
 - [ ] **CPC**: $0.62
-- [ ] **Search Intent**: Informational , Commercial
+- [ ] **Search Intent**: Informational, Commercial
 - [ ] **Current Ranking**: Out of top 10
 - [ ] **SERP Features**: Featured snippets? People Also Ask? Shopping results?
 
-#### **Secondary Keywords cần research:**
+#### **Secondary Keywords to research:**
 1. **"72 hour earthquake kit"**
    - [ ] Search Volume: 30
    - [ ] Keyword Difficulty: ?
@@ -63,12 +63,12 @@
 
 #### **Long-tail Keywords:**
 - [ ] "what to put in earthquake kit": volume 30, cpc: 0.33
-- [ ] "how to prepare earthquake kit": volum 20
-- [ ] "earthquake kit for 4 person": volum 20
-- [ ] "california earthquake kit":volum 50, Intent: Informational, Commercial, cpc: 1.17
+- [ ] "how to prepare earthquake kit": volume 20
+- [ ] "earthquake kit for 4 person": volume 20
+- [ ] "california earthquake kit": volume 50, Intent: Informational, Commercial, cpc: 1.17
 
 **Additional Long-tail Keywords to Research (10-15):**
-- [ ] "earthquake kit for 2 person" / "2 person earthquake kit": vlolume:20
+- [ ] "earthquake kit for 2 person" / "2 person earthquake kit": volume: 20
 - [ ] "earthquake survival kit"
 - [ ] "earthquake kit for family" / "family earthquake kit"
 - [ ] "earthquake emergency supplies"
@@ -84,15 +84,15 @@
 - [ ] "earthquake kit essentials"
 - [ ] "earthquake kit for apartment" / "apartment earthquake kit"
 
-**Deliverable**: Keyword Research Spreadsheet với tất cả metrics trên
+**Deliverable**: Keyword Research Spreadsheet with all metrics above
 
 ---
 
-### **0.2. Competitor Analysis - CẦN RESEARCH**
+### **0.2. Competitor Analysis - RESEARCH REQUIRED**
 
-**Cần phân tích Top 5-10 trang đang rank cho "earthquake kit":**
+**Need to analyze Top 5-10 pages ranking for "earthquake kit":**
 
-#### **Cho mỗi competitor (Top 5):**
+#### **For each competitor (Top 5):**
 
 **Competitor 1: [URL]**
 - [ ] **Domain Authority**: ? (Ahrefs/SEMrush)
@@ -103,8 +103,8 @@
 - [ ] **Title Tag**: ?
 - [ ] **Meta Description**: ?
 - [ ] **H2/H3 Structure**: [List headings]
-- [ ] **Internal Links**: ? số lượng
-- [ ] **External Links**: ? số lượng
+- [ ] **Internal Links**: ? count
+- [ ] **External Links**: ? count
 - [ ] **FAQ Section**: Yes/No, ? questions
 - [ ] **Schema Types**: [List schemas used]
 - [ ] **Image Count**: ? images
@@ -112,7 +112,7 @@
 - [ ] **USPs Highlighted**: [List unique selling points]
 - [ ] **CTA Strategy**: [Describe CTAs used]
 
-**Lặp lại cho Competitor 2-5...**
+**Repeat for Competitor 2-5...**
 
 #### **Competitor Content Gap Analysis:**
 - [ ] **Topics covered**: [List topics competitors cover]
@@ -121,13 +121,13 @@
 - [ ] **Visual content**: [Infographics? Videos?]
 - [ ] **Trust signals**: [Certifications? Reviews? Expert quotes?]
 
-**Deliverable**: Competitor Analysis Report với bảng so sánh chi tiết
+**Deliverable**: Competitor Analysis Report with detailed comparison table
 
 ---
 
-### **0.3. Current Page Audit - CẦN KIỂM TRA**
+### **0.3. Current Page Audit - NEED TO CHECK**
 
-**Cần audit trang hiện tại trước khi tối ưu:**
+**Need to audit current page before optimization:**
 
 #### **Technical Audit:**
 - [ ] **Current Title Tag**: ?
@@ -135,14 +135,14 @@
 - [ ] **Current H1**: ?
 - [ ] **Current Content Length**: ? words
 - [ ] **Schema Markup**: Yes/No, types: ?
-- [ ] **Internal Links**: ? số lượng
-- [ ] **Image Alt Text**: ?/100% có alt text
+- [ ] **Internal Links**: ? count
+- [ ] **Image Alt Text**: ?/100% have alt text
 - [ ] **Page Speed**: ? seconds, Score: ?
 - [ ] **Core Web Vitals**: LCP: ?s, CLS: ?, FID: ?ms
 
 #### **Content Audit:**
-- [ ] **Keyword Density**: "earthquake kit" xuất hiện ? lần
-- [ ] **Keyword Placement**: Từ khóa ở paragraph đầu? H1? H2?
+- [ ] **Keyword Density**: "earthquake kit" appears ? times
+- [ ] **Keyword Placement**: Keyword in first paragraph? H1? H2?
 - [ ] **Content Quality**: High/Medium/Low
 - [ ] **Readability Score**: ?
 - [ ] **CTA Count**: ? CTAs
@@ -159,33 +159,33 @@
 
 ---
 
-## 📝 1. TỐI ƯU NỘI DUNG TRANG (Content Optimization)
+## 📝 1. PAGE CONTENT OPTIMIZATION
 
-### **1.1. Collection Description (Mô tả Collection)**
+### **1.1. Collection Description**
 
-**Cần làm:**
-- ✅ Viết lại mô tả collection từ đầu, tập trung vào từ khóa "earthquake kit"
-- ✅ Độ dài: 800-1200 từ (nội dung phong phú, có giá trị)
-- ✅ Tránh nội dung mỏng hoặc duplicate từ các nguồn khác
-- ✅ Bao gồm từ khóa chính một cách tự nhiên, không nhồi nhét
-- ✅ **Keyword Placement**: Từ khóa "earthquake kit" xuất hiện trong:
-  - Đoạn đầu tiên (50-100 từ đầu)
+**To do:**
+- ✅ Rewrite collection description from scratch, focusing on keyword "earthquake kit"
+- ✅ Length: 800-1200 words (rich, valuable content)
+- ✅ Avoid thin content or duplicate from other sources
+- ✅ Include primary keyword naturally, no keyword stuffing
+- ✅ **Keyword Placement**: Keyword "earthquake kit" appears in:
+  - First paragraph (first 50-100 words)
   - H1 heading
-  - Ít nhất 2 H2 headings
-  - 3-5 lần trong body content (tự nhiên)
+  - At least 2 H2 headings
+  - 3-5 times in body content (naturally)
   - Meta description
 
-**Cấu trúc nội dung nên có:**
-- **Đoạn mở đầu**: Giới thiệu về tầm quan trọng của earthquake kit (100-150 từ)
-  - **Phải chứa từ khóa "earthquake kit" trong 100 từ đầu**
-  - Hook người đọc với stat/số liệu (ví dụ: "California experiences 10,000+ earthquakes annually...")
-  - Establish urgency (ví dụ: "Don't wait until it's too late...")
-- **Phần chính**: Mô tả chi tiết về sản phẩm, lợi ích, tính năng (500-700 từ)
-  - Chi tiết items trong kit (với số lượng cụ thể)
-  - FEMA compliance và standards
-  - Use cases và scenarios
-  - So sánh với DIY kits
-- **Kết luận**: Call-to-action và giá trị độc đáo (100-150 từ)
+**Content structure should include:**
+- **Opening paragraph**: Introduction about importance of earthquake kit (100-150 words)
+  - **Must contain keyword "earthquake kit" within first 100 words**
+  - Hook reader with stat/data (e.g., "California experiences 10,000+ earthquakes annually...")
+  - Establish urgency (e.g., "Don't wait until it's too late...")
+- **Main section**: Detailed product description, benefits, features (500-700 words)
+  - Detailed items in kit (with specific quantities)
+  - FEMA compliance and standards
+  - Use cases and scenarios
+  - Comparison with DIY kits
+- **Conclusion**: Call-to-action and unique value (100-150 words)
   - Reiterate value proposition
   - Clear CTA
   - Trust signals (reviews, certifications, guarantees)
@@ -193,14 +193,14 @@
 **TEMPLATE - Collection Description Outline:**
 
 ```
-[ĐOẠN 1: HOOK & INTRODUCTION - 100-150 words]
-[Stat/Số liệu về earthquakes] - Hook người đọc
+[PARAGRAPH 1: HOOK & INTRODUCTION - 100-150 words]
+[Stat/Data about earthquakes] - Hook reader
 → Transition: "That's why having a properly prepared earthquake kit..."
 → Define: "An earthquake kit is..."
 → Keyword placement: "...comprehensive earthquake kit can mean..."
 → Value: "Our earthquake kits are..."
 
-[ĐOẠN 2: WHAT'S INCLUDED - 200-250 words]
+[PARAGRAPH 2: WHAT'S INCLUDED - 200-250 words]
 Heading: "What's Included in Your Earthquake Kit"
 - List major categories (Food, Water, Medical, Tools)
 - Specific quantities and items
@@ -208,7 +208,7 @@ Heading: "What's Included in Your Earthquake Kit"
 - Quality standards
 → Keyword usage: "Your earthquake kit contains..."
 
-[ĐOẠN 3: BENEFITS & FEATURES - 200-250 words]
+[PARAGRAPH 3: BENEFITS & FEATURES - 200-250 words]
 Heading: "Why Choose Our Earthquake Kit"
 - Ready-to-use advantage
 - Expert-curated items
@@ -217,7 +217,7 @@ Heading: "Why Choose Our Earthquake Kit"
 - Family size options
 → Keyword usage: "Our earthquake kit is designed to..."
 
-[ĐOẠN 4: USE CASES - 150-200 words]
+[PARAGRAPH 4: USE CASES - 150-200 words]
 Heading: "When You Need an Earthquake Kit"
 - Home preparedness
 - Car emergency kit
@@ -225,7 +225,7 @@ Heading: "When You Need an Earthquake Kit"
 - Different family sizes
 → Keyword usage: "Whether you need an earthquake kit for..."
 
-[ĐOẠN 5: CTA & CLOSING - 100-150 words]
+[PARAGRAPH 5: CTA & CLOSING - 100-150 words]
 Heading: "Get Prepared Today"
 - Reiterate urgency
 - Trust signals (reviews, guarantees)
@@ -234,7 +234,7 @@ Heading: "Get Prepared Today"
 → Keyword usage: "Shop our earthquake kit collection now..."
 ```
 
-**Ví dụ câu văn mẫu (Example Phrases):**
+**Example phrase samples:**
 - "A comprehensive earthquake kit is essential for..."
 - "Our earthquake emergency kit includes..."
 - "When preparing your earthquake kit, it's important to..."
@@ -242,41 +242,41 @@ Heading: "Get Prepared Today"
 - "FEMA-compliant earthquake kits provide..."
 
 **Keyword Density Guidelines:**
-- **Target**: "earthquake kit" xuất hiện ~1-1.5% (8-12 lần trong 1000 từ)
-- **Variations**: Sử dụng variations tự nhiên:
-  - "earthquake emergency kit" (2-3 lần)
-  - "earthquake preparedness kit" (1-2 lần)
-  - "72-hour earthquake kit" (1-2 lần)
-  - "FEMA earthquake kit" (1 lần nếu relevant)
+- **Target**: "earthquake kit" appears ~1-1.5% (8-12 times in 1000 words)
+- **Variations**: Use natural variations:
+  - "earthquake emergency kit" (2-3 times)
+  - "earthquake preparedness kit" (1-2 times)
+  - "72-hour earthquake kit" (1-2 times)
+  - "FEMA earthquake kit" (1 time if relevant)
 
 ---
 
-### **1.2. Cấu trúc Heading (H1, H2, H3)**
+### **1.2. Heading Structure (H1, H2, H3)**
 
-**Cần làm:**
-- ✅ **H1**: Phải chứa từ khóa chính "earthquake kit"
-  - **Yêu cầu**: Từ khóa ở đầu H1 (nếu có thể)
-  - **Độ dài**: 50-70 ký tự
+**To do:**
+- ✅ **H1**: Must contain primary keyword "earthquake kit"
+  - **Requirement**: Keyword at beginning of H1 (if possible)
+  - **Length**: 50-70 characters
   - **Format**: "Earthquake Kit | [Value Prop] | [Brand/Differentiator]"
-  - Chỉ có 1 H1 duy nhất trên trang
+  - Only 1 H1 on the page
   
-- ✅ **H2**: Sử dụng từ khóa liên quan và từ khóa phụ
-  - **Số lượng**: 3-5 H2 headings
-  - **Phân bố từ khóa**: 2-3 H2 chứa "earthquake kit", 1-2 H2 chứa variations
-  - **Pattern**: [Question format] hoặc [Descriptive format]
+- ✅ **H2**: Use related and secondary keywords
+  - **Quantity**: 3-5 H2 headings
+  - **Keyword distribution**: 2-3 H2 contain "earthquake kit", 1-2 H2 contain variations
+  - **Pattern**: [Question format] or [Descriptive format]
   
-- ✅ **H3**: Sử dụng cho các phần phụ
-  - **Số lượng**: 5-8 H3 headings
-  - **Mục đích**: Breakdown chi tiết của H2 sections
+- ✅ **H3**: Use for subsections
+  - **Quantity**: 5-8 H3 headings
+  - **Purpose**: Detailed breakdown of H2 sections
 
 **TEMPLATE - Heading Structure:**
 
 ```
 H1: "Earthquake Kit | 72 Hour Emergency Preparedness | 72 HRS"
-  → Primary keyword ở đầu, brand ở cuối
+  → Primary keyword at beginning, brand at end
 
 H2: "What's Included in Your Earthquake Kit"
-  → Keyword trong H2
+  → Keyword in H2
 
 H3: "Food and Water Supplies (72-Hour Minimum)"
 H3: "Medical and First Aid Equipment"
@@ -309,26 +309,26 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 ```
 
 **Heading Best Practices:**
-- ✅ **Keyword placement**: Primary keyword trong H1 và 2-3 H2
-- ✅ **Readability**: Headings phải dễ đọc, tự nhiên
-- ✅ **Hierarchy**: Luôn theo thứ tự H1 → H2 → H3 (không skip)
+- ✅ **Keyword placement**: Primary keyword in H1 and 2-3 H2
+- ✅ **Readability**: Headings must be readable, natural
+- ✅ **Hierarchy**: Always follow order H1 → H2 → H3 (don't skip)
 - ✅ **Length**: H1: 50-70 chars, H2: 60-80 chars, H3: 40-60 chars
 - ❌ **Avoid**: Keyword stuffing, duplicate headings, all caps
 
 ---
 
-### **1.3. Key Features và Benefits**
+### **1.3. Key Features and Benefits**
 
-**Cần làm:**
-- ✅ Liệt kê các tính năng chính của earthquake kit
-- ✅ Highlight lợi ích cho khách hàng
-- ✅ So sánh với competitors (nếu phù hợp)
-- ✅ Bao gồm thông tin về số lượng, chất lượng, tiêu chuẩn
-- ✅ Expand mỗi feature/benefit thành potential content topics
+**To do:**
+- ✅ List main features of earthquake kit
+- ✅ Highlight benefits for customers
+- ✅ Compare with competitors (if appropriate)
+- ✅ Include information about quantities, quality, standards
+- ✅ Expand each feature/benefit into potential content topics
 
 ---
 
-#### **A. PRODUCT FEATURES (Tính năng sản phẩm)**
+#### **A. PRODUCT FEATURES**
 
 **1. FEMA Compliance & Standards**
 - **Feature**: "FEMA-compliant items included"
@@ -459,7 +459,7 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 
 ---
 
-#### **B. CUSTOMER BENEFITS (Lợi ích cho khách hàng)**
+#### **B. CUSTOMER BENEFITS**
 
 **1. Peace of Mind & Psychological Benefits**
 - **Benefit**: "Peace of mind during emergencies"
@@ -559,7 +559,7 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 
 ---
 
-#### **C. COMPETITIVE ADVANTAGES (Điểm khác biệt)**
+#### **C. COMPETITIVE ADVANTAGES**
 
 **1. vs DIY Kits**
 - **Advantage**: "Expert selection vs guesswork"
@@ -669,7 +669,7 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 
 ## 📝 CONTENT TOPIC GENERATION FROM FEATURES & BENEFITS
 
-**Dựa trên các features và benefits trên, có thể tạo ra 30+ blog post topics:**
+**Based on the features and benefits above, you can create 30+ blog post topics:**
 
 ### **Features-Based Topics (1-10):**
 
@@ -713,7 +713,7 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 29. "What DIY Kits Often Miss: Common Oversights"
 30. "Earthquake Kit for Special Needs: Medical Conditions & Disabilities"
 
-**Mỗi blog post này có thể:**
+**Each blog post can:**
 - Target different keywords
 - Link back to collection page
 - Build topical authority
@@ -722,14 +722,14 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 
 ---
 
-### **1.4. FAQ Section (Phần Câu hỏi thường gặp)**
+### **1.4. FAQ Section**
 
-**Cần làm:**
-- ✅ Thêm section FAQ với 7-10 câu hỏi phổ biến (target 10 để maximize featured snippet opportunities)
-- ✅ Sử dụng từ khóa trong câu hỏi và câu trả lời một cách tự nhiên
-- ✅ Câu trả lời phải chi tiết, hữu ích (50-150 từ mỗi câu trả lời)
-- ✅ Format questions theo cách users search (People Also Ask style)
-- ✅ Triển khai FAQ Schema markup (sẽ nói ở phần 2.3)
+**To do:**
+- ✅ Add FAQ section with 7-10 common questions (target 10 to maximize featured snippet opportunities)
+- ✅ Use keywords in questions and answers naturally
+- ✅ Answers must be detailed and helpful (50-150 words per answer)
+- ✅ Format questions according to how users search (People Also Ask style)
+- ✅ Implement FAQ Schema markup (covered in section 2.3)
 
 **TEMPLATE - FAQ Questions & Answers:**
 
@@ -834,42 +834,42 @@ H2: "Frequently Asked Questions About Earthquake Kits"
 - "Do you ship earthquake kits nationwide?"
 - "What if I already have some items - can I buy a partial kit?"
 
-**Tiêu chí thành công:**
-- ✅ 7-10 câu hỏi liên quan đến "earthquake kit"
-- ✅ Câu trả lời 50-150 từ, thực sự hữu ích
-- ✅ Từ khóa tự nhiên trong câu hỏi và câu trả lời
-- ✅ Format phù hợp cho featured snippets (numbered list, paragraph)
-- ✅ Internal linking opportunities trong answers
+**Success Criteria:**
+- ✅ 7-10 questions related to "earthquake kit"
+- ✅ Answers 50-150 words, truly helpful
+- ✅ Keywords natural in questions and answers
+- ✅ Format suitable for featured snippets (numbered list, paragraph)
+- ✅ Internal linking opportunities in answers
 
 ---
 
-### **1.5. Value Proposition (Giá trị độc đáo)**
+### **1.5. Value Proposition**
 
-**Cần làm:**
-- ✅ Xác định và highlight điểm khác biệt của 72 HRS
-- ✅ Nhấn mạnh tại sao khách hàng nên chọn sản phẩm này
-- ✅ Bao gồm trust signals (chứng nhận, đánh giá, v.v.)
+**To do:**
+- ✅ Identify and highlight unique differentiators of 72 HRS
+- ✅ Emphasize why customers should choose this product
+- ✅ Include trust signals (certifications, reviews, etc.)
 
-**Nội dung nên có:**
+**Content should include:**
 - Unique selling points (USPs)
-- Testimonials hoặc reviews
-- Certifications hoặc compliance claims
-- Guarantees hoặc warranties
+- Testimonials or reviews
+- Certifications or compliance claims
+- Guarantees or warranties
 
 ---
 
-## 🔍 2. TỐI ƯU META DATA & SEO
+## 🔍 2. META DATA & SEO OPTIMIZATION
 
-### **2.1. Title Tag (Thẻ tiêu đề)**
+### **2.1. Title Tag**
 
-**Cần làm:**
-- ✅ Tối ưu title tag: **"Earthquake Kit | 72 Hour Emergency Kit | 72 HRS"**
-- ✅ Độ dài: 50-60 ký tự (để hiển thị đầy đủ trong SERP - Google thường hiển thị ~50-60 chars)
-- ✅ Bao gồm từ khóa chính "earthquake kit" ở đầu (QUAN TRỌNG)
-- ✅ Bao gồm từ khóa phụ "72 hour emergency kit"
-- ✅ Bao gồm brand name "72 HRS" ở cuối
+**To do:**
+- ✅ Optimize title tag: **"Earthquake Kit | 72 Hour Emergency Kit | 72 HRS"**
+- ✅ Length: 50-60 characters (to display fully in SERP - Google typically displays ~50-60 chars)
+- ✅ Include primary keyword "earthquake kit" at beginning (IMPORTANT)
+- ✅ Include secondary keyword "72 hour emergency kit"
+- ✅ Include brand name "72 HRS" at end
 
-**Cấu trúc title tag tốt:**
+**Good title tag structure:**
 ```
 Primary Keyword | Secondary Keyword | Brand Name
 Earthquake Kit | 72 Hour Emergency Kit | 72 HRS
@@ -901,31 +901,31 @@ Earthquake Kit | Ready-to-Use Emergency Supplies | 72 HRS
 [57 characters]
 ```
 
-**RECOMMENDATION**: Option 1 hoặc Option 4 (test cả 2)
+**RECOMMENDATION**: Option 1 or Option 4 (test both)
 
 **Shopify Implementation:**
 - **Location**: Collection settings > Search engine listing > Title
-- **Template Variable**: `{{ collection.title }}` trong theme (nếu muốn dynamic)
-- **Best Practice**: Hard-code title trong collection settings để control chính xác
+- **Template Variable**: `{{ collection.title }}` in theme (if want dynamic)
+- **Best Practice**: Hard-code title in collection settings for precise control
 
-**Lưu ý:**
-- Không nhồi nhét từ khóa
-- Title phải hấp dẫn, click-worthy
-- Đảm bảo unique cho trang này (không duplicate với other collections)
-- **Character count**: Dùng tool như [Moz Title Tag Preview](https://moz.com/learn/seo/title-tag) để test
-- **Emoji**: Tránh dùng emoji trong title (có thể làm giảm CTR trong một số cases)
+**Notes:**
+- Don't stuff keywords
+- Title must be attractive, click-worthy
+- Ensure unique for this page (not duplicate with other collections)
+- **Character count**: Use tool like [Moz Title Tag Preview](https://moz.com/learn/seo/title-tag) to test
+- **Emoji**: Avoid emoji in title (may reduce CTR in some cases)
 
 ---
 
 ### **2.2. Meta Description**
 
-**Cần làm:**
-- ✅ Viết meta description hấp dẫn, có tính thuyết phục
-- ✅ Độ dài: **150-155 ký tự** (tối ưu cho hiển thị trong SERP - Google thường hiển thị ~155-160 chars)
-- ✅ Bao gồm từ khóa "earthquake kit" (preferably trong 120 ký tự đầu)
-- ✅ Có Call-to-Action (CTA) rõ ràng
-- ✅ Highlight giá trị độc đáo hoặc lợi ích chính
-- ✅ Include numbers/stats nếu có (tăng CTR)
+**To do:**
+- ✅ Write compelling, persuasive meta description
+- ✅ Length: **150-155 characters** (optimized for SERP display - Google typically displays ~155-160 chars)
+- ✅ Include keyword "earthquake kit" (preferably in first 120 characters)
+- ✅ Have clear Call-to-Action (CTA)
+- ✅ Highlight unique value or main benefits
+- ✅ Include numbers/stats if available (increases CTR)
 
 **META DESCRIPTION OPTIONS (A/B Testing):**
 
@@ -953,87 +953,87 @@ Need an earthquake kit? Our 72-hour emergency supplies are FEMA-compliant and re
 [150 characters]
 ```
 
-**RECOMMENDATION**: Option 1 hoặc Option 3 (test cả 2)
+**RECOMMENDATION**: Option 1 or Option 3 (test both)
 
 **Meta Description Best Practices:**
-- ✅ **First 120 chars**: Most important info (nơi Google thường cắt)
+- ✅ **First 120 chars**: Most important info (where Google typically cuts)
 - ✅ **Include CTA**: "Shop now", "Learn more", "Get prepared"
 - ✅ **Power words**: "Complete", "FEMA-compliant", "Ready-to-use", "Expert-curated"
-- ✅ **Numbers**: "72-hour", specific quantities nếu có
+- ✅ **Numbers**: "72-hour", specific quantities if available
 - ✅ **Trust signals**: "FEMA-compliant", "Free shipping"
 - ❌ **Avoid**: Over-promising, keyword stuffing, generic phrases
 
 **Shopify Implementation:**
 - **Location**: Collection settings > Search engine listing > Description
-- **Template Variable**: `{{ collection.description }}` trong theme (nếu muốn dynamic)
-- **Best Practice**: Hard-code meta description trong collection settings
+- **Template Variable**: `{{ collection.description }}` in theme (if want dynamic)
+- **Best Practice**: Hard-code meta description in collection settings
 
-**Tiêu chí thành công:**
-- ✅ Dưới 155 ký tự (ideal: 150-155)
-- ✅ Click-worthy (khuyến khích click)
-- ✅ Bao gồm từ khóa trong 120 chars đầu
-- ✅ Có CTA rõ ràng
-- ✅ Unique (không duplicate với other pages)
+**Success Criteria:**
+- ✅ Under 155 characters (ideal: 150-155)
+- ✅ Click-worthy (encourages click)
+- ✅ Include keyword in first 120 chars
+- ✅ Have clear CTA
+- ✅ Unique (not duplicate with other pages)
 
 ---
 
 ### **2.3. Structured Data (Schema Markup)**
 
-**Cần làm:**
-- ✅ Triển khai **CollectionPage** schema
-- ✅ Triển khai **FAQPage** schema cho phần FAQ
-- ✅ Triển khai **BreadcrumbList** schema cho breadcrumb
-- ✅ **BONUS**: Triển khai **Product** schema cho top products (nếu có space)
-- ✅ Validate với Google Rich Results Test sau khi triển khai
+**To do:**
+- ✅ Implement **CollectionPage** schema
+- ✅ Implement **FAQPage** schema for FAQ section
+- ✅ Implement **BreadcrumbList** schema for breadcrumb
+- ✅ **BONUS**: Implement **Product** schema for top products (if space available)
+- ✅ Validate with Google Rich Results Test after implementation
 
 ---
 
 ## 📍 **WHERE & HOW TO IMPLEMENT - STEP BY STEP GUIDE**
 
-### **📍 WHERE: Vị trí triển khai trên Shopify**
+### **📍 WHERE: Implementation Location on Shopify**
 
-#### **Option 1: Sử dụng Theme Editor (RECOMMENDED cho beginners)**
-**Đường dẫn**: Shopify Admin → Online Store → Themes → Customize → Templates → Collection template
+#### **Option 1: Use Theme Editor (RECOMMENDED for beginners)**
+**Path**: Shopify Admin → Online Store → Themes → Customize → Templates → Collection template
 
-#### **Option 2: Chỉnh sửa Theme Code trực tiếp (ADVANCED)**
-**Đường dẫn**: Shopify Admin → Online Store → Themes → Actions → Edit code
-**Files cần edit**:
-- `templates/collection.liquid` (hoặc collection template đang dùng)
-- `sections/collection-template.liquid` (nếu theme có section structure)
-- `layout/theme.liquid` (cho Organization schema - sitewide)
+#### **Option 2: Edit Theme Code Directly (ADVANCED)**
+**Path**: Shopify Admin → Online Store → Themes → Actions → Edit code
+**Files to edit**:
+- `templates/collection.liquid` (or collection template you're using)
+- `sections/collection-template.liquid` (if theme has section structure)
+- `layout/theme.liquid` (for Organization schema - sitewide)
 
 ---
 
-### **🛠️ HOW: Hướng dẫn triển khai chi tiết**
+### **🛠️ HOW: Detailed Implementation Guide**
 
-#### **BƯỚC 1: Backup & Preparation**
+#### **STEP 1: Backup & Preparation**
 
-**1.1. Backup theme hiện tại:**
+**1.1. Backup current theme:**
 ```
 Shopify Admin → Online Store → Themes → Actions → Download
 ```
-⚠️ **QUAN TRỌNG**: Luôn backup trước khi edit code!
+⚠️ **IMPORTANT**: Always backup before editing code!
 
-**1.2. Xác định theme structure:**
-- Vào **Edit code** → Tìm file collection template
+**1.2. Identify theme structure:**
+- Go to **Edit code** → Find collection template file
 - Common file names:
   - `templates/collection.liquid`
   - `templates/collection.json`
   - `sections/collection-template.liquid`
 
-**1.3. Tìm `<head>` section:**
-- Schema JSON-LD phải đặt trong `<head>` tag
-- Hoặc trước closing `</head>` tag
+**1.3. Find `<head>` section:**
+- Schema JSON-LD must be placed in `<head>` tag
+- Or before closing `</head>` tag
 
 ---
 
-#### **BƯỚC 2: Implement CollectionPage Schema**
+#### **STEP 2: Implement CollectionPage Schema**
 
-**2.1. Vị trí code:**
-- File: `templates/collection.liquid` hoặc `sections/collection-template.liquid`
-- Đặt trong `<head>` section hoặc trong collection template
+**2.1. Code location:**
+- File: `templates/collection.liquid` or `sections/collection-template.liquid`
+- Place in `<head>` section or in collection template
 
-**2.2. Code để thêm (JSON-LD format):**
+**2.2. Code to add (JSON-LD format):**
 
 ```liquid
 {% if collection.handle == 'earthquake-kits' %}
@@ -1062,37 +1062,37 @@ Shopify Admin → Online Store → Themes → Actions → Download
 {% endif %}
 ```
 
-**2.3. Cách thêm vào theme:**
+**2.3. How to add to theme:**
 
 **Method A: Edit Code (RECOMMENDED)**
-1. Vào **Online Store → Themes → Actions → Edit code**
-2. Mở file `templates/collection.liquid` (hoặc collection template đang dùng)
-3. Tìm `<head>` section (search "head" trong file)
-4. Thêm code trên vào trong `<head>` tag (trước `</head>`)
+1. Go to **Online Store → Themes → Actions → Edit code**
+2. Open file `templates/collection.liquid` (or collection template you're using)
+3. Find `<head>` section (search "head" in file)
+4. Add code above inside `<head>` tag (before `</head>`)
 5. Save file
 
-**Method B: Theme Customizer (nếu theme hỗ trợ)**
-1. Vào **Online Store → Themes → Customize**
-2. Chọn **Collection page**
-3. Thêm custom HTML block hoặc code injection
-4. Paste code (nếu theme cho phép)
+**Method B: Theme Customizer (if theme supports)**
+1. Go to **Online Store → Themes → Customize**
+2. Select **Collection page**
+3. Add custom HTML block or code injection
+4. Paste code (if theme allows)
 
 **2.4. Test:**
 - View source page: `https://72hours.com/collections/earthquake-kits`
-- Tìm `<script type="application/ld+json">` trong source
-- Copy JSON và test với [Google Rich Results Test](https://search.google.com/test/rich-results)
+- Find `<script type="application/ld+json">` in source
+- Copy JSON and test with [Google Rich Results Test](https://search.google.com/test/rich-results)
 
 ---
 
-#### **BƯỚC 3: Implement FAQPage Schema**
+#### **STEP 3: Implement FAQPage Schema**
 
-**3.1. Vị trí code:**
-- Cùng file với CollectionPage schema
-- Đặt trong `<head>` section
+**3.1. Code location:**
+- Same file as CollectionPage schema
+- Place in `<head>` section
 
-**3.2. Code để thêm:**
+**3.2. Code to add:**
 
-**Option A: Hard-coded FAQs (Nếu FAQs cố định):**
+**Option A: Hard-coded FAQs (If FAQs are fixed):**
 
 ```liquid
 {% if collection.handle == 'earthquake-kits' %}
@@ -1163,9 +1163,9 @@ Shopify Admin → Online Store → Themes → Actions → Download
 {% endif %}
 ```
 
-**Option B: Dynamic FAQs (Nếu FAQs trong CMS/Sections):**
+**Option B: Dynamic FAQs (If FAQs in CMS/Sections):**
 
-Nếu có FAQ section với blocks trong theme, sử dụng code này:
+If you have FAQ section with blocks in theme, use this code:
 
 ```liquid
 {% if collection.handle == 'earthquake-kits' %}
@@ -1192,20 +1192,20 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 {% endif %}
 ```
 
-**3.3. Cách thêm:**
-- Thêm vào cùng file với CollectionPage schema
-- Đặt trong `<head>` section
-- Save và test
+**3.3. How to add:**
+- Add to same file as CollectionPage schema
+- Place in `<head>` section
+- Save and test
 
 ---
 
-#### **BƯỚC 4: Implement BreadcrumbList Schema**
+#### **STEP 4: Implement BreadcrumbList Schema**
 
-**4.1. Vị trí code:**
-- Cùng file với các schemas trên
-- Hoặc trong breadcrumb navigation component
+**4.1. Code location:**
+- Same file as schemas above
+- Or in breadcrumb navigation component
 
-**4.2. Code để thêm:**
+**4.2. Code to add:**
 
 ```liquid
 {% if collection.handle == 'earthquake-kits' %}
@@ -1238,15 +1238,15 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 {% endif %}
 ```
 
-**4.3. Cách thêm:**
-- Thêm vào cùng file
-- Save và test
+**4.3. How to add:**
+- Add to same file
+- Save and test
 
 ---
 
-#### **BƯỚC 5: Combine All Schemas (Final Code Block)**
+#### **STEP 5: Combine All Schemas (Final Code Block)**
 
-**Tổng hợp tất cả schemas vào 1 code block:**
+**Combine all schemas into 1 code block:**
 
 ```liquid
 {% if collection.handle == 'earthquake-kits' %}
@@ -1325,7 +1325,7 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 #### **Step 3: Schema.org Validator**
 1. Go to: https://validator.schema.org/
-2. Enter URL hoặc paste JSON
+2. Enter URL or paste JSON
 3. Verify no errors
 
 #### **Step 4: Google Search Console**
@@ -1339,16 +1339,16 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 ### **⚠️ COMMON ISSUES & TROUBLESHOOTING**
 
-#### **Issue 1: Schema không hiển thị**
+#### **Issue 1: Schema not displaying**
 **Causes:**
-- Code đặt sai vị trí (không trong `<head>`)
+- Code placed in wrong location (not in `<head>`)
 - Liquid syntax error
-- Collection handle không match
+- Collection handle doesn't match
 
 **Solution:**
-- Check code trong `<head>` section
-- Verify `collection.handle == 'earthquake-kits'` đúng
-- Check Liquid syntax errors trong theme code editor
+- Check code in `<head>` section
+- Verify `collection.handle == 'earthquake-kits'` is correct
+- Check Liquid syntax errors in theme code editor
 
 #### **Issue 2: Validation errors**
 **Common errors:**
@@ -1357,20 +1357,20 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 - Invalid URLs
 
 **Solution:**
-- Use [JSONLint](https://jsonlint.com/) để check JSON format
+- Use [JSONLint](https://jsonlint.com/) to check JSON format
 - Ensure all URLs are absolute (start with `https://`)
-- Check required fields theo Schema.org docs
+- Check required fields according to Schema.org docs
 
-#### **Issue 3: FAQ không hiển thị rich results**
+#### **Issue 3: FAQ not displaying rich results**
 **Causes:**
-- Google cần 2-4 tuần để index
-- FAQs không đủ (cần 5-7 minimum)
-- Content không đủ quality
+- Google needs 2-4 weeks to index
+- Not enough FAQs (need 5-7 minimum)
+- Content quality insufficient
 
 **Solution:**
 - Wait 2-4 weeks after implementation
 - Ensure 7-10 FAQs
-- Request indexing trong GSC
+- Request indexing in GSC
 
 #### **Issue 4: Theme conflict**
 **Causes:**
@@ -1378,8 +1378,8 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 - App conflicts
 
 **Solution:**
-- Use theme customization files thay vì direct edit (nếu theme hỗ trợ)
-- Document changes để re-apply sau theme updates
+- Use theme customization files instead of direct edit (if theme supports)
+- Document changes to re-apply after theme updates
 - Test after theme/app updates
 
 ---
@@ -1395,7 +1395,7 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 **During Implementation:**
 - [ ] Add CollectionPage schema
 - [ ] Add BreadcrumbList schema
-- [ ] Add FAQPage schema với 7-10 FAQs
+- [ ] Add FAQPage schema with 7-10 FAQs
 - [ ] Save changes
 - [ ] Check for syntax errors
 
@@ -1464,9 +1464,9 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 ```
 
 **Shopify Implementation:**
-- **Location**: Trong `<head>` section của collection template
-- **Format**: JSON-LD (preferred) hoặc Microdata
-- **File**: `sections/collection-template.liquid` hoặc `templates/collection.liquid`
+- **Location**: In `<head>` section of collection template
+- **Format**: JSON-LD (preferred) or Microdata
+- **File**: `sections/collection-template.liquid` or `templates/collection.liquid`
 
 **Code Example (JSON-LD):**
 ```liquid
@@ -1485,7 +1485,7 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 #### **2. FAQPage Schema (Required - High Priority)**
 
-**Full Schema JSON với 7-10 Questions:**
+**Full Schema JSON with 7-10 Questions:**
 ```json
 {
   "@context": "https://schema.org",
@@ -1552,8 +1552,8 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 ```
 
 **Shopify Implementation:**
-- **Location**: Trong FAQ section HTML, hoặc trong `<head>`
-- **Format**: JSON-LD (recommended) hoặc Microdata
+- **Location**: In FAQ section HTML, or in `<head>`
+- **Format**: JSON-LD (recommended) or Microdata
 - **Best Practice**: Include all 7-10 FAQs for maximum featured snippet opportunities
 
 **Code Example (JSON-LD in head):**
@@ -1661,49 +1661,49 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 ---
 
 **VALIDATION CHECKLIST:**
-- [ ] Test tất cả schemas với [Google Rich Results Test](https://search.google.com/test/rich-results)
-- [ ] Test với [Schema Markup Validator](https://validator.schema.org/)
-- [ ] Verify FAQ schema hiển thị trong search results (có thể mất 1-2 tuần)
-- [ ] Verify breadcrumb hiển thị trong SERP
-- [ ] Check Google Search Console > Enhancements để confirm schemas được nhận diện
+- [ ] Test all schemas with [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [ ] Test with [Schema Markup Validator](https://validator.schema.org/)
+- [ ] Verify FAQ schema displays in search results (may take 1-2 weeks)
+- [ ] Verify breadcrumb displays in SERP
+- [ ] Check Google Search Console > Enhancements to confirm schemas are recognized
 
-**Tiêu chí thành công:**
-- ✅ Rich Results Test hiển thị valid schema (0 errors)
-- ✅ FAQ snippets có thể hiển thị trong SERP (monitor trong 2-4 tuần)
-- ✅ Breadcrumb navigation hiển thị trong search results
-- ✅ GSC không có schema errors
+**Success Criteria:**
+- ✅ Rich Results Test displays valid schema (0 errors)
+- ✅ FAQ snippets may display in SERP (monitor for 2-4 weeks)
+- ✅ Breadcrumb navigation displays in search results
+- ✅ GSC has no schema errors
 
 ---
 
 ### **2.4. URL Structure**
 
-**Cần làm:**
-- ✅ Đảm bảo URL là: `/collections/earthquake-kits`
-- ✅ URL phải ngắn gọn, dễ đọc
-- ✅ Bao gồm từ khóa chính
-- ✅ Tránh các ký tự đặc biệt hoặc số dài
+**To do:**
+- ✅ Ensure URL is: `/collections/earthquake-kits`
+- ✅ URL must be short, readable
+- ✅ Include primary keyword
+- ✅ Avoid special characters or long numbers
 
-**Lưu ý:**
-- Shopify tự động tạo URL từ collection title
-- Đảm bảo collection handle là "earthquake-kits"
+**Notes:**
+- Shopify automatically generates URL from collection title
+- Ensure collection handle is "earthquake-kits"
 
 ---
 
-## 🔗 3. TỐI ƯU INTERNAL LINKING
+## 🔗 3. INTERNAL LINKING OPTIMIZATION
 
 ### **3.1. Contextual Links to Related Products**
 
-**Cần làm:**
-- ✅ Thêm 3-5 internal links đến các sản phẩm liên quan trong nội dung
-- ✅ Links phải ngữ cảnh (contextual), không phải list đơn thuần
-- ✅ Sử dụng anchor text tự nhiên, có từ khóa liên quan
+**To do:**
+- ✅ Add 3-5 internal links to related products in content
+- ✅ Links must be contextual, not just a list
+- ✅ Use natural anchor text with related keywords
 
-**Ví dụ anchor text tốt:**
+**Good anchor text examples:**
 - "Our 2-person earthquake kit includes..."
 - "For larger families, check out our 4-person emergency kit..."
 - "Pair with our car emergency kit for complete protection..."
 
-**Sản phẩm nên link đến (Prioritized by Search Volume):**
+**Products to link to (Prioritized by Search Volume):**
 
 #### **HIGH PRIORITY (High Search Volume Keywords):**
 
@@ -1760,7 +1760,7 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 #### **ADDITIONAL OPPORTUNITIES:**
 
-8. **"Earthquake Survival Kit"** (variation của primary keyword)
+8. **"Earthquake Survival Kit"** (variation of primary keyword)
    - **Anchor text**: "Our earthquake survival kit is designed for..."
    - **Priority**: MEDIUM (Semantic variation)
 
@@ -1785,15 +1785,15 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 **Internal Linking Strategy Based on Search Volume:**
 
 **Target Distribution:**
-- **High Volume Keywords (2400+ monthly)**: 2-3 links trong collection description
+- **High Volume Keywords (2400+ monthly)**: 2-3 links in collection description
   - "earthquake emergency kit" (2,400/month) → PRIORITY #1
-  - "earthquake kit" (2,900/month) → Already primary keyword, reinforce với variations
+  - "earthquake kit" (2,900/month) → Already primary keyword, reinforce with variations
   
 - **Medium Volume Keywords (50-170/month)**: 1-2 links
   - "best earthquake kit" (170/month)
   - "california earthquake kit" (50/month)
   
-- **Long-tail Keywords (20-30/month)**: 1 link each trong relevant sections
+- **Long-tail Keywords (20-30/month)**: 1 link each in relevant sections
   - Size-specific keywords (2-person, 4-person)
   - Feature-specific keywords (FEMA, portable)
   - Use case keywords (car, home)
@@ -1808,18 +1808,18 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 ### **3.2. Links to Blog Content**
 
-**Cần làm:**
-- ✅ Link đến các blog posts về earthquake preparedness
-- ✅ Tạo 2-3 links đến relevant blog content
-- ✅ Links phải tự nhiên trong flow của nội dung
+**To do:**
+- ✅ Link to blog posts about earthquake preparedness
+- ✅ Create 2-3 links to relevant blog content
+- ✅ Links must be natural in content flow
 
-**Blog posts nên link đến:**
+**Blog posts to link to:**
 - "Earthquake Preparedness Checklist" (pillar content)
 - "What to put in earthquake kit"
 - "FEMA 72-hour guidelines"
 - "How to prepare for earthquake"
 
-**Ví dụ link:**
+**Link example:**
 ```
 "Learn more about earthquake preparedness in our comprehensive guide [link to blog post]"
 ```
@@ -1828,92 +1828,92 @@ Nếu có FAQ section với blocks trong theme, sử dụng code này:
 
 ### **3.3. Breadcrumb Navigation**
 
-**Cần làm:**
-- ✅ Tạo breadcrumb navigation rõ ràng
+**To do:**
+- ✅ Create clear breadcrumb navigation
 - ✅ Implement BreadcrumbList schema
-- ✅ Đảm bảo navigation path: Home > Collections > Earthquake Kits
+- ✅ Ensure navigation path: Home > Collections > Earthquake Kits
 
-**Cấu trúc breadcrumb:**
+**Breadcrumb structure:**
 ```
 Home / Collections / Earthquake Kits
 ```
 
-**Tiêu chí thành công:**
+**Success Criteria:**
 - ✅ Clear navigation path
-- ✅ Breadcrumb hiển thị trong search results
+- ✅ Breadcrumb displays in search results
 - ✅ Schema implemented correctly
 
 ---
 
-## 🖼️ 4. TỐI ƯU HÌNH ẢNH & VISUAL
+## 🖼️ 4. IMAGE & VISUAL OPTIMIZATION
 
 ### **4.1. Collection Banner Image**
 
-**Cần làm:**
-- ✅ Tối ưu kích thước: Không quá 100KB
-- ✅ Format: WebP (preferred) hoặc JPEG optimized
-- ✅ Kích thước: Tối ưu cho responsive (multiple sizes)
-- ✅ Nội dung: Hình ảnh chất lượng cao, liên quan đến earthquake kit
+**To do:**
+- ✅ Optimize size: No more than 100KB
+- ✅ Format: WebP (preferred) or JPEG optimized
+- ✅ Size: Optimized for responsive (multiple sizes)
+- ✅ Content: High-quality image related to earthquake kit
 
 **Specifications:**
-- **Desktop**: 1920x600px (hoặc theo theme)
+- **Desktop**: 1920x600px (or according to theme)
 - **Mobile**: 800x400px
-- **Format**: WebP với fallback JPEG
+- **Format**: WebP with fallback JPEG
 - **Compression**: 80-85% quality
 
 ---
 
-### **4.2. Alt Text cho Tất cả Hình ảnh**
+### **4.2. Alt Text for All Images**
 
-**Cần làm:**
-- ✅ Thêm alt text mô tả cho TẤT CẢ hình ảnh
-- ✅ Alt text phải mô tả nội dung hình ảnh
-- ✅ Bao gồm từ khóa một cách tự nhiên (không nhồi nhét)
+**To do:**
+- ✅ Add descriptive alt text for ALL images
+- ✅ Alt text must describe image content
+- ✅ Include keyword naturally (no keyword stuffing)
 
-**Ví dụ alt text tốt:**
+**Good alt text examples:**
 - ✅ "72 hour earthquake emergency kit with food, water, and medical supplies"
 - ✅ "FEMA-compliant earthquake preparedness kit contents"
 - ✅ "Portable earthquake kit container for home storage"
 
-**Ví dụ alt text KHÔNG tốt:**
+**Bad alt text examples:**
 - ❌ "earthquake kit earthquake kit earthquake"
 - ❌ "image1.jpg"
 - ❌ "product photo"
 
-**Tiêu chí thành công:**
-- ✅ 100% hình ảnh có descriptive alt text
-- ✅ Alt text dài 5-15 từ
-- ✅ Từ khóa được sử dụng tự nhiên
+**Success Criteria:**
+- ✅ 100% of images have descriptive alt text
+- ✅ Alt text 5-15 words long
+- ✅ Keywords used naturally
 
 ---
 
-### **4.3. Product Images trong Collection**
+### **4.3. Product Images in Collection**
 
-**Cần làm:**
-- ✅ Đảm bảo tất cả product images trong collection có alt text
-- ✅ Optimize product images (kích thước, format)
-- ✅ Implement lazy loading cho images below the fold
+**To do:**
+- ✅ Ensure all product images in collection have alt text
+- ✅ Optimize product images (size, format)
+- ✅ Implement lazy loading for images below the fold
 
-**Lưu ý:**
-- Shopify có thể tự động generate alt text từ product title
-- Kiểm tra và chỉnh sửa để đảm bảo chất lượng
-- Thêm từ khóa vào alt text nếu phù hợp
+**Notes:**
+- Shopify can automatically generate alt text from product title
+- Check and edit to ensure quality
+- Add keywords to alt text if appropriate
 
 ---
 
 ### **4.4. Mobile Responsiveness**
 
-**Cần làm:**
-- ✅ Đảm bảo collection page responsive trên mobile
-- ✅ Test trên nhiều kích thước màn hình
-- ✅ Đảm bảo images load nhanh trên mobile
-- ✅ Text readable, buttons clickable trên mobile
+**To do:**
+- ✅ Ensure collection page responsive on mobile
+- ✅ Test on multiple screen sizes
+- ✅ Ensure images load quickly on mobile
+- ✅ Text readable, buttons clickable on mobile
 
-**Checklist mobile:**
-- ✅ Layout không bị vỡ trên mobile
-- ✅ Text size đủ lớn (minimum 16px)
-- ✅ Touch targets đủ lớn (minimum 44x44px)
-- ✅ Page speed trên mobile <3s
+**Mobile checklist:**
+- ✅ Layout doesn't break on mobile
+- ✅ Text size large enough (minimum 16px)
+- ✅ Touch targets large enough (minimum 44x44px)
+- ✅ Page speed on mobile <3s
 
 ---
 
@@ -1921,13 +1921,13 @@ Home / Collections / Earthquake Kits
 
 ### **5.1. Page Speed Optimization**
 
-**Cần làm:**
-- ✅ Đảm bảo page load time <3 giây
-- ✅ Optimize images trước khi upload
-- ✅ Minimize JavaScript và CSS blocking
-- ✅ Implement lazy loading cho below-fold content
+**To do:**
+- ✅ Ensure page load time <3 seconds
+- ✅ Optimize images before upload
+- ✅ Minimize JavaScript and CSS blocking
+- ✅ Implement lazy loading for below-fold content
 
-**Metrics cần đạt:**
+**Metrics to achieve:**
 - **LCP (Largest Contentful Paint)**: <2.5s
 - **FID (First Input Delay)**: <100ms
 - **CLS (Cumulative Layout Shift)**: <0.1
@@ -1937,12 +1937,12 @@ Home / Collections / Earthquake Kits
 
 ### **5.2. Call-to-Action (CTA) Optimization**
 
-**Cần làm:**
-- ✅ Có CTA rõ ràng trên collection page
-- ✅ CTA phải visible, không bị che khuất
-- ✅ Sử dụng action words: "Shop Now", "View Kits", "Get Prepared"
+**To do:**
+- ✅ Have clear CTA on collection page
+- ✅ CTA must be visible, not hidden
+- ✅ Use action words: "Shop Now", "View Kits", "Get Prepared"
 
-**Ví dụ CTA:**
+**CTA examples:**
 - Button: "Shop Earthquake Kits Now"
 - Text link: "Browse all emergency kits"
 - Banner CTA: "Start your emergency preparedness today"
@@ -1951,10 +1951,10 @@ Home / Collections / Earthquake Kits
 
 ### **5.3. Filter & Sort Options**
 
-**Cần làm:**
-- ✅ Đảm bảo filter/sort hoạt động tốt
-- ✅ Filters phải SEO-friendly (nếu có filter pages)
-- ✅ Canonical tags cho filtered pages
+**To do:**
+- ✅ Ensure filter/sort works well
+- ✅ Filters must be SEO-friendly (if filter pages exist)
+- ✅ Canonical tags for filtered pages
 
 ---
 
@@ -1962,17 +1962,17 @@ Home / Collections / Earthquake Kits
 
 ### **6.1. Analytics Setup (Google Analytics / Shopify Analytics)**
 
-**Cần làm:**
-- ✅ Track pageviews cho collection page
-- ✅ Track conversion rate từ collection page
-- ✅ Monitor bounce rate và time on page
-- ✅ Set up goals trong Google Analytics
-- ✅ Track scroll depth (để measure engagement với content)
+**To do:**
+- ✅ Track pageviews for collection page
+- ✅ Track conversion rate from collection page
+- ✅ Monitor bounce rate and time on page
+- ✅ Set up goals in Google Analytics
+- ✅ Track scroll depth (to measure engagement with content)
 
-**Metrics cần track:**
+**Metrics to track:**
 
 #### **Page Performance Metrics:**
-- [ ] **Pageviews**: Baseline: ?, Target: +25% sau 1 tháng
+- [ ] **Pageviews**: Baseline: ?, Target: +25% after 1 month
 - [ ] **Unique Pageviews**: Baseline: ?, Target: +20%
 - [ ] **Avg. Time on Page**: Baseline: ? seconds, Target: >2 minutes
 - [ ] **Bounce Rate**: Baseline: ?%, Target: <50%
@@ -2029,18 +2029,18 @@ gtag('event', 'cta_click', {
 
 ### **6.2. Search Console Monitoring**
 
-**Cần làm:**
-- ✅ Submit collection page URL trong GSC
-- ✅ Request indexing sau khi publish changes
-- ✅ Monitor impressions và clicks
+**To do:**
+- ✅ Submit collection page URL in GSC
+- ✅ Request indexing after publishing changes
+- ✅ Monitor impressions and clicks
 - ✅ Track CTR improvements
-- ✅ Monitor keyword rankings cho "earthquake kit"
+- ✅ Monitor keyword rankings for "earthquake kit"
 - ✅ Track rich results performance
 
-**Metrics cần track (Weekly):**
+**Metrics to track (Weekly):**
 
 #### **Search Performance:**
-- [ ] **Impressions**: Baseline: ?/week, Target: +30% sau 1 tháng
+- [ ] **Impressions**: Baseline: ?/week, Target: +30% after 1 month
 - [ ] **Clicks**: Baseline: ?/week, Target: +40%
 - [ ] **CTR**: Baseline: ?%, Target: >3% (industry avg ~2-3%)
 - [ ] **Average Position**: Baseline: ?, Target: Top 10
@@ -2053,7 +2053,7 @@ gtag('event', 'cta_click', {
 #### **Rich Results Performance:**
 - [ ] **FAQ Rich Results**: Impressions ?, Clicks ?
 - [ ] **Breadcrumb Rich Results**: Impressions ?, Clicks ?
-- [ ] **Rich Results CTR**: ?% (compare với organic CTR)
+- [ ] **Rich Results CTR**: ?% (compare with organic CTR)
 
 #### **Coverage Issues:**
 - [ ] Check for indexing errors weekly
@@ -2064,7 +2064,7 @@ gtag('event', 'cta_click', {
 
 **1. URL Inspection:**
 - Test URL: `https://72hours.com/collections/earthquake-kits`
-- Request indexing sau mỗi major update
+- Request indexing after each major update
 
 **2. Performance Report Filtering:**
 - Filter by page: `/collections/earthquake-kits`
@@ -2080,12 +2080,12 @@ gtag('event', 'cta_click', {
 
 ### **6.3. Keyword Ranking Tracking**
 
-**Tools cần sử dụng:**
+**Tools to use:**
 - [ ] **SEMrush/Ahrefs**: Track target keywords weekly
 - [ ] **Google Search Console**: Track top ranking queries
 - [ ] **Manual Search**: Test rankings weekly (logged out, incognito)
 
-**Keywords cần track:**
+**Keywords to track:**
 
 **Primary Keywords:**
 - [ ] "earthquake kit" - Current: ?, Target: Top 1
@@ -2113,7 +2113,7 @@ gtag('event', 'cta_click', {
 
 ### **6.4. Performance Benchmarking**
 
-**Pre-Optimization Baseline (CẦN RESEARCH):**
+**Pre-Optimization Baseline (RESEARCH REQUIRED):**
 - [ ] Collection page current metrics (before optimization)
 - [ ] Keyword rankings (before optimization)
 - [ ] GSC performance (before optimization)
@@ -2148,45 +2148,45 @@ gtag('event', 'cta_click', {
 
 ---
 
-## ✅ CHECKLIST TỔNG QUAN
+## ✅ OVERALL CHECKLIST
 
-### **Nội dung**
-- [ ] Collection description: 800-1200 từ, chứa từ khóa "earthquake kit"
-- [ ] H1: Chứa từ khóa "earthquake kit", chỉ có 1 H1
-- [ ] H2: 3-5 headings với từ khóa liên quan
-- [ ] H3: Headings phụ cho các section
-- [ ] Key features và benefits được highlight
-- [ ] FAQ section: 5-7 câu hỏi với câu trả lời chi tiết
-- [ ] Value proposition rõ ràng
+### **Content**
+- [ ] Collection description: 800-1200 words, contains keyword "earthquake kit"
+- [ ] H1: Contains keyword "earthquake kit", only 1 H1
+- [ ] H2: 3-5 headings with related keywords
+- [ ] H3: Subheadings for sections
+- [ ] Key features and benefits highlighted
+- [ ] FAQ section: 5-7 questions with detailed answers
+- [ ] Value proposition clear
 
 ### **SEO & Meta Data**
 - [ ] Title tag: "Earthquake Kit | 72 Hour Emergency Kit | 72 HRS" (50-60 chars)
-- [ ] Meta description: 150-155 chars, có CTA, chứa từ khóa
+- [ ] Meta description: 150-155 chars, has CTA, contains keyword
 - [ ] CollectionPage schema implemented
 - [ ] FAQPage schema implemented
 - [ ] BreadcrumbList schema implemented
-- [ ] Schema validated với Rich Results Test
-- [ ] URL structure đúng: `/collections/earthquake-kits`
+- [ ] Schema validated with Rich Results Test
+- [ ] URL structure correct: `/collections/earthquake-kits`
 
 ### **Internal Linking**
-- [ ] 3-5 contextual links đến related products
-- [ ] 2-3 links đến relevant blog posts
+- [ ] 3-5 contextual links to related products
+- [ ] 2-3 links to relevant blog posts
 - [ ] Breadcrumb navigation implemented
 - [ ] Breadcrumb schema working
 
-### **Hình ảnh & Visual**
+### **Images & Visual**
 - [ ] Collection banner optimized (<100KB, WebP format)
-- [ ] Tất cả hình ảnh có descriptive alt text
-- [ ] Alt text chứa từ khóa tự nhiên (không nhồi nhét)
-- [ ] Product images optimized và có alt text
+- [ ] All images have descriptive alt text
+- [ ] Alt text contains keywords naturally (no keyword stuffing)
+- [ ] Product images optimized and have alt text
 - [ ] Lazy loading implemented
 - [ ] Mobile responsive tested
 
 ### **Performance & UX**
 - [ ] Page load time <3s
-- [ ] Core Web Vitals đạt chuẩn (LCP <2.5s, FID <100ms, CLS <0.1)
+- [ ] Core Web Vitals meet standards (LCP <2.5s, FID <100ms, CLS <0.1)
 - [ ] PageSpeed Score >80
-- [ ] CTA buttons visible và clear
+- [ ] CTA buttons visible and clear
 - [ ] Mobile-friendly layout tested
 
 ### **Tracking**
@@ -2197,34 +2197,34 @@ gtag('event', 'cta_click', {
 
 ---
 
-## 📊 CHỈ SỐ THÀNH CÔNG
+## 📊 SUCCESS METRICS
 
-**Sau khi tối ưu, kỳ vọng:**
-- ✅ **CTR**: Cải thiện >20% trong SERP
-- ✅ **Rankings**: Top 50 cho "earthquake kit" trong tháng đầu
+**After optimization, expected:**
+- ✅ **CTR**: Improve >20% in SERP
+- ✅ **Rankings**: Top 50 for "earthquake kit" in first month
 - ✅ **Traffic**: +25% non-brand clicks
-- ✅ **Conversion**: Cải thiện conversion rate từ collection page
+- ✅ **Conversion**: Improve conversion rate from collection page
 - ✅ **Page Speed**: PageSpeed Score >80
-- ✅ **Rich Snippets**: FAQ và breadcrumb hiển thị trong SERP
+- ✅ **Rich Snippets**: FAQ and breadcrumb display in SERP
 
 ---
 
 ## 🎯 PRIORITY RANKING
 
-### **P0 - Phải làm ngay:**
-1. Title tag và meta description
-2. Collection description (800-1200 từ)
-3. H1 với từ khóa "earthquake kit"
-4. FAQ section (5-7 câu hỏi)
+### **P0 - Must do immediately:**
+1. Title tag and meta description
+2. Collection description (800-1200 words)
+3. H1 with keyword "earthquake kit"
+4. FAQ section (5-7 questions)
 5. Basic schema (CollectionPage, FAQPage)
 
-### **P1 - Làm trong tuần 2:**
+### **P1 - Do in week 2:**
 1. Internal linking (3-5 links)
-2. Image optimization và alt text
+2. Image optimization and alt text
 3. Breadcrumb navigation
 4. H2, H3 headings structure
 
-### **P2 - Có thể làm sau:**
+### **P2 - Can do later:**
 1. Advanced schema expansion
 2. Additional visual content
 3. A/B testing CTAs
@@ -2232,70 +2232,70 @@ gtag('event', 'cta_click', {
 
 ---
 
-## 📋 TỔNG HỢP CÁC RESEARCH CẦN THIẾT
+## 📋 SUMMARY OF REQUIRED RESEARCH
 
-### **🔴 URGENT - Cần Research Trước Khi Bắt Đầu:**
+### **🔴 URGENT - Research Required Before Starting:**
 
 #### **1. Keyword Research (SEMrush/Ahrefs/Keyword Planner)**
-- [ ] Search volume cho "earthquake kit" và all variations
+- [ ] Search volume for "earthquake kit" and all variations
 - [ ] Keyword difficulty scores
-- [ ] SERP features hiện tại (Featured snippets, PAA, etc.)
-- [ ] Current ranking position (nếu có)
-- [ ] CPC và competition level
+- [ ] Current SERP features (Featured snippets, PAA, etc.)
+- [ ] Current ranking position (if any)
+- [ ] CPC and competition level
 - [ ] Search intent analysis
 
-**Deliverable**: Keyword Research Spreadsheet với đầy đủ metrics
+**Deliverable**: Keyword Research Spreadsheet with full metrics
 
 ---
 
-#### **2. Competitor Analysis (Top 5-10 URLs ranking cho "earthquake kit")**
-- [ ] Domain Authority / Page Authority của competitors
-- [ ] Content length và structure analysis
+#### **2. Competitor Analysis (Top 5-10 URLs ranking for "earthquake kit")**
+- [ ] Domain Authority / Page Authority of competitors
+- [ ] Content length and structure analysis
 - [ ] Meta tags analysis (title, description)
 - [ ] Heading structure (H1, H2, H3)
 - [ ] Schema markup types used
 - [ ] Internal/external linking strategy
-- [ ] FAQ content và structure
+- [ ] FAQ content and structure
 - [ ] Core Web Vitals scores
-- [ ] USPs và differentiation points
+- [ ] USPs and differentiation points
 - [ ] Content gaps (topics they cover vs. what we should cover)
 
-**Deliverable**: Competitor Analysis Report với comparison table
+**Deliverable**: Competitor Analysis Report with comparison table
 
 ---
 
 #### **3. Current Page Audit (Baseline Metrics)**
-- [ ] Current title tag và meta description
-- [ ] Current H1 và heading structure
+- [ ] Current title tag and meta description
+- [ ] Current H1 and heading structure
 - [ ] Current content length (word count)
 - [ ] Current schema markup (types, validation)
 - [ ] Current internal links count
 - [ ] Current image alt text coverage (%)
-- [ ] Current page speed và Core Web Vitals
+- [ ] Current page speed and Core Web Vitals
 - [ ] Current GSC metrics (impressions, clicks, CTR, avg position)
 - [ ] Current keyword rankings
-- [ ] Current conversion rate từ collection page
+- [ ] Current conversion rate from collection page
 
 **Deliverable**: Current State Audit Report (Baseline Document)
 
 ---
 
 #### **4. Product Information Research**
-- [ ] List all products trong earthquake-kits collection
-- [ ] Product handles (để dùng trong internal linking)
-- [ ] Product titles và descriptions
+- [ ] List all products in earthquake-kits collection
+- [ ] Product handles (for use in internal linking)
+- [ ] Product titles and descriptions
 - [ ] FEMA compliance details (specific standards met)
-- [ ] Specific quantities trong kits (for content accuracy)
+- [ ] Specific quantities in kits (for content accuracy)
 - [ ] Shelf life information
-- [ ] Certifications và trust signals available
+- [ ] Certifications and trust signals available
 
 **Deliverable**: Product Information Database
 
 ---
 
 #### **5. Technical Setup Research**
-- [ ] Current Shopify theme và template structure
-- [ ] Current schema implementation (nếu có)
+- [ ] Current Shopify theme and template structure
+- [ ] Current schema implementation (if any)
 - [ ] Current apps affecting SEO (if any)
 - [ ] Current image optimization setup
 - [ ] Current analytics setup (GA4, GSC)
@@ -2305,24 +2305,24 @@ gtag('event', 'cta_click', {
 
 ---
 
-### **🟡 IMPORTANT - Cần Research Trong Quá Trình:**
+### **🟡 IMPORTANT - Research Required During Process:**
 
 #### **6. Content Research**
-- [ ] FEMA guidelines và official recommendations (citations)
+- [ ] FEMA guidelines and official recommendations (citations)
 - [ ] USGS earthquake statistics (for content hooks)
-- [ ] Expert quotes hoặc citations về emergency preparedness
-- [ ] Best practices từ authoritative sources
-- [ ] User questions từ forums, reviews, GSC queries
+- [ ] Expert quotes or citations about emergency preparedness
+- [ ] Best practices from authoritative sources
+- [ ] User questions from forums, reviews, GSC queries
 
-**Deliverable**: Content Research Document với citations
+**Deliverable**: Content Research Document with citations
 
 ---
 
 #### **7. Link Building Opportunities**
-- [ ] Relevant blog posts để link to
-- [ ] Related product pages để internal link
-- [ ] External authoritative sources để cite
-- [ ] Resource pages có thể outreach
+- [ ] Relevant blog posts to link to
+- [ ] Related product pages to internal link
+- [ ] External authoritative sources to cite
+- [ ] Resource pages that can outreach
 
 **Deliverable**: Internal Linking Map
 
@@ -2363,17 +2363,17 @@ Metric Category | Metric Name | Current Value | Target Value | Timeline
 1. ✅ Complete Keyword Research (Section 0.1)
 2. ✅ Complete Competitor Analysis (Section 0.2)
 3. ✅ Complete Current Page Audit (Section 0.3)
-4. ✅ Review research findings với team
+4. ✅ Review research findings with team
 
 ### **AFTER RESEARCH (Next Week):**
-1. ✅ Finalize content strategy dựa trên research
-2. ✅ Begin content creation với templates provided
+1. ✅ Finalize content strategy based on research
+2. ✅ Begin content creation with templates provided
 3. ✅ Begin technical implementation (Schema, Meta tags)
-4. ✅ Set up tracking và monitoring
+4. ✅ Set up tracking and monitoring
 
 ---
 
-**Tài liệu này cung cấp chi tiết đầy đủ về tất cả các điểm cần tối ưu cho Collection Page `/collections/earthquake-kits`**
+**This document provides comprehensive details about all optimization points for Collection Page `/collections/earthquake-kits`**
 
 **Document Version**: 2.0 (Enhanced with Research Requirements)  
 **Last Updated**: [Current Date]  
