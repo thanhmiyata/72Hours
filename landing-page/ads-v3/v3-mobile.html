@@ -1701,6 +1701,10 @@
             height: auto;
         }
 
+        .Gallery3Mobile {
+            padding-top: 3rem !important;
+        }
+
         .Header147Mobile {
             display: flex;
             flex-direction: column;
@@ -1927,6 +1931,12 @@
             flex-grow: 0;
         }
 
+        /* Frame 20 spacing - large gap as per design */
+        .Product4Mobile .Frame20Mobile {
+            margin-top: 5rem !important;
+            padding-top: 0 !important;
+        }
+
         /* Product card styles */
         .ProductCard .ContentBottomMobile {
             display: flex;
@@ -2042,31 +2052,40 @@
         }
 
         /* Tagline style nhỏ và màu đen */
+        .Layout254Mobile .TaglineWrapperMobile {
+            align-items: flex-start !important;
+            min-height: auto !important;
+        }
+        
         .Layout254Mobile .TaglineMobile {
-            width: 300px;
-            height: 40px;
-            font-family: 'Poppins';
+            width: 100% !important;
+            max-width: 300px;
+            height: auto !important;
+            min-height: auto !important;
+            font-family: 'Poppins' !important;
             font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 150%;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            line-height: 1.6 !important;
             text-align: center;
             color: #000000 !important;
             flex: none;
             order: 0;
             flex-grow: 0;
+            white-space: normal !important;
         }
 
         /* Heading style cho phần "4 Person Kit – Everything You Need for Emergencies" */
         .Layout254Mobile .HeadingMobile {
-            height: 64px;
-            font-family: 'Bona Nova';
+            height: auto !important;
+            min-height: 64px;
+            font-family: 'Bona Nova' !important;
             font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 100%;
+            font-weight: 700 !important;
+            font-size: 24px !important;
+            line-height: 1.4 !important;
             text-align: center;
-            color: #561513;
+            color: #561513 !important;
             flex: none;
             order: 0;
             align-self: stretch;
@@ -3074,8 +3093,6 @@
             width: 190px !important;
         }
 
-        .w-calc-100p-plus-4rem {}
-
         .bg-D4CEC9 {
             background-color: #D4CEC9 !important;
         }
@@ -3890,10 +3907,10 @@
                         </div>
                     </div>
                 </div>
-                <div data-layer="Frame 20" class="Frame20Mobile flex w-100 justify-end pt-12">
+                <!-- <div data-layer="Frame 20" class="Frame20Mobile flex w-100 justify-end mt-20">
                     <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-frame20.png"
                         alt="Decorative dotted divider" class="h-24 w-auto max-w-xs object-contain" />
-                </div>
+                </div> -->
             </div>
             <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
             <div data-layer="Layout / 254 /"
@@ -3904,7 +3921,7 @@
                         <div data-layer="Tagline Wrapper"
                             class="TaglineWrapperMobile flex w-100 items-center justify-center gap-6">
                             <div data-layer="Tagline"
-                                class="TaglineMobile w-100 font-Poppins text-sm font-semibold leading-5">
+                                class="TaglineMobile w-100 font-Poppins text-sm font-semibold">
                                 Choose the Amount of people you<br />want the Kit For</div>
                         </div>
                         <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-5">
@@ -4023,7 +4040,7 @@
             </div>
             <!-- Layer: Gallery / 3 / -->
             <div data-layer="Gallery / 3 /"
-                class="Gallery3Mobile relative flex w-100 justify-center overflow-hidden bg-7D291C px-0 pb-10 pt-px">
+                class="Gallery3Mobile relative flex w-100 justify-center overflow-hidden bg-7D291C px-0 pb-10 pt-12">
                 <div data-layer="Container"
                     class="ContainerMobile relative z-10 flex w-100 max-w-480px flex-col items-center gap-20 px-0">
                     <div data-layer="Section Title"

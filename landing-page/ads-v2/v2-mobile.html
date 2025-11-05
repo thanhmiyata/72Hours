@@ -27,15 +27,20 @@
         transform: translateX(-50%) !important;
         width: 100vw !important;
         max-width: 100vw !important;
-        height: auto !important;         /* auto-size container */
+        height: auto !important; /* auto-size container */
         min-height: 0 !important;
         margin: 0 !important;
       }
 
       /* Ensure the lp-element wrapper doesn't lock a fixed height */
-      #lp-code-18.lp-element.lp-code { height: auto !important; min-height: 0 !important; }
+      #lp-code-18.lp-element.lp-code {
+        height: auto !important;
+        min-height: 0 !important;
+      }
       /* Inner root should not force extra height */
-      #lp-code-18 .HomeMobile { height: auto !important; }
+      #lp-code-18 .HomeMobile {
+        height: auto !important;
+      }
 
       /* Ensure content inside the custom block spans full width */
       #lp-code-18 .HomeMobile,
@@ -1182,72 +1187,25 @@
         height: 20px;
       }
 
-      .Testimonial1 {
-        opacity: 1; /* avoid see-through over sticky */
+      /* Testimonial Section */
+      .mobi-Testimonial1 {
         width: 100%;
-        height: 100%;
-        padding: 112px 64px;
-        background: #6b1c20;
-        background-image: url(https://cdn.shopify.com/s/files/1/0077/1092/files/bg_1.png?v=1759863877);
-        background-size: cover !important;
-        background-blend-mode: overlay;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 80px;
-        max-width: 2188px;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-        z-index: 2;
-      }
-
-      .Testimonial1 .testimonial-container {
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 80px;
-      }
-
-      .Testimonial1 .testimonial-content {
-        width: 100%;
-        max-width: 768px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .Testimonial1 .testimonial-logo {
-        width: 120px;
-        height: 48px;
+        height: auto;
         position: relative;
         overflow: hidden;
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
       }
 
-      .Testimonial1 .testimonial-logo-inner {
-        width: 115.7px;
-        height: 19.29px;
-        left: 2.14px;
-        top: 14.36px;
-        position: absolute;
-        background: var(--Color-Scheme-4-Text, white);
-      }
-
-      .Testimonial1 .testimonial-quote {
-        align-self: stretch;
-        text-align: center;
-        color: var(--Color-Scheme-4-Text, white);
-        font-size: 35px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 49px;
-        word-wrap: break-word;
+      .mobi-Testimonial1 .mobi-testimonial-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
       }
 
       .Layout482 {
@@ -1370,15 +1328,15 @@
       }
 
       .layout482-video {
-        width: 100vw;            /* full-bleed width */
+        width: 100vw; /* full-bleed width */
         max-width: 100vw;
         left: 50%;
         position: relative;
         transform: translateX(-50%); /* center the 100vw element */
-        aspect-ratio: 16 / 9;   /* responsive height */
+        aspect-ratio: 16 / 9; /* responsive height */
         border-radius: 30px;
-        overflow: hidden;       /* keep rounded corners */
-        margin: -20px 0;        /* negative vertical spacing to tuck closer */
+        overflow: hidden; /* keep rounded corners */
+        margin: -20px 0; /* negative vertical spacing to tuck closer */
       }
 
       .layout482-video iframe {
@@ -2451,21 +2409,12 @@
           <div class="Layout308__spacer"></div>
         </div>
       </div>
-      <div class="Testimonial1">
-        <div class="testimonial-container">
-          <div class="testimonial-content">
-            <div data-alternate="False" data-logo="2" class="testimonial-logo">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/testimonial_logo.png?v=1759862805"
-              />
-            </div>
-            <div class="testimonial-quote">
-              "I realized that instead of spending countless hours researching
-              and hundreds of dollars piecing together a kit, I could simply
-              click and have everything I needed delivered to my door."
-            </div>
-          </div>
-        </div>
+      <div class="mobi-Testimonial1">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0077/1092/files/Screenshot_2025-11-05_at_04.33.04.png?v=1762291997"
+          alt="Testimonial"
+          class="mobi-testimonial-image"
+        />
       </div>
 
       <div class="Layout482">
