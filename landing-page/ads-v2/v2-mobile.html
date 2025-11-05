@@ -1,2628 +1,2560 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>72Hours Emergency Kit - A Mom's Story</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="v2-mobile.css" />
-    <script src="v2.js" defer></script>
-    <style>
-      /* Xóa padding mặc định và ngăn scroll ngang */
-      html,
-      body {
-        overflow-x: hidden;
-      }
-      #lp-pom-root,
-      #lp-pom-content,
-      .lp-positioned-content {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
 
-      /* Unbounce mobile overrides: full-bleed canvas + fluid widgets */
-      /* Full-bleed for the Custom HTML block (replace #lp-code-18 if different) */
-      #lp-code-18 {
-        position: relative !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        height: auto !important; /* auto-size container */
-        min-height: 0 !important;
-        margin: 0 !important;
-      }
+<head>
+  <title>72Hours Emergency Kit - A Mom's Story</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="v2-mobile.css" />
+  <script src="v2.js" defer></script>
+  <style>
+    /* Xóa padding mặc định và ngăn scroll ngang */
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
-      /* Ensure the lp-element wrapper doesn't lock a fixed height */
-      #lp-code-18.lp-element.lp-code {
-        height: auto !important;
-        min-height: 0 !important;
-      }
-      /* Inner root should not force extra height */
-      #lp-code-18 .HomeMobile {
-        height: auto !important;
-      }
+    #lp-pom-root,
+    #lp-pom-content,
+    .lp-positioned-content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
 
-      /* Ensure content inside the custom block spans full width */
-      #lp-code-18 .HomeMobile,
-      #lp-code-18 > div {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+    /* Unbounce mobile overrides: full-bleed canvas + fluid widgets */
+    /* Full-bleed for the Custom HTML block (replace #lp-code-18 if different) */
+    #lp-code-18 {
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      height: auto !important;
+      /* auto-size container */
+      min-height: 0 !important;
+      margin: 0 !important;
+    }
 
-      /* Remove fixed widths from Unbounce image widgets (e.g., 480px) */
-      #lp-pom-root .lp-pom-image-container,
-      #lp-pom-root .lp-image,
-      #lp-pom-root .lp-pom-image-container img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-      }
+    /* Ensure the lp-element wrapper doesn't lock a fixed height */
+    #lp-code-18.lp-element.lp-code {
+      height: auto !important;
+      min-height: 0 !important;
+    }
 
-      /* Make Unbounce buttons fluid if used */
-      #lp-pom-root .lp-pom-button,
-      #lp-pom-root .lp-pom-button a {
-        width: 100% !important;
-        display: block !important;
-      }
+    /* Inner root should not force extra height */
+    #lp-code-18 .HomeMobile {
+      height: auto !important;
+    }
 
-      /* Phần tử tràn 2 bên (full-bleed) */
-      .ub-fullbleed {
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-        width: 100vw;
-        max-width: 100vw;
-      }
+    /* Ensure content inside the custom block spans full width */
+    #lp-code-18 .HomeMobile,
+    #lp-code-18>div {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
 
-      /* Nội dung bên trong full-bleed fill toàn chiều ngang */
-      .ub-fullbleed > img,
-      .ub-fullbleed > video,
-      .ub-fullbleed > picture,
-      .ub-fullbleed > .bg,
-      .ub-fullbleed > .wrapper {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
+    /* Remove fixed widths from Unbounce image widgets (e.g., 480px) */
+    #lp-pom-root .lp-pom-image-container,
+    #lp-pom-root .lp-image,
+    #lp-pom-root .lp-pom-image-container img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
 
-      /* Container chính */
-      .HomeMobile .Banner7 {
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        display: inline-flex;
-      }
+    /* Make Unbounce buttons fluid if used */
+    #lp-pom-root .lp-pom-button,
+    #lp-pom-root .lp-pom-button a {
+      width: 100% !important;
+      display: block !important;
+    }
 
-      /* Content wrapper (icon + text) */
-      .HomeMobile .Banner7 .Banner7__content {
-        justify-content: flex-start;
-        align-items: center;
-        gap: 16px;
-        display: flex;
-      }
+    /* Phần tử tràn 2 bên (full-bleed) */
+    .ub-fullbleed {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      width: 100vw;
+      max-width: 100vw;
+    }
 
-      /* Icon wrapper */
-      .HomeMobile .Banner7 .Banner7__icon-wrapper {
-        width: 32px;
-        height: 32px;
-        position: relative;
-      }
+    /* Nội dung bên trong full-bleed fill toàn chiều ngang */
+    .ub-fullbleed>img,
+    .ub-fullbleed>video,
+    .ub-fullbleed>picture,
+    .ub-fullbleed>.bg,
+    .ub-fullbleed>.wrapper {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
 
-      /* Text group */
-      .HomeMobile .Banner7 .Banner7__text-group {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        display: inline-flex;
-      }
+    /* Container chính */
+    .HomeMobile .Banner7 {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      display: inline-flex;
+    }
 
-      /* Title */
-      .HomeMobile .Banner7 .Banner7__title {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 13px;
-        font-family: Merriweather Sans;
-        font-weight: 700;
-        line-height: 24px;
-        word-wrap: break-word;
-      }
+    /* Content wrapper (icon + text) */
+    .HomeMobile .Banner7 .Banner7__content {
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      display: flex;
+    }
 
-      /* Subtitle */
-      .HomeMobile .Banner7 .Banner7__subtitle {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 14px;
-        font-family: Merriweather Sans;
-        font-weight: 400;
-        line-height: 21px;
-        word-wrap: break-word;
-      }
+    /* Icon wrapper */
+    .HomeMobile .Banner7 .Banner7__icon-wrapper {
+      width: 32px;
+      height: 32px;
+      position: relative;
+    }
 
-      /* Button */
-      .HomeMobile .Banner7 .Banner7__button {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        background: var(--Color-Valencia, #d73630);
-        border-radius: 100px;
-        border-left: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
-        border-top: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
-        border-right: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
-        border-bottom: 4px var(--Color-Valencia-Dark, #ac2b26) solid;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        display: flex;
-      }
+    /* Text group */
+    .HomeMobile .Banner7 .Banner7__text-group {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+    }
 
-      /* Button text */
-      .HomeMobile .Banner7 .Banner7__button-text {
-        color: var(--Color-White, white);
-        font-size: 16px;
-        font-family: Merriweather Sans;
-        font-weight: 700;
-        line-height: 24px;
-        word-wrap: break-word;
-      }
+    /* Title */
+    .HomeMobile .Banner7 .Banner7__title {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 13px;
+      font-family: Merriweather Sans;
+      font-weight: 700;
+      line-height: 24px;
+      word-wrap: break-word;
+    }
 
-      /* Header30 CSS - Mobile Only */
+    /* Subtitle */
+    .HomeMobile .Banner7 .Banner7__subtitle {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 14px;
+      font-family: Merriweather Sans;
+      font-weight: 400;
+      line-height: 21px;
+      word-wrap: break-word;
+    }
 
-      /* Container chính với background image và overlay */
-      .HomeMobile .Header30 {
-        width: 100%;
-        min-height: 100vh;
-        background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-          ),
-          url("https://cdn.shopify.com/s/files/1/0077/1092/files/header.jpg?v=1759861231");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    /* Button */
+    .HomeMobile .Banner7 .Banner7__button {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      background: var(--Color-Valencia, #d73630);
+      border-radius: 100px;
+      border-left: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
+      border-top: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
+      border-right: 1.5px var(--Color-Valencia-Dark, #ac2b26) solid;
+      border-bottom: 4px var(--Color-Valencia-Dark, #ac2b26) solid;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      display: flex;
+    }
 
-      /* Container wrapper */
-      .HomeMobile .Header30 .Header30__container {
-        width: 100%;
-        max-width: 480px;
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-        align-items: center;
-        gap: 40px;
-      }
+    /* Button text */
+    .HomeMobile .Banner7 .Banner7__button-text {
+      color: var(--Color-White, white);
+      font-size: 16px;
+      font-family: Merriweather Sans;
+      font-weight: 700;
+      line-height: 24px;
+      word-wrap: break-word;
+    }
 
-      /* Content wrapper */
-      .HomeMobile .Header30 .Header30__content-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-      }
+    /* Header30 CSS - Mobile Only */
 
-      /* Text group */
-      .HomeMobile .Header30 .Header30__text-group {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
-      }
+    /* Container chính với background image và overlay */
+    .HomeMobile .Header30 {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(0deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.5) 100%),
+        url("https://cdn.shopify.com/s/files/1/0077/1092/files/header.jpg?v=1759861231");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      /* Title */
-      .HomeMobile .Header30 .Header30__title {
-        width: 100%;
-        color: white;
-        font-size: 32px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.3;
-        word-wrap: break-word;
-      }
+    /* Container wrapper */
+    .HomeMobile .Header30 .Header30__container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      align-items: center;
+      gap: 40px;
+    }
 
-      /* Subtitle */
-      .HomeMobile .Header30 .Header30__subtitle {
-        width: 100%;
-        color: white;
-        font-size: 18px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
+    /* Content wrapper */
+    .HomeMobile .Header30 .Header30__content-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
 
-      /* Layout426 CSS - Mobile Only */
-      /* Layout426 CSS - Mobile Only */
+    /* Text group */
+    .HomeMobile .Header30 .Header30__text-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+    }
 
-      /* Container chính với background gradient */
-      .HomeMobile .Layout426 {
-        width: 100%;
-        padding: 70px 0;
-        background: linear-gradient(
-          169deg,
+    /* Title */
+    .HomeMobile .Header30 .Header30__title {
+      width: 100%;
+      color: white;
+      font-size: 32px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.3;
+      word-wrap: break-word;
+    }
+
+    /* Subtitle */
+    .HomeMobile .Header30 .Header30__subtitle {
+      width: 100%;
+      color: white;
+      font-size: 18px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Layout426 CSS - Mobile Only */
+    /* Layout426 CSS - Mobile Only */
+
+    /* Container chính với background gradient */
+    .HomeMobile .Layout426 {
+      width: 100%;
+      padding: 70px 0;
+      background: linear-gradient(169deg,
           #e0c2a5 0%,
           #e8b29c 44%,
-          white 100%
-        );
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        position: sticky; /* stick to top when reached */
-        top: 0;
-        z-index: 1; /* under following sections */
-      }
-
-      /* Ensure all sections after Layout426 appear above it while scrolling */
-      .HomeMobile .Layout426 ~ * {
-        position: relative;
-        z-index: 2;
-      }
-
-      /* Container wrapper */
-      .HomeMobile .Layout426 .Layout426__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Content wrapper */
-      .HomeMobile .Layout426 .Layout426__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-
-      /* Text section */
-      .HomeMobile .Layout426 .Layout426__text-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Label wrapper */
-      .HomeMobile .Layout426 .Layout426__label-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Label */
-      .HomeMobile .Layout426 .Layout426__label {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Header group */
-      .HomeMobile .Layout426 .Layout426__header-group {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .Layout426 .Layout426__title {
-        width: 100%;
-        color: #420e24;
-        font-size: 36px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .Layout426 .Layout426__description {
-        width: 100%;
-        text-align: left;
-      }
-
-      /* Description normal text */
-      .HomeMobile .Layout426 .Layout426__description-normal {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Description bold text */
-      .HomeMobile .Layout426 .Layout426__description-bold {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      .Layout426__image-wrapper {
-        width: 300px;
-        /* hoặc kích thước bạn muốn */
-        height: 300px;
-        overflow: hidden;
-        /* cắt ảnh ra ngoài border-radius */
-        border-radius: 20px;
-        /* bo góc tròn */
-        position: relative;
-        transform: rotate(4deg);
-        /* xoay nhẹ về phía trái */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        /* tạo bóng nhẹ */
-      }
-
-      .Layout426__image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* ảnh lấp đầy div và giữ tỉ lệ */
-        display: block;
-      }
-
-      /* Layout86 CSS - Mobile Only */
-
-      /* Container chính với background màu đỏ */
-      .HomeMobile .Layout86 {
-        width: 100%;
-        padding: 60px 0;
-        background: #7d291c;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 10px */
-      .HomeMobile .Layout86 .Layout86__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Content wrapper */
-      .HomeMobile .Layout86 .Layout86__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      /* Header section */
-      .HomeMobile .Layout86 .Layout86__header-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Title */
-      .HomeMobile .Layout86 .Layout86__title {
-        width: 100%;
-        color: white;
-        font-size: 32px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.3;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Stats section */
-      .HomeMobile .Layout86 .Layout86__stats-section {
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-      }
-
-      /* Stats wrapper */
-      .HomeMobile .Layout86 .Layout86__stats-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Stats row */
-      .HomeMobile .Layout86 .Layout86__stats-row {
-        width: 100%;
-        display: flex;
-        gap: 30px;
-        padding: 8px 0;
-      }
-
-      /* Stat item */
-      .HomeMobile .Layout86 .Layout86__stat-item {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      /* Stat number wrapper */
-      .HomeMobile .Layout86 .Layout86__stat-number {
-        width: 100%;
-        max-width: 127px;
-        height: 74px;
-        position: relative;
-        overflow: hidden;
-        font-family: "Bona Nova";
-      }
-
-      /* Number text */
-      .HomeMobile .Layout86 .Layout86__number-text {
-        width: 127px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        color: white;
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 72px;
-        font-family: "Bona Nova";
-        word-wrap: break-word;
-      }
-
-      /* Stat description */
-      .HomeMobile .Layout86 .Layout86__stat-description {
-        width: 100%;
-        color: white;
-        font-size: 16px;
-        font-family: "Merriweather Sans";
-        font-weight: 400;
-        line-height: 1.6;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Gallery CSS - Mobile Only */
-
-      /* Container chính với background image */
-      .HomeMobile .Gallery {
-        width: 100%;
-        padding: 0 0 60px 0;
-        background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/emergency_bg.png?v=1760078467");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 10px */
-      .HomeMobile .Gallery .Gallery__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-
-      /* Header section */
-      .HomeMobile .Gallery .Gallery__header-section {
-        width: 100%;
-        max-width: 100%;
-        padding-top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 24px;
-      }
-
-      /* Title */
-      .HomeMobile .Gallery .Gallery__title {
-        width: 100%;
-        text-align: center;
-        color: #40100e;
-        font-size: 42px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        word-wrap: break-word;
-      }
-
-      /* Image section */
-      .HomeMobile .Gallery .Gallery__image-section {
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Image */
-      .HomeMobile .Gallery .Gallery__image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 20px;
-        object-fit: cover;
-        box-shadow: 0 0 0 3px rgba(255, 153, 153, 0.8),
-          0 0 0 6px rgba(255, 153, 153, 0.5), 0 0 0 9px rgba(255, 153, 153, 0.3),
-          0 0 0 12px rgba(255, 153, 153, 0.1);
-      }
-
-      /* Layout456 CSS - Mobile Only */
-
-      /* Container chính với background image */
-      .HomeMobile .Layout456 {
-        width: 100%;
-        min-height: 100vh;
-        padding: 60px 0;
-        background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/line_top.png?v=1760078613");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 10px */
-      .HomeMobile .Layout456 .Layout456__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 50px;
-      }
-
-      /* Text section */
-      .HomeMobile .Layout456 .Layout456__text-section {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-      }
-
-      /* Text wrapper */
-      .HomeMobile .Layout456 .Layout456__text-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Label wrapper */
-      .HomeMobile .Layout456 .Layout456__label-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Label */
-      .HomeMobile .Layout456 .Layout456__label {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Header group */
-      .HomeMobile .Layout456 .Layout456__header-group {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .Layout456 .Layout456__title {
-        width: 100%;
-        text-align: left;
-      }
-
-      /* Title bold */
-      .HomeMobile .Layout456 .Layout456__title-bold {
-        color: #420e24;
-        font-size: 36px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        word-wrap: break-word;
-      }
-
-      /* Title regular */
-      .HomeMobile .Layout456 .Layout456__title-regular {
-        color: #420e24;
-        font-size: 36px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.2;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .Layout456 .Layout456__description {
-        width: 100%;
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 22px;
-        font-family: Merriweather Sans;
-        font-weight: 400;
-        line-height: 35.86px;
-        word-wrap: break-word;
-      }
-
-      /* Image section */
-      .HomeMobile .Layout456 .Layout456__image-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-      }
-
-      /* Image */
-      .HomeMobile .Layout456 .Layout456__image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        box-shadow: 0px 0px 50px 16px rgba(255, 255, 255, 0.75);
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        object-fit: cover;
-      }
-
-      /* Comparison CSS - Mobile Only */
-
-      /* Container chính với background image */
-      .HomeMobile .Comparison {
-        width: 100%;
-        min-height: 100vh;
-        padding: 60px 0;
-        overflow: hidden;
-        background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/line_bottom.png?v=1760078637");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .Comparison .Comparison__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-      }
-
-      /* Header section */
-      .HomeMobile .Comparison .Comparison__header-section {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-      }
-
-      /* Header content */
-      .HomeMobile .Comparison .Comparison__header-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .Comparison .Comparison__title {
-        width: 100%;
-        text-align: center;
-        color: #40100e;
-        font-size: 28px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        word-wrap: break-word;
-      }
-
-      /* Subtitle */
-      .HomeMobile .Comparison .Comparison__subtitle {
-        width: 100%;
-        text-align: center;
-        color: var(--Color-Neutral-Darkest, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Table section */
-      .HomeMobile .Comparison .Comparison__table-section {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* Table header */
-      .HomeMobile .Comparison .Comparison__table-header {
-        width: 100%;
-        display: flex;
-        align-items: stretch;
-        min-height: 70px;
-      }
-
-      /* Table header label */
-      .HomeMobile .Comparison .Comparison__table-header-label {
-        width: 40%;
-        padding: 16px 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-      }
-
-      /* Header title */
-      .HomeMobile .Comparison .Comparison__header-title {
-        width: 100%;
-        color: var(--Color-Valencia-Darkest, #40100e);
-        font-size: 14px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.4;
-        word-wrap: break-word;
-      }
-
-      /* Table header price */
-      .HomeMobile .Comparison .Comparison__table-header-price {
-        flex: 1;
-        padding: 16px;
-        background: var(--Color-Valencia-Darkest, #40100e);
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Price header content */
-      .HomeMobile .Comparison .Comparison__price-header-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* Price title */
-      .HomeMobile .Comparison .Comparison__price-title {
-        width: 100%;
-        text-align: center;
-        color: white;
-        font-size: 14px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.4;
-        word-wrap: break-word;
-      }
-
-      /* Table row */
-      .HomeMobile .Comparison .Comparison__table-row {
-        width: 100%;
-        display: flex;
-        align-items: stretch;
-      }
-
-      /* Table cell label */
-      .HomeMobile .Comparison .Comparison__table-cell-label {
-        width: 40%;
-        padding: 12px;
-        background: #f1e7e7;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        outline: 2px #f2f2f2 solid;
-        outline-offset: -2px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      /* Cell text */
-      .HomeMobile .Comparison .Comparison__cell-text {
-        flex: 1;
-        color: var(--Color-Valencia-Darkest, #40100e);
-        font-size: 13px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Table cell price */
-      .HomeMobile .Comparison .Comparison__table-cell-price {
-        flex: 1;
-        padding: 12px 16px;
-        background: var(--Color-Valencia-Darkest, #40100e);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Price text */
-      .HomeMobile .Comparison .Comparison__price-text {
-        flex: 1;
-        text-align: center;
-        color: white;
-        font-size: 13px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Table footer */
-      .HomeMobile .Comparison .Comparison__table-footer {
-        width: 100%;
-        display: flex;
-        align-items: stretch;
-      }
-
-      /* Table footer label */
-      .HomeMobile .Comparison .Comparison__table-footer-label {
-        width: 40%;
-        padding: 16px 12px;
-        background: transparent;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      /* Footer title */
-      .HomeMobile .Comparison .Comparison__footer-title {
-        width: 100%;
-        color: var(--Color-Valencia-Darkest, #40100e);
-        font-size: 18px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 800;
-        line-height: 1.3;
-        word-wrap: break-word;
-      }
-
-      /* Table footer price */
-      .HomeMobile .Comparison .Comparison__table-footer-price {
-        flex: 1;
-        padding: 16px;
-        background: var(--Color-Valencia-Darkest, #40100e);
-        border-bottom-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Total price wrapper */
-      .HomeMobile .Comparison .Comparison__total-price {
-        width: 100%;
-        max-width: 200px;
-        height: 50px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      /* Total price text */
-      .HomeMobile .Comparison .Comparison__total-price-text {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        text-align: center;
-        color: white;
-        font-size: 24px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Quote section */
-      .HomeMobile .Comparison .Comparison__quote-section {
-        width: 100%;
-        padding: 0 20px;
-        background: #6b1c20;
-        border-top-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Quote box */
-      .HomeMobile .Comparison .Comparison__quote-box {
-        flex: 1;
-        padding: 20px 16px;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Quote text */
-      .HomeMobile .Comparison .Comparison__quote-text {
-        flex: 1;
-        text-align: center;
-        color: white;
-        font-size: 16px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Layout308 CSS - Mobile Only */
-
-      /* Container chính với background gradient */
-      .HomeMobile .Layout308 {
-        width: 100%;
-        min-height: 100vh;
-        padding: 60px 0 40px 0;
-        background: linear-gradient(117deg, #f9dee0 0%, white 55%, #f8dee4 90%);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .Layout308 .Layout308__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-      }
-
-      /* Header section */
-      .HomeMobile .Layout308 .Layout308__header-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-      }
-
-      /* Header text */
-      .HomeMobile .Layout308 .Layout308__header-text {
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Label wrapper */
-      .HomeMobile .Layout308 .Layout308__label-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Label */
-      .HomeMobile .Layout308 .Layout308__label {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Title */
-      .HomeMobile .Layout308 .Layout308__title {
-        width: 100%;
-        color: #6b2f45;
-        font-size: 28px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.2;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .Layout308 .Layout308__description {
-        width: 100%;
-        text-align: left;
-      }
-
-      /* Description normal text */
-      .HomeMobile .Layout308 .Layout308__description-normal {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 15px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Description bold text */
-      .HomeMobile .Layout308 .Layout308__description-bold {
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 15px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Features section */
-      .HomeMobile .Layout308 .Layout308__features-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-      }
-
-      /* Features wrapper */
-      .HomeMobile .Layout308 .Layout308__features-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      /* Mỗi hàng chứa 2 item */
-      .HomeMobile .Layout308 .Layout308__features-row {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      /* Feature item: chia đều 2 cột, cùng chiều cao */
-      .HomeMobile .Layout308 .Layout308__feature-item {
-        flex: 1;
-        align-items: flex-start;
-        gap: 16px;
-        border-radius: 16px;
-        padding: 16px;
-        box-sizing: border-box;
-      }
-
-      /* Feature icon */
-      .HomeMobile .Layout308 .Layout308__feature-icon {
-        width: 48px;
-        height: 48px;
-        flex-shrink: 0;
-      }
-
-      .HomeMobile .Layout308 .Layout308__feature-icon img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      /* Nội dung feature */
-      .HomeMobile .Layout308 .Layout308__feature-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      /* Tiêu đề */
-      .HomeMobile .Layout308 .Layout308__feature-title {
-        color: #0b0302;
-        font-size: 18px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.4;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Mô tả */
-      .HomeMobile .Layout308 .Layout308__feature-description {
-        color: #0b0302;
-        font-size: 14px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Spacer */
-      .HomeMobile .Layout308 .Layout308__spacer {
-        width: 100%;
-        height: 20px;
-      }
-
-      /* Testimonial Section */
-      .mobi-Testimonial1 {
-        width: 100%;
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        display: block;
-        margin: 0;
-        padding: 0;
-        line-height: 0;
-      }
-
-      .mobi-Testimonial1 .mobi-testimonial-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .Layout482 {
-        width: 100%;
-        height: auto;
-        padding: 20px 0; /* even tighter */
-        overflow: hidden;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 12px; /* tighter space */
-        background: #f5f5f5;
-      }
-
-      .Layout482 .layout-container {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 12px; /* was 24px */
-        padding: 0 20px;
-        box-sizing: border-box;
-      }
-
-      .Layout482 .layout-content {
-        width: 100%;
-        max-width: 768px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .Layout482 .layout-text {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .Layout482 .layout-heading {
-        display: inline-flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .Layout482 .layout-title {
-        text-align: center;
-        color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 25px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 37.5px;
-      }
-
-      .Layout482 .layout-body {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 24px;
-      }
-
-      .Layout482 .layout-subtitle {
-        text-align: center;
-        color: #420e24;
-        font-size: 38px; /* smaller for mobile */
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-
-      .Layout482 .layout-description {
-        text-align: center;
-        color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 16px; /* smaller for mobile */
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-      }
-
-      .Layout482 .layout-button-group {
-        display: inline-flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 24px;
-      }
-
-      .Layout482 .layout-button {
-        padding: 10px 24px;
-        border-radius: 100px;
-        border: 1.5px solid rgba(11, 3, 2, 0.15);
-        border-bottom: 4px solid rgba(11, 3, 2, 0.15);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        background: transparent;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .Layout482 .layout-button:hover {
-        background: rgba(11, 3, 2, 0.05);
-      }
-
-      .Layout482 .layout-button-text {
-        color: var(--Color-Neutral-Darkest, #0b0302);
-        font-size: 18px; /* smaller for mobile */
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-      }
-
-      .layout482-video {
-        width: 100vw; /* full-bleed width */
-        max-width: 100vw;
-        left: 50%;
-        position: relative;
-        transform: translateX(-50%); /* center the 100vw element */
-        aspect-ratio: 16 / 9; /* responsive height */
-        border-radius: 30px;
-        overflow: hidden; /* keep rounded corners */
-        margin: -20px 0; /* negative vertical spacing to tuck closer */
-      }
-
-      .layout482-video iframe {
-        border: none;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: 30px;
-      }
-
-      .player video {
-        border-radius: 30px;
-      }
-
-      .video {
-        border-radius: 30px;
-      }
-
-      /* Layout413 CSS - Mobile Only */
-
-      /* Container chính với background image */
-      .HomeMobile .Layout413 {
-        width: 100%;
-        min-height: 100vh;
-        padding: 60px 0;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/day7.png?v=1760078688");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .Layout413 .Layout413__container {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 20px;
-        align-items: center;
-      }
-
-      /* Content wrapper */
-      .HomeMobile .Layout413 .Layout413__content-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-      }
-
-      /* Image wrapper */
-      .HomeMobile .Layout413 .Layout413__image-wrapper {
-        width: 100%;
-        max-width: 100%;
-        position: relative;
-        transform: rotate(-1deg);
-        transform-origin: top left;
-      }
-
-      /* Image */
-      .HomeMobile .Layout413 .Layout413__image {
-        width: 100%;
-        height: auto;
-        border-radius: 16px;
-        object-fit: cover;
-      }
-
-      /* Text section */
-      .HomeMobile .Layout413 .Layout413__text-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-      }
-
-      /* Text content */
-      .HomeMobile .Layout413 .Layout413__text-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-      }
-
-      /* Header group */
-      .HomeMobile .Layout413 .Layout413__header-group {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      /* Header wrapper */
-      .HomeMobile .Layout413 .Layout413__header-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .Layout413 .Layout413__title {
-        width: 100%;
-        color: #420e24;
-        font-size: 36px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .Layout413 .Layout413__description {
-        width: 100%;
-        color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Takeaway section */
-      .HomeMobile .Layout413 .Layout413__takeaway-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      /* Takeaway wrapper */
-      .HomeMobile .Layout413 .Layout413__takeaway-wrapper {
-        width: 100%;
-        padding: 8px 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      /* Takeaway content */
-      .HomeMobile .Layout413 .Layout413__takeaway-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      /* Takeaway title */
-      .HomeMobile .Layout413 .Layout413__takeaway-title {
-        width: 100%;
-        text-align: center;
-        color: var(--Color-Valencia-Darkest, #40100e);
-        font-size: 32px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.4;
-        word-wrap: break-word;
-      }
-
-      /* Takeaway text */
-      .HomeMobile .Layout413 .Layout413__takeaway-text {
-        width: 100%;
-        text-align: left;
-      }
-
-      /* Takeaway normal text */
-      .HomeMobile .Layout413 .Layout413__takeaway-normal {
-        color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Takeaway underline text */
-      .HomeMobile .Layout413 .Layout413__takeaway-underline {
-        color: var(--Color-Scheme-1-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        text-decoration: underline;
-        line-height: 1.5;
-        word-wrap: break-word;
-      }
-
-      /* Header64 CSS - Mobile Only */
-
-      /* Container chính với background đỏ */
-      .HomeMobile .Header64 {
-        width: 100%;
-        padding: 40px 0;
-        background: #7d291c;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .Header64 .Header64__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Content wrapper */
-      .HomeMobile .Header64 .Header64__content-wrapper {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .Header64 .Header64__title {
-        width: 100%;
-        text-align: center;
-        color: white;
-        font-size: 38px;
-        font-family: "Bona Nova", serif;
-        font-weight: 700;
-        line-height: 1.2;
-        word-wrap: break-word;
-      }
-
-      /* Rating wrapper */
-      .HomeMobile .Header64 .Header64__rating {
-        width: auto;
-        height: auto;
-        position: relative;
-      }
-
-      /* Rating stars */
-      .HomeMobile .Header64 .Header64__rating-stars {
-        width: 100%;
-        opacity: 0.5;
-        text-align: center;
-        color: white;
-        font-size: 18px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .Header64 .Header64__description {
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Description normal text */
-      .HomeMobile .Header64 .Header64__description-normal {
-        color: white;
-        font-size: 18px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Description bold text */
-      .HomeMobile .Header64 .Header64__description-bold {
-        color: white;
-        font-size: 18px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Layout228 CSS - Mobile Only */
-
-      /* Container chính với background gradient */
-      .HomeMobile .Layout228 {
-        width: 100%;
-        padding: 40px 0;
-        background: linear-gradient(90deg, #f1e1e0 4%, white 42%, #f1e1e0 100%);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .Layout228 .Layout228__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      /* Features wrapper */
-      .HomeMobile .Layout228 .Layout228__features-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-      }
-
-      /* Feature item */
-      .HomeMobile .Layout228 .Layout228__feature-item {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Feature content */
-      .HomeMobile .Layout228 .Layout228__feature-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-      }
-
-      /* Feature header */
-      .HomeMobile .Layout228 .Layout228__feature-header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      /* Feature icon */
-      .HomeMobile .Layout228 .Layout228__feature-icon {
-        width: 48px;
-        height: 48px;
-        position: relative;
-        flex-shrink: 0;
-      }
-
-      /* Icon background */
-      .HomeMobile .Layout228 .Layout228__icon-bg {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: 4px;
-        top: 4px;
-        background: var(--Color-Valencia-Darkest, #40100e);
-      }
-
-      /* Feature text */
-      .HomeMobile .Layout228 .Layout228__feature-text {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-      }
-
-      /* Feature title */
-      .HomeMobile .Layout228 .Layout228__feature-title {
-        width: 100%;
-        text-align: center;
-        color: var(--Color-Valencia-Darkest, #40100e);
-        font-size: 26px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.3;
-        word-wrap: break-word;
-      }
-
-      /* CTA39 CSS - Mobile Only */
-
-      /* Container chính với background */
-      .CTA39 {
-        width: 100%;
-        padding: 100px 0;
-        background: var(--Color-Scheme-4-Foreground, #d68c2f);
-        background-image: url(https://cdn.shopify.com/s/files/1/0077/1092/files/people_58f27c53-daa4-4ce4-b3c1-cb44209f8ace.png?v=1759863578);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-blend-mode: multiply; /* 🔥 quan trọng */
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      /* Container wrapper với padding 0 20px */
-      .HomeMobile .CTA39 .CTA39__container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Card */
-      .HomeMobile .CTA39 .CTA39__card {
-        width: 100%;
-        background: white;
-        overflow: hidden;
-        border-radius: 16px;
-        outline: 1px solid rgba(11, 3, 2, 0.15);
-        outline-offset: -1px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Card content */
-      .HomeMobile .CTA39 .CTA39__card-content {
-        width: 100%;
-        padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-      }
-
-      /* Text section */
-      .HomeMobile .CTA39 .CTA39__text-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      /* Title */
-      .HomeMobile .CTA39 .CTA39__title {
-        width: 100%;
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 32px;
-        font-family: "Bona Nova", serif;
-        font-weight: 400;
-        line-height: 1.2;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Description */
-      .HomeMobile .CTA39 .CTA39__description {
-        width: 100%;
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        text-align: left;
-        word-wrap: break-word;
-      }
-
-      /* Button wrapper */
-      .HomeMobile .CTA39 .CTA39__button-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Button */
-      .HomeMobile .CTA39 .CTA39__button {
-        width: 100%;
-        padding: 20px 15px;
-        background: var(--Color-Valencia, #d73630);
-        border-radius: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-
-      .HomeMobile .CTA39 .CTA39__button:hover {
-        background: #c12f29;
-      }
-
-      /* Button text */
-      .HomeMobile .CTA39 .CTA39__button-text {
-        color: white;
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.5;
-        text-align: center;
-        word-wrap: break-word;
-      }
-
-      /* Offer section */
-      .HomeMobile .CTA39 .CTA39__offer-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Offer text */
-      .HomeMobile .CTA39 .CTA39__offer-text {
-        width: 100%;
-        text-align: center;
-        color: var(--Color-Scheme-2-Text, #0b0302);
-        font-size: 16px;
-        font-family: "Merriweather Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-
-      /* Image */
-      .HomeMobile .CTA39 .CTA39__image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-      }
-
-      .Footer {
-        width: 100%;
-        height: 100%;
-        padding: 80px 64px;
-        background: var(--Color-Scheme-2-Background, white);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 80px;
-      }
-
-      .Footer .footer-container {
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 80px;
-      }
-
-      .Footer .footer-top {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .Footer .footer-logo {
-        flex: 1;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      .Footer .footer-logo-inner {
-        width: 84px;
-        height: 36px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .Footer .footer-logo-icon {
-        width: 70px;
-        height: 36px;
-        position: absolute;
-        left: 6.67px;
-        top: 0;
-      }
-
-      .Footer .footer-logo-icon .shape {
-        position: absolute;
-        background: var(--Color-Neutral-Darkest, #0b0302);
-      }
-
-      .Footer .footer-logo-icon .shape1 {
-        width: 18.81px;
-        height: 15.95px;
-        left: 50.82px;
-        top: 10.87px;
-      }
-
-      .Footer .footer-logo-icon .shape2 {
-        width: 19.44px;
-        height: 24.68px;
-        left: 34.33px;
-        top: 11.32px;
-      }
-
-      .Footer .footer-logo-icon .shape3 {
-        width: 18.81px;
-        height: 15.95px;
-        left: 18.55px;
-        top: 10.87px;
-      }
-
-      .Footer .footer-logo-icon .shape4 {
-        width: 21.6px;
-        height: 16.19px;
-        left: 0;
-        top: 10.24px;
-      }
-
-      .Footer .footer-logo-icon .shape5 {
-        width: 15.13px;
-        height: 9.29px;
-        left: 1.15px;
-        top: 0;
-      }
-
-      .Footer .footer-icons {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .Footer .icon {
-        width: 24px;
-        height: 24px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .Footer .footer-line {
-        width: 100%;
-        height: 0;
-        border-top: 1px solid var(--Color-Scheme-2-Border, rgba(11, 3, 2, 0.15));
-        outline-offset: -0.5px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div
-      data-layer="Home Mobile"
-      class="HomeMobile size- inline-flex flex-col justify-start items-start overflow-hidden"
-    >
-      <div class="Banner7">
-        <div class="Banner7__content">
-          <div class="Banner7__icon-wrapper">
-            <div class="Banner7__icon-bg">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.5411 23.2458L20.2251 19.5262C20.5787 19.3048 20.7554 18.9912 20.7554 18.5852C20.7554 18.1792 20.5787 17.863 20.2251 17.6365L14.5744 13.8755C14.1984 13.6268 13.8088 13.6082 13.4054 13.8195C13.0021 14.0308 12.8004 14.3672 12.8004 14.8285V22.2928C12.8004 22.7568 12.9966 23.0952 13.3888 23.3078C13.781 23.5205 14.1651 23.4998 14.5411 23.2458ZM4.73877 28.6995C4.12544 28.6995 3.59366 28.4743 3.14344 28.0238C2.693 27.5736 2.46777 27.0418 2.46777 26.4285V9.53218C2.46777 9.21218 2.57688 8.94162 2.79511 8.72051C3.01333 8.49918 3.28277 8.38851 3.60344 8.38851H10.4838V5.05518C10.4838 4.4474 10.709 3.91696 11.1594 3.46384C11.6097 3.01073 12.1414 2.78418 12.7548 2.78418H19.2461C19.8594 2.78418 20.3912 3.01073 20.8414 3.46384C21.2919 3.91696 21.5171 4.4474 21.5171 5.05518V8.38851H28.3974C28.7174 8.38851 28.988 8.49918 29.2091 8.72051C29.4304 8.94162 29.5411 9.21218 29.5411 9.53218V26.4285C29.5411 27.0418 29.3151 27.5736 28.8631 28.0238C28.4113 28.4743 27.8777 28.6995 27.2621 28.6995H4.73877ZM4.73877 26.4285H27.2621V10.6675H4.73877V26.4285ZM12.7548 8.38851H19.2461V5.05518H12.7548V8.38851Z"
-                  fill="#000000"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="Banner7__text-group">
-            <div class="Banner7__title">
-              Limited Time: 20% OFF + Free Blanket!
-            </div>
-            <div class="Banner7__subtitle">
-              Hurry, offer ends soon—don't miss out!
-            </div>
+          white 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: sticky;
+      /* stick to top when reached */
+      top: 0;
+      z-index: 1;
+      /* under following sections */
+    }
+
+    /* Ensure all sections after Layout426 appear above it while scrolling */
+    .HomeMobile .Layout426~* {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Container wrapper */
+    .HomeMobile .Layout426 .Layout426__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Content wrapper */
+    .HomeMobile .Layout426 .Layout426__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Text section */
+    .HomeMobile .Layout426 .Layout426__text-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Label wrapper */
+    .HomeMobile .Layout426 .Layout426__label-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Label */
+    .HomeMobile .Layout426 .Layout426__label {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Header group */
+    .HomeMobile .Layout426 .Layout426__header-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .Layout426 .Layout426__title {
+      width: 100%;
+      color: #420e24;
+      font-size: 36px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .Layout426 .Layout426__description {
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Description normal text */
+    .HomeMobile .Layout426 .Layout426__description-normal {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Description bold text */
+    .HomeMobile .Layout426 .Layout426__description-bold {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    .Layout426__image-wrapper {
+      width: 300px;
+      /* hoặc kích thước bạn muốn */
+      height: 300px;
+      overflow: hidden;
+      /* cắt ảnh ra ngoài border-radius */
+      border-radius: 20px;
+      /* bo góc tròn */
+      position: relative;
+      transform: rotate(4deg);
+      /* xoay nhẹ về phía trái */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      /* tạo bóng nhẹ */
+    }
+
+    .Layout426__image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* ảnh lấp đầy div và giữ tỉ lệ */
+      display: block;
+    }
+
+    /* Layout86 CSS - Mobile Only */
+
+    /* Container chính với background màu đỏ */
+    .HomeMobile .Layout86 {
+      width: 100%;
+      padding: 60px 0;
+      background: #7d291c;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 10px */
+    .HomeMobile .Layout86 .Layout86__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Content wrapper */
+    .HomeMobile .Layout86 .Layout86__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Header section */
+    .HomeMobile .Layout86 .Layout86__header-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Title */
+    .HomeMobile .Layout86 .Layout86__title {
+      width: 100%;
+      color: white;
+      font-size: 32px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.3;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Stats section */
+    .HomeMobile .Layout86 .Layout86__stats-section {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Stats wrapper */
+    .HomeMobile .Layout86 .Layout86__stats-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Stats row */
+    .HomeMobile .Layout86 .Layout86__stats-row {
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      padding: 8px 0;
+    }
+
+    /* Stat item */
+    .HomeMobile .Layout86 .Layout86__stat-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Stat number wrapper */
+    .HomeMobile .Layout86 .Layout86__stat-number {
+      width: 100%;
+      max-width: 127px;
+      height: 74px;
+      position: relative;
+      overflow: hidden;
+      font-family: "Bona Nova";
+    }
+
+    /* Number text */
+    .HomeMobile .Layout86 .Layout86__number-text {
+      width: 127px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      color: white;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 72px;
+      font-family: "Bona Nova";
+      word-wrap: break-word;
+    }
+
+    /* Stat description */
+    .HomeMobile .Layout86 .Layout86__stat-description {
+      width: 100%;
+      color: white;
+      font-size: 16px;
+      font-family: "Merriweather Sans";
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Gallery CSS - Mobile Only */
+
+    /* Container chính với background image */
+    .HomeMobile .Gallery {
+      width: 100%;
+      padding: 0 0 60px 0;
+      background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/emergency_bg.png?v=1760078467");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 10px */
+    .HomeMobile .Gallery .Gallery__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Header section */
+    .HomeMobile .Gallery .Gallery__header-section {
+      width: 100%;
+      max-width: 100%;
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Title */
+    .HomeMobile .Gallery .Gallery__title {
+      width: 100%;
+      text-align: center;
+      color: #40100e;
+      font-size: 42px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    /* Image section */
+    .HomeMobile .Gallery .Gallery__image-section {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Image */
+    .HomeMobile .Gallery .Gallery__image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 0 3px rgba(255, 153, 153, 0.8),
+        0 0 0 6px rgba(255, 153, 153, 0.5), 0 0 0 9px rgba(255, 153, 153, 0.3),
+        0 0 0 12px rgba(255, 153, 153, 0.1);
+    }
+
+    /* Layout456 CSS - Mobile Only */
+
+    /* Container chính với background image */
+    .HomeMobile .Layout456 {
+      width: 100%;
+      min-height: 100vh;
+      padding: 60px 0;
+      background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/line_top.png?v=1760078613");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 10px */
+    .HomeMobile .Layout456 .Layout456__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+    }
+
+    /* Text section */
+    .HomeMobile .Layout456 .Layout456__text-section {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Text wrapper */
+    .HomeMobile .Layout456 .Layout456__text-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Label wrapper */
+    .HomeMobile .Layout456 .Layout456__label-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Label */
+    .HomeMobile .Layout456 .Layout456__label {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Header group */
+    .HomeMobile .Layout456 .Layout456__header-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .Layout456 .Layout456__title {
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Title bold */
+    .HomeMobile .Layout456 .Layout456__title-bold {
+      color: #420e24;
+      font-size: 36px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    /* Title regular */
+    .HomeMobile .Layout456 .Layout456__title-regular {
+      color: #420e24;
+      font-size: 36px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .Layout456 .Layout456__description {
+      width: 100%;
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 22px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 35.86px;
+      word-wrap: break-word;
+    }
+
+    /* Image section */
+    .HomeMobile .Layout456 .Layout456__image-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* Image */
+    .HomeMobile .Layout456 .Layout456__image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0px 0px 50px 16px rgba(255, 255, 255, 0.75);
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      object-fit: cover;
+    }
+
+    /* Comparison CSS - Mobile Only */
+
+    /* Container chính với background image */
+    .HomeMobile .Comparison {
+      width: 100%;
+      min-height: 100vh;
+      padding: 60px 0;
+      overflow: hidden;
+      background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/line_bottom.png?v=1760078637");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .Comparison .Comparison__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* Header section */
+    .HomeMobile .Comparison .Comparison__header-section {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Header content */
+    .HomeMobile .Comparison .Comparison__header-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .Comparison .Comparison__title {
+      width: 100%;
+      text-align: center;
+      color: #40100e;
+      font-size: 28px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    /* Subtitle */
+    .HomeMobile .Comparison .Comparison__subtitle {
+      width: 100%;
+      text-align: center;
+      color: var(--Color-Neutral-Darkest, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Table section */
+    .HomeMobile .Comparison .Comparison__table-section {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Table header */
+    .HomeMobile .Comparison .Comparison__table-header {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      min-height: 70px;
+    }
+
+    /* Table header label */
+    .HomeMobile .Comparison .Comparison__table-header-label {
+      width: 40%;
+      padding: 16px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    /* Header title */
+    .HomeMobile .Comparison .Comparison__header-title {
+      width: 100%;
+      color: var(--Color-Valencia-Darkest, #40100e);
+      font-size: 14px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    /* Table header price */
+    .HomeMobile .Comparison .Comparison__table-header-price {
+      flex: 1;
+      padding: 16px;
+      background: var(--Color-Valencia-Darkest, #40100e);
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Price header content */
+    .HomeMobile .Comparison .Comparison__price-header-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Price title */
+    .HomeMobile .Comparison .Comparison__price-title {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    /* Table row */
+    .HomeMobile .Comparison .Comparison__table-row {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Table cell label */
+    .HomeMobile .Comparison .Comparison__table-cell-label {
+      width: 40%;
+      padding: 12px;
+      background: #f1e7e7;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      outline: 2px #f2f2f2 solid;
+      outline-offset: -2px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    /* Cell text */
+    .HomeMobile .Comparison .Comparison__cell-text {
+      flex: 1;
+      color: var(--Color-Valencia-Darkest, #40100e);
+      font-size: 13px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Table cell price */
+    .HomeMobile .Comparison .Comparison__table-cell-price {
+      flex: 1;
+      padding: 12px 16px;
+      background: var(--Color-Valencia-Darkest, #40100e);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Price text */
+    .HomeMobile .Comparison .Comparison__price-text {
+      flex: 1;
+      text-align: center;
+      color: white;
+      font-size: 13px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Table footer */
+    .HomeMobile .Comparison .Comparison__table-footer {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Table footer label */
+    .HomeMobile .Comparison .Comparison__table-footer-label {
+      width: 40%;
+      padding: 16px 12px;
+      background: transparent;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    /* Footer title */
+    .HomeMobile .Comparison .Comparison__footer-title {
+      width: 100%;
+      color: var(--Color-Valencia-Darkest, #40100e);
+      font-size: 18px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 800;
+      line-height: 1.3;
+      word-wrap: break-word;
+    }
+
+    /* Table footer price */
+    .HomeMobile .Comparison .Comparison__table-footer-price {
+      flex: 1;
+      padding: 16px;
+      background: var(--Color-Valencia-Darkest, #40100e);
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Total price wrapper */
+    .HomeMobile .Comparison .Comparison__total-price {
+      width: 100%;
+      max-width: 200px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Total price text */
+    .HomeMobile .Comparison .Comparison__total-price-text {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Quote section */
+    .HomeMobile .Comparison .Comparison__quote-section {
+      width: 100%;
+      padding: 0 20px;
+      background: #6b1c20;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Quote box */
+    .HomeMobile .Comparison .Comparison__quote-box {
+      flex: 1;
+      padding: 20px 16px;
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Quote text */
+    .HomeMobile .Comparison .Comparison__quote-text {
+      flex: 1;
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Layout308 CSS - Mobile Only */
+
+    /* Container chính với background gradient */
+    .HomeMobile .Layout308 {
+      width: 100%;
+      min-height: 100vh;
+      padding: 60px 0 40px 0;
+      background: linear-gradient(117deg, #f9dee0 0%, white 55%, #f8dee4 90%);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .Layout308 .Layout308__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    /* Header section */
+    .HomeMobile .Layout308 .Layout308__header-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Header text */
+    .HomeMobile .Layout308 .Layout308__header-text {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Label wrapper */
+    .HomeMobile .Layout308 .Layout308__label-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Label */
+    .HomeMobile .Layout308 .Layout308__label {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Title */
+    .HomeMobile .Layout308 .Layout308__title {
+      width: 100%;
+      color: #6b2f45;
+      font-size: 28px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .Layout308 .Layout308__description {
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Description normal text */
+    .HomeMobile .Layout308 .Layout308__description-normal {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 15px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Description bold text */
+    .HomeMobile .Layout308 .Layout308__description-bold {
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 15px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Features section */
+    .HomeMobile .Layout308 .Layout308__features-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    /* Features wrapper */
+    .HomeMobile .Layout308 .Layout308__features-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Mỗi hàng chứa 2 item */
+    .HomeMobile .Layout308 .Layout308__features-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Feature item: chia đều 2 cột, cùng chiều cao */
+    .HomeMobile .Layout308 .Layout308__feature-item {
+      flex: 1;
+      align-items: flex-start;
+      gap: 16px;
+      border-radius: 16px;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    /* Feature icon */
+    .HomeMobile .Layout308 .Layout308__feature-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .HomeMobile .Layout308 .Layout308__feature-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Nội dung feature */
+    .HomeMobile .Layout308 .Layout308__feature-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Tiêu đề */
+    .HomeMobile .Layout308 .Layout308__feature-title {
+      color: #0b0302;
+      font-size: 18px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Mô tả */
+    .HomeMobile .Layout308 .Layout308__feature-description {
+      color: #0b0302;
+      font-size: 14px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Spacer */
+    .HomeMobile .Layout308 .Layout308__spacer {
+      width: 100%;
+      height: 20px;
+    }
+
+    /* Testimonial Section */
+    .mobi-Testimonial1 {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
+
+    .mobi-Testimonial1 .mobi-testimonial-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .Layout482 {
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+      /* even tighter */
+      overflow: hidden;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      /* tighter space */
+      background: #f5f5f5;
+    }
+
+    .Layout482 .layout-container {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      /* was 24px */
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .Layout482 .layout-content {
+      width: 100%;
+      max-width: 768px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .Layout482 .layout-text {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .Layout482 .layout-heading {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .Layout482 .layout-title {
+      text-align: center;
+      color: var(--Color-Scheme-1-Text, #0b0302);
+      font-size: 25px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 37.5px;
+    }
+
+    .Layout482 .layout-body {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .Layout482 .layout-subtitle {
+      text-align: center;
+      color: #420e24;
+      font-size: 38px;
+      /* smaller for mobile */
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .Layout482 .layout-description {
+      text-align: center;
+      color: var(--Color-Scheme-1-Text, #0b0302);
+      font-size: 16px;
+      /* smaller for mobile */
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .Layout482 .layout-button-group {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .Layout482 .layout-button {
+      padding: 10px 24px;
+      border-radius: 100px;
+      border: 1.5px solid rgba(11, 3, 2, 0.15);
+      border-bottom: 4px solid rgba(11, 3, 2, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .Layout482 .layout-button:hover {
+      background: rgba(11, 3, 2, 0.05);
+    }
+
+    .Layout482 .layout-button-text {
+      color: var(--Color-Neutral-Darkest, #0b0302);
+      font-size: 18px;
+      /* smaller for mobile */
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .layout482-video {
+      width: 100vw;
+      /* full-bleed width */
+      max-width: 100vw;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      /* center the 100vw element */
+      aspect-ratio: 16 / 9;
+      /* responsive height */
+      border-radius: 30px;
+      overflow: hidden;
+      /* keep rounded corners */
+      margin: -20px 0;
+      /* negative vertical spacing to tuck closer */
+    }
+
+    .layout482-video iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 30px;
+    }
+
+    .player video {
+      border-radius: 30px;
+    }
+
+    .video {
+      border-radius: 30px;
+    }
+
+    /* Layout413 CSS - Mobile Only */
+
+    /* Container chính với background image */
+    .HomeMobile .Layout413 {
+      width: 100%;
+      min-height: 100vh;
+      padding: 60px 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/day7.png?v=1760078688");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .Layout413 .Layout413__container {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0px 20px;
+      align-items: center;
+    }
+
+    /* Content wrapper */
+    .HomeMobile .Layout413 .Layout413__content-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* Image wrapper */
+    .HomeMobile .Layout413 .Layout413__image-wrapper {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      transform: rotate(-1deg);
+      transform-origin: top left;
+    }
+
+    /* Image */
+    .HomeMobile .Layout413 .Layout413__image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    /* Text section */
+    .HomeMobile .Layout413 .Layout413__text-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    /* Text content */
+    .HomeMobile .Layout413 .Layout413__text-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    /* Header group */
+    .HomeMobile .Layout413 .Layout413__header-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    /* Header wrapper */
+    .HomeMobile .Layout413 .Layout413__header-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .Layout413 .Layout413__title {
+      width: 100%;
+      color: #420e24;
+      font-size: 36px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .Layout413 .Layout413__description {
+      width: 100%;
+      color: var(--Color-Scheme-1-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Takeaway section */
+    .HomeMobile .Layout413 .Layout413__takeaway-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    /* Takeaway wrapper */
+    .HomeMobile .Layout413 .Layout413__takeaway-wrapper {
+      width: 100%;
+      padding: 8px 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    /* Takeaway content */
+    .HomeMobile .Layout413 .Layout413__takeaway-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    /* Takeaway title */
+    .HomeMobile .Layout413 .Layout413__takeaway-title {
+      width: 100%;
+      text-align: center;
+      color: var(--Color-Valencia-Darkest, #40100e);
+      font-size: 32px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    /* Takeaway text */
+    .HomeMobile .Layout413 .Layout413__takeaway-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Takeaway normal text */
+    .HomeMobile .Layout413 .Layout413__takeaway-normal {
+      color: var(--Color-Scheme-1-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Takeaway underline text */
+    .HomeMobile .Layout413 .Layout413__takeaway-underline {
+      color: var(--Color-Scheme-1-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      text-decoration: underline;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    /* Header64 CSS - Mobile Only */
+
+    /* Container chính với background đỏ */
+    .HomeMobile .Header64 {
+      width: 100%;
+      padding: 40px 0;
+      background: #7d291c;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .Header64 .Header64__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Content wrapper */
+    .HomeMobile .Header64 .Header64__content-wrapper {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .Header64 .Header64__title {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 38px;
+      font-family: "Bona Nova", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    /* Rating wrapper */
+    .HomeMobile .Header64 .Header64__rating {
+      width: auto;
+      height: auto;
+      position: relative;
+    }
+
+    /* Rating stars */
+    .HomeMobile .Header64 .Header64__rating-stars {
+      width: 100%;
+      opacity: 0.5;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .Header64 .Header64__description {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Description normal text */
+    .HomeMobile .Header64 .Header64__description-normal {
+      color: white;
+      font-size: 18px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Description bold text */
+    .HomeMobile .Header64 .Header64__description-bold {
+      color: white;
+      font-size: 18px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Layout228 CSS - Mobile Only */
+
+    /* Container chính với background gradient */
+    .HomeMobile .Layout228 {
+      width: 100%;
+      padding: 40px 0;
+      background: linear-gradient(90deg, #f1e1e0 4%, white 42%, #f1e1e0 100%);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .Layout228 .Layout228__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    /* Features wrapper */
+    .HomeMobile .Layout228 .Layout228__features-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    /* Feature item */
+    .HomeMobile .Layout228 .Layout228__feature-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Feature content */
+    .HomeMobile .Layout228 .Layout228__feature-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* Feature header */
+    .HomeMobile .Layout228 .Layout228__feature-header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Feature icon */
+    .HomeMobile .Layout228 .Layout228__feature-icon {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* Icon background */
+    .HomeMobile .Layout228 .Layout228__icon-bg {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      background: var(--Color-Valencia-Darkest, #40100e);
+    }
+
+    /* Feature text */
+    .HomeMobile .Layout228 .Layout228__feature-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Feature title */
+    .HomeMobile .Layout228 .Layout228__feature-title {
+      width: 100%;
+      text-align: center;
+      color: var(--Color-Valencia-Darkest, #40100e);
+      font-size: 26px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.3;
+      word-wrap: break-word;
+    }
+
+    /* CTA39 CSS - Mobile Only */
+
+    /* Container chính với background */
+    .CTA39 {
+      width: 100%;
+      padding: 100px 0;
+      background: var(--Color-Scheme-4-Foreground, #d68c2f);
+      background-image: url(https://cdn.shopify.com/s/files/1/0077/1092/files/people_58f27c53-daa4-4ce4-b3c1-cb44209f8ace.png?v=1759863578);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      /* 🔥 quan trọng */
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Container wrapper với padding 0 20px */
+    .HomeMobile .CTA39 .CTA39__container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Card */
+    .HomeMobile .CTA39 .CTA39__card {
+      width: 100%;
+      background: white;
+      overflow: hidden;
+      border-radius: 16px;
+      outline: 1px solid rgba(11, 3, 2, 0.15);
+      outline-offset: -1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Card content */
+    .HomeMobile .CTA39 .CTA39__card-content {
+      width: 100%;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* Text section */
+    .HomeMobile .CTA39 .CTA39__text-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    /* Title */
+    .HomeMobile .CTA39 .CTA39__title {
+      width: 100%;
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 32px;
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Description */
+    .HomeMobile .CTA39 .CTA39__description {
+      width: 100%;
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    /* Button wrapper */
+    .HomeMobile .CTA39 .CTA39__button-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Button */
+    .HomeMobile .CTA39 .CTA39__button {
+      width: 100%;
+      padding: 20px 15px;
+      background: var(--Color-Valencia, #d73630);
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .HomeMobile .CTA39 .CTA39__button:hover {
+      background: #c12f29;
+    }
+
+    /* Button text */
+    .HomeMobile .CTA39 .CTA39__button-text {
+      color: white;
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    /* Offer section */
+    .HomeMobile .CTA39 .CTA39__offer-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Offer text */
+    .HomeMobile .CTA39 .CTA39__offer-text {
+      width: 100%;
+      text-align: center;
+      color: var(--Color-Scheme-2-Text, #0b0302);
+      font-size: 16px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Image */
+    .HomeMobile .CTA39 .CTA39__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .Footer {
+      width: 100%;
+      height: 100%;
+      padding: 80px 64px;
+      background: var(--Color-Scheme-2-Background, white);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .Footer .footer-container {
+      width: 100%;
+      max-width: 1280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 80px;
+    }
+
+    .Footer .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .Footer .footer-logo {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .Footer .footer-logo-inner {
+      width: 84px;
+      height: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .Footer .footer-logo-icon {
+      width: 70px;
+      height: 36px;
+      position: absolute;
+      left: 6.67px;
+      top: 0;
+    }
+
+    .Footer .footer-logo-icon .shape {
+      position: absolute;
+      background: var(--Color-Neutral-Darkest, #0b0302);
+    }
+
+    .Footer .footer-logo-icon .shape1 {
+      width: 18.81px;
+      height: 15.95px;
+      left: 50.82px;
+      top: 10.87px;
+    }
+
+    .Footer .footer-logo-icon .shape2 {
+      width: 19.44px;
+      height: 24.68px;
+      left: 34.33px;
+      top: 11.32px;
+    }
+
+    .Footer .footer-logo-icon .shape3 {
+      width: 18.81px;
+      height: 15.95px;
+      left: 18.55px;
+      top: 10.87px;
+    }
+
+    .Footer .footer-logo-icon .shape4 {
+      width: 21.6px;
+      height: 16.19px;
+      left: 0;
+      top: 10.24px;
+    }
+
+    .Footer .footer-logo-icon .shape5 {
+      width: 15.13px;
+      height: 9.29px;
+      left: 1.15px;
+      top: 0;
+    }
+
+    .Footer .footer-icons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .Footer .icon {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .Footer .footer-line {
+      width: 100%;
+      height: 0;
+      border-top: 1px solid var(--Color-Scheme-2-Border, rgba(11, 3, 2, 0.15));
+      outline-offset: -0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-layer="Home Mobile" class="HomeMobile size- inline-flex flex-col justify-start items-start overflow-hidden">
+    <div class="Banner7">
+      <div class="Banner7__content">
+        <div class="Banner7__icon-wrapper">
+          <div class="Banner7__icon-bg">
+            <svg width="32" height="32" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5411 23.2458L20.2251 19.5262C20.5787 19.3048 20.7554 18.9912 20.7554 18.5852C20.7554 18.1792 20.5787 17.863 20.2251 17.6365L14.5744 13.8755C14.1984 13.6268 13.8088 13.6082 13.4054 13.8195C13.0021 14.0308 12.8004 14.3672 12.8004 14.8285V22.2928C12.8004 22.7568 12.9966 23.0952 13.3888 23.3078C13.781 23.5205 14.1651 23.4998 14.5411 23.2458ZM4.73877 28.6995C4.12544 28.6995 3.59366 28.4743 3.14344 28.0238C2.693 27.5736 2.46777 27.0418 2.46777 26.4285V9.53218C2.46777 9.21218 2.57688 8.94162 2.79511 8.72051C3.01333 8.49918 3.28277 8.38851 3.60344 8.38851H10.4838V5.05518C10.4838 4.4474 10.709 3.91696 11.1594 3.46384C11.6097 3.01073 12.1414 2.78418 12.7548 2.78418H19.2461C19.8594 2.78418 20.3912 3.01073 20.8414 3.46384C21.2919 3.91696 21.5171 4.4474 21.5171 5.05518V8.38851H28.3974C28.7174 8.38851 28.988 8.49918 29.2091 8.72051C29.4304 8.94162 29.5411 9.21218 29.5411 9.53218V26.4285C29.5411 27.0418 29.3151 27.5736 28.8631 28.0238C28.4113 28.4743 27.8777 28.6995 27.2621 28.6995H4.73877ZM4.73877 26.4285H27.2621V10.6675H4.73877V26.4285ZM12.7548 8.38851H19.2461V5.05518H12.7548V8.38851Z"
+                fill="#000000" />
+            </svg>
           </div>
         </div>
-        <div
-          class="Banner7__button"
-          data-alternate="False"
-          data-icon-position="No icon"
-          data-small="True"
-          data-style="Primary"
-        >
-          <div class="Banner7__button-text">Shop</div>
-        </div>
-      </div>
-
-      <div class="Header30">
-        <div class="Header30__container">
-          <div class="Header30__content-wrapper">
-            <div class="Header30__text-group">
-              <div class="Header30__title">
-                A mom's story: why I finally built our emergency kit
-              </div>
-              <div class="Header30__subtitle">
-                When the earth shook, my first thought was my kids. That's when
-                I knew I couldn't wait any longer.
-              </div>
-            </div>
+        <div class="Banner7__text-group">
+          <div class="Banner7__title">
+            Limited Time: 20% OFF + Free Blanket!
+          </div>
+          <div class="Banner7__subtitle">
+            Hurry, offer ends soon—don't miss out!
           </div>
         </div>
       </div>
-      <div class="Layout426">
-        <div class="Layout426__container">
-          <div class="Layout426__content">
-            <div class="Layout426__text-section">
-              <div class="Layout426__label-wrapper">
-                <div class="Layout426__label">Awakening</div>
-              </div>
-              <div class="Layout426__header-group">
-                <div class="Layout426__title">Day 1: The Wake-Up Call</div>
-                <div class="Layout426__description">
-                  <span class="Layout426__description-normal"
-                    >I never considered myself the "prepper" type. I always
-                    thought emergency kits were for doomsday people, not regular
-                    families like mine. But last winter, the power went out in
-                    our neighborhood for two full days.<br />No heat, no lights,
-                    no hot meals.<br /><br />My kids huddled under blankets,
-                    scared, and I felt helpless. That night, I realized
-                    something painful: I wasn't </span
-                  ><span class="Layout426__description-bold">READY</span
-                  ><span class="Layout426__description-normal"
-                    >. If something bigger happened, like a wildfire, flood, or
-                    earthquake, we wouldn't last more than a few hours.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="Layout426__image-wrapper" data-property-1="Default">
-              <img
-                class="Layout426__image"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/layout_426.jpg?v=1759861283"
-              />
-            </div>
-          </div>
-        </div>
+      <div class="Banner7__button" data-alternate="False" data-icon-position="No icon" data-small="True"
+        data-style="Primary">
+        <div class="Banner7__button-text">Shop</div>
       </div>
-      <div class="Layout86">
-        <div class="Layout86__container">
-          <div class="Layout86__content">
-            <div class="Layout86__header-section">
-              <div class="Layout86__title">
-                The Truth About Preparedness: What Canadians Are Doing
-              </div>
-            </div>
-            <div class="Layout86__stats-section">
-              <div class="Layout86__stats-wrapper">
-                <div class="Layout86__stats-row">
-                  <div class="Layout86__stat-item">
-                    <div
-                      class="Layout86__stat-number"
-                      data-property-1="Default"
-                    >
-                      <div class="Layout86__number-text">
-                        0%<br />11%<br />23%<br />35%<br />46%<br />57%
-                      </div>
-                    </div>
-                    <div class="Layout86__stat-description">
-                      Considering steps for weather-related safety.
-                    </div>
-                  </div>
-                  <div class="Layout86__stat-item">
-                    <div
-                      class="Layout86__stat-number"
-                      data-property-1="Default"
-                    >
-                      <div class="Layout86__number-text">
-                        0%<br />1%<br />3%<br />4%<br />5%<br />7%<br />9%
-                      </div>
-                    </div>
-                    <div class="Layout86__stat-description">
-                      Have added insurance for extra protection.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        data-layer="Frame 19"
-        style="margin-top: -3px; margin-bottom: -7px"
-        class="Frame19 w-[2316px] h-32 relative overflow-hidden"
-      >
-        <img
-          src="https://cdn.shopify.com/s/files/1/0077/1092/files/frame19-mobile.png?v=1760079680"
-          style="width: 100%; height: auto"
-          alt="Decorative banner"
-          class="w-full h-full object-cover"
-        />
-      </div>
+    </div>
 
-      <div class="Gallery">
-        <div class="Gallery__container">
-          <div class="Gallery__header-section">
-            <div class="Gallery__title">72Hours Emergency Kit</div>
-          </div>
-          <div class="Gallery__image-section">
-            <img
-              class="Gallery__image"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/gallery.png?v=1759861456"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="Layout456">
-        <div class="Layout456__container">
-          <div class="Layout456__text-section">
-            <div class="Layout456__text-wrapper">
-              <div class="Layout456__label-wrapper">
-                <div class="Layout456__label">Research</div>
-              </div>
-              <div class="Layout456__header-group">
-                <div class="Layout456__title">
-                  <span class="Layout456__title-bold">Day 2</span
-                  ><span class="Layout456__title-regular"
-                    >: The Search for Peace of Mind</span
-                  >
-                </div>
-                <div class="Layout456__description">
-                  I started Googling "how to prepare for an emergency," and
-                  everything I read said the same thing:<br /><br />Every
-                  household should have at least 72 hours of food, water, and
-                  essential supplies.<br /><br />I thought about building my own
-                  kit, but the list was overwhelming. Canned food, first aid,
-                  water storage, flashlights, radios… and then I realized it
-                  wasn't just about buying things, it was about replacing them
-                  regularly before they expire.
-                </div>
-              </div>
+    <div class="Header30">
+      <div class="Header30__container">
+        <div class="Header30__content-wrapper">
+          <div class="Header30__text-group">
+            <div class="Header30__title">
+              A mom's story: why I finally built our emergency kit
+            </div>
+            <div class="Header30__subtitle">
+              When the earth shook, my first thought was my kids. That's when
+              I knew I couldn't wait any longer.
             </div>
           </div>
-          <div class="Layout456__image-section">
-            <img
-              class="Layout456__image"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/layout_456.png?v=1759861491"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="Comparison">
-        <div class="Comparison__container">
-          <div class="Comparison__header-section">
-            <div class="Comparison__header-content">
-              <div class="Comparison__title">DIY Kit Price Reality Check</div>
-              <div class="Comparison__subtitle">
-                Here's what it would have cost me if I tried to build my own:
-              </div>
-            </div>
-          </div>
-          <div class="Comparison__table-section">
-            <div class="Comparison__table-header">
-              <div class="Comparison__table-header-label">
-                <div class="Comparison__header-title">Emergency Essentials</div>
-              </div>
-              <div class="Comparison__table-header-price">
-                <div class="Comparison__price-header-content">
-                  <div class="Comparison__price-title">Individual Cost</div>
-                </div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">
-                  Drinking water and storage
-                </div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$40-60</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">Emergency Food</div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$60-80</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">First aid kit</div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$35-50</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">
-                  Flashlights and extra batteries
-                </div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$25-40</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">Hand-crank radio</div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$40-60</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">
-                  Thermal blankets and ponchos
-                </div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$25-40</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">
-                  Sanitation supplies and masks
-                </div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$30-50</div>
-              </div>
-            </div>
-            <div class="Comparison__table-row">
-              <div class="Comparison__table-cell-label">
-                <div class="Comparison__cell-text">Backpack</div>
-              </div>
-              <div class="Comparison__table-cell-price">
-                <div class="Comparison__price-text">$40-60</div>
-              </div>
-            </div>
-            <div class="Comparison__table-footer">
-              <div class="Comparison__table-footer-label">
-                <div class="Comparison__footer-title">TOTAL DIY COST</div>
-              </div>
-              <div class="Comparison__table-footer-price">
-                <div class="Comparison__total-price" data-property-1="Default">
-                  <div class="Comparison__total-price-text">$0</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="Comparison__quote-section">
-            <div
-              class="Comparison__quote-box"
-              data-alternate="False"
-              data-icon-position="No icon"
-              data-small="False"
-              data-style="Secondary"
-            >
-              <div class="Comparison__quote-text">
-                "I thought I'd save money building my own kit… until I realized
-                it would cost more, expire faster, and take weeks to organize."
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Layout308">
-        <div class="Layout308__container">
-          <div class="Layout308__header-section">
-            <div class="Layout308__header-text">
-              <div class="Layout308__label-wrapper">
-                <div class="Layout308__label">Smart</div>
-              </div>
-              <div class="Layout308__title">
-                The Smarter Alternative for Your Family's Safety
-              </div>
-            </div>
-            <div class="Layout308__description">
-              <span class="Layout308__description-normal"
-                >Discover the 72HRS Emergency Survival Kits, expertly designed
-                to provide peace of mind. Each kit is pre-packed with essential
-                supplies, ensuring your family is prepared for any situation.
-                Don't </span
-              ><span class="Layout308__description-bold"
-                >leave your safety </span
-              ><span class="Layout308__description-normal"
-                >to chance, choose the smarter solution!</span
-              >
-            </div>
-          </div>
-          <div class="Layout308__features-section">
-            <div class="Layout308__features-wrapper">
-              <div class="Layout308__features-row">
-                <div class="Layout308__feature-item">
-                  <div class="Layout308__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/verified.png?v=1759861563"
-                    />
-                  </div>
-                  <div class="Layout308__feature-content">
-                    <div class="Layout308__feature-title">
-                      Government Approved
-                    </div>
-                    <div class="Layout308__feature-description">
-                      Government-recommended kits that cover all essential
-                      supplies for your safety.
-                    </div>
-                  </div>
-                </div>
-                <div class="Layout308__feature-item">
-                  <div class="Layout308__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/groups_2.jpg?v=1759861910"
-                    />
-                  </div>
-                  <div class="Layout308__feature-content">
-                    <div class="Layout308__feature-title">Fits Your Family</div>
-                    <div class="Layout308__feature-description">
-                      Options available for 1-person to 4-person kits, tailored
-                      to your needs.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="Layout308__features-row">
-                <div class="Layout308__feature-item">
-                  <div class="Layout308__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/shelves.png?v=1759861593"
-                    />
-                  </div>
-                  <div class="Layout308__feature-content">
-                    <div class="Layout308__feature-title">
-                      Shelf-<br />Stable
-                    </div>
-                    <div class="Layout308__feature-description">
-                      Sealed supplies that last for years without the need for
-                      regular rotation.
-                    </div>
-                  </div>
-                </div>
-                <div class="Layout308__feature-item">
-                  <div class="Layout308__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/thumb_up.svg?v=1759862262"
-                    />
-                  </div>
-                  <div class="Layout308__feature-content">
-                    <div class="Layout308__feature-title">
-                      Smarter <br />Value
-                    </div>
-                    <div class="Layout308__feature-description">
-                      Starting at $259.99 CAD, less than DIY, saving you time
-                      and effort.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="Layout308__spacer"></div>
-        </div>
-      </div>
-      <div class="mobi-Testimonial1">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0077/1092/files/Screenshot_2025-11-05_at_04.33.04.png?v=1762291997"
-          alt="Testimonial"
-          class="mobi-testimonial-image"
-        />
-      </div>
-
-      <div class="Layout482">
-        <div class="layout-container">
-          <div class="layout-content">
-            <div class="layout-text">
-              <div class="layout-heading">
-                <div class="layout-title">Action</div>
-              </div>
-              <div class="layout-body">
-                <div class="layout-subtitle">
-                  Day 3: Taking Control of Our Safety
-                </div>
-                <div class="layout-description">
-                  Click. Order placed.<br />For the first time in weeks, I felt
-                  calm. Instead of worrying “what if,” I knew we had a plan. I
-                  could literally lift one bag and know my family would be okay
-                  for three days.<br /><br />The kit arrived quickly, neatly
-                  packed with everything from:
-                </div>
-              </div>
-            </div>
-            <div class="layout-button-group">
-              <div class="layout-button">
-                <div class="layout-button-text">Get Kit</div>
-              </div>
-            </div>
-          </div>
-          <div class="layout482-video">
-            <iframe
-              allow="fullscreen;autoplay"
-              allowfullscreen
-              src="https://streamable.com/e/xttkut?autoplay=1&muted=1&nocontrols=1"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="Layout413">
-        <div class="Layout413__container">
-          <div class="Layout413__content-wrapper">
-            <div class="Layout413__image-wrapper" data-property-1="Default">
-              <img
-                class="Layout413__image"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/bg_413.png?v=1759861023"
-              />
-            </div>
-            <div class="Layout413__text-section">
-              <div class="Layout413__text-content">
-                <div class="Layout413__header-group">
-                  <div class="Layout413__header-wrapper">
-                    <div class="Layout413__title">Day 7: Relief in a Box</div>
-                    <div class="Layout413__description">
-                      Now the kit sits by our front door. My kids even helped me
-                      practice a "grab-and-go" drill. It's amazing how much
-                      lighter the worry feels knowing we're prepared.
-                      Emergencies don't feel like distant possibilities anymore,
-                      they feel like something we can handle.
-                    </div>
-                  </div>
-                </div>
-                <div class="Layout413__takeaway-section">
-                  <div class="Layout413__takeaway-wrapper">
-                    <div class="Layout413__takeaway-content">
-                      <div class="Layout413__takeaway-title">My Takeaway</div>
-                      <div class="Layout413__takeaway-text">
-                        <span class="Layout413__takeaway-normal"
-                          >Preparedness isn't about fear.<br />It's about giving
-                          your family </span
-                        ><span class="Layout413__takeaway-underline"
-                          >peace of mind</span
-                        ><span class="Layout413__takeaway-normal">
-                          when life throws the unexpected at you.</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Header64">
-        <div class="Header64__container">
-          <div class="Header64__content-wrapper">
-            <div class="Header64__title">Why I Trust 72HRS</div>
-            <div class="Header64__rating" data-property-1="Default">
-              <div class="Header64__rating-stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
-            </div>
-            <div class="Header64__description">
-              <span class="Header64__description-normal">"Over </span
-              ><span class="Header64__description-bold">75,000 families</span
-              ><span class="Header64__description-normal">
-                prepared with 72HRS"</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Layout228">
-        <div class="Layout228__container">
-          <div class="Layout228__features-wrapper">
-            <div class="Layout228__feature-item">
-              <div class="Layout228__feature-content">
-                <div class="Layout228__feature-header">
-                  <div class="Layout228__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/check_circle.svg?v=1759863483"
-                    />
-                  </div>
-                  <div class="Layout228__feature-text">
-                    <div class="Layout228__feature-title">FEMA Aligned</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="Layout228__feature-item">
-              <div class="Layout228__feature-content">
-                <div class="Layout228__feature-header">
-                  <div class="Layout228__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/health_and_safety.svg?v=1759863510"
-                    />
-                  </div>
-                  <div class="Layout228__feature-text">
-                    <div class="Layout228__feature-title">
-                      Canadian Government Recommended
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="Layout228__feature-item">
-              <div class="Layout228__feature-content">
-                <div class="Layout228__feature-header">
-                  <div class="Layout228__feature-icon">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0077/1092/files/groups_2.jpg?v=1759861910"
-                    />
-                  </div>
-                  <div class="Layout228__feature-text">
-                    <div class="Layout228__feature-title">
-                      Trusted by Canadians for 20+ Years
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="CTA39">
-        <div class="CTA39__container">
-          <div class="CTA39__card">
-            <div class="CTA39__card-content">
-              <div class="CTA39__text-section">
-                <div class="CTA39__title">
-                  Check Out Canada's #1 Emergency Kit
-                </div>
-                <div class="CTA39__description">
-                  Complete 72-hour coverage<br />Pre-packed, grab-and-go kit<br />Fast
-                  shipping, ready in days
-                </div>
-              </div>
-              <div class="CTA39__button-wrapper">
-                <div class="CTA39__button">
-                  <div class="CTA39__button-text">GET KIT NOW</div>
-                </div>
-              </div>
-              <div class="CTA39__offer-section">
-                <div class="CTA39__offer-text">
-                  Limited Time Offer: <br />Get 20% OFF + Free Fire Blanket
-                </div>
-              </div>
-            </div>
-            <img
-              class="CTA39__image"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/CTA.png?v=1759863616"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="Footer">
-        <div class="footer-container">
-          <div class="footer-top">
-            <div class="footer-logo">
-              <div data-alternate="False" class="footer-logo-inner">
-                <div class="footer-logo-icon">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0077/1092/files/Logo-wide_1.svg?v=1759863646"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="footer-icons">
-              <div class="icon">
-                <img src="./assets/Facebook.svg" />
-              </div>
-              <div class="icon"><img src="./assets/Instagram.svg" /></div>
-              <div class="icon"><img src="./assets/X.svg" /></div>
-              <div class="icon"><img src="./assets/LinkedIn.svg" /></div>
-              <div class="icon"><img src="./assets/Youtube.svg" /></div>
-            </div>
-          </div>
-          <div class="footer-line"></div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="Layout426">
+      <div class="Layout426__container">
+        <div class="Layout426__content">
+          <div class="Layout426__text-section">
+            <div class="Layout426__label-wrapper">
+              <div class="Layout426__label">Awakening</div>
+            </div>
+            <div class="Layout426__header-group">
+              <div class="Layout426__title">Day 1: The Wake-Up Call</div>
+              <div class="Layout426__description">
+                <span class="Layout426__description-normal">I never considered myself the "prepper" type. I always
+                  thought emergency kits were for doomsday people, not regular
+                  families like mine. But last winter, the power went out in
+                  our neighborhood for two full days.<br />No heat, no lights,
+                  no hot meals.<br /><br />My kids huddled under blankets,
+                  scared, and I felt helpless. That night, I realized
+                  something painful: I wasn't </span><span class="Layout426__description-bold">READY</span><span
+                  class="Layout426__description-normal">. If something bigger happened, like a wildfire, flood, or
+                  earthquake, we wouldn't last more than a few hours.</span>
+              </div>
+            </div>
+          </div>
+          <div class="Layout426__image-wrapper" data-property-1="Default">
+            <img class="Layout426__image"
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/layout_426.jpg?v=1759861283" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Layout86">
+      <div class="Layout86__container">
+        <div class="Layout86__content">
+          <div class="Layout86__header-section">
+            <div class="Layout86__title">
+              The Truth About Preparedness: What Canadians Are Doing
+            </div>
+          </div>
+          <div class="Layout86__stats-section">
+            <div class="Layout86__stats-wrapper">
+              <div class="Layout86__stats-row">
+                <div class="Layout86__stat-item">
+                  <div class="Layout86__stat-number" data-property-1="Default">
+                    <div class="Layout86__number-text">
+                      0%<br />11%<br />23%<br />35%<br />46%<br />57%
+                    </div>
+                  </div>
+                  <div class="Layout86__stat-description">
+                    Considering steps for weather-related safety.
+                  </div>
+                </div>
+                <div class="Layout86__stat-item">
+                  <div class="Layout86__stat-number" data-property-1="Default">
+                    <div class="Layout86__number-text">
+                      0%<br />1%<br />3%<br />4%<br />5%<br />7%<br />9%
+                    </div>
+                  </div>
+                  <div class="Layout86__stat-description">
+                    Have added insurance for extra protection.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-layer="Frame 19" style="margin-top: -3px; margin-bottom: -7px"
+      class="Frame19 w-[2316px] h-32 relative overflow-hidden">
+      <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/frame19-mobile.png?v=1760079680"
+        style="width: 100%; height: auto" alt="Decorative banner" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="Gallery">
+      <div class="Gallery__container">
+        <div class="Gallery__header-section">
+          <div class="Gallery__title">72Hours Emergency Kit</div>
+        </div>
+        <div class="Gallery__image-section">
+          <img class="Gallery__image"
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/gallery.png?v=1759861456" />
+        </div>
+      </div>
+    </div>
+    <div class="Layout456">
+      <div class="Layout456__container">
+        <div class="Layout456__text-section">
+          <div class="Layout456__text-wrapper">
+            <div class="Layout456__label-wrapper">
+              <div class="Layout456__label">Research</div>
+            </div>
+            <div class="Layout456__header-group">
+              <div class="Layout456__title">
+                <span class="Layout456__title-bold">Day 2</span><span class="Layout456__title-regular">: The Search for
+                  Peace of Mind</span>
+              </div>
+              <div class="Layout456__description">
+                I started Googling "how to prepare for an emergency," and
+                everything I read said the same thing:<br /><br />Every
+                household should have at least 72 hours of food, water, and
+                essential supplies.<br /><br />I thought about building my own
+                kit, but the list was overwhelming. Canned food, first aid,
+                water storage, flashlights, radios… and then I realized it
+                wasn't just about buying things, it was about replacing them
+                regularly before they expire.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Layout456__image-section">
+          <img class="Layout456__image"
+            src="https://cdn.shopify.com/s/files/1/0077/1092/files/layout_456.png?v=1759861491" />
+        </div>
+      </div>
+    </div>
+
+    <div class="Comparison">
+      <div class="Comparison__container">
+        <div class="Comparison__header-section">
+          <div class="Comparison__header-content">
+            <div class="Comparison__title">DIY Kit Price Reality Check</div>
+            <div class="Comparison__subtitle">
+              Here's what it would have cost me if I tried to build my own:
+            </div>
+          </div>
+        </div>
+        <div class="Comparison__table-section">
+          <div class="Comparison__table-header">
+            <div class="Comparison__table-header-label">
+              <div class="Comparison__header-title">Emergency Essentials</div>
+            </div>
+            <div class="Comparison__table-header-price">
+              <div class="Comparison__price-header-content">
+                <div class="Comparison__price-title">Individual Cost</div>
+              </div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">
+                Drinking water and storage
+              </div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$40-60</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">Emergency Food</div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$60-80</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">First aid kit</div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$35-50</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">
+                Flashlights and extra batteries
+              </div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$25-40</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">Hand-crank radio</div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$40-60</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">
+                Thermal blankets and ponchos
+              </div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$25-40</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">
+                Sanitation supplies and masks
+              </div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$30-50</div>
+            </div>
+          </div>
+          <div class="Comparison__table-row">
+            <div class="Comparison__table-cell-label">
+              <div class="Comparison__cell-text">Backpack</div>
+            </div>
+            <div class="Comparison__table-cell-price">
+              <div class="Comparison__price-text">$40-60</div>
+            </div>
+          </div>
+          <div class="Comparison__table-footer">
+            <div class="Comparison__table-footer-label">
+              <div class="Comparison__footer-title">TOTAL DIY COST</div>
+            </div>
+            <div class="Comparison__table-footer-price">
+              <div class="Comparison__total-price" data-property-1="Default">
+                <div class="Comparison__total-price-text">$0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Comparison__quote-section">
+          <div class="Comparison__quote-box" data-alternate="False" data-icon-position="No icon" data-small="False"
+            data-style="Secondary">
+            <div class="Comparison__quote-text">
+              "I thought I'd save money building my own kit… until I realized
+              it would cost more, expire faster, and take weeks to organize."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Layout308">
+      <div class="Layout308__container">
+        <div class="Layout308__header-section">
+          <div class="Layout308__header-text">
+            <div class="Layout308__label-wrapper">
+              <div class="Layout308__label">Smart</div>
+            </div>
+            <div class="Layout308__title">
+              The Smarter Alternative for Your Family's Safety
+            </div>
+          </div>
+          <div class="Layout308__description">
+            <span class="Layout308__description-normal">Discover the 72HRS Emergency Survival Kits, expertly designed
+              to provide peace of mind. Each kit is pre-packed with essential
+              supplies, ensuring your family is prepared for any situation.
+              Don't </span><span class="Layout308__description-bold">leave your safety </span><span
+              class="Layout308__description-normal">to chance, choose the smarter solution!</span>
+          </div>
+        </div>
+        <div class="Layout308__features-section">
+          <div class="Layout308__features-wrapper">
+            <div class="Layout308__features-row">
+              <div class="Layout308__feature-item">
+                <div class="Layout308__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/verified.png?v=1759861563" />
+                </div>
+                <div class="Layout308__feature-content">
+                  <div class="Layout308__feature-title">
+                    Government Approved
+                  </div>
+                  <div class="Layout308__feature-description">
+                    Government-recommended kits that cover all essential
+                    supplies for your safety.
+                  </div>
+                </div>
+              </div>
+              <div class="Layout308__feature-item">
+                <div class="Layout308__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/groups_2.jpg?v=1759861910" />
+                </div>
+                <div class="Layout308__feature-content">
+                  <div class="Layout308__feature-title">Fits Your Family</div>
+                  <div class="Layout308__feature-description">
+                    Options available for 1-person to 4-person kits, tailored
+                    to your needs.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Layout308__features-row">
+              <div class="Layout308__feature-item">
+                <div class="Layout308__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/shelves.png?v=1759861593" />
+                </div>
+                <div class="Layout308__feature-content">
+                  <div class="Layout308__feature-title">
+                    Shelf-<br />Stable
+                  </div>
+                  <div class="Layout308__feature-description">
+                    Sealed supplies that last for years without the need for
+                    regular rotation.
+                  </div>
+                </div>
+              </div>
+              <div class="Layout308__feature-item">
+                <div class="Layout308__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/thumb_up.svg?v=1759862262" />
+                </div>
+                <div class="Layout308__feature-content">
+                  <div class="Layout308__feature-title">
+                    Smarter <br />Value
+                  </div>
+                  <div class="Layout308__feature-description">
+                    Starting at $259.99 CAD, less than DIY, saving you time
+                    and effort.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Layout308__spacer"></div>
+      </div>
+    </div>
+    <div class="mobi-Testimonial1">
+      <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Screenshot_2025-11-05_at_04.33.04.png?v=1762291997"
+        alt="Testimonial" class="mobi-testimonial-image" />
+    </div>
+
+    <div class="Layout482">
+      <div class="layout-container">
+        <div class="layout-content">
+          <div class="layout-text">
+            <div class="layout-heading">
+              <div class="layout-title">Action</div>
+            </div>
+            <div class="layout-body">
+              <div class="layout-subtitle">
+                Day 3: Taking Control of Our Safety
+              </div>
+              <div class="layout-description">
+                Click. Order placed.<br />For the first time in weeks, I felt
+                calm. Instead of worrying “what if,” I knew we had a plan. I
+                could literally lift one bag and know my family would be okay
+                for three days.<br /><br />The kit arrived quickly, neatly
+                packed with everything from:
+              </div>
+            </div>
+          </div>
+          <div class="layout-button-group">
+            <div class="layout-button">
+              <div class="layout-button-text">Get Kit</div>
+            </div>
+          </div>
+        </div>
+        <div class="layout482-video">
+          <iframe allow="fullscreen;autoplay" allowfullscreen
+            src="https://streamable.com/e/xttkut?autoplay=1&muted=1&nocontrols=1"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="Layout413">
+      <div class="Layout413__container">
+        <div class="Layout413__content-wrapper">
+          <div class="Layout413__image-wrapper" data-property-1="Default">
+            <img class="Layout413__image"
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/bg_413.png?v=1759861023" />
+          </div>
+          <div class="Layout413__text-section">
+            <div class="Layout413__text-content">
+              <div class="Layout413__header-group">
+                <div class="Layout413__header-wrapper">
+                  <div class="Layout413__title">Day 7: Relief in a Box</div>
+                  <div class="Layout413__description">
+                    Now the kit sits by our front door. My kids even helped me
+                    practice a "grab-and-go" drill. It's amazing how much
+                    lighter the worry feels knowing we're prepared.
+                    Emergencies don't feel like distant possibilities anymore,
+                    they feel like something we can handle.
+                  </div>
+                </div>
+              </div>
+              <div class="Layout413__takeaway-section">
+                <div class="Layout413__takeaway-wrapper">
+                  <div class="Layout413__takeaway-content">
+                    <div class="Layout413__takeaway-title">My Takeaway</div>
+                    <div class="Layout413__takeaway-text">
+                      <span class="Layout413__takeaway-normal">Preparedness isn't about fear.<br />It's about giving
+                        your family </span><span class="Layout413__takeaway-underline">peace of mind</span><span
+                        class="Layout413__takeaway-normal">
+                        when life throws the unexpected at you.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Header64">
+      <div class="Header64__container">
+        <div class="Header64__content-wrapper">
+          <div class="Header64__title">Why I Trust 72HRS</div>
+          <div class="Header64__rating" data-property-1="Default">
+            <div class="Header64__rating-stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+          </div>
+          <div class="Header64__description">
+            <span class="Header64__description-normal">"Over </span><span class="Header64__description-bold">75,000
+              families</span><span class="Header64__description-normal">
+              prepared with 72HRS"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Layout228">
+      <div class="Layout228__container">
+        <div class="Layout228__features-wrapper">
+          <div class="Layout228__feature-item">
+            <div class="Layout228__feature-content">
+              <div class="Layout228__feature-header">
+                <div class="Layout228__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/check_circle.svg?v=1759863483" />
+                </div>
+                <div class="Layout228__feature-text">
+                  <div class="Layout228__feature-title">FEMA Aligned</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Layout228__feature-item">
+            <div class="Layout228__feature-content">
+              <div class="Layout228__feature-header">
+                <div class="Layout228__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/health_and_safety.svg?v=1759863510" />
+                </div>
+                <div class="Layout228__feature-text">
+                  <div class="Layout228__feature-title">
+                    Canadian Government Recommended
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Layout228__feature-item">
+            <div class="Layout228__feature-content">
+              <div class="Layout228__feature-header">
+                <div class="Layout228__feature-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/groups_2.jpg?v=1759861910" />
+                </div>
+                <div class="Layout228__feature-text">
+                  <div class="Layout228__feature-title">
+                    Trusted by Canadians for 20+ Years
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="CTA39">
+      <div class="CTA39__container">
+        <div class="CTA39__card">
+          <div class="CTA39__card-content">
+            <div class="CTA39__text-section">
+              <div class="CTA39__title">
+                Check Out Canada's #1 Emergency Kit
+              </div>
+              <div class="CTA39__description">
+                Complete 72-hour coverage<br />Pre-packed, grab-and-go kit<br />Fast
+                shipping, ready in days
+              </div>
+            </div>
+            <div class="CTA39__button-wrapper">
+              <div class="CTA39__button">
+                <div class="CTA39__button-text">GET KIT NOW</div>
+              </div>
+            </div>
+            <div class="CTA39__offer-section">
+              <div class="CTA39__offer-text">
+                Limited Time Offer: <br />Get 20% OFF + Free Fire Blanket
+              </div>
+            </div>
+          </div>
+          <img class="CTA39__image" src="https://cdn.shopify.com/s/files/1/0077/1092/files/CTA.png?v=1759863616" />
+        </div>
+      </div>
+    </div>
+    <div class="Footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div data-alternate="False" class="footer-logo-inner">
+              <div class="footer-logo-icon">
+                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/Logo-wide_1.svg?v=1759863646" />
+              </div>
+            </div>
+          </div>
+          <div class="footer-icons">
+            <div class="icon">
+              <img src="./assets/Facebook.svg" />
+            </div>
+            <div class="icon"><img src="./assets/Instagram.svg" /></div>
+            <div class="icon"><img src="./assets/X.svg" /></div>
+            <div class="icon"><img src="./assets/LinkedIn.svg" /></div>
+            <div class="icon"><img src="./assets/Youtube.svg" /></div>
+          </div>
+        </div>
+        <div class="footer-line"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
