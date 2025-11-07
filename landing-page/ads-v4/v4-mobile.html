@@ -1136,15 +1136,9 @@
         }
 
         /* Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
-        .Mobile .Layout254MobileV3 .SectionTitleMobile .TaglineMobile {
-            color: #561513;
-            font-family: 'Poppins', ui-sans-serif, system-ui;
-            font-weight: 600;
-        }
-
         .Mobile .Layout254MobileV3 .SectionTitleMobile .HeadingMobile {
             font-family: 'Poppins', serif;
-            color: #561513;
+            color: #000000;
         }
 
         .Mobile .Layout254MobileV3 .SectionTitleMobile .TextMobile {
@@ -1153,7 +1147,7 @@
 
         .Mobile .Layout254MobileV3 .ColumnMobile .HeadingMobile {
             font-family: 'Poppins', serif;
-            color: #561513;
+            color: #000000;
         }
 
         .Mobile .Layout254MobileV3 .ColumnMobile .TextMobile {
@@ -1613,7 +1607,7 @@
             gap: 5rem;
             width: 30rem;
             max-width: 100%;
-            background: #1A1A1A;
+            background: #000000;
             color: #FFFFFF;
         }
 
@@ -1963,7 +1957,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 7rem 4rem;
+            padding: 4.2rem 2.4rem !important;
             gap: 5rem;
             width: 100%;
             max-width: 100%;
@@ -2225,6 +2219,10 @@
             margin: 0 !important;
         }
 
+        .Mobile .Product4Mobile .ProductCard .HeadingMobile .text-red {
+            color: #d73630 !important;
+        }
+
         .Mobile .Product4Mobile .ProductCard .TextMobile {
             width: 100% !important;
             font-family: 'Poppins' !important;
@@ -2316,7 +2314,7 @@
             font-size: 22px !important;
             line-height: 1.4 !important;
             text-align: center;
-            color: #561513 !important;
+            color: #fc0c04 !important;
             flex: none;
             order: 0;
             align-self: stretch;
@@ -2339,7 +2337,7 @@
             font-size: 32px;
             line-height: 1.2;
             text-align: center;
-            color: #561513;
+            color: #000000;
             flex: none;
             order: 0;
             align-self: stretch;
@@ -2364,7 +2362,6 @@
 
         /* Ensure SectionTitle intro text uses 18px (div lacks TextMobile class) */
         .Mobile .Layout254MobileV3 .SectionTitleMobile .font-Poppins {
-            font-size: 18px !important;
             line-height: 1.5 !important;
         }
 
@@ -2596,12 +2593,12 @@
         .Mobile .FAQAccordion.active .AnswerMobile {
             display: block !important;
         }
-        
+
         /* Ensure all answer containers are hidden by default */
         .Mobile [data-layer="Answer"] {
             display: none !important;
         }
-        
+
         .Mobile .FAQAccordion.active [data-layer="Answer"] {
             display: block !important;
         }
@@ -2650,37 +2647,40 @@
 
         /* CTA Heading style */
         .Mobile .CTAHeading {
-            width: 256px;
-            height: 106px;
+            width: 100%;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 26.4px;
-            /* increased 10% from 24px */
-            line-height: 31px;
-            /* adjusted proportionally */
+            font-size: 27px;
+            line-height: 1;
+            letter-spacing: -0.42px;
+            text-transform: uppercase;
             color: #FFFFFF;
             flex: none;
             order: 0;
             align-self: stretch;
             flex-grow: 0;
+            text-align: left;
+            margin: 0;
+            padding: 0 !important;
         }
 
         /* CTA Text style */
         .Mobile .CTAText {
-            width: 256px;
-            height: 60px;
+            width: 100%;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 15.4px;
-            /* increased 10% from 14px */
-            line-height: 1.4;
+            font-size: 12px;
+            line-height: 1.5;
             color: #FFFFFF;
             flex: none;
             order: 1;
             align-self: stretch;
             flex-grow: 0;
+            text-align: left;
+            margin: 0;
+            padding: 0 !important;
         }
 
         .Mobile .Stats26__copy {
@@ -2969,7 +2969,7 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 4.5rem;
+            font-size: 4.275rem;
             line-height: 1.3;
             color: #d73630;
             height: 6.003125rem;
@@ -2988,7 +2988,7 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 1.4625rem;
+            font-size: 1.389rem;
             line-height: 1.1;
             letter-spacing: -0.26px;
             text-transform: uppercase;
@@ -3221,6 +3221,7 @@
         }
 
         .Mobile .Layout254MobileV3 .ButtonRow {
+            text-align: center !important;
             padding-left: 0 !important;
             margin-left: 0 !important;
             margin-right: 0 !important;
@@ -3234,6 +3235,7 @@
 
         /* Increase height of "See Full Spec Sheet" button by 15% */
         .Mobile .ButtonRow [data-layer="Button"] {
+            text-align: center ; 
             padding-top: 0.575rem !important;
             /* increased 15% from 0.5rem (8px) = 9.2px */
             padding-bottom: 0.575rem !important;
@@ -3522,9 +3524,6 @@
             color: #111827 !important;
         }
 
-        .Mobile .text-561513 {
-            color: #561513 !important;
-        }
 
         .Mobile .font-Merriweather-Sans {
             font-family: 'Merriweather Sans', sans-serif !important;
@@ -3534,7 +3533,7 @@
             font-family: 'Poppins', sans-serif !important;
         }
 
-        .Mobile .font-Bona-Nova {
+        .Mobile .font-Poppins {
             font-family: 'Poppins', serif !important;
         }
 
@@ -4057,8 +4056,7 @@
                         </div>
                         <div data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
                             class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72HoursMobile w-100 font-Poppins PreparationCopy">
-                            <p>Preparation is key to survival in chaos, so explore durable products that ensure your
-                                readiness beyond 72 hours.</p>
+                            <p>Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours.</p>
                         </div>
                     </div>
                 </div>
@@ -4121,8 +4119,7 @@
                                 <div
                                     class="flex flex-col items-center w-100 max-w-400px gap-3 border-l border-D73630 pl-8 h-120px">
                                     <p class="mobile-carousel-text text-left">
-                                        Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM
-                                        Radio
+                                        Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM Radio
                                     </p>
                                 </div>
                             </article>
@@ -4181,8 +4178,7 @@
                                     alt="Checklist icon" loading="lazy" />
                                 <div>
                                     <div class="TrustedStandard__heading">FEMA-Aligned</div>
-                                    <p class="TrustedStandard__copy">Built to meet FEMA &amp; Ready.gov 72-hour kit
-                                        guidelines.</p>
+                                    <p class="TrustedStandard__copy">Built to meet FEMA & Ready.gov 72-hour kit guidelines.</p> 
                                 </div>
                             </div>
                         </div>
@@ -4193,8 +4189,7 @@
                                     alt="Globe icon" loading="lazy" />
                                 <div>
                                     <div class="TrustedStandard__heading">Canadian-Recommended</div>
-                                    <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness
-                                        advice. Proudly assembled in Canada.</p>
+                                    <p class="TrustedStandard__copy">Aligned with Canada&rsquo;s 72-hour preparedness advice. Proudly assembled in Canada.</p>
                                 </div>
                             </div>
                         </div>
@@ -4205,8 +4200,7 @@
                                     alt="Verified badge icon" loading="lazy" />
                                 <div>
                                     <div class="TrustedStandard__heading">20+ Years of Trust</div>
-                                    <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two
-                                        decades.</p>
+                                    <p class="TrustedStandard__copy">Trusted by over 75,000 Canadian families for two decades.</p>
                                 </div>
                             </div>
                         </div>
@@ -4218,13 +4212,10 @@
                 <div data-layer="Container" class="Stats26__container">
                     <div data-layer="Content" class="Stats26__intro">
                         <div data-layer="Column" class="Stats26__col">
-                            <p data-layer="Heading" class="Stats26__heading"><span class="text-red">Families Approved.
-                                </span>Peace of Mind Proven.</p>
+                            <p data-layer="Heading" class="Stats26__heading"><span class="text-red">Families Approved.</span><br><span class="text-white">Peace of Mind Proven.</span></p>
                         </div>
                         <div data-layer="Column" class="Stats26__col">
-                            <p data-layer="Text" class="Stats26__copy">When families choose the 72HRS kit, they gain
-                                confidence in their preparedness. Our customers report feeling equipped to handle
-                                emergencies effectively. Join the thousands who have made the smart choice for safety.
+                            <p data-layer="Text" class="Stats26__copy">When families choose the 72HRS kit, they gain confidence in their preparedness. Our customers report feeling equipped to handle emergencies effectively. Join the thousands who have made the smart choice for safety.
                             </p>
                         </div>
                     </div>
@@ -4250,7 +4241,7 @@
                                 <span class="stat-count" data-target="97">0</span><span>%</span>
                             </div>
                             <div data-layer="Content" class="StatCard__content">
-                                <p data-layer="Text" class="StatCard__label">Said they would recommend 72HRS kits to friends &amp; family</p>
+                                <p data-layer="Text" class="StatCard__label">Said they would recommend 72HRS kits to friends & family</p>
                             </div>
                         </div>
                     </div>
@@ -4378,7 +4369,7 @@
                 </div>
                 <div data-layer="Actions" class="flex flex-col gap-6 items-start">
                     <div data-layer="Button" class="ButtonMobile inline-flex items-center justify-center">
-                        <p>See Full Spec Sheet</p>
+                        <p class="text-center">See Full Spec Sheet</p>
                     </div>
                 </div>
             </div>
@@ -4396,10 +4387,8 @@
                         </div>
                         <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-3">
                             <div data-layer="Heading"
-                                class="HeadingMobile w-100 font-Bona-Nova text-lg font-bold leading-6 text-561513">
-                                4 Person Kit –
-                                Everything You Need for
-                                Emergencies
+                                class="HeadingMobile w-100 font-Poppins text-lg font-bold leading-6">
+                                <span class="text-red">4 PERSON KIT –</span><br><span class="text-0B0302">EVERYTHING YOU NEED FOR EMERGENCIES</span>
                             </div>
                             <div data-layer="Text"
                                 class=" w-100 font-Poppins text-sm font-normal leading-5 text-0B0302">
@@ -4421,8 +4410,8 @@
                                 </div>
                                 <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-2">
                                     <div data-layer="Heading"
-                                        class="TopicHeading w-100 text-center font-Bona-Nova text-lg font-bold leading-52px text-561513">
-                                        Food &amp; Water</div>
+                                        class="TopicHeading w-100 text-center font-Poppins text-lg font-bold leading-52px text-561513">
+                                        FOOD & WATER</div>
                                     <div data-layer="Text"
                                         class=" ProductText w-100 text-center font-Poppins text-sm leading-27px text-0B0302">
                                         4 x 72HRS Food Rations<br />(3,600 Cal each)<br />48 x Emergency Water
@@ -4438,8 +4427,8 @@
                                 </div>
                                 <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-4">
                                     <div data-layer="Heading"
-                                        class="TopicHeading w-100 text-center font-Bona-Nova text-lg font-bold leading-52px text-561513">
-                                        Shelter &amp; Warmth</div>
+                                        class="TopicHeading w-100 text-center font-Poppins text-lg font-bold leading-52px text-561513">
+                                        SHELTER & WARMTH</div>
                                     <div data-layer="Text"
                                         class=" w-100 text-center font-Poppins text-18px ProductText leading-27px text-0B0302">
                                         4 × Sleeping Bags<br />4 × Rain Ponchos<br />2 × Tube Tent</div>
@@ -4460,8 +4449,8 @@
                                 </div>
                                 <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-4">
                                     <div data-layer="Heading"
-                                        class="TopicHeading w-100 text-center font-Bona-Nova text-lg font-bold leading-52px text-561513">
-                                        First Aid &amp; Essentials</div>
+                                        class="TopicHeading w-100 text-center font-Poppins text-lg font-bold leading-52px text-561513">
+                                        FIRST AID & ESSENTIALS</div>
                                     <div data-layer="Text"
                                         class=" w-100 text-center font-Poppins text-sm ProductText leading-27px text-0B0302">
                                         1 × 108-Piece First Aid Kit<br />1 × Hand-Crank Radio<br />1 × 36-Hour Emergency
@@ -4476,8 +4465,8 @@
                                 </div>
                                 <div data-layer="Content" class="ContentMobile flex w-100 flex-col items-center gap-4">
                                     <div data-layer="Heading"
-                                        class="TopicHeading w-100 text-center font-Bona-Nova text-lg font-bold leading-52px text-561513">
-                                        Tools &amp; Safety</div>
+                                        class="TopicHeading w-100 text-center font-Poppins text-lg font-bold leading-52px text-561513">
+                                        TOOLS & SAFETY</div>
                                     <div data-layer="Text"
                                         class=" w-100 text-center font-Poppins text-sm ProductText leading-27px text-0B0302">
                                         1 × Multi-tool Knife<br />1 × Whistle<br />1 × Duct Tape Roll<br />1 × Aluminum
@@ -4491,10 +4480,10 @@
                     <div data-layer="Actions" class="ActionsMobile flex  flex-col items-center gap-4 w-100">
                         <div data-layer="ButtonRow"
                             class="ButtonRow flex flex-col w-100 items-center justify-center gap-3 -mx-4 px-0">
-                            <div data-layer="Button" data-alternate="False" data-icon-position="No icon"
-                                data-small="False" data-style="Secondary"
-                                class="inline-flex items-center justify-center gap-2 rounded-md bg-D73630 px-4 py-2 text-16px font-medium font-Poppins leading-6 text-white shadow-0_0_75rem_1_5rem_-1_25rem_rgba-226-58-58-0_8 whitespace-nowrap">
-                                See Full Spec Sheet
+                            <div data-layer="Actions" class="flex flex-col gap-6 items-start">
+                                <div data-layer="Button" class="ButtonMobile inline-flex items-center justify-center" style="background-color: #d73630; color: #ffffff; padding: 0.625rem 1.5rem; border-radius: 0.375rem; font-family: 'Poppins'; font-weight: 500; font-size: 0.9rem; line-height: 1.5; box-shadow: 0px 1px 2px 0px rgba(11, 3, 2, 0.05); cursor: pointer;">
+                                    <p class="text-center" style="margin-left: 15px; color: #ffffff; font-size: 0.9rem;">   See Full Spec Sheet</p>
+                                </div>
                             </div>
                             <div
                                 class="inline-flex items-center justify-center gap-1 text-16px font-medium font-Poppins text-0B0302 whitespace-nowrap flex-nowrap pr-1">
@@ -4683,7 +4672,7 @@
                             <div data-layer="Content"
                                 class="ContentMobile flex w-100 max-w-256px flex-col items-start gap-4">
                                 <h2 data-layer="Heading" class="HeadingMobile CTAHeading">
-                                    Save 20%<br />Today - Offer<br />Ends Soon</h2>
+                                    SAVE 20%<br />TODAY - OFFER<br />ENDS SOON</h2>
                                 <p data-layer="Text" class="TextMobile CTAText">
                                     Includes a Free Fire<br />Blanket with every Deluxe<br />Kit purchased
                                     today.<br />Don't
@@ -4723,116 +4712,117 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script>
-        // Simple countdown to a target date (set 45 days from now by default)
-        (function () {
-            const mobileRoot = document.querySelector('.Mobile');
-            if (!mobileRoot) return;
-            const daysEl = mobileRoot.querySelector('#cd-days-mobile');
-            const hoursEl = mobileRoot.querySelector('#cd-hours-mobile');
-            const minsEl = mobileRoot.querySelector('#cd-mins-mobile');
-            const secsEl = mobileRoot.querySelector('#cd-secs-mobile');
-            if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
-            const target = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000); // demo target: 45 days from now
-            const tick = () => {
-                const now = new Date();
-                let diff = Math.max(0, target - now);
-                const days = Math.floor(diff / (24 * 60 * 60 * 1000)); diff -= days * (24 * 60 * 60 * 1000);
-                const hours = Math.floor(diff / (60 * 60 * 1000)); diff -= hours * (60 * 60 * 1000);
-                const mins = Math.floor(diff / (60 * 1000)); diff -= mins * (60 * 1000);
-                const secs = Math.floor(diff / 1000);
-                daysEl.textContent = String(days).padStart(2, '0');
-                hoursEl.textContent = String(hours).padStart(2, '0');
-                minsEl.textContent = String(mins).padStart(2, '0');
-                secsEl.textContent = String(secs).padStart(2, '0');
-            };
-            tick();
-            setInterval(tick, 1000);
-        })();
-        // Count-up on scroll for Stats section + loop every 3s (0 -> target)
-        (function () {
-            const statsSection = document.querySelector('.Mobile [data-layer="Stats / 26 /"]');
-            if (!statsSection) return;
-            const counters = statsSection.querySelectorAll('.stat-count');
-            let hasRun = false;
-            const animateOnce = () => {
-                counters.forEach(el => {
-                    const target = parseInt(el.getAttribute('data-target') || '0', 10);
-                    const duration = 1200; // ms
-                    const start = performance.now();
-                    const tick = (now) => {
-                        const progress = Math.min(1, (now - start) / duration);
-                        const value = Math.floor(progress * target);
-                        el.textContent = String(value);
-                        if (progress < 1) requestAnimationFrame(tick);
-                    };
-                    requestAnimationFrame(tick);
-                });
-            };
-            const cycle = () => {
-                // reset to 0%
-                counters.forEach(el => { el.textContent = '0'; });
-                // animate up
-                animateOnce();
-            };
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting && !hasRun) { hasRun = true; cycle(); setInterval(cycle, 3000); io.disconnect(); } });
-            }, { threshold: 0.3 });
-            io.observe(statsSection);
-        })();
-
-        // FAQ Accordion toggle functionality
-        (function () {
-            const mobileRoot = document.querySelector('.Mobile');
-            if (!mobileRoot) return;
-            
-            // Ensure all answers are closed by default
-            const accordions = mobileRoot.querySelectorAll('.FAQAccordion');
-            accordions.forEach(accordion => {
-                // Remove active class to ensure all are closed
-                accordion.classList.remove('active');
-                
-                // Also hide answer containers directly via inline style as backup
-                const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
-                answerContainers.forEach(answer => {
-                    answer.style.display = 'none';
-                });
-            });
-
-            // Add click handlers to all accordions
-            accordions.forEach(accordion => {
-                // Find the question container - could be FAQQuestionContainer or QuestionMobile with data-layer="Question"
-                const questionContainer = accordion.querySelector('.FAQQuestionContainer') ||
-                    accordion.querySelector('.QuestionMobile[data-layer="Question"]') ||
-                    accordion.querySelector('[data-layer="Question"]');
-
-                if (questionContainer) {
-                    questionContainer.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        // Toggle active class on the accordion
-                        const isActive = accordion.classList.contains('active');
-                        
-                        if (isActive) {
-                            // Close this accordion
-                            accordion.classList.remove('active');
-                            const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
-                            answerContainers.forEach(answer => {
-                                answer.style.display = 'none';
-                            });
-                        } else {
-                            // Open this accordion
-                            accordion.classList.add('active');
-                            const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
-                            answerContainers.forEach(answer => {
-                                answer.style.display = 'block';
-                            });
-                        }
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simple countdown to a target date (set 45 days from now by default)
+            (function () {
+                const mobileRoot = document.querySelector('.Mobile');
+                if (!mobileRoot) return;
+                const daysEl = mobileRoot.querySelector('#cd-days-mobile');
+                const hoursEl = mobileRoot.querySelector('#cd-hours-mobile');
+                const minsEl = mobileRoot.querySelector('#cd-mins-mobile');
+                const secsEl = mobileRoot.querySelector('#cd-secs-mobile');
+                if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+                const target = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000); // demo target: 45 days from now
+                const tick = () => {
+                    const now = new Date();
+                    let diff = Math.max(0, target - now);
+                    const days = Math.floor(diff / (24 * 60 * 60 * 1000)); diff -= days * (24 * 60 * 60 * 1000);
+                    const hours = Math.floor(diff / (60 * 60 * 1000)); diff -= hours * (60 * 60 * 1000);
+                    const mins = Math.floor(diff / (60 * 1000)); diff -= mins * (60 * 1000);
+                    const secs = Math.floor(diff / 1000);
+                    daysEl.textContent = String(days).padStart(2, '0');
+                    hoursEl.textContent = String(hours).padStart(2, '0');
+                    minsEl.textContent = String(mins).padStart(2, '0');
+                    secsEl.textContent = String(secs).padStart(2, '0');
+                };
+                tick();
+                setInterval(tick, 1000);
+            })();
+            // Count-up on scroll for Stats section + loop every 3s (0 -> target)
+            (function () {
+                const statsSection = document.querySelector('.Mobile [data-layer="Stats / 26 /"]');
+                if (!statsSection) return;
+                const counters = statsSection.querySelectorAll('.stat-count');
+                let hasRun = false;
+                const animateOnce = () => {
+                    counters.forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target') || '0', 10);
+                        const duration = 1200; // ms
+                        const start = performance.now();
+                        const tick = (now) => {
+                            const progress = Math.min(1, (now - start) / duration);
+                            const value = Math.floor(progress * target);
+                            el.textContent = String(value);
+                            if (progress < 1) requestAnimationFrame(tick);
+                        };
+                        requestAnimationFrame(tick);
                     });
-                }
-            });
-        })();
+                };
+                const cycle = () => {
+                    // reset to 0%
+                    counters.forEach(el => { el.textContent = '0'; });
+                    // animate up
+                    animateOnce();
+                };
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => { if (entry.isIntersecting && !hasRun) { hasRun = true; cycle(); setInterval(cycle, 3000); io.disconnect(); } });
+                }, { threshold: 0.3 });
+                io.observe(statsSection);
+            })();
 
+            // FAQ Accordion toggle functionality
+            (function () {
+                const mobileRoot = document.querySelector('.Mobile');
+                if (!mobileRoot) return;
+
+                // Ensure all answers are closed by default
+                const accordions = mobileRoot.querySelectorAll('.FAQAccordion');
+                accordions.forEach(accordion => {
+                    // Remove active class to ensure all are closed
+                    accordion.classList.remove('active');
+
+                    // Also hide answer containers directly via inline style as backup
+                    const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
+                    answerContainers.forEach(answer => {
+                        answer.style.display = 'none';
+                    });
+                });
+
+                // Add click handlers to all accordions
+                accordions.forEach(accordion => {
+                    // Find the question container - could be FAQQuestionContainer or QuestionMobile with data-layer="Question"
+                    const questionContainer = accordion.querySelector('.FAQQuestionContainer') ||
+                        accordion.querySelector('.QuestionMobile[data-layer="Question"]') ||
+                        accordion.querySelector('[data-layer="Question"]');
+
+                    if (questionContainer) {
+                        questionContainer.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            // Toggle active class on the accordion
+                            const isActive = accordion.classList.contains('active');
+
+                            if (isActive) {
+                                // Close this accordion
+                                accordion.classList.remove('active');
+                                const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
+                                answerContainers.forEach(answer => {
+                                    answer.style.display = 'none';
+                                });
+                            } else {
+                                // Open this accordion
+                                accordion.classList.add('active');
+                                const answerContainers = accordion.querySelectorAll('.FAQAnswerContainer, .AnswerMobile, [data-layer="Answer"]');
+                                answerContainers.forEach(answer => {
+                                    answer.style.display = 'block';
+                                });
+                            }
+                        });
+                    }
+                });
+            })();
+        });
     </script>
 </body>
 
