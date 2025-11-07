@@ -232,7 +232,7 @@
 
     /* Header / 131 / - Scoped styles for Unbounce compatibility */
     .Header131 {
-      background-color: #7D291C !important;
+      background-color: #0B0302 !important;
       color: #ffffff !important;
       display: flex !important;
       flex-direction: column !important;
@@ -334,16 +334,16 @@
 
     .Header131 .Heading,
     .Header131 .Heading * {
-      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
     }
 
     .Header131 .Heading > div {
-      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
       text-transform: uppercase !important;
-      font-weight: 700 !important;
+      font-weight: 900 !important;
       color: #ffffff !important;
-      font-size: 70px !important;
-      line-height: 70px !important;
+      font-size: 112px !important;
+      line-height: 112px !important;
       letter-spacing: 0 !important;
       font-style: normal !important;
       font-display: swap !important;
@@ -352,7 +352,7 @@
     .Header131 .Heading > div,
     .Header131 .Heading > div *,
     .Header131 .Heading > div span {
-      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
     }
 
     .Header131 .Heading > div span {
@@ -439,8 +439,8 @@
 
     @media (max-width: 1024px) {
       .Header131 .Heading > div {
-        font-size: 56px !important;
-        line-height: 56px !important;
+        font-size: 88px !important;
+        line-height: 88px !important;
       }
 
       .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child {
@@ -457,8 +457,8 @@
       }
 
       .Header131 .Heading > div {
-        font-size: 40px !important;
-        line-height: 44px !important;
+        font-size: 56px !important;
+        line-height: 60px !important;
       }
 
       .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child {
@@ -494,17 +494,17 @@
 
     .Header147 .Heading,
     .Header147 .Heading * {
-      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
       font-weight: 700 !important;
       font-style: normal !important;
     }
 
     .Header147 .Heading > div {
-      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
       font-weight: 700 !important;
-      font-size: 63px !important;
+      font-size: 84px !important;
       line-height: 84px !important;
-      color: #6A1B1B !important;
+      color: #0B0302 !important;
     }
 
     /* Countdown separator: thin gray vertical bar, slightly taller than numbers, shorter than labels */
@@ -541,10 +541,7 @@
       border-bottom-left-radius: 16px;
     }
 
-    .stats-heading {
-      font-family: 'Bona Nova', 'Times New Roman', serif;
-      font-weight: 700;
-    }
+    /* Removed conflicting heading font for Stats / 26 / to respect Poppins in HTML */
 
     .stats-body {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
@@ -610,17 +607,27 @@
       font-weight: 400;
     }
 
+    /* Frame 19 - Remove padding and border */
+    .Frame19 {
+      padding: 0 !important;
+      margin: 0 !important;
+      margin-bottom: -1px !important;
+      border: none !important;
+      outline: none !important;
+    }
+
     /* DT Gallery / 3 / - Scoped styles for Unbounce compatibility */
     .DTGallery3 {
       position: relative !important;
       width: 100% !important;
       padding: 96px 64px !important;
-      background-color: #7D291B !important;
+      background-color: #000000 !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: flex-start !important;
       align-items: center !important;
       overflow: hidden !important;
+      margin: 0 !important;
     }
 
     .DTGallery3 .Container {
@@ -729,126 +736,26 @@
     }
 
     /* DT FAQ / 6 / - Scoped styles for Unbounce compatibility */
-    .DTFaq6 {
-      width: 100% !important;
-      padding: 96px 64px !important;
-      background-color: #F7F7F7 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: center !important;
-      gap: 64px !important;
-      overflow: hidden !important;
-    }
+    /* Removed conflicting CSS rules to allow HTML inline styles to work properly */
 
-    .DTFaq6 .Container {
-      width: 100% !important;
-      max-width: 1280px !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
-      gap: 64px !important;
-    }
-
-    .DTFaq6 .Component {
-      width: 100% !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
-      gap: 64px !important;
-    }
-
-    @media (min-width: 1024px) {
-      .DTFaq6 .Component {
-        flex-direction: row !important;
-      }
-    }
-
-    .DTFaq6 .GotQuestions,
-    .DTFaq6 .GotQuestions * {
-      font-family: 'Bona Nova', 'Times New Roman', serif !important;
-      font-weight: 700 !important;
-      font-size: 52px !important;
-      line-height: 52px !important;
-      color: #561513 !important;
-    }
-
-    .DTFaq6 .Text[data-layer="Text"] {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-      font-weight: 400 !important;
-      font-size: 20px !important;
-      line-height: 30px !important;
-      color: #111827 !important;
-    }
-
-    .DTFaq6 .Button[data-layer="Button"] {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-      font-weight: 500 !important;
-      font-size: 16px !important;
-      line-height: 24px !important;
-    }
-
-    .DTFaq6 .Question[data-layer="Question"] {
-      font-family: 'Bona Nova', 'Times New Roman', serif !important;
-      font-weight: 700 !important;
-      font-size: 24px !important;
-      line-height: 32px !important;
-      color: #111827 !important;
-    }
-
-    .DTFaq6 .Text[data-layer="Text"]:not(.DTFaq6 .GotQuestions) {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-      font-weight: 400 !important;
-      font-size: 18px !important;
-      line-height: 28px !important;
-      color: #111827 !important;
-    }
-
-    .DTFaq6 .Accordion {
-      border: 1px solid #0B0302 !important;
-      border-radius: 20px !important;
-    }
-
-    .DTFaq6 .AccordionList {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 12px !important;
-    }
-
-    /* Tab title typography */
-    .TabsMenu .ShortHeadingGoesHere {
-      color: var(--Color-Scheme-1-Text, #0B0302);
-      font-family: 'Bona Nova', serif;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 52px;
-      /* 130% */
-      letter-spacing: 0;
-      text-transform: none !important;
-    }
+    /* Removed conflicting tab title font override; keep HTML Poppins settings */
 
     /* DT Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
     .DTLayout254 .SectionTitle .Tagline {
-      color: #561513;
+      color: #0B0302;
       font-family: 'Poppins', ui-sans-serif, system-ui;
       font-weight: 600;
     }
 
-    .DTLayout254 .SectionTitle .Heading {
-      font-family: 'Bona Nova', serif;
-      color: #561513;
-    }
+    /* Removed conflicting font override for Layout / 254 heading to respect inline Poppins */
 
     .DTLayout254 .SectionTitle .Text {
       color: #111827;
     }
 
     .DTLayout254 .Column .Heading {
-      font-family: 'Bona Nova', serif;
-      color: #561513;
+      font-family: 'Poppins', sans-serif;
+      color: #0B0302;
     }
 
     .DTLayout254 .Column .Text {
@@ -898,18 +805,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 231px;
-      height: 44px;
-      padding: 0;
-      border-radius: 6px;
+      min-width: 360px; /* avoid wrapping */
+      height: 52px;
+      padding: 0 20px;
+      border-radius: 8px;
       background: linear-gradient(180deg, #FF6A6A 0%, #E23A3A 100%);
       border: 2px solid rgba(255, 255, 255, 0.55);
       color: #ffffff;
       font-family: 'Poppins', ui-sans-serif, system-ui;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+      white-space: nowrap; /* keep on one line */
       box-shadow: 0 0 18px 10px rgba(255, 255, 255, 0.6);
       isolation: isolate;
       overflow: visible;
@@ -957,6 +865,28 @@
         background-position: 200% 200%;
       }
     }
+
+    /* Hero CTA (Header / 5 /) — white button with pink glow */
+    .hero-cta {
+      position: relative;
+      border-radius: 12px;
+      box-shadow:
+        inset 0 -2px 0 rgba(0, 0, 0, 0.15), /* subtle inner depth */
+        0 0 0 1px rgba(0, 0, 0, 0.10);      /* soft outline */
+    }
+
+    .hero-cta::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 18px;
+      background: radial-gradient(60% 80% at 50% 50%, rgba(226, 27, 60, 0.55) 0%, rgba(226, 27, 60, 0.28) 45%, rgba(226, 27, 60, 0) 100%);
+      filter: blur(10px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-cta:hover::before { filter: blur(12px); }
   </style>
   <!-- Basic FAQ accordion (optional, progressive enhancement) -->
   <script>
@@ -980,67 +910,39 @@
 <body class="bg-Color-Scheme-1-Background">
   <!-- Layer: Sales Page Web V1 (root wrapper) -->
   <div data-layer="Sales Page Web V1"
-    class="SalesPageWebV1 w-[1600px] inline-flex flex-col justify-start items-start overflow-hidden">
-    <!-- Layer: Navbar / 1 / -->
-    <div data-layer="Navbar / 1 /"
-      class="Navbar1 self-stretch h-16 px-16 bg-Color-Scheme-1-Background flex flex-col justify-center items-center">
-      <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-        <div data-layer="Content" class="Content w-20 h-10 flex justify-center items-center">
-          <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-20 h-9 relative overflow-hidden">
-            <div data-layer="Logo-wide 1" class="LogoWide1 w-16 h-9 left-[6.67px] top-0 absolute overflow-hidden">
-              <img data-layer="72 HRS LOGO 1" class="HrsLogo1 w-36 h-28 left-[-40.17px] top-[-38.50px] absolute"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/72_HRS_LOGO_1.png?v=1759772678" />
-            </div>
-          </div>
-        </div>
-        <div data-layer="Column" class="Column size- flex justify-center items-center gap-8">
-          <div data-layer="Nav links" class="NavLinks size- flex justify-end items-center gap-8">
-            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-              <div data-layer="Link text"
-                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                Kits</div>
-            </div>
-            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-              <div data-layer="Link text"
-                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                Gear</div>
-            </div>
-            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-              <div data-layer="Link text"
-                class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                Learn</div>
-            </div>
-            <div data-layer="Link" class="Link size- flex justify-center items-center gap-1">
-              <div data-layer="Nav Link Dropdown" class="NavLinkDropdown size- flex justify-start items-center gap-1">
-                <div data-layer="Link text"
-                  class="LinkText justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                  Resources</div>
-                <div data-layer="Chevron Down" class="ChevronDown size-6 relative overflow-hidden">
-                  <div data-layer="Vector"
-                    class="Vector w-3 h-2 left-[5.70px] top-[8.70px] absolute bg-Color-Scheme-1-Text"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Actions" class="Actions size- flex justify-center items-center gap-4">
-            <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True"
-              data-style="Secondary"
-              class="Button size- px-5 py-2 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
-              <div data-layer="Button"
-                class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">
-                Buy</div>
-            </div>
-            <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="True"
-              data-style="Primary"
-              class="Button size- px-5 py-2 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
-              <div data-layer="Button"
-                class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">Demo
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    class="SalesPageWebV1 w-full max-w-[1440px] inline-flex flex-col justify-start items-start overflow-hidden">
+    <!-- Layer: Navbar / 1 / (Updated per Figma) -->
+    <header data-layer="Navbar / 1 /"
+      class="Navbar1 sticky top-0 z-50 self-stretch h-16 px-6 sm:px-10 lg:px-16 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-gray-200 flex flex-col justify-center items-center">
+      <nav aria-label="Primary" class="Container self-stretch max-w-[1280px] w-full inline-flex items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2" aria-label="72HRS Home">
+          <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/72_HRS_LOGO_1.png?v=1759772678" alt="72HRS"
+            class="h-8 w-auto" />
+        </a>
+        <div class="flex-1"></div>
+
+        <!-- Desktop Nav (right aligned) -->
+        <ul class="hidden md:flex items-center justify-end gap-6 lg:gap-8 text-[#0B0302] font-['Poppins'] text-base">
+          <li><a href="#kits" class="hover:text-Color-Valencia transition-colors">Kits</a></li>
+          <li><a href="#gear" class="hover:text-Color-Valencia transition-colors">Gear</a></li>
+          <li><a href="#learn" class="hover:text-Color-Valencia transition-colors">Learn</a></li>
+          <li>
+            <a href="#resources" class="inline-flex items-center gap-1 hover:text-Color-Valencia transition-colors">
+              Resources
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+          <li><a href="#buy" class="hover:text-Color-Valencia transition-colors">Buy</a></li>
+          <li>
+            <a href="#demo" class="inline-flex items-center px-4 py-2 rounded-[10px] bg-Color-Valencia text-white font-['Poppins'] text-sm font-semibold shadow-[0_6px_14px_-6px_rgba(226,27,60,0.6)] hover:opacity-95 transition">
+              Demo
+            </a>
+          </li>
+        </ul>
+    </header>
     <!-- Layer: Header / 5 / -->
     <div data-layer="Header / 5 /"
       class="Header5 self-stretch h-[900px] px-16 inline-flex justify-center items-center overflow-hidden relative"
@@ -1050,7 +952,7 @@
         class="Container flex-1 max-w-[1280px] inline-flex flex-col justify-start items-start gap-6 relative">
         <div class="w-full max-w-[720px] flex flex-col justify-start items-start gap-6">
           <div
-            class="text-Color-White font-['Poppins'] font-extrabold uppercase leading-[1.05] text-[79px] tracking-tight">
+            class="text-Color-White font-['Inter'] font-extrabold uppercase tracking-[-0.01em] text-[92px] leading-[92px] md:text-[84px] md:leading-[84px] sm:text-[58px] sm:leading-[62px]">
             <span class="text-Color-Valencia">Only Today:</span><br />
             20% Off<br />
             + Free Fire<br />
@@ -1058,14 +960,15 @@
             Auto-Added<br />
             At Checkout
           </div>
-          <div class="text-Color-White/90 text-lg font-['Poppins'] leading-relaxed max-w-[640px]">
+          <div class="text-white/95 text-[18px] md:text-[20px] font-['Poppins'] leading-relaxed max-w-[640px]">
             Protect Your Family. Be Ready For Every Emergency Situations.<br />
             Kits for 1–4 People | Made in Canada | Trusted by 75,000+ Families.
           </div>
           <div class="inline-flex">
             <a href="#product"
-              class="flare-border-btn px-6 py-3 bg-Color-White text-Color-Neutral-Darkest text-lg font-semibold font-['Poppins']">Shop
-              Deluxe Kits Now</a>
+              class="flare-border-btn btn-flare relative z-[1] px-10 md:px-12 h-[68px] inline-flex items-center justify-center bg-white text-[#0B0302] text-[26px] md:text-[28px] font-['Inter'] font-semibold rounded-[14px]">
+              Shop Deluxe Kits Now
+            </a>
           </div>
         </div>
       </div>
@@ -1090,23 +993,22 @@
     </div>
     <!-- Layer: Event Item Header / 2 / -->
     <div data-layer="Event Item Header / 2 /"
-      class="EventItemHeader2 self-stretch px-16 py-14 flex flex-col justify-start items-center gap-20 overflow-hidden"
-      style="background: linear-gradient(180deg, #E0C2A5 0%, #E8B29C 44%, #FFFFFF 100%);">
+      class="EventItemHeader2 self-stretch px-16 py-20 bg-white flex flex-col justify-start items-center gap-16 overflow-hidden">
       <div data-layer="Container"
-        class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        class="Container w-full max-w-[1280px] mx-auto flex flex-col justify-start items-center gap-12">
         <div data-layer="Content" class="Content w-full flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20">
           <div data-layer="Events details"
             class="EventsDetails flex-1 flex flex-col justify-center items-center gap-6">
             <div data-layer="Section Title"
               class="SectionTitle self-stretch flex flex-col justify-start items-center gap-4">
               <div data-layer="Subheading"
-                class="Subheading self-stretch text-center justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
+                class="Subheading self-stretch text-center text-[#111827]/80 text-lg font-semibold font-['Poppins'] leading-relaxed">
                 Ready</div>
-              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-6">
-                <div data-layer="Heading" class="Heading self-stretch text-center justify-start"><span
-                    class="text-Color-Valencia text-6xl font-bold font-['Poppins'] uppercase leading-[60px]">Act
+              <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+                <div data-layer="Heading" class="Heading self-stretch text-center"><span
+                    class="text-Color-Valencia text-[64px] md:text-[72px] font-bold font-['Poppins'] uppercase leading-[60px] md:leading-[72px]">Act
                     Early.</span><span
-                    class="text-Color-Scheme-1-Text text-6xl font-bold font-['Poppins'] uppercase leading-[60px]"> Stay
+                    class="text-Color-Scheme-1-Text text-[64px] md:text-[72px] font-bold font-['Poppins'] uppercase leading-[60px] md:leading-[72px]"> Stay
                     Safe.</span></div>
               </div>
             </div>
@@ -1124,7 +1026,7 @@
                 </div>
               </div>
               <div data-layer="Content"
-                class="Content size- px-6 py-4 bg-Color-Scheme-1-Foreground rounded-2xl inline-flex justify-start items-center gap-4 border-animated">
+                class="Content size- px-6 py-4 bg-white rounded-2xl inline-flex justify-start items-center gap-4 border-2 border-Color-Valencia/40 shadow-[0_10px_30px_-20px_rgba(214,69,69,0.45)]">
                 <div data-layer="Event time" class="EventTime w-16 inline-flex flex-col justify-center items-center">
                   <div data-layer="Text" id="cd-days"
                     class="Text justify-start text-Color-Valencia text-5xl font-bold font-['Poppins'] uppercase leading-[48px]">
@@ -1161,59 +1063,55 @@
                     Secs</div>
                 </div>
               </div>
+              <!-- Primary CTA under countdown -->
+              <a href="#product" class="mt-6 inline-flex items-center justify-center px-6 py-2.5 rounded-md bg-Color-Valencia text-white text-base font-['Poppins'] font-semibold shadow-[0_10px_24px_-18px_rgba(214,69,69,0.8)]">
+                Order your kit
+              </a>
             </div>
           </div>
-          <div data-layer="Actions" class="Actions flex-1 flex flex-col justify-center items-center gap-4">
-            <div data-layer="Form" class="Form self-stretch inline-flex justify-center items-start gap-4">
-              <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
-                data-style="Primary"
-                class="Button size- px-6 py-2.5 bg-Color-Amaranth rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(0,0,0,0.20)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.15)] shadow-[inset_0px_2px_1px_0px_rgba(255,255,255,0.25)] shadow-[inset_0px_32px_24px_0px_rgba(255,255,255,0.05)] flex justify-center items-center gap-2">
-                <div data-layer="Button"
-                  class="Button justify-start text-Color-White text-lg font-medium font-['Poppins'] leading-relaxed">
-                  Order your kit</div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
     <!-- Layer: Header / 131 / -->
-    <!-- Đã đổi màu nền từ màu đen (hoặc bất kỳ màu nào khác) sang màu #7D291C -->
     <div data-layer="Header / 131 /"
-      class="Header131 self-stretch px-8 sm:px-12 lg:px-16 py-20 lg:py-28 bg-[#7D291C] text-white flex flex-col justify-start items-center gap-20 overflow-hidden min-h-[1315px]">
+      class="Header131 self-stretch px-8 sm:px-12 lg:px-16 py-20 lg:py-28 bg-[#0B0302] text-white flex flex-col justify-start items-center gap-20 overflow-hidden min-h-[1315px]">
       <div data-layer="Container"
         class="Container w-full max-w-[1272px] flex flex-col justify-start items-start gap-14">
         <div data-layer="Content"
           class="Content w-full flex flex-col md:flex-row items-start"
           style="display: flex !important; align-items: flex-start !important;">
-          <div data-layer="Column" class="Column w-full md:w-6/12 flex flex-col justify-start items-start gap-4"
+          <div data-layer="Column" class="Column w-full md:w-5/12 flex flex-col justify-start items-start gap-4"
             style="display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; width: 100% !important; padding: 2rem 2rem !important;">
             <div data-layer="Heading" class="Heading w-full text-left"
               style="width: 100% !important; text-align: left !important;">
               <div
-                class="font-['Bona Nova'] uppercase font-bold text-white text-[65px] leading-[70px] tracking-[0]"
-                style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 650 !important; font-size: 65px !important; line-height: 70px !important; text-transform: uppercase !important; color: #ffffff !important; letter-spacing: 0 !important;">
-                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Get Your Free</span>
-                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Fire Blanket</span>
-                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Today!</span>
+                class="uppercase font-['Poppins'] font-bold text-white text-[84px] leading-[84px] tracking-[0]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 84px !important; line-height: 84px !important; text-transform: uppercase !important; color: #ffffff !important; letter-spacing: 0 !important;">
+                <span class="block text-white" style="font-family: 'Poppins' !important;">Get Your</span>
+                <span class="block text-[#D1232A]" style="font-family: 'Poppins' !important; color:#D1232A !important;">Free Fire</span>
+                <span class="block text-[#D1232A]" style="font-family: 'Poppins' !important; color:#D1232A !important;">Blanket</span>
+                <span class="block text-white" style="font-family: 'Poppins' !important;">Today!</span>
               </div>
             </div>
           </div>
-          <div data-layer="Column" class="Column w-full md:w-6/12 flex flex-col justify-start items-start gap-8"
+          <div data-layer="Column" class="Column w-full md:w-7/12 flex flex-col justify-start items-start gap-8"
             style="display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; width: 100% !important; padding: 2rem 2rem !important;">
             <div
               data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
               class="TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla w-full text-white font-['Poppins'] space-y-6"
               style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; width: 100% !important; display: flex !important; flex-direction: column !important; gap: 24px !important; align-items: flex-start !important;">
-              <p class="text-white font-normal text-[35px] leading-[46px] whitespace-nowrap" style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 35px !important; line-height: 46px !important; color: #ffffff !important; font-weight: 400 !important; white-space: nowrap !important; margin: 0 !important;">
-                Save <span class="font-bold" style="font-weight: 700 !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">20%</span> Today – Offer Ends Soon.
+              <p class="text-white font-normal text-[35px] leading-[46px]" style="font-family: 'Poppins' !important; margin: 0 !important;">
+                Save <span class="font-bold">20%</span> Today – Offer Ends Soon.
               </p>
-              <p class="text-white font-normal text-[20px] leading-[30px]" style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 20px !important; line-height: 30px !important; color: #ffffff !important; font-weight: 400 !important; margin: 0 !important;">
+              <p>
+              </p>
+              <p class="text-white/95 font-normal text-[20px] leading-[30px]" style="font-family: 'Poppins' !important; margin: 0 !important;">
                 Every Deluxe Kit order today includes a
-                <span class="font-bold text-[25px]" style="font-weight: 700 !important; font-size: 25px !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">FREE Fire Blanket</span>
-                <span class="font-normal text-[20px]" style="font-weight: 400 !important; font-size: 20px !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;"> (Value $21.99)</span>
+                <span class="font-bold"> FREE Fire Blanket</span>
+                <span class="font-normal"> (Value $21.99)</span>
               </p>
-              <p class="text-white font-normal text-[20px] leading-[30px]" style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 20px !important; line-height: 30px !important; color: #ffffff !important; font-weight: 400 !important; margin: 0 !important;">
+              <p class="text-white/95 font-normal text-[22px] leading-[33px]" style="font-family: 'Poppins' !important; margin: 0 !important;">
                 A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!
               </p>
             </div>
@@ -1229,58 +1127,81 @@
         </div>
       </div>
     </div>
-    <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
-        class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Separator: Frame 17 (wave) - synced to Figma via MCP -->
+    <div data-layer="Frame 17" class="Frame17 w-full relative flex items-center justify-center overflow-hidden">
+      <div class="flex-none scale-y-[-100%]">
+        <div class="h-[138px] relative w-[1440px]">
+          <img alt="wave" src="https://www.figma.com/api/mcp/asset/375a2876-5dde-4da9-af06-1d9a31ace530" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+      </div>
     </div>
     <!-- Layer: Header / 147 / (Video Lightbox) -->
     <div data-layer="Header / 147 /"
-      class="Header147 self-stretch flex flex-col justify-start items-center overflow-hidden"
-      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-header147.png'); background-size:cover; background-position:center;">
+      class="Header147 self-stretch flex flex-col justify-start items-center overflow-hidden">
       <div data-layer="Content"
-        class="Content self-stretch px-16 pt-28 pb-12 flex flex-col justify-start items-center gap-20">
-        <div data-layer="Container"
+        class="Content self-stretch px-16 pt-28 pb-12 flex flex-col justify-start items-center gap-20"
+        style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/Screenshot_2025-11-05_at_23.23.39.png?v=1762359827'); background-size:contain; background-repeat:no-repeat; background-position:top center;">
+          <div data-layer="Container"
           class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
           <div data-layer="Column" class="Column w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
-              <div data-layer="Heading" class="Heading w-auto text-center justify-start whitespace-nowrap">
-                <div class="text-[#6A1B1B] text-[63px] leading-[84px] font-['Bona Nova'] font-bold"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 63px !important; line-height: 84px !important; color: #6A1B1B !important;">Built to Meet
-                  FEMA & Canadian Guidelines</div>
+              <div data-layer="Heading" class="Heading w-auto text-center justify-start">
+                <div class="font-['Poppins'] font-extrabold text-[84px] leading-[90px] text-[#0B0302] tracking-[-0.02em]">
+                  <span class="block whitespace-nowrap">BUILT TO MEET <span class="text-[#D73630]">FEMA</span> &</span>
+                  <span class="block whitespace-nowrap"><span class="text-[#D73630]">CANADIAN</span> GUIDELINES</span>
+                </div>
               </div>
               <div data-layer="Text"
-                class="Text w-[950px] text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">
+                class="Text w-[950px] text-center justify-start text-[#0B0302] font-['Poppins']"
+                style="font-size:25px; line-height:37.5px;">
                 See exactly how the 72HRS Deluxe Kit checks every box experts recommend for emergency preparedness.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <img data-layer="Placeholder Lightbox" class="PlaceholderLightbox self-stretch h-[900px] rounded-2xl object-cover"
+      <img data-layer="Placeholder Lightbox" class="PlaceholderLightbox max-w-full h-auto mx-auto object-contain"
         src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-video147.png" alt="Video placeholder" />
     </div>
-    <!-- Wrapper for What's Inside sections with background -->
-    <div class="WhatsInsideWrapper self-stretch flex flex-col justify-start items-center overflow-hidden"
-      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-whatsinsideweb.png'); background-size:cover; background-position:center;">
-      <!-- Layer: Header / 64 / (What's inside - title) -->
-      <div data-layer="Header / 64 /"
-        class="Header64 self-stretch px-16 pt-10 bg-transparent flex flex-col justify-start items-center gap-8 overflow-hidden">
-        <div data-layer="Container"
-          class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-          <div data-layer="Component"
-            class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
-            <div data-layer="What's inside" class="WhatSInside self-stretch text-center justify-start">
-              <div class="whats-inside-heading font-bold text-[70px] leading-[84px] font-['Bona Nova'] text-[#561513]">What's Inside</div>
+    <!-- Layer: Header / 64 / (What's inside - title) -->
+    <div data-layer="Header / 64 /"
+      class="Header64 self-stretch bg-white px-16 pt-[39px] pb-0 flex flex-col justify-start items-center gap-[31px] overflow-hidden">
+      <!-- Decorative elements (wave, dash, dots) -->
+      <div class="h-[120px] relative w-[1203px] max-w-full">
+        <div class="absolute h-[62px] left-[-0.5px] top-[33px] w-[214px]">
+          <img alt="wave" src="https://www.figma.com/api/mcp/asset/bca181ea-d033-4575-842c-409db42198c0"
+            class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <div class="absolute h-[25px] left-[999.5px] top-[100px] w-[146px]">
+          <img alt="dash" src="https://www.figma.com/api/mcp/asset/469148f6-c2ac-4b6d-b163-6f5ef43fdeb4"
+            class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <div class="absolute flex h-[29px] items-center justify-center left-[601.5px] top-[38px] w-[146px]">
+          <div class="flex-none scale-y-[-100%]">
+            <div class="h-[29px] relative w-[146px]">
+              <img alt="dots" src="https://www.figma.com/api/mcp/asset/0dac3f62-2144-40ad-81c9-7e83f9580148"
+                class="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div
-              data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
-              class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours self-stretch text-center justify-start text-Color-Scheme-1-Text text-2xl font-normal font-['Poppins'] leading-9">
-              Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72
-              hours.</div>
           </div>
         </div>
       </div>
+      <div data-layer="Container"
+        class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        <div data-layer="Component"
+          class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6 text-center">
+          <div data-layer="What's inside" class="WhatSInside self-stretch text-center">
+            <div class="font-['Poppins'] font-bold text-[84px] leading-[84px] tracking-[-0.84px] uppercase text-[#0B0302]">
+              <span>What's </span><span class="text-[#D73630]">inside</span>
+            </div>
+          </div>
+          <div
+            data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
+            class="PreparationIsKeyToSurvivalInChaosSoExploreDurableProductsThatEnsureYourReadinessBeyond72Hours self-stretch text-center text-[#0B0302] font-['Poppins'] font-normal text-[25px] leading-[37.5px]">
+            Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours.
+          </div>
+        </div>
+      </div>
+    </div>
       <!-- Layer: Layout / 28 / (What's inside - tabs) -->
       <div data-layer="Layout / 28 /"
         class="Layout28 self-stretch px-16 py-28 bg-transparent flex flex-col justify-start items-center gap-20 overflow-hidden">
@@ -1387,27 +1308,58 @@
           </div>
         </div>
       </div>
-    </div>
     <!-- Layer: Layout / 238 / (Trusted standard) -->
     <div data-layer="Layout / 238 /"
-      class="Layout238 self-stretch h-[587px] relative bg-Color-Scheme-4-Background overflow-hidden"
-      style="background-image:url('https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-238.png'); background-size:cover; background-position:center;">
+      class="Layout238 relative self-stretch h-[587px] overflow-hidden"
+      style="background-color:#D73630;">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-[1152px] max-w-full flex flex-col items-center gap-20">
+          <p class="font-['Poppins'] font-bold text-[48px] leading-[48px] uppercase text-white text-center underline decoration-white decoration-[2px] underline-offset-8">built on trusted standard</p>
+          <div class="w-full flex justify-center items-start gap-12">
+            <div class="flex-1 min-w-[0] flex flex-col items-center gap-6 text-center text-white">
+              <img alt="FEMA aligned" src="https://www.figma.com/api/mcp/asset/ed872267-96a1-405e-b059-527219b98ad9" class="w-12 h-12" />
+              <div class="flex flex-col gap-3">
+                <div class="font-['Poppins'] font-bold text-[32px] leading-[1.1] uppercase">FEMA-Aligned</div>
+                <div class="font-['Poppins'] text-[18px] leading-[27px]">Built to meet FEMA & Ready.gov 72-hour kit guidelines.</div>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[0] flex flex-col items-center gap-6 text-center text-white">
+              <img alt="Canadian recommended" src="https://www.figma.com/api/mcp/asset/72434746-4f7c-4441-8dd7-6505a80c910d" class="w-12 h-12" />
+              <div class="flex flex-col gap-3">
+                <div class="font-['Poppins'] font-bold text-[32px] leading-[1.1] uppercase">Canadian-Recommended</div>
+                <div class="font-['Poppins'] text-[18px] leading-[27px]">Aligned with Canada’s 72-hour preparedness advice. Proudly assembled in Canada.</div>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[0] flex flex-col items-center gap-6 text-center text-white">
+              <img alt="Trusted" src="https://www.figma.com/api/mcp/asset/5dbaabaf-04d1-4fb6-9363-0a3935556af3" class="w-12 h-12" />
+              <div class="flex flex-col gap-3">
+                <div class="font-['Poppins'] font-bold text-[32px] leading-[1.1] uppercase">20+ Years of Trust</div>
+                <div class="font-['Poppins'] text-[18px] leading-[27px]">Trusted by over 75,000 Canadian families for two decades.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Side waves -->
+      <img alt="side wave left" src="https://www.figma.com/api/mcp/asset/acf5b77d-64bc-44fe-b28b-0a2e62676ad0" class="absolute left-0 top-[11px] w-[138px] h-[649px] opacity-25" />
+      <img alt="side wave right" src="https://www.figma.com/api/mcp/asset/acf5b77d-64bc-44fe-b28b-0a2e62676ad0" class="absolute right-[-13px] top-[-103px] w-[176.677px] h-[832px] opacity-25 rotate-180 -scale-y-100" />
     </div>
     <!-- Layer: Stats / 26 / -->
     <div data-layer="Stats / 26 /"
-      class="Stats26 self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden"
-      style="background: linear-gradient(90deg, #ffe6eb 0%, #ffffff 50%, #ffe6eb 100%);">
+      class="Stats26 self-stretch px-16 py-28 bg-[#0B0302] flex flex-col justify-start items-center gap-20 overflow-hidden">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
         <div data-layer="Content" class="Content self-stretch inline-flex justify-start items-start gap-20">
           <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
-            <div data-layer="Heading" class="Heading self-stretch justify-start stats-heading"
-              style="color: var(--Color-Valencia-Darker, #561513); font-size:55px; line-height:52px; letter-spacing:0;">
-              Families Approved. <br />Peace of Mind Proven</div>
+            <div data-layer="Heading" class="Heading self-stretch justify-start stats-heading text-white font-['Poppins'] font-bold uppercase"
+              style="font-size:50px; line-height:50px; white-space: nowrap;">
+              <span class="text-[#D73630]">Families Approved.</span> <br>
+              <span>Peace of Mind Proven.</span>
+            </div>
           </div>
           <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-start gap-6">
             <div data-layer="Text"
-              class="Text self-stretch justify-start text-[#111827] text-xl stats-body leading-loose">
+              class="Text self-stretch justify-start text-white/90 text-xl stats-body leading-loose">
               When families choose the 72HRS kit, they gain confidence in their preparedness. Our customers report
               feeling equipped to handle emergencies effectively. Join the thousands who have made the smart choice for
               safety.</div>
@@ -1416,38 +1368,38 @@
         <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-12">
           <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
             <div data-layer="Stat"
-              class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              class="Stat flex-1 p-10 bg-transparent rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
+                class="Text self-stretch justify-start text-[#D73630] text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="97">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
+                  class="Text self-stretch justify-start text-white text-2xl stats-label leading-7">
                   Say they feel more prepared after getting their 72HRS kit</div>
               </div>
             </div>
             <div data-layer="Stat"
-              class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              class="Stat flex-1 p-10 bg-transparent rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
+                class="Text self-stretch justify-start text-[#D73630] text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="95">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
-                  Said the kit had everything they needed for emergencies</div>
+                  class="Text self-stretch justify-start text-white text-2xl stats-label leading-7">
+                  Said the kit had everything they needed for emergenciesss</div>
               </div>
             </div>
             <div data-layer="Stat"
-              class="Stat flex-1 p-8 bg-white/70 rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
+              class="Stat flex-1 p-10 bg-transparent rounded-2xl outline outline-1 outline-offset-[-1px] outline-Color-Valencia inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Text"
-                class="Text self-stretch justify-start text-Color-Valencia text-[88px] stats-percentage leading-[96px]">
+                class="Text self-stretch justify-start text-[#D73630] text-[88px] stats-percentage leading-[96px]">
                 <span class="stat-count" data-target="97">0</span>%
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
                 <div data-layer="Text"
-                  class="Text self-stretch justify-start text-Color-Valencia text-2xl stats-label leading-7">
+                  class="Text self-stretch justify-start text-white text-2xl stats-label leading-7">
                   Said they would recommend 72HRS kits to friends & family</div>
               </div>
             </div>
@@ -1455,13 +1407,13 @@
         </div>
       </div>
     </div>
-    <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/wave17.png?v=1762272643"
-        class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Separator: Frame 18 (wave) -->
+    <div data-layer="Frame 18" class="Frame18 w-full max-w-[1440px] h-[138px] relative overflow-hidden">
+      <img alt="wave" src="https://www.figma.com/api/mcp/asset/29a232a4-9d20-4da9-bd22-2fa00960dbe5"
+        class="absolute inset-0 w-full h-full object-cover -scale-y-100 select-none pointer-events-none" />
     </div>
-    <!-- Layer: DT Product / 4 / (Choose the Right Kit) -->
-    <div data-layer="DT Product / 4 /"
+    <!-- Layer: Product / 4 / (Choose the Right Kit) -->
+    <div data-layer="Product / 4 /"
       class="DTProduct4 self-stretch px-16 pt-7 pb-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
@@ -1473,18 +1425,22 @@
           </div>
           <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
             <div data-layer="Heading" class="Heading self-stretch text-center justify-start product-title whitespace-nowrap"
-              style="color:#561513; font-size:64px; line-height:72px;">Choose the Right Kit for Your Family</div>
+              style="color:#0B0302; font-size:64px; line-height:72px; text-transform:uppercase;">
+              <span style="color:#D73630; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">Choose the Right Kit</span><br />
+              <span style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">For Your Family</span>
+            </div>
             <div data-layer="Text"
-              class="Text w-[908px] text-center justify-start text-[#111827] text-xl leading-8 product-subtitle">
-              Each kit supports 1 person for 72 hours.<br />Select your household size and we’ll show you the perfect
+              class="Text w-[908px] text-center justify-start text-[#111827] text-xl leading-8 product-subtitle"
+              style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 22px;">
+              Each kit supports 1 person for 72 hours.<br />Select your household size and we'll show you the perfect
               match.</div>
           </div>
         </div>
         <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-16">
           <div data-layer="Row" class="Row self-stretch inline-flex justify-start items-start gap-8">
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
-              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-1person.jpg" />
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-contain"
+                src="https://www.figma.com/api/mcp/asset/5b535b56-82c9-483d-a955-a732ead66f01" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -1511,8 +1467,8 @@
               </div>
             </div>
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
-              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-2person.jpg" />
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-contain"
+                src="https://www.figma.com/api/mcp/asset/85c9664e-8c80-41b7-a604-f453b8a4d5ca" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -1539,8 +1495,8 @@
               </div>
             </div>
             <div data-layer="Product" class="Product flex-1 inline-flex flex-col justify-start items-start gap-4">
-              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-3person.jpg" />
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-contain"
+                src="https://www.figma.com/api/mcp/asset/166dad20-256d-4801-853c-19c864a4ca77" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -1568,8 +1524,8 @@
             </div>
             <div data-layer="Product"
               class="Product flex-1 bg-white inline-flex flex-col justify-start items-start gap-4">
-              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-cover"
-                src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
+              <img data-layer="Placeholder Image" class="PlaceholderImage self-stretch h-96 rounded-2xl object-contain"
+                src="https://www.figma.com/api/mcp/asset/c03a3ee7-d265-476b-b67e-1a7b997174ba" />
               <div data-layer="Content Bottom"
                 class="ContentBottom self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-2">
@@ -1604,96 +1560,98 @@
         </div>
       </div>
     </div>
-    <!-- Layer: DT Layout / 254 / (4 Person Kit - detailed) -->
-    <div data-layer="DT Layout / 254 /"
-      class="DTLayout254 self-stretch px-16 pt-28 pb-8 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+    <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
+    <div data-layer="Layout / 254 /"
+      class="DTLayout254 self-stretch px-16 pt-28 pb-[34px] bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
       <div data-layer="Container"
-        class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+        class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-[81px]">
         <div data-layer="Section Title"
           class="SectionTitle w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
           <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
             <div data-layer="Tagline"
-              class="Tagline text-center justify-start text-[#333333] text-xl font-normal font-['Poppins'] leading-8">
+              class="Tagline text-center justify-start text-[#0B0302] text-[25px] font-semibold font-['Poppins'] leading-[37.5px]">
               Choose the Amount of people you want the Kit For</div>
           </div>
           <div data-layer="Content" class="Content w-[818px] flex flex-col justify-start items-center gap-6">
-            <div data-layer="Heading" class="Heading self-stretch text-center justify-start">
-              <div class="text-[#561513] text-[64px] font-bold font-['Bona Nova'] leading-[72px]">
-                4 Person Kit – Everything You Need for Emergencies
-              </div>
+            <div data-layer="Heading" class="Heading self-stretch text-center justify-start text-[70px] leading-[70px] tracking-[-0.7px] uppercase font-bold font-['Poppins']">
+              <span class="block text-[#D73630]">4 Person Kit -</span>
+              <span class="block text-[#0B0302]">Everything You Need</span>
+              <span class="block text-[#0B0302]">for Emergencies</span>
             </div>
             <div data-layer="Text"
-              class="Text w-[1206px] text-center justify-start text-[#333333] text-xl font-normal font-['Poppins'] leading-8">
+              class="Text w-[1206px] text-center justify-start text-[#0B0302] text-[25px] font-normal font-['Poppins'] leading-[37.5px]">
               The 72HRS Deluxe Emergency Kit is designed to ensure your family is ready for any situation.<br />With
               essential supplies and trusted quality, peace of mind is just a click away.</div>
           </div>
         </div>
-        <div data-layer="Content" class="Content w-[1340px] inline-flex justify-start items-center gap-12 ContentRow">
+        <div data-layer="Content" class="Content w-[1340px] inline-flex justify-start items-center gap-[48px] ContentRow">
           <div data-layer="Column"
-            class="Column flex-1 h-[653px] inline-flex flex-col justify-center items-center gap-16">
-            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+            class="Column flex-1 h-[653px] inline-flex flex-col justify-center items-center gap-[64px]">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-[24px]">
               <div data-layer="water_do"
-                class="WaterDo inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.svg" alt=""
-                  class="w-8 h-8 select-none" loading="lazy" />
+                class="WaterDo inline-flex items-center justify-center w-12 h-12">
+                <img src="https://www.figma.com/api/mcp/asset/a0951341-351d-4c14-956f-d0d3802527da" alt=""
+                  class="w-12 h-12 select-none pointer-events-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#0B0302] text-[32px] font-bold font-['Poppins'] leading-[35.2px] tracking-[-0.32px] uppercase">
                   Food & Water</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#0B0302] text-[18px] font-normal font-['Poppins'] leading-[27px]">
                   4 × 72HRS Food Rations <br />(3,600 Cal each)<br />48 × Emergency Water Pouches <br />(125 ml
                   each)<br />10 x Aquatabs Water Purification Tablet</div>
               </div>
             </div>
-            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-[24px]">
               <div data-layer="Vector"
-                class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-tuyet.png" alt=""
-                  class="w-10 h-10 object-contain select-none" loading="lazy" />
+                class="Vector inline-flex items-center justify-center">
+                <img src="https://www.figma.com/api/mcp/asset/7176d197-54d4-4916-9d83-fafdc1c3de58" alt=""
+                  class="w-[41.333px] h-[40.263px] object-contain select-none pointer-events-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#0B0302] text-[32px] font-bold font-['Poppins'] leading-[35.2px] tracking-[-0.32px] uppercase">
                   Shelter & Warmth</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#0B0302] text-[18px] font-normal font-['Poppins'] leading-[27px]">
                   4 × Sleeping Bags<br />4 × Rain Ponchos<br />2 × Tube Tent</div>
               </div>
             </div>
           </div>
-          <img data-layer="Placeholder Image" class="PlaceholderImage CenterImage object-cover"
-            src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-4person.jpg" />
-          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-center gap-16">
-            <div data-layer="Content" class="Content w-96 flex flex-col justify-start items-center gap-6">
+          <div data-layer="Placeholder Image" class="PlaceholderImage h-[560.4px] w-[540px] rounded-2xl shrink-0 relative overflow-hidden">
+            <img src="https://www.figma.com/api/mcp/asset/fc3a2f85-841a-423f-b3d7-52f32f1b4067" alt=""
+              class="absolute inset-0 w-full h-full object-contain pointer-events-none rounded-2xl" loading="lazy" />
+          </div>
+          <div data-layer="Column" class="Column flex-1 inline-flex flex-col justify-start items-center gap-[64px]">
+            <div data-layer="Content" class="Content w-[420px] flex flex-col justify-start items-center gap-[24px]">
               <div data-layer="Vector"
-                class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-medical_services.png" alt=""
-                  class="w-10 h-10 object-contain select-none" loading="lazy" />
+                class="Vector inline-flex items-center justify-center">
+                <img src="https://www.figma.com/api/mcp/asset/0e0bb4ed-e75d-452e-8921-17d29033ac08" alt=""
+                  class="w-[40.61px] h-[40.873px] object-contain select-none pointer-events-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#0B0302] text-[32px] font-bold font-['Poppins'] leading-[35.2px] tracking-[-0.32px] uppercase">
                   First Aid & Essentials</div>
                 <div data-layer="Text"
-                  class="Text self-stretch text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
+                  class="Text self-stretch text-center justify-start text-[#0B0302] text-[18px] font-normal font-['Poppins'] leading-[27px]">
                   1 × 108-Piece First Aid Kit<br />1 × Hand-Crank Radio<br />1 × 36-Hour Emergency Candles<br />1 x
                   72HRS Dust Masks<br />2 x 72HRS Deluxe Backpack</div>
               </div>
             </div>
-            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
+            <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-[24px]">
               <div data-layer="Vector"
-                class="Vector inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F3D5D2]/80">
-                <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fix.png" alt=""
-                  class="w-10 h-10 object-contain select-none" loading="lazy" />
+                class="Vector inline-flex items-center justify-center">
+                <img src="https://www.figma.com/api/mcp/asset/033fa29f-d284-4a3e-84e8-49a39f61dda7" alt=""
+                  class="w-[41.241px] h-[43.327px] object-contain select-none pointer-events-none" loading="lazy" />
               </div>
               <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-4">
                 <div data-layer="Heading"
-                  class="Heading self-stretch text-center justify-start text-[#561513] text-[32px] font-bold font-['Bona Nova'] leading-9">
+                  class="Heading self-stretch text-center justify-start text-[#0B0302] text-[32px] font-bold font-['Poppins'] leading-[35.2px] tracking-[-0.32px] uppercase">
                   Tools & Safety</div>
                 <div data-layer="Text"
-                  class="Text w-96 text-center justify-start text-[#333333] text-base font-normal font-['Poppins'] leading-relaxed">
+                  class="Text w-[382px] text-center justify-start text-[#0B0302] text-[18px] font-normal font-['Poppins'] leading-[27px]">
                   1 × Multi-tool Knife<br />1 × Whistle<br />1 × Duct Tape Roll<br />1 x Aluminum Alloy Emergency
                   Whistle<br />4 x 72HRS Tissue Pack<br />1 x 72HRS 50FT Nylon Utility Cord <br /> 3 x LED Rechargeable
                   Flashlight<br /> 1 x 72HRS Roll Duct Tape</div>
@@ -1702,72 +1660,66 @@
           </div>
         </div>
         <div data-layer="Actions"
-          class="Actions w-full flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6">
+          class="Actions flex flex-col gap-[24px] h-[47px] items-center justify-center w-[229px]">
           <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
             data-style="Secondary"
-            class="Button inline-flex justify-center items-center gap-2 w-[231px] h-[47px] bg-Color-Amaranth text-Color-White rounded-[6px] shadow-[0_12px_24px_-20px_rgba(226,58,58,0.8)]">
-            <span class="text-Color-White text-lg font-semibold font-['Poppins'] leading-relaxed">See Full Spec
-              Sheet</span>
-          </div>
-          <div class="inline-flex items-center gap-2 text-[#333333] text-base font-semibold font-['Poppins']">
-            <span>Orig Price $399.99</span>
-            <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector.png" alt=""
-              class="w-3 h-3 select-none" loading="lazy" />
+            class="Button inline-flex justify-center items-center gap-2 px-6 py-[10px] bg-[#D73630] text-white rounded-[6px] shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)]">
+            <span class="text-white text-[18px] font-medium font-['Poppins'] leading-[27px]">See Full Spec Sheet</span>
           </div>
         </div>
       </div>
     </div>
-    <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
-      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17.png"
-        class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
+    <!-- Separator: Frame 19 (wave) -->
+    <div data-layer="Frame 19" class="Frame19 w-full h-[201px] relative overflow-hidden">
+      <img alt="Decorative wave edge" src="https://www.figma.com/api/mcp/asset/4040e2a7-b2fa-4e2f-ab7b-de4bbd35c91e"
+        class="absolute inset-0 w-full h-full object-cover -scale-y-100 select-none pointer-events-none" />
     </div>
-    <!-- Layer: DT Gallery / 3 / -->
+    <!-- Layer: Gallery / 3 / -->
     <div data-layer="DT Gallery / 3 /"
-      class="DTGallery3 self-stretch relative px-16 py-24 bg-[#7D291B] flex flex-col justify-start items-center overflow-hidden">
+      class="DTGallery3 self-stretch relative px-16 py-28 bg-black flex flex-col justify-start items-center overflow-hidden">
       <div data-layer="Container"
         class="Container relative z-10 w-full max-w-[1280px] flex flex-col justify-start items-center gap-16">
         <div data-layer="Section Title"
           class="SectionTitle w-full max-w-[938px] flex flex-col justify-start items-center gap-4 text-center">
           <h2 data-layer="Heading"
-            class="Heading w-[938px] h-[140px] flex flex-col justify-center items-center text-center gallery-heading text-[70px] leading-[70px] drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
-            <span>See Why Influencers &amp;</span>
-            <span>Families Choose 72HRS</span>
+            class="Heading max-w-[1280px] flex flex-col justify-center items-center text-center font-['Poppins'] font-bold text-[76px] leading-[76px] tracking-[-0.76px] uppercase text-white">
+            <span class="block">See Why Influencers &amp;</span>
+            <span class="block">Families <span class="text-[#D73630]">Choose 72HRS</span></span>
           </h2>
           <p data-layer="Text"
-            class="Text w-full text-center text-white/90 text-lg leading-[30px] gallery-subheading drop-shadow-[0_2px_0_rgba(0,0,0,0.25)]">
+            class="Text w-full text-center text-white font-['Poppins'] text-[25px] leading-[37.5px]">
             Discover why families trust 72HRS for safety.
           </p>
         </div>
         <div data-layer="Content"
           class="Content w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8">
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[405px] w-full aspect-square rounded-[16px] bg-white/5 overflow-hidden">
             <img data-layer="Gallery Image 1" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png?v=1761032998"
+              src="https://www.figma.com/api/mcp/asset/5be05542-8c9c-4b57-b986-7e35049409af"
               alt="Customer reviewing the 72HRS backpack" loading="eager" referrerpolicy="no-referrer" crossorigin="anonymous" />
           </div>
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[405px] w-full aspect-square rounded-[16px] bg-white/5 overflow-hidden">
             <img data-layer="Gallery Image 2" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png?v=1761032997"
+              src="https://www.figma.com/api/mcp/asset/d33483c0-266b-4c8c-aa06-08e15b346903"
               alt="Customer holding 72HRS drinking water packs" loading="eager" referrerpolicy="no-referrer" crossorigin="anonymous" />
           </div>
           <div
-            class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
+            class="relative flex-1 max-w-[405px] w-full aspect-square rounded-[16px] bg-white/5 overflow-hidden">
             <img data-layer="Gallery Image 3" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png?v=1761032997"
+              src="https://www.figma.com/api/mcp/asset/21f56773-c97c-48dc-9c3a-a2ae522f24f4"
               alt="Community member sharing their 72HRS experience" loading="eager" referrerpolicy="no-referrer" crossorigin="anonymous" />
           </div>
         </div>
       </div>
     </div>
-    <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative pt-0 overflow-hidden">
-      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
-        class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
+     <!-- Separator: Frame 18 (wave) -->
+     <div data-layer="Frame 18" class="Frame18 w-full max-w-[1440px] h-[138px] relative overflow-hidden">
+      <img alt="wave" src="https://www.figma.com/api/mcp/asset/29a232a4-9d20-4da9-bd22-2fa00960dbe5"
+        class="absolute inset-0 w-full h-full object-cover -scale-y-100 select-none pointer-events-none" />
     </div>
-    <!-- Layer: DT FAQ / 6 / -->
+    <!-- Layer:  FAQ / 6 / -->
     <div data-layer="DT FAQ / 6 /"
       class="DTFaq6 self-stretch px-16 py-24 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-16 overflow-hidden">
       <div data-layer="Container"
@@ -1775,34 +1727,35 @@
         <div data-layer="Component"
           class="Component self-stretch inline-flex flex-col lg:flex-row justify-start items-start gap-16">
           <div data-layer="Section Title"
-            class="SectionTitle w-full max-w-[500px] bg-transparent px-6 py-5 flex flex-col justify-start items-start gap-4">
-            <div data-layer="Content" class="Content w-full flex flex-col justify-start items-start gap-2">
+            class="SectionTitle w-full max-w-[500px] bg-transparent flex flex-col justify-start items-start gap-8">
+            <div data-layer="Content" class="Content w-full flex flex-col justify-start items-start gap-6">
               <div data-layer="Got questions?"
-                class="GotQuestions self-stretch DT-faq-heading text-[#561513]"
-                style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 52px !important; line-height: 52px !important; color: #561513 !important;">
-                Got questions?</div>
+                class="GotQuestions self-stretch font-['Poppins'] font-bold text-[70px] leading-[70px] tracking-[-0.7px] uppercase"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 70px !important; line-height: 70px !important; letter-spacing: -0.7px !important; text-transform: uppercase !important;">
+                <span class="text-Color-Scheme-2-Text">Got </span><span class="text-[#D73630]">questions?</span>
+              </div>
               <div data-layer="Text"
-                class="Text self-stretch text-Color-Scheme-2-Text text-[20px] leading-[30px] DT-faq-lede"
-                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
-                Find answers to your most pressing questions<br />about our emergency kits.</div>
+                class="Text self-stretch text-Color-Scheme-2-Text text-[25px] leading-[37.5px]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 25px !important; line-height: 37.5px !important; color: #111827 !important;">
+                Find answers to your most pressing questions about our emergency kits.</div>
             </div>
             <div data-layer="Actions" class="Actions flex justify-start items-center">
               <button type="button" data-layer="Button" data-style="Secondary"
-                class="Button self-start px-6 py-2 bg-[#0B0302] text-white text-base leading-[24px] DT-faq-cta rounded-[6px] border border-[#0B0302]"
-                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 500 !important; font-size: 16px !important; line-height: 24px !important; color: #ffffff !important;">
+                class="Button self-start px-6 py-2.5 bg-[#0B0302] text-white rounded-[6px]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 500 !important; font-size: 18px !important; line-height: 27px !important; color: #ffffff !important;">
                 Contact
               </button>
             </div>
           </div>
           <div data-layer="Accordion List"
-            class="AccordionList flex-1 w-full flex flex-col justify-start items-stretch gap-3">
+            class="AccordionList flex-1 w-full flex flex-col justify-start items-stretch gap-4">
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-[16px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
               <div data-layer="Question"
-                class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
+                class="Question self-stretch px-6 py-5 inline-flex justify-between items-center gap-6 cursor-pointer">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
                   Why 72 hours?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1818,12 +1771,12 @@
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-[16px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
               <div data-layer="Question"
-                class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
+                class="Question self-stretch px-6 py-5 inline-flex justify-between items-center gap-6 cursor-pointer">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
                   Shelf-life of the food and water?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1841,12 +1794,12 @@
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-[16px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
               <div data-layer="Question"
-                class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
+                class="Question self-stretch px-6 py-5 inline-flex justify-between items-center gap-6 cursor-pointer">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
                   Can the kit be customized to meet specific needs or requirements?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1862,12 +1815,12 @@
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-[16px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
               <div data-layer="Question"
-                class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
+                class="Question self-stretch px-6 py-5 inline-flex justify-between items-center gap-6 cursor-pointer">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
                   Are the food rations gluten-free?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1884,12 +1837,12 @@
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-Color-Scheme-2-Foreground rounded-[16px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
               <div data-layer="Question"
-                class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
+                class="Question self-stretch px-6 py-5 inline-flex justify-between items-center gap-6 cursor-pointer">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
-                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
                   Do you do custom Emergency Kit orders for large groups?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1912,216 +1865,37 @@
     <!-- Layer: CTA / 39 / -->
     <div data-layer="DT CTA / 39 /"
       class="DTCta39 self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden"
-      style="background: linear-gradient(180deg, #F4DDDA 0%, #ffffff 50%, #F4DDDA 100%);">
-      <div data-layer="DT Container" class="DTContainer w-full max-w-[1280px] flex flex-col justify-start items-start">
+      style="background: #D73630">
+      <div data-layer="DT Container" class="DTContainer w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
         <div data-layer="DT Card"
-          class="DTCard self-stretch bg-[#641E1A] rounded-[28px] shadow-[0_30px_60px_-35px_rgba(90,20,20,0.6)] inline-flex justify-between items-stretch overflow-hidden">
+          class="DTCard self-stretch bg-[#561513] rounded-[16px] border border-white/20 inline-flex justify-between items-stretch overflow-hidden">
           <div data-layer="DT Column"
-            class="DTColumn flex-[0_0_52%] p-12 inline-flex flex-col justify-center items-start gap-6 text-left">
-            <div data-layer="DT Content" class="DTContent self-stretch flex flex-col justify-start items-start gap-4">
+            class="DTColumn flex-1 p-12 inline-flex flex-col justify-center items-start gap-8 text-left">
+            <div data-layer="DT Content" class="DTContent self-stretch flex flex-col justify-start items-start gap-6">
               <div data-layer="DT Heading"
-                class="DTHeading self-stretch text-left text-white text-[48px] font-semibold font-['Bona Nova'] leading-[56px]">
-                Save 20% Today – Offer Ends Soon</div>
+                class="DTHeading self-stretch text-left text-white uppercase"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; font-size: 60px !important; line-height: 60px !important; letter-spacing: -0.6px !important;">
+                Save 20% Today - Offer Ends Soon</div>
               <div data-layer="DT Text"
-                class="DTText self-stretch text-left text-white/85 text-[20px] font-normal font-['Poppins'] leading-[30px]">
-                Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don’t miss out!</div>
+                class="DTText self-stretch text-left text-white"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 20px !important; line-height: 30px !important;">
+                Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don't miss out!</div>
             </div>
-            <div data-layer="DT Actions" class="DTActions size- inline-flex justify-start items-start gap-4">
-              <div data-layer="DT Button" data-alternate="False" data-icon-position="No icon" data-small="False"
-                data-style="Primary" class="DTButton DT-cta-glow">
+            <div data-layer="DT Actions" class="DTActions inline-flex justify-start items-start">
+              <button data-layer="DT Button" data-alternate="False" data-icon-position="No icon" data-small="False"
+                data-style="Primary" class="DTButton DT-cta-glow bg-[#E63946] px-6 py-2.5 rounded-[6px] relative">
                 <span data-layer="DT Button"
-                  class="Button relative z-[1] text-white text-lg font-semibold font-['Poppins'] leading-relaxed tracking-[0.5px] uppercase">
+                  class="Button relative z-[1] text-white uppercase"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 500 !important; font-size: 18px !important; line-height: 27px !important;">
                   GET 20% OFF TODAY!</span>
-              </div>
+              </button>
             </div>
           </div>
-          <img data-layer="DT Placeholder Image" class="DTPlaceholderImage flex-1 h-full object-cover"
+          <div data-layer="DT Placeholder Image" class="DTPlaceholderImage flex-1 h-full relative">
+            <img data-layer="DT Placeholder Image" class="DTPlaceholderImage flex-1 h-full object-cover"
             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-PlaceholderImage.png"
             alt="Customer preparing emergency supplies" loading="lazy" />
         </div>
-      </div>
-    </div>
-    <!-- Layer: Footer / 2 / -->
-    <div data-layer="Footer / 2 /"
-      class="Footer2 self-stretch px-16 py-20 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
-      <div data-layer="Container"
-        class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
-        <div data-layer="Content" class="Content self-stretch h-60 inline-flex justify-start items-start gap-32">
-          <div data-layer="Links" class="Links flex-1 flex justify-start items-start gap-10">
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start overflow-hidden">
-              <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-32 h-auto flex items-center">
-                <img src="../ads-v2/assets/Logo-wide%201.svg" alt="72HRS logo" class="max-w-full h-auto"
-                  loading="lazy" />
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Company"
-                class="Company self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Company</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="About us"
-                    class="AboutUs flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    About us</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Careers"
-                    class="Careers flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Careers</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Press"
-                    class="Press flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Press</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Contact"
-                    class="Contact flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Contact</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Mission"
-                    class="Mission flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Mission</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Resources"
-                class="Resources self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Resources</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Blog"
-                    class="Blog flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Blog</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Guides"
-                    class="Guides flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Guides</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Tools"
-                    class="Tools flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Tools</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Support"
-                    class="Support flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Support</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Community"
-                    class="Community flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Community</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Legal"
-                class="Legal self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Legal</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Terms"
-                    class="Terms flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Terms</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Privacy"
-                    class="Privacy flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Privacy</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Cookies"
-                    class="Cookies flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Cookies</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Compliance"
-                    class="Compliance flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Compliance</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Subscribe"
-                    class="Subscribe flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Subscribe</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Newslatter" class="Newslatter w-96 inline-flex flex-col justify-start items-start gap-6">
-            <div data-layer="Frame 13" class="Frame13 self-stretch flex flex-col justify-start items-start gap-4">
-              <div data-layer="Stay informed about emergency preparedness"
-                class="StayInformedAboutEmergencyPreparedness self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Stay informed about emergency preparedness</div>
-              <div data-layer="Email address"
-                class="EmailAddress self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                Email address</div>
-            </div>
-            <div data-layer="Actions" class="Actions size- flex flex-col justify-start items-start gap-3">
-              <div data-layer="Form" class="Form self-stretch inline-flex justify-start items-start gap-4">
-                <div data-layer="Text input" data-alternate="False" data-type="Default"
-                  class="TextInput flex-1 px-3 py-2 bg-Opacity-Transparent/0 rounded-xl outline outline-1 outline-Opacity-Neutral-Darkest-15/20 flex justify-start items-center gap-2">
-                  <div data-layer="Placeholder"
-                    class="Placeholder flex-1 justify-start text-Opacity-Neutral-Darkest-60/60 text-lg font-normal font-['Poppins'] leading-relaxed">
-                    Subscribe</div>
-                </div>
-                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
-                  data-style="Secondary"
-                  class="Button size- px-6 py-2.5 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
-                  <div data-layer="Button"
-                    class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">
-                    By subscribing, you agree to our privacy policy and consent to receive updates.</div>
-                </div>
-              </div>
-              <div data-layer="Thank you for subscribing!"
-                class="ThankYouForSubscribing self-stretch justify-start text-Color-Scheme-1-Text text-xs font-normal font-['Poppins'] leading-none">
-                Thank you for subscribing!</div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Credits" class="Credits self-stretch flex flex-col justify-start items-start gap-8">
-          <div data-layer="Divider"
-            class="Divider self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-Color-Scheme-1-Border/20">
-          </div>
-          <div data-layer="Row" class="Row self-stretch inline-flex justify-between items-start">
-            <div data-layer="Credits" class="Credits size- flex justify-start items-center gap-6">
-              <div data-layer="Privacy policy"
-                class="PrivacyPolicy justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                Privacy policy</div>
-              <div data-layer="Terms of service"
-                class="TermsOfService justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Terms of service</div>
-              <div data-layer="Cookies settings"
-                class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Cookies settings</div>
-              <div data-layer="Cookies Settings"
-                class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Cookies Settings</div>
-            </div>
-            <div data-layer="Social Links" class="SocialLinks flex justify-start items-center gap-3">
-              <a data-layer="Facebook" href="#" class="Facebook w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Facebook.svg" alt="Facebook" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="Instagram" href="#" class="Instagram w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Instagram.svg" alt="Instagram" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="X" href="#" class="X w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/X.svg" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="LinkedIn" href="#" class="Linkedin w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/LinkedIn.svg" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="Youtube" href="#" class="Youtube w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Youtube.svg" alt="YouTube" class="w-6 h-6" loading="lazy" />
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -2207,6 +1981,19 @@
       io.observe(statsSection);
     })();
 
+  </script>
+  <script>
+    // Mobile menu toggle
+    (function () {
+      const btn = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const isHidden = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', !isHidden);
+        btn.setAttribute('aria-expanded', String(isHidden));
+      });
+    })();
   </script>
 </body>
 
