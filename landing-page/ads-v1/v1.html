@@ -6,6 +6,7 @@
   <title>72 Hours Emergency Kit</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="v1.css">
+
 <style >
  * {
     margin: 0;
@@ -1180,7 +1181,7 @@ section {
  
 </style>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function() {
     let closeIcon = document.querySelector("#close-btn .Icon");
     if (closeIcon) {
         closeIcon.addEventListener("click", function() {
@@ -1279,40 +1280,48 @@ document.addEventListener('DOMContentLoaded', function() {
     totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
     selectAllCheckbox.checked = checkedCount === totalItems;
     selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < totalItems;
-    if (checkedCount === totalItems) {
-      resultCard.style.background = 'linear-gradient(180deg, rgba(52, 199, 89, 0.05) 0%, rgba(52, 199, 89, 0.1) 100%)';
-      resultCard.style.boxShadow = '0 0 25px 5px rgba(255, 0, 0, 0.3)';
-      resultCard.classList.add('warning-state');
+    
+    // CASE 1: 0 ITEMS - Empty state
+    if (checkedCount === 0) {
+      resultCard.style.background = 'transparent';
+      resultCard.style.boxShadow = 'none';
       warningIcon.style.display = 'none';
-      successIcon.style.display = 'block';
-      resultHeadline.innerHTML = "✅ You've covered<br>FEMA's full checklist.";
+      resultHeadline.innerHTML = '';
+      resultHeadline.style.display = 'none';
+      resultSubtext.innerHTML = '';
       resultSubtext.style.display = 'none';
       resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
+      resultPrice.style.display = 'none';
+      resultPriceSubtext.style.display = 'none';
+      comparisonText.style.display = 'none';
+    }
+    // CASE 3: ALL ITEMS - Success state
+    else if (checkedCount === totalItems) {
+      resultCard.style.background = 'linear-gradient(180deg, rgba(52, 199, 89, 0.05) 0%, rgba(52, 199, 89, 0.1) 100%)';
+      resultCard.style.boxShadow = '0 0 12px 2px rgba(52,199,89,0.15)';
+      warningIcon.style.display = 'none';
+      resultHeadline.style.display = 'block';
+      resultHeadline.innerHTML = "✅ You've covered FEMA's full checklist.";
+      resultSubtext.innerHTML = '';
+      resultSubtext.style.display = 'none';
+      resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
+      resultPrice.style.display = 'block';
       resultPriceSubtext.style.display = 'none';
       comparisonText.style.display = 'block';
-    } else if (checkedCount > 0) {
-      resultCard.style.background = 'white';
-      resultCard.style.boxShadow = '0 0 25px 5px rgba(255, 0, 0, 0.3)';
-      resultCard.classList.add('warning-state');
+    }
+    // CASE 2: 1+ BUT NOT ALL - Alert state
+    else {
+      resultCard.style.background = 'linear-gradient(180deg, rgba(255, 59, 48, 0.05) 0%, rgba(255, 59, 48, 0.1) 100%)';
+      resultCard.style.boxShadow = '0 0 12px 2px rgba(211,35,42,0.15)';
       warningIcon.style.display = 'block';
-      successIcon.style.display = 'none';
-      resultHeadline.innerHTML = "⚠️ Your emergency kit is<br>missing critical essentials.";
+      resultHeadline.style.display = 'block';
+      resultHeadline.innerHTML = "⚠️ Your emergency kit is missing critical essentials.";
+      resultSubtext.innerHTML = "Even one missing item could put your family at risk during the first 72 hours.";
       resultSubtext.style.display = 'block';
-      resultSubtext.innerHTML = "Even one missing item could put your family at risk<br>during the first 72 hours.";
       resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
-      resultPriceSubtext.style.display = 'block';
+      resultPrice.style.display = 'block';
       resultPriceSubtext.textContent = '+ hours of shopping and research';
-      comparisonText.style.display = 'none';
-    } else {
-      resultCard.style.background = 'transparent';
-      resultCard.style.boxShadow = '0 0 25px 5px rgba(255, 0, 0, 0.3)';
-      resultCard.classList.add('warning-state');
-      warningIcon.style.display = 'none';
-      successIcon.style.display = 'none';
-      resultHeadline.innerHTML = "";
-      resultSubtext.style.display = 'none';
-      resultPrice.textContent = `$${totalPrice.toFixed(2)}`;
-      resultPriceSubtext.style.display = 'none';
+      resultPriceSubtext.style.display = 'block';
       comparisonText.style.display = 'none';
     }
   }
@@ -1446,9 +1455,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div style="width: 1280px; height: 759px; position: absolute; left: 0; top: 0;">
           <!-- Image Gallery Component -->
           <div class="image-gallery-hover" style="width: 765px; height: 758px; position: absolute; left: 604px; top: 25px;">
-            <img class="center-img" style="width: 595px; height: 595px; position: absolute; left: 48.14px; top: -1.13px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/1_8dacca2e-e944-4fed-836b-7115afb3e8c5.jpg?v=1759772680" alt="Emergency Kit">
-            <img class="left-img" style="width: 196px; height: 196px; position: absolute; left: 15.81px; top: 517px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/2_8d897ab5-48dc-41a6-881d-3df4b2e88d91.jpg?v=1759772679" alt="Emergency Supplies">
-            <img class="right-img" style="width: 155px; height: 155px; position: absolute; left: 550.26px; top: 557.74px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://cdn.shopify.com/s/files/1/0077/1092/files/3_d99a0dd8-6e64-4fa7-a854-cd5208231703.jpg?v=1759772679" alt="Emergency Water">
+            <img class="center-img" style="width: 595px; height: 595px; position: absolute; left: 48.14px; top: -1.13px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://www.figma.com/api/mcp/asset/ee81f163-ff3f-41a1-bd7d-c82cd6a119d6" alt="Emergency Kit">
+            <img class="left-img" style="width: 196px; height: 196px; position: absolute; left: 15.81px; top: 517px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://www.figma.com/api/mcp/asset/99363e3e-130a-4967-81b6-0b86aef30646" alt="Emergency Supplies">
+            <img class="right-img" style="width: 155px; height: 155px; position: absolute; left: 550.26px; top: 557.74px; border-radius: 40px; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover;" src="https://www.figma.com/api/mcp/asset/a4c2cd11-6d4f-41ff-8e14-f1cfe72befd6" alt="Emergency Water">
           </div>
           
           <!-- Text Content Column -->
@@ -1955,42 +1964,22 @@ document.addEventListener('DOMContentLoaded', function() {
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; width: 100%; max-width: 1280px;">
           <!-- Video 1 -->
           <div style="position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 9/16; background: #000;">
-            <iframe 
-              src="https://www.youtube.com/embed/jDczswX-FIU?autoplay=1&mute=1&controls=0&loop=1&playlist=jDczswX-FIU&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
-              style="width: 100%; height: 100%; border: none;"
-              allow="autoplay; encrypted-media"
-              allowfullscreen>
-            </iframe>
+            <iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/14q6dm?loop=0&nocontrols=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
           </div>
           
           <!-- Video 2 -->
           <div style="position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 9/16; background: #000;">
-            <iframe 
-              src="https://www.youtube.com/embed/3ArZI9UEGdE?autoplay=1&mute=1&controls=0&loop=1&playlist=3ArZI9UEGdE&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
-              style="width: 100%; height: 100%; border: none;"
-              allow="autoplay; encrypted-media"
-              allowfullscreen>
-            </iframe>
+            <iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/evu1f8?loop=0&nocontrols=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
           </div>
           
           <!-- Video 3 -->
           <div style="position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 9/16; background: #000;">
-            <iframe 
-              src="https://www.youtube.com/embed/XTppi5Lohg0?autoplay=1&mute=1&controls=0&loop=1&playlist=XTppi5Lohg0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
-              style="width: 100%; height: 100%; border: none;"
-              allow="autoplay; encrypted-media"
-              allowfullscreen>
-            </iframe>
+            <iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/rdv28t?loop=0&nocontrols=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
           </div>
           
           <!-- Video 4 -->
           <div style="position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 9/16; background: #000;">
-            <iframe 
-              src="https://www.youtube.com/embed/fKGW4bxspM0?autoplay=1&mute=1&controls=0&loop=1&playlist=fKGW4bxspM0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
-              style="width: 100%; height: 100%; border: none;"
-              allow="autoplay; encrypted-media"
-              allowfullscreen>
-            </iframe>
+            <iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/1r1ko1?loop=0&nocontrols=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
           </div>
         </div>
       </div>
