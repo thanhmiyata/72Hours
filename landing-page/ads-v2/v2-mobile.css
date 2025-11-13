@@ -143,10 +143,10 @@ body {
 .HomeMobile .Header30 .Header30__title {
   width: 100%;
   color: white;
-  font-size: 32px;
+  font-size: 21px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   word-wrap: break-word;
 }
 
@@ -154,10 +154,10 @@ body {
 .HomeMobile .Header30 .Header30__subtitle {
   width: 100%;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -221,7 +221,7 @@ body {
 /* Label */
 .HomeMobile .Layout426 .Layout426__label {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -241,10 +241,10 @@ body {
 .HomeMobile .Layout426 .Layout426__title {
   width: 100%;
   color: #420e24;
-  font-size: 36px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: left;
   word-wrap: break-word;
 }
@@ -258,20 +258,20 @@ body {
 /* Description normal text */
 .HomeMobile .Layout426 .Layout426__description-normal {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
 /* Description bold text */
 .HomeMobile .Layout426 .Layout426__description-bold {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -342,10 +342,10 @@ body {
 .HomeMobile .Layout86 .Layout86__title {
   width: 100%;
   color: white;
-  font-size: 32px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
-  font-weight: 400;
-  line-height: 1.3;
+  font-weight: 700;
+  line-height: 1.2;
   text-align: left;
   word-wrap: break-word;
 }
@@ -400,9 +400,9 @@ body {
   top: 0px;
   position: absolute;
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 72px;
+  line-height: 1.2;
   font-family: "Bona Nova";
   word-wrap: break-word;
 }
@@ -411,10 +411,10 @@ body {
 .HomeMobile .Layout86 .Layout86__stat-description {
   width: 100%;
   color: white;
-  font-size: 16px;
+  font-size: 11px;
   font-family: "Merriweather Sans";
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: left;
   word-wrap: break-word;
 }
@@ -547,7 +547,7 @@ body {
 /* Label */
 .HomeMobile .Layout456 .Layout456__label {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -569,23 +569,14 @@ body {
   text-align: left;
 }
 
-/* Title bold */
-.HomeMobile .Layout456 .Layout456__title-bold {
-  color: #420e24;
-  font-size: 36px;
-  font-family: "Bona Nova", serif;
-  font-weight: 700;
-  line-height: 1.2;
-  word-wrap: break-word;
-}
 
 /* Title regular */
 .HomeMobile .Layout456 .Layout456__title-regular {
-  color: #420e24;
-  font-size: 36px;
-  font-family: "Bona Nova", serif;
-  font-weight: 400;
-  line-height: 1.2;
+  color: #420e24 !important;
+  font-size: 17px !important;
+  font-family: "Bona Nova", serif !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
   word-wrap: break-word;
 }
 
@@ -593,10 +584,10 @@ body {
 .HomeMobile .Layout456 .Layout456__description {
   width: 100%;
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 22px;
-  font-family: Merriweather Sans;
+  font-size: 14px;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 35.86px;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -672,7 +663,7 @@ body {
   width: 100%;
   text-align: center;
   color: #40100e;
-  font-size: 28px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
   line-height: 1.2;
@@ -684,10 +675,10 @@ body {
   width: 100%;
   text-align: center;
   color: var(--Color-Neutral-Darkest, #0b0302);
-  font-size: 16px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -722,10 +713,10 @@ body {
 .HomeMobile .Comparison .Comparison__header-title {
   width: 100%;
   color: var(--Color-Valencia-Darkest, #40100e);
-  font-size: 14px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
@@ -755,10 +746,10 @@ body {
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 14px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
@@ -787,7 +778,7 @@ body {
 .HomeMobile .Comparison .Comparison__cell-text {
   flex: 1;
   color: var(--Color-Valencia-Darkest, #40100e);
-  font-size: 13px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -810,7 +801,7 @@ body {
   flex: 1;
   text-align: center;
   color: white;
-  font-size: 13px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -841,7 +832,7 @@ body {
 .HomeMobile .Comparison .Comparison__footer-title {
   width: 100%;
   color: var(--Color-Valencia-Darkest, #40100e);
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 800;
   line-height: 1.3;
@@ -878,7 +869,7 @@ body {
   top: 0;
   text-align: center;
   color: white;
-  font-size: 24px;
+  font-size: 27px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -912,7 +903,7 @@ body {
   flex: 1;
   text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 400;
   line-height: 1.5;
@@ -972,7 +963,7 @@ body {
 /* Label */
 .HomeMobile .Layout308 .Layout308__label {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -983,11 +974,6 @@ body {
 /* Title */
 .HomeMobile .Layout308 .Layout308__title {
   width: 100%;
-  color: #6b2f45;
-  font-size: 28px;
-  font-family: "Bona Nova", serif;
-  font-weight: 400;
-  line-height: 1.2;
   text-align: left;
   word-wrap: break-word;
 }
@@ -1001,20 +987,20 @@ body {
 /* Description normal text */
 .HomeMobile .Layout308 .Layout308__description-normal {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 15px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
 /* Description bold text */
 .HomeMobile .Layout308 .Layout308__description-bold {
   color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 15px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -1077,7 +1063,7 @@ body {
 /* Tiêu đề */
 .HomeMobile .Layout308 .Layout308__feature-title {
   color: #0b0302;
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
   line-height: 1.4;
@@ -1088,7 +1074,7 @@ body {
 /* Mô tả */
 .HomeMobile .Layout308 .Layout308__feature-description {
   color: #0b0302;
-  font-size: 14px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -1221,10 +1207,10 @@ body {
 .Layout482 .layout-title {
   text-align: center;
   color: var(--Color-Scheme-1-Text, #0b0302);
-  font-size: 25px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 37.5px;
+  line-height: 1.5;
 }
 
 .Layout482 .layout-body {
@@ -1238,20 +1224,15 @@ body {
 
 .Layout482 .layout-subtitle {
   text-align: center;
-  color: #420e24;
-  font-size: 55px;
-  font-family: "Bona Nova", serif;
-  font-weight: 700;
-  line-height: 66px;
 }
 
 .Layout482 .layout-description {
   text-align: center;
   color: var(--Color-Scheme-1-Text, #0b0302);
-  font-size: 25px;
+  font-size: 11px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 40.75px;
+  line-height: 1.63;
 }
 
 .Layout482 .layout-button-group {
@@ -1281,10 +1262,10 @@ body {
 
 .Layout482 .layout-button-text {
   color: var(--Color-Neutral-Darkest, #0b0302);
-  font-size: 25px;
+  font-size: 17px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 37.5px;
+  line-height: 1.5;
 }
 
 .layout482-video {
@@ -1320,26 +1301,22 @@ body {
 /* Container chính với background image */
 .HomeMobile .Layout413 {
   width: 100%;
-  min-height: 100vh;
   padding: 60px 0;
+  background: #f5f0e8;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: url("https://cdn.shopify.com/s/files/1/0077/1092/files/day7.png?v=1760078688");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* Container wrapper với padding 0 20px */
+/* Container wrapper */
 .HomeMobile .Layout413 .Layout413__container {
   width: 100%;
   max-width: 100%;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
   align-items: center;
 }
 
@@ -1349,24 +1326,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 /* Image wrapper */
 .HomeMobile .Layout413 .Layout413__image-wrapper {
   width: 100%;
   max-width: 100%;
+  height: 320px;
   position: relative;
-  transform: rotate(-1deg);
-  transform-origin: top left;
+  overflow: hidden;
+  border-radius: 16px;
+  flex-shrink: 0;
 }
 
 /* Image */
 .HomeMobile .Layout413 .Layout413__image {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Text section */
@@ -1374,16 +1353,15 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 32px;
 }
 
-/* Text content */
+/* Text content wrapper */
 .HomeMobile .Layout413 .Layout413__text-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 32px;
 }
 
@@ -1392,7 +1370,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
 }
 
@@ -1401,15 +1378,14 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  gap: 16px;
 }
 
 /* Title */
 .HomeMobile .Layout413 .Layout413__title {
   width: 100%;
   color: #420e24;
-  font-size: 36px;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
   line-height: 1.2;
@@ -1420,11 +1396,11 @@ body {
 /* Description */
 .HomeMobile .Layout413 .Layout413__description {
   width: 100%;
-  color: var(--Color-Scheme-1-Text, #0b0302);
-  font-size: 16px;
+  color: #0b0302;
+  font-size: 14px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   text-align: left;
   word-wrap: break-word;
 }
@@ -1434,65 +1410,67 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
 }
 
 /* Takeaway wrapper */
 .HomeMobile .Layout413 .Layout413__takeaway-wrapper {
   width: 100%;
-  padding: 8px 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Takeaway content */
 .HomeMobile .Layout413 .Layout413__takeaway-content {
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
+  align-items: center;
 }
 
 /* Takeaway title */
 .HomeMobile .Layout413 .Layout413__takeaway-title {
   width: 100%;
-  text-align: center;
-  color: var(--Color-Valencia-Darkest, #40100e);
-  font-size: 32px;
+  color: #40100e;
+  font-size: 17px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
   line-height: 1.4;
+  text-align: center;
   word-wrap: break-word;
 }
 
 /* Takeaway text */
 .HomeMobile .Layout413 .Layout413__takeaway-text {
   width: 100%;
-  text-align: left;
+  color: #0b0302;
+  font-size: 14px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 /* Takeaway normal text */
 .HomeMobile .Layout413 .Layout413__takeaway-normal {
-  color: var(--Color-Scheme-1-Text, #0b0302);
-  font-size: 16px;
+  color: #0b0302;
+  font-size: 14px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  word-wrap: break-word;
 }
 
 /* Takeaway underline text */
 .HomeMobile .Layout413 .Layout413__takeaway-underline {
-  color: var(--Color-Scheme-1-Text, #0b0302);
-  font-size: 16px;
+  color: #0b0302;
+  font-size: 14px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  text-decoration: underline;
   line-height: 1.5;
-  word-wrap: break-word;
+  text-decoration: underline;
 }
 
 /* Header64 CSS - Mobile Only */
@@ -1534,7 +1512,7 @@ body {
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 38px;
+  font-size: 30px;
   font-family: "Bona Nova", serif;
   font-weight: 700;
   line-height: 1.2;
@@ -1570,20 +1548,20 @@ body {
 /* Description normal text */
 .HomeMobile .Header64 .Header64__description-normal {
   color: white;
-  font-size: 18px;
+  font-size: 23px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
 /* Description bold text */
 .HomeMobile .Header64 .Header64__description-bold {
   color: white;
-  font-size: 18px;
+  font-size: 23px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.63;
   word-wrap: break-word;
 }
 
@@ -1678,162 +1656,11 @@ body {
   width: 100%;
   text-align: center;
   color: var(--Color-Valencia-Darkest, #40100e);
-  font-size: 26px;
+  font-size: 24px;
   font-family: "Bona Nova", serif;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.3;
   word-wrap: break-word;
-}
-
-/* CTA39 CSS - Mobile Only */
-
-/* Container chính với background */
-.CTA39 {
-  width: 100%;
-  height: 870px;
-  padding: 100px 0;
-  background: var(--Color-Scheme-4-Foreground, #d68c2f);
-  background-image: url(https://cdn.shopify.com/s/files/1/0077/1092/files/people_58f27c53-daa4-4ce4-b3c1-cb44209f8ace.png?v=1759863578);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply; /* 🔥 quan trọng */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Container wrapper với padding 0 20px */
-.HomeMobile .CTA39 .CTA39__container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Card */
-.HomeMobile .CTA39 .CTA39__card {
-  width: 100%;
-  background: white;
-  overflow: hidden;
-  border-radius: 16px;
-  outline: 1px solid rgba(11, 3, 2, 0.15);
-  outline-offset: -1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Card content */
-.HomeMobile .CTA39 .CTA39__card-content {
-  width: 100%;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
-/* Text section */
-.HomeMobile .CTA39 .CTA39__text-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-/* Title */
-.HomeMobile .CTA39 .CTA39__title {
-  width: 100%;
-  color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 32px;
-  font-family: "Bona Nova", serif;
-  font-weight: 400;
-  line-height: 1.2;
-  text-align: left;
-  word-wrap: break-word;
-}
-
-/* Description */
-.HomeMobile .CTA39 .CTA39__description {
-  width: 100%;
-  color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: left;
-  word-wrap: break-word;
-}
-
-/* Button wrapper */
-.HomeMobile .CTA39 .CTA39__button-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Button */
-.HomeMobile .CTA39 .CTA39__button {
-  width: 100%;
-  padding: 20px 15px;
-  background: var(--Color-Valencia, #d73630);
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.HomeMobile .CTA39 .CTA39__button:hover {
-  background: #c12f29;
-}
-
-/* Button text */
-.HomeMobile .CTA39 .CTA39__button-text {
-  color: white;
-  font-size: 16px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-/* Offer section */
-.HomeMobile .CTA39 .CTA39__offer-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Offer text */
-.HomeMobile .CTA39 .CTA39__offer-text {
-  width: 100%;
-  text-align: center;
-  color: var(--Color-Scheme-2-Text, #0b0302);
-  font-size: 16px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: 700;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-/* Image */
-.HomeMobile .CTA39 .CTA39__image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
 }
 
 .Footer {

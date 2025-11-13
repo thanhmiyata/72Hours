@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bona+Nova:wght@400;700&display=swap"
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,8 +31,8 @@
                 'Border': '#D1D5DB'
               },
               'Scheme-2': {
-                'Background': '#F7F7F7',
-                'Foreground': '#ffffff',
+                'Background': '#F2F2F2',
+                'Foreground': '#F2F2F2',
                 'Text': '#111827',
                 'Border': '#E5E7EB'
               },
@@ -60,6 +60,9 @@
     }
   </script>
   <style>
+    /* Import Inter font for Header / 131 / */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
     /* Smooth fonts and better image rendering */
     html {
       -webkit-font-smoothing: antialiased;
@@ -77,6 +80,7 @@
       background-color: #ffffff;
     }
 
+    
     .SalesPageWebV1 {
       margin: 0 auto;
     }
@@ -119,6 +123,7 @@
           rgba(226, 27, 60, 0) 0%, rgba(226, 27, 60, 0.6) 15%, rgba(255, 255, 255, 0.9) 45%, rgba(226, 27, 60, 0.8) 75%, rgba(226, 27, 60, 0) 100%);
       animation: spin 4s linear infinite;
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       padding: 5px;
@@ -196,6 +201,7 @@
       animation: border-move 3s linear infinite;
       pointer-events: none;
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
     }
@@ -223,6 +229,286 @@
 
     .image-tilt:hover .img-tilt-small {
       transform: rotate(5deg);
+    }
+
+    /* Header / 131 / - Scoped styles for Unbounce compatibility */
+    .Header131 {
+      background-color: #7D291C !important;
+      color: #ffffff !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      width: 100% !important;
+      padding: 80px 64px !important;
+      gap: 80px !important;
+      overflow: hidden !important;
+      min-height: 1315px !important;
+    }
+
+    @media (max-width: 1024px) {
+      .Header131 {
+        padding: 80px 48px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .Header131 {
+        padding: 80px 32px !important;
+      }
+    }
+
+    .Header131 .Container {
+      width: 100% !important;
+      max-width: 1272px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      gap: 56px !important;
+      /* Reduced by 30% from 80px (gap-20) to 56px (gap-14) */
+    }
+
+    .Header131 .Content {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0 !important;
+    }
+
+    @media (min-width: 768px) {
+      .Header131 .Content {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+      }
+    }
+
+    .Header131 .Column {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+
+    @media (min-width: 768px) {
+      .Header131 .Column:first-child {
+        width: 50% !important;
+        /* 6/12 = 50% */
+        flex: 0 0 50% !important;
+        padding: 2rem 3rem !important;
+      }
+
+      .Header131 .Column:last-child {
+        width: 50% !important;
+        /* 6/12 = 50% */
+        flex: 0 0 50% !important;
+        padding: 2rem 3rem !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .Header131 .Column:first-child {
+        padding: 3rem 4rem !important;
+      }
+
+      .Header131 .Column:last-child {
+        padding: 3rem 4rem !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .Header131 .Column {
+        width: 100% !important;
+      }
+    }
+
+    .Header131 .Column:first-child {
+      gap: 16px !important;
+    }
+
+    .Header131 .Column:last-child {
+      gap: 32px !important;
+    }
+
+    .Header131 .Heading {
+      width: 100% !important;
+      text-align: left !important;
+    }
+
+    .Header131 .Heading,
+    .Header131 .Heading * {
+      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .Heading>div {
+      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      text-transform: uppercase !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      font-size: 70px !important;
+      line-height: 70px !important;
+      letter-spacing: 0 !important;
+      font-style: normal !important;
+      font-display: swap !important;
+    }
+
+    .Header131 .Heading>div,
+    .Header131 .Heading>div *,
+    .Header131 .Heading>div span {
+      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .Heading>div span {
+      display: block !important;
+      font-family: 'Bona Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: inherit !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla {
+      width: 100% !important;
+      color: #ffffff !important;
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 24px !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p {
+      margin: 0 !important;
+      color: #ffffff !important;
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p * {
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child {
+      font-size: 35px !important;
+      line-height: 46px !important;
+      white-space: nowrap !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child span {
+      font-weight: 700 !important;
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:nth-child(2),
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:nth-child(3) {
+      font-size: 20px !important;
+      line-height: 30px !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p span.font-bold {
+      font-weight: 700 !important;
+      font-size: 25px !important;
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p span {
+      font-family: 'Poppins', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    .Header131 .ImageContainer {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 1272px !important;
+      height: 746px !important;
+    }
+
+    .Header131 .img-tilt-large {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 100% !important;
+      max-width: 1088px !important;
+      height: 746px !important;
+      border-radius: 16px !important;
+      object-fit: cover !important;
+    }
+
+    .Header131 .img-tilt-small {
+      position: absolute !important;
+      width: 384px !important;
+      height: 384px !important;
+      right: 0 !important;
+      top: 80px !important;
+      border-radius: 16px !important;
+      object-fit: cover !important;
+    }
+
+    @media (max-width: 1024px) {
+      .Header131 .Heading>div {
+        font-size: 56px !important;
+        line-height: 56px !important;
+      }
+
+      .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child {
+        font-size: 28px !important;
+        line-height: 38px !important;
+        white-space: normal !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .Header131 {
+        padding: 56px 32px !important;
+        gap: 48px !important;
+      }
+
+      .Header131 .Heading>div {
+        font-size: 40px !important;
+        line-height: 44px !important;
+      }
+
+      .Header131 .TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla p:first-child {
+        font-size: 24px !important;
+        line-height: 32px !important;
+      }
+
+      .Header131 .img-tilt-small {
+        width: 280px !important;
+        height: 280px !important;
+        top: 40px !important;
+      }
+
+      .Header131 .ImageContainer {
+        height: 600px !important;
+      }
+
+      .Header131 .img-tilt-large {
+        height: 600px !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* Header / 147 / - Scoped styles for Unbounce compatibility */
+    .Header147 {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      overflow: hidden !important;
+    }
+
+    .Header147 .Heading,
+    .Header147 .Heading * {
+      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+    }
+
+    .Header147 .Heading>div {
+      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-weight: 700 !important;
+      font-size: 63px !important;
+      line-height: 84px !important;
+      color: #6A1B1B !important;
     }
 
     /* Countdown separator: thin gray vertical bar, slightly taller than numbers, shorter than labels */
@@ -281,77 +567,260 @@
       letter-spacing: -0.01em;
     }
 
-    .product-tagline {
+    /* DT Product / 4 / - Scoped product classes */
+    .DTProduct4 .product-tagline {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 600;
     }
 
-    .product-title {
+    .DTProduct4 .product-title {
       font-family: 'Bona Nova', 'Times New Roman', serif;
       font-weight: 700;
     }
 
-    .product-subtitle {
+    .DTProduct4 .product-subtitle {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 400;
     }
 
-    .product-card-title {
-      font-family: 'Bona Nova', 'Times New Roman', serif;
+    .DTProduct4 .product-card-title {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 700;
     }
 
-    .product-card-meta {
-      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    .DTProduct4 .product-card-meta {
+      font-family: 'Bona Nova', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 400;
     }
 
-    .product-card-price {
-      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 600;
+    .DTProduct4 .product-card-price {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 600 !important;
     }
 
-    .product-cta-text {
+    .DTProduct4 .product-cta-text {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 500;
     }
 
-    .gallery-heading {
+    .DTGallery3 .gallery-heading {
       font-family: 'Bona Nova', 'Times New Roman', serif;
       font-weight: 700;
       color: #ffffff;
+
     }
 
-    .gallery-subheading {
+    .DTGallery3 .gallery-subheading {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 400;
     }
 
-    .faq-heading {
+    /* DT Gallery / 3 / - Scoped styles for Unbounce compatibility */
+    .DTGallery3 {
+      position: relative !important;
+      width: 100% !important;
+      padding: 96px 64px !important;
+      background-color: #7D291B !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      overflow: hidden !important;
+      padding-bottom: 95px !important;
+    }
+
+    .DTGallery3 .Container {
+      position: relative !important;
+      z-index: 10 !important;
+      width: 100% !important;
+      max-width: 1280px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      gap: 64px !important;
+    }
+
+    .DTGallery3 .Content {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    @media (min-width: 768px) {
+      .DTGallery3 .Content {
+        flex-direction: row !important;
+        align-items: stretch !important;
+      }
+    }
+
+    .DTGallery3 .Content>div {
+      position: relative !important;
+      flex: 1 1 0% !important;
+      max-width: 360px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      height: 320px !important;
+      border-radius: 30px !important;
+      background-color: rgba(255, 255, 255, 0.05) !important;
+      box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.55) !important;
+      overflow: hidden !important;
+      margin: 0 !important;
+    }
+
+    .DTGallery3 .Content img {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .DTGallery3 .Content img[data-layer="Gallery Image 1"],
+    .DTGallery3 .Content img[data-layer="Gallery Image 2"],
+    .DTGallery3 .Content img[data-layer="Gallery Image 3"] {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .DT-faq-heading {
       font-family: 'Bona Nova', 'Times New Roman', serif;
       font-weight: 700;
       font-size: 52px;
       line-height: 52px;
     }
 
-    .faq-lede {
+    .DT-faq-lede {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 400;
     }
 
-    .faq-cta {
+    .DT-faq-cta {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 500;
     }
 
-    .faq-question {
+    .DT-faq-question {
       font-family: 'Bona Nova', 'Times New Roman', serif;
       font-weight: 700;
     }
 
-    .faq-answer {
+    .DT-faq-answer {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 400;
+    }
+
+    /* DT FAQ / 6 / - Scoped styles for Unbounce compatibility */
+    .DTFaq6 {
+      width: 100% !important;
+      padding: 96px 64px !important;
+      background-color: #F2F2F2 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      gap: 64px !important;
+      overflow: hidden !important;
+    }
+
+    .DTFaq6 .Container {
+      width: 100% !important;
+      max-width: 1280px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      gap: 64px !important;
+    }
+
+    .DTFaq6 .Component {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      gap: 64px !important;
+    }
+
+    @media (min-width: 1024px) {
+      .DTFaq6 .Component {
+        flex-direction: row !important;
+      }
+    }
+
+    .DTFaq6 .GotQuestions,
+    .DTFaq6 .GotQuestions * {
+      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-weight: 700 !important;
+      font-size: 52px !important;
+      line-height: 52px !important;
+      color: #561513 !important;
+    }
+
+    .DTFaq6 .Text[data-layer="Text"] {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 20px !important;
+      line-height: 30px !important;
+      color: #111827 !important;
+    }
+
+    .DTFaq6 .Button[data-layer="Button"] {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 500 !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+
+    .DTFaq6 .Question[data-layer="Question"] {
+      font-family: 'Bona Nova', 'Times New Roman', serif !important;
+      font-weight: 700 !important;
+      font-size: 24px !important;
+      line-height: 32px !important;
+      color: #111827 !important;
+    }
+
+    .DTFaq6 .Text[data-layer="Text"]:not(.DTFaq6 .GotQuestions) {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 18px !important;
+      line-height: 28px !important;
+      color: #111827 !important;
+    }
+
+    .DTFaq6 .Accordion {
+      border: 1px solid #0B0302 !important;
+      border-radius: 20px !important;
+    }
+
+    .DTFaq6 .AccordionList {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
     }
 
     /* Tab title typography */
@@ -367,39 +836,39 @@
       text-transform: none !important;
     }
 
-    /* Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
-    .Layout254 .SectionTitle .Tagline {
+    /* DT Layout / 254 / (4 Person Kit - detailed) – typography + hover behavior */
+    .DTLayout254 .SectionTitle .Tagline {
       color: #561513;
       font-family: 'Poppins', ui-sans-serif, system-ui;
       font-weight: 600;
     }
 
-    .Layout254 .SectionTitle .Heading {
+    .DTLayout254 .SectionTitle .Heading {
       font-family: 'Bona Nova', serif;
       color: #561513;
     }
 
-    .Layout254 .SectionTitle .Text {
+    .DTLayout254 .SectionTitle .Text {
       color: #111827;
     }
 
-    .Layout254 .Column .Heading {
+    .DTLayout254 .Column .Heading {
       font-family: 'Bona Nova', serif;
       color: #561513;
     }
 
-    .Layout254 .Column .Text {
+    .DTLayout254 .Column .Text {
       color: #111827;
     }
 
-    .Layout254 .ContentRow {
+    .DTLayout254 .ContentRow {
       display: inline-flex;
       align-items: center;
       gap: 12px;
       transition: gap 300ms ease;
     }
 
-    .Layout254 .CenterImage {
+    .DTLayout254 .CenterImage {
       width: 520px;
       height: 560.4px;
       border-radius: 16px;
@@ -409,28 +878,28 @@
       transform-origin: center;
     }
 
-    .Layout254 .ContentRow .Column {
+    .DTLayout254 .ContentRow .Column {
       transition: transform 300ms ease;
     }
 
     /* New hover effect: scale image and expand gaps */
-    .Layout254 .ContentRow:hover {
+    .DTLayout254 .ContentRow:hover {
       gap: 60px;
     }
 
-    .Layout254 .ContentRow:hover .CenterImage {
+    .DTLayout254 .ContentRow:hover .CenterImage {
       transform: scale(1.05);
     }
 
-    .Layout254 .ContentRow:hover .Column:first-child {
+    .DTLayout254 .ContentRow:hover .Column:first-child {
       transform: translateX(-30px);
     }
 
-    .Layout254 .ContentRow:hover .Column:last-child {
+    .DTLayout254 .ContentRow:hover .Column:last-child {
       transform: translateX(30px);
     }
 
-    .cta-glow {
+    .DT-cta-glow {
       position: relative;
       display: inline-flex;
       align-items: center;
@@ -452,7 +921,7 @@
       overflow: visible;
     }
 
-    .cta-glow::before {
+    .DT-cta-glow::before {
       content: "";
       position: absolute;
       inset: -12px;
@@ -464,7 +933,7 @@
     }
 
     /* Enhanced CTA button with animated border light */
-    .cta-glow::after {
+    .DT-cta-glow::after {
       content: "";
       position: absolute;
       inset: -2px;
@@ -586,22 +1055,24 @@
       <div data-layer="Container"
         class="Container flex-1 max-w-[1280px] inline-flex flex-col justify-start items-start gap-6 relative">
         <div class="w-full max-w-[720px] flex flex-col justify-start items-start gap-6">
-          <div
-            class="text-Color-White font-['Poppins'] font-extrabold uppercase leading-[1.05] text-[79px] tracking-tight">
-            <span class="text-Color-Valencia">Only Today:</span><br />
-            20% Off<br />
-            + Free Fire<br />
-            Blanket<br />
-            Auto-Added<br />
-            At Checkout
+          <div data-node-id="2834:512"
+            style="font-family: 'Bona Nova', serif; font-weight: 700; font-size: 75px; line-height: 1.2; letter-spacing: -0.75px; color: #ffffff;">
+            <p style="margin: 0; display: block;"><span style="color: #d73630;">Only Today:</span></p>
+            <p style="margin: 0; display: block;"><span style="font-weight: 700;">2</span>0<span
+                style="font-weight: 700;">% OFF</span></p>
+            <p style="margin: 0; display: block;">+ Free Fire Blanket</p>
+            <p style="margin: 0; display: block;">Auto-Added</p>
+            <p style="margin: 0; display: block;">at Checkout</p>
           </div>
-          <div class="text-Color-White/90 text-lg font-['Poppins'] leading-relaxed max-w-[640px]">
-            Protect Your Family. Be Ready For Every Emergency Situations.<br />
-            Kits for 1–4 People | Made in Canada | Trusted by 75,000+ Families.
+          <div data-node-id="2834:513"
+            style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.5; color: #ffffff; max-width: 640px;">
+            <p style="margin: 0; display: block;">Protect Your Family. Be Ready For Every Emergency Situations.</p>
+            <p style="margin: 0; display: block;">Kits for 1–4 People | Made in Canada | Trusted by 75,000+ Families.
+            </p>
           </div>
           <div class="inline-flex">
             <a href="#product"
-              class="flare-border-btn px-6 py-3 bg-Color-White text-Color-Neutral-Darkest text-lg font-semibold font-['Poppins']">Shop
+              class="flare-border-btn px-6 py-3 bg-Color-White text-Color-Neutral-Darkest text-lg font-semibold font-['Bona Nova']">Shop
               Deluxe Kits Now</a>
           </div>
         </div>
@@ -627,12 +1098,13 @@
     </div>
     <!-- Layer: Event Item Header / 2 / -->
     <div data-layer="Event Item Header / 2 /"
-      class="EventItemHeader2 self-stretch px-16 py-14 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+      class="EventItemHeader2 self-stretch px-16 py-14 flex flex-col justify-start items-center gap-20 overflow-hidden"
+      style="background: linear-gradient(180deg, #E0C2A5 0%, #E8B29C 44%, #FFFFFF 100%);">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-        <div data-layer="Content" class="Content w-full max-w-[768px] flex flex-col justify-center items-center gap-8">
-          <div data-layer="Events details"
-            class="EventsDetails self-stretch flex flex-col justify-center items-center gap-6">
+        <div data-layer="Content"
+          class="Content w-full flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20">
+          <div data-layer="Events details" class="EventsDetails flex-1 flex flex-col justify-center items-center gap-6">
             <div data-layer="Section Title"
               class="SectionTitle self-stretch flex flex-col justify-start items-center gap-4">
               <div data-layer="Subheading"
@@ -699,7 +1171,7 @@
               </div>
             </div>
           </div>
-          <div data-layer="Actions" class="Actions w-[480px] flex flex-col justify-center items-center gap-4">
+          <div data-layer="Actions" class="Actions flex-1 flex flex-col justify-center items-center gap-4">
             <div data-layer="Form" class="Form self-stretch inline-flex justify-center items-start gap-4">
               <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
                 data-style="Primary"
@@ -714,39 +1186,51 @@
       </div>
     </div>
     <!-- Layer: Header / 131 / -->
+    <!-- Đã đổi màu nền từ màu đen (hoặc bất kỳ màu nào khác) sang màu #7D291C -->
     <div data-layer="Header / 131 /"
       class="Header131 self-stretch px-8 sm:px-12 lg:px-16 py-20 lg:py-28 bg-[#7D291C] text-white flex flex-col justify-start items-center gap-20 overflow-hidden min-h-[1315px]">
       <div data-layer="Container"
-        class="Container w-full max-w-[1272px] flex flex-col justify-start items-start gap-20">
-        <div data-layer="Content"
-          class="Content w-full flex flex-col lg:flex-row justify-start lg:justify-between items-start gap-12 lg:gap-20">
-          <div data-layer="Column" class="Column w-full max-w-[596px] flex flex-col justify-start items-start gap-4">
-            <div data-layer="Heading" class="Heading w-full text-left">
-              <div
-                class="font-['Bona Nova'] uppercase font-bold tracking-[0.02em] text-white leading-[1.05] text-[40px] sm:text-[48px] md:text-[56px] lg:text-[70px] lg:leading-[70px]">
-                <span class="block">Get Your Free</span>
-                <span class="block">Fire Blanket</span>
-                <span class="block">Today!</span>
+        class="Container w-full max-w-[1272px] flex flex-col justify-start items-start gap-14">
+        <div data-layer="Content" class="Content w-full flex flex-col md:flex-row items-start"
+          style="display: flex !important; align-items: flex-start !important;">
+          <div data-layer="Column" class="Column w-full md:w-6/12 flex flex-col justify-start items-start gap-4"
+            style="display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; width: 100% !important; padding: 2rem 2rem !important;">
+            <div data-layer="Heading" class="Heading w-full text-left"
+              style="width: 100% !important; text-align: left !important;">
+              <div class="font-['Bona Nova'] uppercase font-bold text-white text-[65px] leading-[70px] tracking-[0]"
+                style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 650 !important; font-size: 65px !important; line-height: 70px !important; text-transform: uppercase !important; color: #ffffff !important; letter-spacing: 0 !important;">
+                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Get Your
+                  Free</span>
+                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Fire
+                  Blanket</span>
+                <span class="block" style="font-family: 'Bona Nova', 'Times New Roman', serif !important;">Today!</span>
               </div>
             </div>
           </div>
-          <div data-layer="Column" class="Column w-full max-w-[596px] flex flex-col justify-start items-start gap-8">
+          <div data-layer="Column" class="Column w-full md:w-6/12 flex flex-col justify-start items-start gap-8"
+            style="display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; width: 100% !important; padding: 2rem 2rem !important;">
             <div
               data-layer="Text Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
-              class="TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla w-full text-white font-['Poppins'] space-y-6">
-              <p
-                class="font-normal text-white/80 text-[20px] sm:text-[26px] lg:text-[32px] leading-[30px] sm:leading-[36px] lg:leading-[46px]">
-                Save <span class="font-bold text-white text-[20px] sm:text-[26px] lg:text-[32px]">20%</span> Today –
-                Offer Ends Soon.
+              class="TextSuspendisseVariusEnimInErosElementumTristiqueDuisCursusMiQuisViverraOrnareErosDolorInterdumNulla w-full text-white font-['Poppins'] space-y-6"
+              style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; width: 100% !important; display: flex !important; flex-direction: column !important; gap: 24px !important; align-items: flex-start !important;">
+              <p class="text-white font-normal text-[35px] leading-[46px] whitespace-nowrap"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 35px !important; line-height: 46px !important; color: #ffffff !important; font-weight: 400 !important; white-space: nowrap !important; margin: 0 !important;">
+                Save <span class="font-bold"
+                  style="font-weight: 700 !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">20%</span>
+                Today – Offer Ends Soon.
               </p>
-              <p
-                class="font-medium text-white/70 text-[12px] sm:text-[16px] lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[28px]">
-                Every Deluxe Kit order today includes a <span
-                  class="font-bold text-white text-[14px] sm:text-[20px] lg:text-[22px]">FREE Fire Blanket</span><br />
-                <span class="font-normal text-white/70 text-[12px] sm:text-[16px] lg:text-[18px]">(Value $21.99)</span>
+              <p class="text-white font-normal text-[20px] leading-[30px]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 20px !important; line-height: 30px !important; color: #ffffff !important; font-weight: 400 !important; margin: 0 !important;">
+                Every Deluxe Kit order today includes a
+                <span class="font-bold text-[25px]"
+                  style="font-weight: 700 !important; font-size: 25px !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">FREE
+                  Fire Blanket</span>
+                <span class="font-normal text-[20px]"
+                  style="font-weight: 400 !important; font-size: 20px !important; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">
+                  (Value $21.99)</span>
               </p>
-              <p
-                class="font-normal text-white/70 text-[12px] sm:text-[16px] lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[28px]">
+              <p class="text-white font-normal text-[20px] leading-[30px]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-size: 20px !important; line-height: 30px !important; color: #ffffff !important; font-weight: 400 !important; margin: 0 !important;">
                 A fast, simple way to smother small flames (kitchen or electrical). Limited-time bonus!
               </p>
             </div>
@@ -763,9 +1247,10 @@
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative overflow-hidden"
+      style="margin: -1px 0 0 0 !important; padding: 0 !important; display: block !important;">
       <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
-        class="absolute inset-0 w-full h-full object-cover" />
+        class="absolute inset-0 w-full h-full object-cover" style="display: block !important;" />
     </div>
     <!-- Layer: Header / 147 / (Video Lightbox) -->
     <div data-layer="Header / 147 /"
@@ -778,7 +1263,9 @@
           <div data-layer="Column" class="Column w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
               <div data-layer="Heading" class="Heading w-auto text-center justify-start whitespace-nowrap">
-                <div class="text-[#6A1B1B] text-[63px] leading-[84px] font-['Bona Nova'] font-semibold">Built to Meet
+                <div class="text-[#6A1B1B] text-[63px] leading-[84px] font-['Bona Nova'] font-bold"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 63px !important; line-height: 84px !important; color: #6A1B1B !important;">
+                  Built to Meet
                   FEMA & Canadian Guidelines</div>
               </div>
               <div data-layer="Text"
@@ -803,7 +1290,8 @@
           <div data-layer="Component"
             class="Component w-full max-w-[768px] flex flex-col justify-start items-center gap-6">
             <div data-layer="What's inside" class="WhatSInside self-stretch text-center justify-start">
-              <div class="whats-inside-heading font-bold text-[70px] leading-[84px] text-[#561513]">What's Inside</div>
+              <div class="whats-inside-heading font-bold text-[70px] leading-[84px] font-['Bona Nova'] text-[#561513]">
+                What's Inside</div>
             </div>
             <div
               data-layer="Preparation is key to survival in chaos, so explore durable products that ensure your readiness beyond 72 hours."
@@ -819,38 +1307,38 @@
         <div data-layer="Container"
           class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
           <div data-layer="Component" class="Component self-stretch inline-flex justify-start items-center">
-            <div data-layer="Tabs Menu" class="TabsMenu flex-1 inline-flex flex-col justify-start items-start gap-10">
+            <div data-layer="Tabs Menu" class="TabsMenu flex-1 inline-flex flex-col justify-start items-start gap-6">
               <div data-layer="Tab Horizontal" data-tab="food-water"
-                class="TabHorizontal self-stretch h-40 px-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+                class="TabHorizontal self-stretch h-48 px-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
                 <div data-layer="Short heading goes here"
-                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">
+                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-[44px] font-bold font-['Poppins'] uppercase leading-[56px]">
                   Food & Water</div>
                 <div data-layer="Text"
                   class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
                   3600 Cal Food Ration<br />125ml Water Pouches<br />Aquatabs</div>
               </div>
               <div data-layer="Tab Horizontal" data-tab="shelter-warmth"
-                class="TabHorizontal self-stretch h-44 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+                class="TabHorizontal self-stretch h-56 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
                 <div data-layer="Short heading goes here"
-                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">
+                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-[44px] font-bold font-['Poppins'] uppercase leading-[56px]">
                   Shelter & Warmth</div>
                 <div data-layer="Text"
                   class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
                   Sleeping Bag<br />Tube Tent<br />Rain Poncho</div>
               </div>
               <div data-layer="Tab Horizontal" data-tab="lighting-communication"
-                class="TabHorizontal self-stretch h-56 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+                class="TabHorizontal self-stretch h-64 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
                 <div data-layer="Short heading goes here"
-                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">
+                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-[44px] font-bold font-['Poppins'] uppercase leading-[56px]">
                   Lighting & Communication</div>
                 <div data-layer="Text"
                   class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
                   Hand-Crank Flashlight<br />3-Wick Candle<br />NOAA Weatherband Radio<br />AM/FM Radio</div>
               </div>
               <div data-layer="Tab Horizontal" data-tab="first-aid-sanitation"
-                class="TabHorizontal self-stretch h-36 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
+                class="TabHorizontal self-stretch h-44 pl-8 flex flex-col justify-center items-start gap-4 overflow-hidden cursor-pointer">
                 <div data-layer="Short heading goes here"
-                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-4xl font-bold font-['Poppins'] uppercase leading-10">
+                  class="ShortHeadingGoesHere self-stretch justify-start text-Color-Scheme-1-Text text-[44px] font-bold font-['Poppins'] uppercase leading-[56px]">
                   First Aid & Sanitation</div>
                 <div data-layer="Text"
                   class="Text self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
@@ -989,22 +1477,23 @@
     </div>
     <!-- Separator: Frame 17 (wave) -->
     <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative bg-neutral-100 overflow-hidden">
-      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Vector1.png"
+      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/wave17.png?v=1762272643"
         class="absolute inset-0 w-full h-full object-cover" />
     </div>
-    <!-- Layer: Product / 4 / (Choose the Right Kit) -->
-    <div data-layer="Product / 4 /"
-      class="Product4 self-stretch px-16 pt-7 pb-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
+    <!-- Layer: DT Product / 4 / (Choose the Right Kit) -->
+    <div data-layer="DT Product / 4 /"
+      class="DTProduct4 self-stretch px-16 pt-7 pb-10 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-8 overflow-hidden">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-        <div data-layer="Title" class="Title w-full max-w-[768px] flex flex-col justify-start items-center gap-4">
+        <div data-layer="Title" class="Title w-full max-w-[1280px] flex flex-col justify-start items-center gap-4">
           <div data-layer="Tagline Wrapper" class="TaglineWrapper size- inline-flex justify-start items-center">
             <div data-layer="Tagline"
-              class="Tagline text-center justify-start text-[#561513] text-xl leading-8 product-tagline">
+              class="Tagline text-center justify-start text-black text-xl leading-8 product-tagline">
               Find your Kit</div>
           </div>
           <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-center gap-6">
-            <div data-layer="Heading" class="Heading self-stretch text-center justify-start product-title"
+            <div data-layer="Heading"
+              class="Heading self-stretch text-center justify-start product-title whitespace-nowrap"
               style="color:#561513; font-size:64px; line-height:72px;">Choose the Right Kit for Your Family</div>
             <div data-layer="Text"
               class="Text w-[908px] text-center justify-start text-[#111827] text-xl leading-8 product-subtitle">
@@ -1029,7 +1518,8 @@
                       Solo, car trunk, student</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
+                    class="Price self-stretch text-center justify-start text-black text-2xl leading-10 product-card-price"
+                    style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 600 !important;">
                     $259.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
@@ -1056,7 +1546,8 @@
                       Couples, roommates</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
+                    class="Price self-stretch text-center justify-start text-black text-2xl leading-10 product-card-price"
+                    style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 600 !important;">
                     $284.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
@@ -1083,7 +1574,8 @@
                       Small Family</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
+                    class="Price self-stretch text-center justify-start text-black text-2xl leading-10 product-card-price"
+                    style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 600 !important;">
                     $374.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
@@ -1111,7 +1603,8 @@
                       Full Household</div>
                   </div>
                   <div data-layer="Price"
-                    class="Price self-stretch text-center justify-start text-Color-Valencia text-2xl leading-10 product-card-price">
+                    class="Price self-stretch text-center justify-start text-black text-2xl leading-10 product-card-price"
+                    style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 600 !important;">
                     $404.99</div>
                 </div>
                 <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
@@ -1132,9 +1625,9 @@
         </div>
       </div>
     </div>
-    <!-- Layer: Layout / 254 / (4 Person Kit - detailed) -->
-    <div data-layer="Layout / 254 /"
-      class="Layout254 self-stretch px-16 pt-28 pb-8 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
+    <!-- Layer: DT Layout / 254 / (4 Person Kit - detailed) -->
+    <div data-layer="DT Layout / 254 /"
+      class="DTLayout254 self-stretch px-16 pt-28 pb-8 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
         <div data-layer="Section Title"
@@ -1245,14 +1738,13 @@
         </div>
       </div>
     </div>
-    <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative overflow-hidden">
-      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17.png"
-        class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative overflow-hidden" style="margin: 1px 0 0 0 !important; padding: 0 !important; display: block !important;">
+      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
+        class="absolute inset-0 w-full h-full object-cover" style="display: block !important; transform: scaleY(-1);" />
     </div>
-    <!-- Layer: Gallery / 3 / -->
-    <div data-layer="Gallery / 3 /"
-      class="Gallery3 self-stretch relative px-16 py-24 bg-[#7D291B] flex flex-col justify-start items-center overflow-hidden">
+    <!-- Layer: DT Gallery / 3 / -->
+    <div data-layer="DT Gallery / 3 /"
+      class="DTGallery3 self-stretch relative px-16 py-24 bg-[#7D291B] flex flex-col justify-start items-center overflow-hidden">
       <div data-layer="Container"
         class="Container relative z-10 w-full max-w-[1280px] flex flex-col justify-start items-center gap-16">
         <div data-layer="Section Title"
@@ -1272,32 +1764,36 @@
           <div
             class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 1" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png"
-              alt="Customer reviewing the 72HRS backpack" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml1.png?v=1761032998"
+              alt="Customer reviewing the 72HRS backpack" loading="eager" referrerpolicy="no-referrer"
+              crossorigin="anonymous" />
           </div>
           <div
             class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 2" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png"
-              alt="Customer holding 72HRS drinking water packs" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml2.png?v=1761032997"
+              alt="Customer holding 72HRS drinking water packs" loading="eager" referrerpolicy="no-referrer"
+              crossorigin="anonymous" />
           </div>
           <div
             class="relative flex-1 max-w-[360px] w-full h-[320px] rounded-[30px] bg-white/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.55)] overflow-hidden">
             <img data-layer="Gallery Image 3" class="absolute inset-0 w-full h-full object-cover"
-              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png"
-              alt="Community member sharing their 72HRS experience" loading="lazy" />
+              src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-fml3.png?v=1761032997"
+              alt="Community member sharing their 72HRS experience" loading="eager" referrerpolicy="no-referrer"
+              crossorigin="anonymous" />
           </div>
         </div>
       </div>
     </div>
     <!-- Separator: Frame 17 (wave) -->
-    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-[139px] relative pt-0 overflow-hidden">
-      <img alt="Decorative wave edge" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
-        class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" loading="lazy" />
+    <div data-layer="Frame 17" class="Frame17 w-[1600px] h-36 relative overflow-hidden" style="margin: -1px 0 0 0 !important; padding: 0 !important; display: block !important;">
+      <img alt="wave" src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-Frame17_2.png"
+        class="absolute inset-0 w-full h-full object-cover" style="display: block !important;" />
     </div>
-    <!-- Layer: FAQ / 6 / -->
-    <div data-layer="FAQ / 6 /"
-      class="Faq6 self-stretch px-16 py-24 bg-Color-Scheme-2-Background flex flex-col justify-start items-center gap-16 overflow-hidden">
+    <!-- Layer: DT FAQ / 6 / -->
+    <div data-layer="DT FAQ / 6 /"
+      class="DTFaq6 self-stretch px-16 py-24 bg-[#F2F2F2] !important; flex flex-col justify-start items-center gap-16 overflow-hidden"
+      style="margin: 0 !important;">
       <div data-layer="Container"
         class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-16">
         <div data-layer="Component"
@@ -1305,16 +1801,18 @@
           <div data-layer="Section Title"
             class="SectionTitle w-full max-w-[500px] bg-transparent px-6 py-5 flex flex-col justify-start items-start gap-4">
             <div data-layer="Content" class="Content w-full flex flex-col justify-start items-start gap-2">
-              <div data-layer="Got questions?"
-                class="GotQuestions self-stretch faq-heading text-Color-Valencia-Darker">
+              <div data-layer="Got questions?" class="GotQuestions self-stretch DT-faq-heading text-[#561513]"
+                style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 52px !important; line-height: 52px !important; color: #561513 !important;">
                 Got questions?</div>
               <div data-layer="Text"
-                class="Text self-stretch text-Color-Scheme-2-Text text-[20px] leading-[30px] faq-lede">
-                Find answers to your most pressing questions about our emergency kits.</div>
+                class="Text self-stretch text-Color-Scheme-2-Text text-[20px] leading-[30px] DT-faq-lede"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 20px !important; line-height: 30px !important; color: #111827 !important;">
+                Find answers to your most pressing questions<br />about our emergency kits.</div>
             </div>
             <div data-layer="Actions" class="Actions flex justify-start items-center">
               <button type="button" data-layer="Button" data-style="Secondary"
-                class="Button self-start px-6 py-2 bg-[#0B0302] text-white text-base leading-[24px] faq-cta rounded-[6px] border border-[#0B0302]">
+                class="Button self-start px-6 py-2 bg-[#0B0302] text-white text-base leading-[24px] DT-faq-cta rounded-[6px] border border-[#0B0302]"
+                style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 500 !important; font-size: 16px !important; line-height: 24px !important; color: #ffffff !important;">
                 Contact
               </button>
             </div>
@@ -1322,11 +1820,12 @@
           <div data-layer="Accordion List"
             class="AccordionList flex-1 w-full flex flex-col justify-start items-stretch gap-3">
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
               <div data-layer="Question"
                 class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] faq-question">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
                   Why 72 hours?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1335,17 +1834,19 @@
               </div>
               <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start">
                 <div data-layer="Text"
-                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] faq-answer">
+                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] DT-faq-answer"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 18px !important; line-height: 28px !important; color: #111827 !important;">
                   FEMA and Canada both recommend being prepared for at least 72 hours. This kit is built to cover that
                   critical period.</div>
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
               <div data-layer="Question"
                 class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] faq-question">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
                   Shelf-life of the food and water?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1354,7 +1855,8 @@
               </div>
               <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start">
                 <div data-layer="Text"
-                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] faq-answer">
+                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] DT-faq-answer"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 18px !important; line-height: 28px !important; color: #111827 !important;">
                   All our Food and water have up to a 5-year shelf life (delivered within 1-6 months after the
                   manufacturing date). The food &amp; water will need to be replenished after the expiration date. We
                   have our own food &amp; water refill kits, so it saves you the convenience of having to find the items
@@ -1362,11 +1864,12 @@
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
               <div data-layer="Question"
                 class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] faq-question">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
                   Can the kit be customized to meet specific needs or requirements?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1375,17 +1878,19 @@
               </div>
               <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start">
                 <div data-layer="Text"
-                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] faq-answer">
+                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] DT-faq-answer"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 18px !important; line-height: 28px !important; color: #111827 !important;">
                   Yes, our emergency kits can be customized to meet your specific needs. Please contact us directly, and
                   we'll work with you to create a personalized kit tailored to your requirements.</div>
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
               <div data-layer="Question"
                 class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] faq-question">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
                   Are the food rations gluten-free?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1394,18 +1899,20 @@
               </div>
               <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start">
                 <div data-layer="Text"
-                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] faq-answer">
+                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] DT-faq-answer"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 18px !important; line-height: 28px !important; color: #111827 !important;">
                   The standard food ration bars in our Emergency Kits are all nut-free and vegetarian friendly but are
                   not gluten free. If you have a gluten allergy, please reach out to us and we'll happily work with you
                   to make sure you've got a solution.</div>
               </div>
             </div>
             <div data-layer="Accordion"
-              class="Accordion self-stretch bg-transparent rounded-[20px] border border-Color-Scheme-2-Border flex flex-col justify-start items-start">
+              class="Accordion self-stretch bg-transparent rounded-[20px] border border-[#0B0302] flex flex-col justify-start items-start">
               <div data-layer="Question"
                 class="Question self-stretch px-6 py-5 inline-flex justify-between items-start gap-6 cursor-pointer bg-transparent">
                 <div data-layer="Question"
-                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] faq-question">
+                  class="Question flex-1 text-left text-Color-Scheme-2-Text text-[24px] leading-[32px] DT-faq-question"
+                  style="font-family: 'Bona Nova', 'Times New Roman', serif !important; font-weight: 700 !important; font-size: 24px !important; line-height: 32px !important; color: #111827 !important;">
                   Do you do custom Emergency Kit orders for large groups?</div>
                 <div data-layer="close" class="Close flex items-center justify-center">
                   <img src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-close.png" alt="Close"
@@ -1414,7 +1921,8 @@
               </div>
               <div data-layer="Answer" class="Answer self-stretch px-6 pb-6 inline-flex justify-start items-start">
                 <div data-layer="Text"
-                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] faq-answer">
+                  class="Text flex-1 text-Color-Scheme-2-Text text-[18px] leading-[28px] DT-faq-answer"
+                  style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important; font-size: 18px !important; line-height: 28px !important; color: #111827 !important;">
                   Yes, we do accept custom orders for large groups. For inquiries regarding custom orders, please email
                   us directly at orders@72hours.ca. We'll be happy to discuss your specific requirements and provide you
                   with a tailored solution to meet the needs of your group.</div>
@@ -1434,210 +1942,26 @@
           <div data-layer="Column"
             class="Column flex-[0_0_52%] p-12 inline-flex flex-col justify-center items-start gap-6 text-left">
             <div data-layer="Content" class="Content self-stretch flex flex-col justify-start items-start gap-4">
-              <div data-layer="Heading"
-                class="Heading self-stretch text-left text-white text-[48px] font-semibold font-['Bona Nova'] leading-[56px]">
+              <div data-layer="Heading" data-node-id="2834:815"
+                style="font-family: 'Bona Nova', serif; font-weight: 700; font-size: 55px; line-height: 52px; color: #ffffff; width: 100%; text-align: left;">
                 Save 20% Today – Offer Ends Soon</div>
-              <div data-layer="Text"
-                class="Text self-stretch text-left text-white/85 text-[20px] font-normal font-['Poppins'] leading-[30px]">
-                Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don’t miss out!</div>
+              <div data-layer="Text" data-node-id="2834:816"
+                style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.5; color: #ffffff; width: 100%; text-align: left;">
+                Includes a Free Fire Blanket with every Deluxe Kit purchased today. Don't miss out!</div>
             </div>
             <div data-layer="Actions" class="Actions size- inline-flex justify-start items-start gap-4">
-              <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
-                data-style="Primary" class="Button cta-glow">
-                <span data-layer="Button"
-                  class="Button relative z-[1] text-white text-lg font-semibold font-['Poppins'] leading-relaxed tracking-[0.5px] uppercase">
+              <button type="button" data-layer="Button" data-alternate="False" data-icon-position="No icon"
+                data-small="False" data-style="Primary"
+                class="DT-cta-glow flare-border-btn px-6 py-3 bg-Color-Amaranth">
+                <span data-layer="Button" data-node-id="2834:818"
+                  style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; line-height: 1.5; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px;">
                   GET 20% OFF TODAY!</span>
-              </div>
+              </button>
             </div>
           </div>
           <img data-layer="Placeholder Image" class="PlaceholderImage flex-1 h-full object-cover"
             src="https://cdn.shopify.com/s/files/1/0077/1092/files/ads-v3-PlaceholderImage.png"
             alt="Customer preparing emergency supplies" loading="lazy" />
-        </div>
-      </div>
-    </div>
-    <!-- Layer: Footer / 2 / -->
-    <div data-layer="Footer / 2 /"
-      class="Footer2 self-stretch px-16 py-20 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-20 overflow-hidden">
-      <div data-layer="Container"
-        class="Container w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
-        <div data-layer="Content" class="Content self-stretch h-60 inline-flex justify-start items-start gap-32">
-          <div data-layer="Links" class="Links flex-1 flex justify-start items-start gap-10">
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start overflow-hidden">
-              <div data-layer="Company Logo" data-alternate="False" class="CompanyLogo w-32 h-auto flex items-center">
-                <img src="../ads-v2/assets/Logo-wide%201.svg" alt="72HRS logo" class="max-w-full h-auto"
-                  loading="lazy" />
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Company"
-                class="Company self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Company</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="About us"
-                    class="AboutUs flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    About us</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Careers"
-                    class="Careers flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Careers</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Press"
-                    class="Press flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Press</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Contact"
-                    class="Contact flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Contact</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Mission"
-                    class="Mission flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Mission</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Resources"
-                class="Resources self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Resources</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Blog"
-                    class="Blog flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Blog</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Guides"
-                    class="Guides flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Guides</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Tools"
-                    class="Tools flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Tools</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Support"
-                    class="Support flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Support</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Community"
-                    class="Community flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Community</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Column"
-              class="Column flex-1 inline-flex flex-col justify-start items-start gap-4 overflow-hidden">
-              <div data-layer="Legal"
-                class="Legal self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Legal</div>
-              <div data-layer="Footer Links" class="FooterLinks self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Terms"
-                    class="Terms flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Terms</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Privacy"
-                    class="Privacy flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Privacy</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Cookies"
-                    class="Cookies flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Cookies</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Compliance"
-                    class="Compliance flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Compliance</div>
-                </div>
-                <div data-layer="Link" class="Link self-stretch py-2 inline-flex justify-start items-start">
-                  <div data-layer="Subscribe"
-                    class="Subscribe flex-1 justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                    Subscribe</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Newslatter" class="Newslatter w-96 inline-flex flex-col justify-start items-start gap-6">
-            <div data-layer="Frame 13" class="Frame13 self-stretch flex flex-col justify-start items-start gap-4">
-              <div data-layer="Stay informed about emergency preparedness"
-                class="StayInformedAboutEmergencyPreparedness self-stretch justify-start text-Color-Scheme-1-Text text-lg font-semibold font-['Poppins'] leading-relaxed">
-                Stay informed about emergency preparedness</div>
-              <div data-layer="Email address"
-                class="EmailAddress self-stretch justify-start text-Color-Scheme-1-Text text-lg font-normal font-['Poppins'] leading-relaxed">
-                Email address</div>
-            </div>
-            <div data-layer="Actions" class="Actions size- flex flex-col justify-start items-start gap-3">
-              <div data-layer="Form" class="Form self-stretch inline-flex justify-start items-start gap-4">
-                <div data-layer="Text input" data-alternate="False" data-type="Default"
-                  class="TextInput flex-1 px-3 py-2 bg-Opacity-Transparent/0 rounded-xl outline outline-1 outline-Opacity-Neutral-Darkest-15/20 flex justify-start items-center gap-2">
-                  <div data-layer="Placeholder"
-                    class="Placeholder flex-1 justify-start text-Opacity-Neutral-Darkest-60/60 text-lg font-normal font-['Poppins'] leading-relaxed">
-                    Subscribe</div>
-                </div>
-                <div data-layer="Button" data-alternate="False" data-icon-position="No icon" data-small="False"
-                  data-style="Secondary"
-                  class="Button size- px-6 py-2.5 bg-Opacity-Transparent/0 rounded-md shadow-[0px_1px_2px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_-2px_1px_0px_rgba(11,3,2,0.05)] shadow-[inset_0px_0px_0px_1px_rgba(11,3,2,0.05)] flex justify-center items-center gap-2">
-                  <div data-layer="Button"
-                    class="Button justify-start text-Color-Neutral-Darkest text-lg font-medium font-['Poppins'] leading-relaxed">
-                    By subscribing, you agree to our privacy policy and consent to receive updates.</div>
-                </div>
-              </div>
-              <div data-layer="Thank you for subscribing!"
-                class="ThankYouForSubscribing self-stretch justify-start text-Color-Scheme-1-Text text-xs font-normal font-['Poppins'] leading-none">
-                Thank you for subscribing!</div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Credits" class="Credits self-stretch flex flex-col justify-start items-start gap-8">
-          <div data-layer="Divider"
-            class="Divider self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-Color-Scheme-1-Border/20">
-          </div>
-          <div data-layer="Row" class="Row self-stretch inline-flex justify-between items-start">
-            <div data-layer="Credits" class="Credits size- flex justify-start items-center gap-6">
-              <div data-layer="Privacy policy"
-                class="PrivacyPolicy justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] leading-normal">
-                Privacy policy</div>
-              <div data-layer="Terms of service"
-                class="TermsOfService justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Terms of service</div>
-              <div data-layer="Cookies settings"
-                class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Cookies settings</div>
-              <div data-layer="Cookies Settings"
-                class="CookiesSettings justify-start text-Color-Scheme-1-Text text-base font-normal font-['Poppins'] underline leading-normal">
-                Cookies Settings</div>
-            </div>
-            <div data-layer="Social Links" class="SocialLinks flex justify-start items-center gap-3">
-              <a data-layer="Facebook" href="#" class="Facebook w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Facebook.svg" alt="Facebook" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="Instagram" href="#" class="Instagram w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Instagram.svg" alt="Instagram" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="X" href="#" class="X w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/X.svg" alt="X (Twitter)" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="LinkedIn" href="#" class="Linkedin w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/LinkedIn.svg" alt="LinkedIn" class="w-6 h-6" loading="lazy" />
-              </a>
-              <a data-layer="Youtube" href="#" class="Youtube w-8 h-8 inline-flex items-center justify-center">
-                <img src="../ads-v2/assets/Youtube.svg" alt="YouTube" class="w-6 h-6" loading="lazy" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
